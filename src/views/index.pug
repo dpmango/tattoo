@@ -1,0 +1,73 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+
+    // NAVIGATION
+    .sections-nav
+      // populated with javascript
+    
+    // SECTIONS
+    .section
+      .hero
+        .container
+          .hero__wrapper.text-center
+            .arrow-bar Акция
+            .mega-title.mt20 Разработка эскиза <span>бесплатно!</span>
+            .fz14.mt10 Действует до 01.12.2018
+            
+            .hero__benefits
+              .hero__benefit
+                .hero__benefit__title Безопасность здоровья 
+                .hero__benefit__description Только одноразовые инструменты, абсолютно стерильное помещение + специалисты с медицинским образованием.
+              .hero__benefit
+                .hero__benefit__title Довольные клиенты
+                .hero__benefit__description Более 10000 клиентов рекомендуют наш тату салон своим друзьям.
+              .hero__benefit
+                .hero__benefit__title Качество татуировки
+                .hero__benefit__description Только мастера с художественным образованием - эскиз любой сложности. Сделать татуировку вы сможете в этот же или в другой день.
+                    
+          i.ico.ico-scrolldown
+    
+    // section
+    .section
+      .services
+        .container
+          .section-title Услуги
+          .services__wrapper
+            a(href='#').services__item
+              .services__item__icon
+                i.ico.ico-service-tatoo-machine
+              .services__item__name Тaтуировки
+            a(href='#').services__item
+              .services__item__icon
+                i.ico.ico-service-tattooache
+              .services__item__name Татуаж
+            a(href='#').services__item
+              .services__item__icon
+                i.ico.ico-service-pircing
+              .services__item__name Пирсинг
+            a(href='#').services__item
+              .services__item__icon
+                i.ico.ico-service-chrysanthemum
+              .services__item__name Био-тату
+            a(href='#').services__item
+              .services__item__icon
+                i.ico.ico-service-nano
+              .services__item__name Удалениe
+            a(href='#').services__item
+              .services__item__icon
+                i.ico.ico-service-pen
+              .services__item__name Обучение  
+
+    // section
+    .section
+      .gallery
+        .container
+          .section-title Галерея
+                    
+    include shared/footer.pug

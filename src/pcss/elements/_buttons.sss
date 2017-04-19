@@ -1,0 +1,20 @@
+// buttons
+button
+  &:focus
+    outline: none
+
+.btn
+  display: inline-block
+  position: relative
+  text-align: center
+  cursor: pointer
+  transition: all $transitionSpeed ease-in-out
+  &:focus, &:active
+    outline: none
+  &--primary
+    font-family: 'RoadRadio'
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 2.15px
+    padding: 5px 30px
+    background: $colorPrimary

@@ -1,0 +1,75 @@
+// THIS MIGHT INCLUDE HEADER, FOOTER AND OTHER
+// COMMON ELEMENTS ACROSS THE SITE
+
+// HEADER
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 9
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__menu
+    flex: 0 0 auto
+    margin-left: auto
+    display: flex
+    align-items: center
+  &__hamburger
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-right: -20px
+    size: 80px
+    margin-left: 40px
+    background: color(black a(60%))
+    color: white
+    font-size: 14px
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: black
+    &__name
+      display: inline-block
+
+
+
+
+
+// FOOTER
+.footer
+  flex: 0
+
+
+// TYPOGRAPHY
+.mega-title
+  padding-right:
+  font-size: 48px
+  font-family: 'RoadRadio'
+  font-weight: 300
+  line-height: 1
+  letter-spacing: 1.33px
+  span
+    display: block
+    font-weight: 700
+
+.arrow-bar
+  position: relative
+  padding: 10px
+  font-family: 'RoadRadio'
+  color: $fontColor
+  line-height: 1
+  font-size: 20px
+  background: $colorPrimary
+
+.section-title
+  font-family: 'RoadRadio'
+  font-size: 28px
+  letter-spacing: 3px
+  position: absolute
+  top: 25px
+  left: 50%
+  transform: translateX(-50%)

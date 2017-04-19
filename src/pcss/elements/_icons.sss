@@ -44,9 +44,28 @@
     background-image: svg-load('../../images/svg/ico-service-pen.svg', fill='#FFFFFF')
     size: 52px
 
+  &-filter-toggle
+    background-image: svg-load('../../images/svg/filter-toggle.svg', fill='#FFFFFF')
+    size: 8px 16px
+    position: absolute
+    top: 50%
+    right: 5px
+    transform: translateY(-50%)
+
+  &-zoom
+    background-image: svg-load('../../images/svg/ico-zoom.svg')
+    size: 55px
+
+  &-phone
+    background-image: svg-load('../../images/svg/ico-phone.svg')
+    size: 17px
+
+  &-location
+    background-image: svg-load('../../images/svg/ico-location.svg')
+    size: 13px 18px
 
 // hoverable states
-.services__item__icon:hover
+.services__item:hover
   .ico
     opacity: 1
     &-service-tatoo-machine

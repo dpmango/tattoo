@@ -33,7 +33,7 @@ doctype html
                     
           i.ico.ico-scrolldown
     
-    // section
+    // SERVICES SECTION
     .section
       .services
         .container
@@ -64,10 +64,42 @@ doctype html
                 i.ico.ico-service-pen
               .services__item__name Обучение  
 
-    // section
+    // GALLERY SECTION
     .section
       .gallery
-        .container
+        .container.container--fluid.container--no-pad
           .section-title Галерея
-                    
+          .gallery__wrapper
+            .gallery__filter
+              i.ico.ico-filter-toggle
+              .gallery__filter__head
+                .gallery__filter__head__label Фильтр
+                .gallery__filter__head__selected Популярные
+              .gallery__filter__content
+                .gallery__filter__item(data-filter='') Все
+                .gallery__filter__item(data-filter='') Мужские тату
+                .gallery__filter__item(data-filter='') Женские тату
+                .gallery__filter__item(data-filter='') Маленькие тату
+                .gallery__filter__item(data-filter='') Большие тату
+                .gallery__filter__item(data-filter='') Тату надписи
+                .gallery__filter__item(data-filter='') Черно-белые татуировки
+                .gallery__filter__item(data-filter='') Цветные татуировки
+                .gallery__filter__item(data-filter='') Исправления (кавер ап)
+
+            .gallery__grid
+              - for (var i = 1; i < 11; i++) {
+                .gallery__grid__card
+                  picture
+                    img(src='images/homepageGallery'+ i +'.png', srcset='images/homepageGallery'+ i +'.png 1x, images/homepageGallery'+ i +'@2x.png 2x')
+                    a.js-magnific-fullpage(href='images/homepageGallery'+ i +'@2x.png')
+                      i.ico.ico-zoom
+              - }
+  
+    // MASTERS SECTION
+    .section
+      .masters
+        .container
+          .section-title Мастера
+          .masters__wrapper                  
+          
     include shared/footer.pug

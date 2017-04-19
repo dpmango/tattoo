@@ -21,6 +21,7 @@ $(document).ready(function () {
   // Hamburger and menu
   $('.js-main-hamb').on('click', function () {
     $(this).find('.hamburger').toggleClass('is-active');
+    $('.navi').toggleClass('active');
   });
 
   // scrollify
@@ -31,14 +32,13 @@ $(document).ready(function () {
     easing: "easeOutExpo",
     scrollSpeed: 1100,
     offset: 0,
-    scrollbars: false,
-    standardScrollElements: "",
+    scrollbars: true,
+    standardScrollElements: ".-gallery__grid",
     setHeights: false,
     overflowScroll: true,
     updateHash: true,
     touchScroll: true,
     before: function before(i, el) {
-      console.log('current section', i);
       $('.sections-nav__dot').each(function (index, val) {
         if ($(val).data('section') == i) {
           $(val).addClass('active');
@@ -46,6 +46,12 @@ $(document).ready(function () {
           $(val).removeClass('active');
         }
       });
+
+      if (i == 0) {
+        $('.header').removeClass('header--no-conacts');
+      } else {
+        $('.header').addClass('header--no-conacts');
+      }
     },
     after: function after() {},
     afterResize: function afterResize() {},
@@ -68,11 +74,32 @@ $(document).ready(function () {
   function setScrollifyActiveClass() {
     var hash = window.location.hash;
     var scrollifyNumber = parseInt(hash.substring(1)) - 1;
-    console.log(scrollifyNumber);
     $('.sections-nav').find('.sections-nav__dot[data-section=' + scrollifyNumber + ']').addClass('active');
   }
 
+  // Masonry
+  $('.gallery__grid').masonry({
+    itemSelector: '.gallery__grid__card',
+    columnWidth: 300,
+    gutter: 20
+  });
+
   // Magnific Popup
+  $('.js-magnific-fullpage').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom',
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300
+    }
+  });
+
   var startWindowScroll = 0;
   $('.popup-with-zoom-anim').magnificPopup({
     type: 'inline',

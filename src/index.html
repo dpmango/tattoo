@@ -8,7 +8,6 @@
   <title>Tattoo mania</title>
   <!--build:css css/styles.css-->
   <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
   <link rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -22,6 +21,10 @@
   <header class="header">
     <div class="container container--fluid">
       <div class="header__wrapper"><a href="#"><i class="ico ico-logo"></i></a>
+        <div class="header__contacts">
+          <div class="header__contact"><i class="ico ico-location"> </i><span>Москва, Кутузовский пр-т, 27</span></div>
+          <div class="header__contact"><i class="ico ico-phone"></i><a href="tel:">8 (495) 123 45 67</a></div>
+        </div>
         <div class="header__menu"><a class="btn btn--primary" href="#">Записаться <br> к мастеру</a>
           <div class="header__hamburger js-main-hamb">
             <button class="hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
@@ -31,6 +34,21 @@
       </div>
     </div>
   </header>
+  <!-- MENU-->
+  <navi class="navi">
+    <div class="navi__wrapper">
+      <ul class="navi__list">
+        <li><a href="#">О салоне</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Галерея</a></li>
+        <li><a href="#">Эскизы  </a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Цены</a></li>
+        <li><a href="#">Обучение</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+  </navi>
   <!-- NAVIGATION-->
   <div class="sections-nav">
     <!-- populated with javascript-->
@@ -61,7 +79,7 @@
       </div>
     </div>
   </div>
-  <!-- section-->
+  <!-- SERVICES SECTION-->
   <div class="section">
     <div class="services">
       <div class="container">
@@ -82,27 +100,80 @@
       </div>
     </div>
   </div>
-  <!-- section-->
+  <!-- GALLERY SECTION-->
   <div class="section">
     <div class="gallery">
-      <div class="container">
+      <div class="container container--fluid container--no-pad">
         <div class="section-title">Галерея</div>
+        <div class="gallery__wrapper">
+          <div class="gallery__filter"><i class="ico ico-filter-toggle"></i>
+            <div class="gallery__filter__head">
+              <div class="gallery__filter__head__label">Фильтр</div>
+              <div class="gallery__filter__head__selected">Популярные</div>
+            </div>
+            <div class="gallery__filter__content">
+              <div class="gallery__filter__item" data-filter="">Все</div>
+              <div class="gallery__filter__item" data-filter="">Мужские тату</div>
+              <div class="gallery__filter__item" data-filter="">Женские тату</div>
+              <div class="gallery__filter__item" data-filter="">Маленькие тату</div>
+              <div class="gallery__filter__item" data-filter="">Большие тату</div>
+              <div class="gallery__filter__item" data-filter="">Тату надписи</div>
+              <div class="gallery__filter__item" data-filter="">Черно-белые татуировки</div>
+              <div class="gallery__filter__item" data-filter="">Цветные татуировки</div>
+              <div class="gallery__filter__item" data-filter="">Исправления (кавер ап)</div>
+            </div>
+          </div>
+          <div class="gallery__grid">
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery1.png" srcset="images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery2.png" srcset="images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery2@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery3@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery4.png" srcset="images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery4@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery5.png" srcset="images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery5@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery6.png" srcset="images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery6@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery7.png" srcset="images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery7@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery8.png" srcset="images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery8@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery9.png" srcset="images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery9@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <div class="gallery__grid__card">
+              <picture><img src="images/homepageGallery10.png" srcset="images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery10@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- FOOTER::START-->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12"></div>
+  <!-- MASTERS SECTION-->
+  <div class="section">
+    <div class="masters">
+      <div class="container">
+        <div class="section-title">Мастера</div>
+        <div class="masters__wrapper">                 </div>
       </div>
     </div>
-  </footer>
+  </div>
   <!-- SCRIPTS-->
   <!--build:js js/scripts.min.js-->
   <script src="components/jquery/dist/jquery.min.js"></script>
   <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
   <script src="components/slick-carousel/slick/slick.min.js"></script>
+  <script src="components/masonry/dist/masonry.pkgd.min.js"> </script>
   <script src="js/libs/jquery.maskedinput.min.js"></script>
   <script src="js/libs/scrollify.js"></script>
   <script src="js/main.js"></script>

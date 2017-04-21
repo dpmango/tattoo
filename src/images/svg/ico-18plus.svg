@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="103px" viewBox="0 0 90 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-18plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-551.000000, -139.000000)">
+            <g id="ico-18plus" transform="translate(553.000000, 141.000000)">
+                <text id="18+" font-family="RoadRadio" font-size="42" font-weight="normal" letter-spacing="1.27272713" fill="#D2A36E">
+                    <tspan x="15" y="61">18+</tspan>
+                </text>
+                <polygon id="Polygon" stroke="#D2A36E" stroke-width="3" points="42.8060797 0 85.6121593 24.7141016 85.6121593 74.1423048 42.8060797 98.8564065 -1.02140518e-13 74.1423048 -1.29674049e-13 24.7141016"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

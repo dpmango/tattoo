@@ -102,8 +102,130 @@
 
 // FOOTER
 .footer
-  flex: 0
+  background: #18181D
+  padding-top: 60px
+  color: white
+  &__menu
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 1280px
+    margin-left: auto
+    margin-right: auto
+    a
+      text-transform: uppercase
+      font-family: 'RoadRadio'
+      font-size: 20px
+      letter-spacing: 1.8px
+      position: relative
+      &:after
+        display: block
+        content: ' '
+        position: absolute
+        left: 50%
+        right: 50%
+        background: white
+        height: 2px
+        bottom: -3px
+        transition: all $transitionSpeed $ease
+      &:hover
+        &::after
+          left: 0
+          right: 0
+  &__wrapper
+    display: flex
+    padding-top: 50px
+    max-width: 1280px
+    margin-left: auto
+    margin-right: auto
+  &__contacts
+    position: relative
+    flex: 0 1 50%
+    padding-right: 40px
+  &__contact
+    position: relative
+    margin-bottom: 20px
+    .ico
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+    span, a
+      display: inline-block
+      padding-left: 40px
+    &--no-ico
+      span
+        padding-left: 0
 
+  .ico-18plus
+    position: absolute
+    right: 80px
+    top: 0
+
+  &__links
+    margin-top: 55px
+    font-weight: 600
+    letter-spacing: 1px
+    color: $colorPrimary
+    text-decoration: underline
+    a
+      position: relative
+      display: inline-block
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+      &:after
+        display: block
+        content: ' '
+        position: absolute
+        left: 0
+        right: 0
+        background: $colorPrimary
+        height: 2px
+        bottom: -3px
+        transition: all $transitionSpeed $ease
+      &:hover
+        &::after
+          left: 50%
+          right: 50%
+
+  &__icons
+    margin-top: 80px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__socials
+    a
+      display: inline-block
+      margin-right: 20px
+      transition: all $transitionSpeed $ease
+      &:last-child
+        margin-right: 0
+      &:hover
+        opacity: .5
+  &__developer
+    font-size: 12px
+    transition: all $transitionSpeed $ease
+    span
+      display: inline-block
+      margin-right: 5px
+      vertical-align: -1px
+    &:hover
+      transform: scale(1.2)
+  &__copy
+    font-size: 10px
+    margin-top: 20px
+    margin-bottom: 35px
+    letter-spacing: 1.35px
+
+  &__maps
+    flex: 0 1 50%
+    display: flex
+    flex-direction: column
+    #yaMap
+      flex: 1
 
 // TYPOGRAPHY
 .mega-title
@@ -135,3 +257,15 @@
   left: 50%
   z-index: 5
   transform: translateX(-50%)
+
+.small-title
+  font-family: 'RoadRadio'
+  font-size: 20px
+  letter-spacing: 1.8px
+
+.seo-text
+  font-size: 14px
+  line-height: 1.145
+  p
+    padding: 0
+    margin: 0

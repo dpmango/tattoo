@@ -28,7 +28,7 @@ $(document).ready(function () {
   $.scrollify({
     section: ".section",
     sectionName: "section-name",
-    interstitialSection: "",
+    interstitialSection: ".seo, .footer",
     easing: "easeOutExpo",
     scrollSpeed: 1100,
     offset: 0,
@@ -185,4 +185,23 @@ $(document).ready(function () {
   $("input[name='phone']").mask("9 (999) 999-9999");
   $("#tin").mask("99-9999999");
   $("#ssn").mask("999-99-9999");
+
+  // YANDEX MAP
+  ymaps.ready(init);
+  var myMap, myPlacemark;
+
+  function init() {
+    myMap = new ymaps.Map("yaMap", {
+      center: [55.76, 37.64],
+      zoom: 15,
+      controls: []
+    });
+
+    // myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+    //     hintContent: 'Москва!',
+    //     balloonContent: 'Столица России'
+    // });
+    //
+    // myMap.geoObjects.add(myPlacemark);
+  }
 });

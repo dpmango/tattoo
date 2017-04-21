@@ -1,4 +1,51 @@
-
+footer.footer
+  .container.container--fluid
+    .footer__menu
+      a(href='#') О салоне
+      a(href='#') Услуги
+      a(href='#') Галерея
+      a(href='#') Эскизы
+      a(href='#') отзывы
+      a(href='#') Цены
+      a(href='#') обучение
+      a(href='#') Контакты
+  .container.container--fluid
+    .footer__wrapper
+      .footer__contacts
+        i.ico.ico-18plus
+        .footer__contact
+          i.ico.ico-location 
+          span Москва, Кутузовский пр-т, 27
+        .footer__contact
+          i.ico.ico-phone
+          a(href='tel:') 8 (495) 123 45 67
+        .footer__contact
+          i.ico.ico-email
+          a(href='mailto:info@tattooz.ru') info@tattooz.ru
+        .footer__contact.footer__contact--no-ico
+          span Режим Работы: <br> Ежедневно с 10:00 до 22:00
+        .footer__links
+          a(href='#') Запись онлайн
+          a(href='#') Цена онлайн
+        .footer__icons
+          .footer__socials
+            a(href='#')
+              i.ico.ico-social-vk
+            a(href='#')
+              i.ico.ico-social-fb    
+            a(href='#')
+              i.ico.ico-social-insta
+          a(href='#' target='_blank').footer__developer
+            span Made in
+            i.ico.ico-developer-logo
+        
+        .footer__copy © Все права защищены, «Медик Лайн» 2011
+              
+          
+      .footer__maps
+        #yaMap
+      
+      
 
 // SECONDARY STYLES
 //build:css css/secondary.css
@@ -6,6 +53,7 @@ link(rel="stylesheet" href="css/secondary.css" type="text/css")
 //endbuild
 
 // SCRIPTS
+script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
 
 //build:js js/scripts.min.js
 script(src="components/jquery/dist/jquery.min.js")

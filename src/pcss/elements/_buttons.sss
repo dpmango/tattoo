@@ -1,5 +1,8 @@
 // buttons
 button
+  -webkit-appearance: none
+  box-shadow: none
+  background: transparent
   &:focus
     outline: none
 
@@ -23,6 +26,10 @@ button
     padding: 10px 25px
     border-radius: 40px
     border: 2px solid white
+    color: white
     &:hover
       background: white
       color: $fontColor
+  &--block
+    width: 100%
+    display: block

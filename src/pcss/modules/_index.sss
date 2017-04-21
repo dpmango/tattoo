@@ -410,8 +410,120 @@
   &__wrapper
     padding-top: 80px
     padding-bottom: 100px
+    max-width: 900px
+    margin-left: auto
+    margin-right: auto
     min-height: 100vh
     display: flex
     flex-wrap: wrap
-    justify-content: center
-    align-items: center
+  &__col
+    flex: 0 1 33%
+    padding-left: 10px
+    padding-right: 10px
+  &__card
+    display: block
+    position: relative
+    margin-bottom: 20px
+    &:hover
+      &::after
+        opacity: 1
+        position: absolute -10px
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0 0 0 0
+      border: 3px solid $colorPrimary
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    &__wrapper
+      overflow: hidden
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      min-height: 180px
+      position: relative
+      padding: 20px
+      background: transparent
+      border: 2px solid color(white a(50%))
+    &--dark
+      .blog__card__wrapper
+        background: #18181D
+        border-color: transparent
+    &--image
+      .blog__card__wrapper
+        border-color: transparent
+        &::after
+          display: block
+          content: ' '
+          position: absolute 0 0 0 0
+          background: color(#18181D a(80%))
+          z-index: 2
+    &__image
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 1
+      width: 100%
+
+    &__title
+      position: relative
+      z-index: 3
+      font-family: 'RoadRadio'
+      font-size: 20px
+      letter-spacing: 1.8px
+    &__metrics
+      position: relative
+      z-index: 3
+      font-size: 14px
+      .ico
+        opacity: .5
+        margin-right: 5px
+      span
+        vertical-align: -2px
+
+  &__promo
+    min-height: 580px
+    padding: 20px
+    background: url('../images/el/blogPromoBg.png') no-repeat top center
+    background-size: cover
+    display: flex
+    flex-direction: column
+    .blog__card__title
+      color: $colorPrimary
+    &__text
+      padding: 0
+      margin: 0
+      font-size: 14px
+      line-height: 1.145
+      padding-bottom: 10px
+    &__counter
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 40px
+    &__triangle
+      display: flex
+      justify-content: center
+      align-items: stretch
+      size: 53px
+      padding: 6px
+      border: 1px solid $colorPrimary
+      transform: rotate(45deg)
+      > span
+        flex: 1
+        border: 2px solid $colorPrimary
+        > span
+          display: flex
+          text-align: center
+          justify-content: center
+          padding-top: 5px
+          width: 100%
+          transform: rotate(-45deg)
+          color: $colorPrimary
+          font-family: 'RoadRadio'
+          font-size: 24px
+          letter-spacing: 1.8px
+    &__form
+      flex: 1
+      margin-top: auto

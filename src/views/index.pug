@@ -216,7 +216,75 @@ doctype html
         .container
           .section-title Блог
           .blog__wrapper
-            
-          
-                   
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--image
+                .blog__card__wrapper
+                  img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                  .blog__card__title Decorate For Less With Art Posters
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card.blog__card--dark
+                .blog__card__wrapper
+                  .blog__card__title Party Jokes Startling But Unnecessary
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card
+                .blog__card__wrapper
+                  .blog__card__title Astronomy Or Astrology
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--dark
+                .blog__card__wrapper
+                  .blog__card__title Is It Good To Hire A Personal Chef
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card
+                .blog__card__wrapper
+                  .blog__card__title The Amazing Hubble
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card.blog__card--image
+                .blog__card__wrapper
+                  img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                  .blog__card__title New Ideas For A Low Cost Vacation On Water
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+            // column
+            .blog__col
+              .blog__promo
+                .blog__card__title Купон  на скидку
+                .blog__promo__text
+                  p Хочешь сделать татуировку <br> со скидкой? <br> Получи уникальный промокод прямо сейчас и обменяй его <br> на скидку в нашем салоне!
+                  p Внимание предложение ограничено, если промокоды сегодня кончились, заходите <br> на наш сайт завтра!
+                .blog__promo__counter
+                  span Осталось <br> купонов:
+                  .blog__promo__triangle
+                    span
+                      span 14
+                      
+                form.blog__promo__form(action='#')
+                  .ui-input
+                    input(type='text' placeholder='имя')
+                  .ui-input
+                    input(type='email' placeholder='email')    
+                  .ui-input
+                    input(type='tel' placeholder='телефон')   
+                  button(type='submit').btn.btn--ghost.btn--block.mt30 Получить купон 
+                  
+                  
     include shared/footer.pug

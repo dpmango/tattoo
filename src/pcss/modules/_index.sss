@@ -296,3 +296,73 @@
       .ico-zoom
         opacity: 1
         transform: translate3d(-50%, -50%, 0)
+
+
+
+// TESTIMONIALS
+.testimonials
+  color: white
+  background: #18181D
+  &__slider
+    opacity: 1
+  &__slide
+    &__wrapper
+      min-height: 100vh
+      display: flex
+      align-items: center
+  &__content
+    flex: 1 1 50%
+    margin-left: auto
+    margin-right: auto
+    max-width: 520px
+  &__actions
+    font-size: 14px
+    margin-bottom: 30px
+    a
+      display: inline-block
+      margin-right: 35px
+      transition: all $transitionSpeed $ease
+      span
+        display: inline-block
+        vertical-align: -2px
+      .ico
+        margin-right: 10px
+      &:last-child
+        margin-right: 0
+      &:hover
+        color: $colorPrimary
+
+
+  &__text
+    position: relative
+    padding: 20px
+    border: 2px solid $colorPrimary
+    font-size: 14px
+    line-height: 1.1
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      left: -2px
+      bottom: -24px
+      z-index: 2
+      width: 25px
+      height: 24px
+      background: svg-load('../../images/svg/testimonials-angle.svg') no-repeat center
+      background-size: contain
+  &__author
+    color: $colorPrimary
+    line-height: 1
+    margin-top: 40px
+  &__cta
+    text-align: center
+    margin-top: 13vh
+
+  &__picture
+    flex: 0 1 50%
+    margin-left: auto
+    text-align: right
+    img
+      display: inline-block
+      height: 100vh
+      max-width: 100%

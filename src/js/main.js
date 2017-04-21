@@ -84,6 +84,25 @@ $(document).ready(function () {
     gutter: 20
   });
 
+  // Testimonails slider
+  $('.testimonials__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 700,
+    vertical: false,
+    adaptiveHeight: true,
+    dots: false,
+    arrows: false,
+    centerPadding: 0,
+    draggable: true,
+    easing: 'linear',
+    infinite: false,
+    lazyLoad: 'ondemand',
+    swipe: true,
+    touchMove: true,
+    fade: false
+  });
+
   // Magnific Popup
   $('.js-magnific-fullpage').magnificPopup({
     type: 'image',

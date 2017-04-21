@@ -68,6 +68,14 @@
     background-image: svg-load('../../images/svg/ico-team.svg')
     size: 91px 54px
 
+  &-photo-camera
+    background-image: svg-load('../../images/svg/ico-photo-camera.svg', fill='#FFFFFF')
+    size: 14px 12px
+  &-user-group
+    background-image: svg-load('../../images/svg/ico-user-group.svg', fill='#FFFFFF')
+    size: 18px 12px
+
+
 // hoverable states
 .services__item:hover
   .ico
@@ -84,3 +92,11 @@
       background-image: svg-load('../../images/svg/ico-service-nano.svg', fill=$colorPrimary)
     &-service-pen
       background-image: svg-load('../../images/svg/ico-service-pen.svg', fill=$colorPrimary)
+
+.testimonials__actions
+  a:hover
+    .ico
+      &-photo-camera
+        background-image: svg-load('../../images/svg/ico-photo-camera.svg', fill=$colorPrimary)
+      &-user-group
+        background-image: svg-load('../../images/svg/ico-user-group.svg', fill=$colorPrimary)

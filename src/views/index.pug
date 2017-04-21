@@ -12,7 +12,7 @@ doctype html
       // populated with javascript
     
     // SECTIONS
-    .section
+    .section(data-section-name='hero' data-nav-name="Главная")
       .hero
         .container
           .hero__wrapper.text-center
@@ -34,7 +34,7 @@ doctype html
           i.ico.ico-scrolldown
     
     // SERVICES SECTION
-    .section
+    .section(data-section-name='services' data-nav-name="Услуги")
       .services
         .container
           .section-title Услуги
@@ -65,7 +65,7 @@ doctype html
               .services__item__name Обучение  
 
     // GALLERY SECTION
-    .section
+    .section(data-section-name='gallery' data-nav-name="Галерея")
       .gallery
         .container.container--fluid.container--no-pad
           .section-title Галерея
@@ -96,7 +96,7 @@ doctype html
               - }
   
     // MASTERS SECTION
-    .section
+    .section(data-section-name='masters' data-nav-name="Мастера")
       .masters
         .container
           .section-title Мастера
@@ -158,7 +158,7 @@ doctype html
               .masters__card__name Больше мастеров
     
     // TESTIMONIALS SECTION
-    .section
+    .section(data-section-name='testimonials' data-nav-name="Отзывы")
       .testimonials
         .container.container--fluid.container--no-pad
           .section-title Отзывы
@@ -181,6 +181,8 @@ doctype html
                     .testimonials__author Екатерина Иванова
                     .testimonials__cta
                         a(href='#').btn.btn--ghost Оставить отзыв
+                    .testimonials__nav
+                      
                     
                   .testimonials__picture
                     picture
@@ -202,10 +204,19 @@ doctype html
                     .testimonials__author Екатерина Иванова
                     .testimonials__cta
                         a(href='#').btn.btn--ghost Оставить отзыв
+                    .testimonials__nav
                     
                   .testimonials__picture
                     picture
                       img(src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x')
                       
-              
+    // BLOG SECTION
+    .section(data-section-name='blog' data-nav-name="Блог")
+      .blog
+        .container
+          .section-title Блог
+          .blog__wrapper
+            
+          
+                   
     include shared/footer.pug

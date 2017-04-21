@@ -1219,8 +1219,10 @@ html.mfp-helper body {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
 }
-.sections-nav__dot {
+.sections-nav__wrapper {
     position: relative;
+}
+.sections-nav__dot {
     margin-bottom: 30px;
     width: 20px;
     height: 20px;
@@ -1233,6 +1235,20 @@ html.mfp-helper body {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+}
+.sections-nav__dot + span {
+    position: absolute;
+    top: 2px;
+    right: 35px;
+    color: white;
+    font-size: 14px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+    pointer-events: none;
 }
 .sections-nav__dot:after {
     position: absolute;
@@ -1248,6 +1264,12 @@ html.mfp-helper body {
 }
 .sections-nav__dot.active, .sections-nav__dot:hover {
     border-color: white;
+}
+.sections-nav__dot:hover + span {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0);
 }
 .sections-nav__dot.active {}
 .sections-nav__dot.active:after {
@@ -1744,20 +1766,40 @@ html.mfp-helper body {
     display: flex;
     -webkit-align-items: center;
             align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
     min-height: 100vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
 }
 .testimonials__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex: 1 1 50%;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+            justify-content: center;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 20px;
+    min-height: 100vh;
     max-width: 520px;
     -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
 }
 .testimonials__actions {
+    margin-top: 15vh;
     margin-bottom: 30px;
     font-size: 14px;
 }
@@ -1808,18 +1850,62 @@ html.mfp-helper body {
     margin-top: 13vh;
     text-align: center;
 }
+.testimonials__nav {
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 14px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+}
 .testimonials__picture {
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+    overflow: hidden;
+    margin-left: 20px;
     margin-left: auto;
-    text-align: right;
     -webkit-box-flex: 0;
 }
+.testimonials__picture picture {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
 .testimonials__picture img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: inline-block;
     max-width: 100%;
-    height: 100vh;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+/* BLOG */
+.blog {
+    position: relative;
+    color: white;
+}
+.blog__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
 }
 /* SOME INNER PAGES CONTENT */
 

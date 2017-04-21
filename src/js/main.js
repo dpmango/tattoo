@@ -60,7 +60,12 @@ $(document).ready(function () {
 
   // populate nav sections
   $('.section').each(function (i, val) {
-    $('.sections-nav').append('<div class="sections-nav__dot" data-section=' + i + '></div>');
+    var naveName = "";
+    if ($(val).data('nav-name')) {
+      naveName = $(val).data('nav-name');
+    }
+
+    $('.sections-nav').append('<div class="sections-nav__wrapper"><div class="sections-nav__dot" data-section=' + i + '></div><span>' + naveName + '</span></div>');
     setScrollifyActiveClass();
   });
 
@@ -90,7 +95,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     speed: 700,
     vertical: false,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     dots: false,
     arrows: false,
     centerPadding: 0,
@@ -101,6 +106,12 @@ $(document).ready(function () {
     swipe: true,
     touchMove: true,
     fade: false
+  });
+
+  // slider navigation
+  var testimonialsSliderTotal = $('.testimonials__slide').length;
+  $('.testimonials__slide').each(function (i, val) {
+    $(val).find('.testimonials__nav').html(i + 1 + ' / ' + testimonialsSliderTotal);
   });
 
   // Magnific Popup

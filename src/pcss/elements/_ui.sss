@@ -8,14 +8,16 @@
     font-size: 14px
     display: inline-block
     width: 100%
-    border: 1px solid white
+    border: 1px solid color(white a(60%))
     background: transparent
     padding: 7px 10px
     transition: all $transitionSpeed ease
     box-shadow: none
+    color: white
     &:focus
+      border-color: white
       outline: none
-      box-shadow: 0 0 4px color(white a(40%))
+
     &::-webkit-input-placeholder
       color: white
     &::-moz-placeholder
@@ -24,12 +26,38 @@
       color: white
     &:-ms-input-placeholder
       color: white
-  &--short
+  &--icon
+    margin-bottom: 20px
+    input, textarea
+      border: 2px solid color(white a(60%))
+      padding: 10px 10px 10px 37px
+      &:focus
+        border-color: white
+  &--user
     input
-      max-width: 70px
-  &--90
+      background: svg-load('../../images/svg/input-user.svg') no-repeat 10px center
+      background-size: 18px 20px
+  &--mobile
     input
-      max-width: 90px
+      background: svg-load('../../images/svg/input-mobile.svg') no-repeat 10px center
+      background-size: 18px 20px
+  &--email
+    input
+      background: svg-load('../../images/svg/input-email.svg') no-repeat 10px center
+      background-size: 18px 20px
+  &--calendar
+    input
+      background: svg-load('../../images/svg/input-calendar.svg') no-repeat 10px center
+      background-size: 18px 20px
+  &--time
+    input
+      background: svg-load('../../images/svg/input-time.svg') no-repeat 10px center
+      background-size: 18px 20px
+  &--comment
+    textarea
+      background: svg-load('../../images/svg/input-comment.svg') no-repeat 10px 10px
+      background-size: 18px 20px
+
   &--error
     input
       display: block
@@ -62,13 +90,27 @@
     align-items: center
     justify-content: center
 
-
-.ui-inputs-h40
-  .ui-input
-    margin-bottom: 10px
-    input, textarea
-      font-size: 14px
-      padding: 10px
+.ui-file
+  position: relative
+  cursor: pointer
+  input
+    position: absolute 0 0 0 0
+    opacity: 0
+    z-index: 1
+    cursor: pointer
+  &__btn
+    opacity: .6
+    font-size: 18px
+    padding: 10px 25px
+    border-radius: 40px
+    border: 2px solid white
+    color: white
+    transition: all $transitionSpeed $ease
+    .ico
+      margin-left: 10px
+  &:hover
+    .ui-file__btn
+      opacity: 1
 
 // SELECT
 .ui-select

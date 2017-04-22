@@ -135,17 +135,6 @@ $(document).ready(function(){
     }
   });
 
-  $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom'
-  });
 
   $('.popup-gallery').magnificPopup({
 		delegate: 'a',
@@ -161,14 +150,6 @@ $(document).ready(function(){
 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
 		}
 	});
-
-
-  // Masked input
-  $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
-  $("input[name='phone']").mask("9 (999) 999-9999");
-  $("#tin").mask("99-9999999");
-  $("#ssn").mask("999-99-9999");
-
 
   // scrollify
   // setTimeout(setScrollify, 300);
@@ -231,6 +212,42 @@ $(document).ready(function(){
     var section = $(this).data('section');
     $.scrollify.move(section);
   });
+
+  ////////////////
+  // UI
+  ////////////////
+
+  // file uploader
+  var fileInputs = $( '.ui-file input' );
+  fileInputs.each(function(i, input){
+    var label	 = $(input).parent().find('span');
+    var labelVal = label.html();
+
+    $(input).on('change', function( e ){
+      var fileName = '';
+      if( $(this)[0].files && $(this)[0].files.length > 1 ){
+        fileName = ( $(this).data('multiple-caption' ) || '' ).replace( '{count}', $(this)[0].files.length );
+      } else{
+        fileName = $(this).val().split( '\\' ).pop();
+      }
+
+      if( fileName ){
+        label.html(fileName);
+      } else{
+        label.html(labelVal);
+      }
+
+    });
+  });
+
+  // datepciker
+  $('.js-datepciker').datepicker({
+    minDate: new Date(),
+    autoClose: true,
+    onSelect: function onSelect(fd, date) {
+
+    }
+  })
 
 
   // YANDEX MAP

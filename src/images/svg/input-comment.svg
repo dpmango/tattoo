@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>input-comment</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="popup_service" transform="translate(-470.000000, -452.000000)" fill="#FFFFFF">
+            <path d="M481.900708,452 L475.099292,452 C472.288271,452 470,454.288271 470,457.099646 L470,461.067375 C470,463.784542 472.135979,466.011896 474.817375,466.158521 L474.817375,468.522937 C474.817375,468.788562 475.033063,469.00425 475.298688,469.00425 C475.425833,469.00425 475.54625,468.954312 475.637625,468.862937 L476.168875,468.331687 C477.564646,466.935917 479.421542,466.166667 481.395667,466.166667 L481.899292,466.166667 C484.711729,466.166667 487,463.878396 487,461.067375 L487,457.099646 C487,454.288271 484.711729,452 481.900708,452 Z" id="input-comment"></path>
+        </g>
+    </g>
+</svg>

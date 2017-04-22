@@ -10,13 +10,39 @@ html.mfp-helper
     height: 100%
     -webkit-transform: translateZ(0)
 
-#small-dialog
-  background: white
-  padding: 20px 30px
+.modal
+  background: #2E2E32
+  padding: 30px 100px 40px 100px
   text-align: left
-  max-width: 600px
+  max-width: 720px
   margin: 40px auto
   position: relative
+  color: white
+  &__title
+    font-family: 'RoadRadio'
+    font-size: 28px
+    letter-spacing: 2.52px
+    text-transform: uppercase
+    text-align: center
+  &__cta
+    padding-top: 20px
+    display: flex
+    justify-content: space-between
+
+
+
+button.mfp-close
+  background: svg-load('../../images/svg/close-btn.svg') no-repeat center
+  background-size: cover
+  size: 30px
+  font-size: 0
+  top: 30px
+  right: 30px
+  transition: all $transitionSpeed $ease
+  &:focus, &:active
+    top: 30px
+  &:hover
+    filter: brightness(50)
 
 // Fade-zoom animation for first dialog
 
@@ -35,28 +61,6 @@ html.mfp-helper
     opacity: 0
     transition: opacity 0.3s ease-out
   &.mfp-ready.mfp-bg
-    opacity: 0.8
-  &.mfp-removing.mfp-bg
-    opacity: 0
-
-
-// Fade-move animation
-
-.my-mfp-slide-bottom
-  .zoom-anim-dialog
-    opacity: 0
-    transition: all 0.2s ease-out
-    transform: translateY(-20px) perspective(600px) rotateX(10deg)
-  &.mfp-ready .zoom-anim-dialog
-    opacity: 1
-    transform: translateY(0) perspective(600px) rotateX(0)
-  &.mfp-removing .zoom-anim-dialog
-    opacity: 0
-    transform: translateY(-10px) perspective(600px) rotateX(10deg)
-  &.mfp-bg
-    opacity: 0
-    transition: opacity 0.3s ease-out
-  &.mfp-ready.mfp-bg
-    opacity: 0.8
+    opacity: 0.7
   &.mfp-removing.mfp-bg
     opacity: 0

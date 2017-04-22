@@ -25,7 +25,7 @@
           <div class="header__contact"><i class="ico ico-location"> </i><span>Москва, Кутузовский пр-т, 27</span></div>
           <div class="header__contact"><i class="ico ico-phone"></i><a href="tel:">8 (495) 123 45 67</a></div>
         </div>
-        <div class="header__menu"><a class="btn btn--primary" href="#">Записаться <br> к мастеру</a>
+        <div class="header__menu"><a class="btn btn--primary popup-with-zoom-anim" href="#modalOrder">Записаться <br> к мастеру</a>
           <div class="header__hamburger js-main-hamb">
             <button class="hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
             <div class="header__hamburger__name">Меню</div>
@@ -416,6 +416,49 @@
       </div>
     </div>
   </footer>
+  <!-- MODALS-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalOrder">
+    <div class="modal__title">Записаться к мастеру</div>
+    <form action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email">
+      </div>
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--calendar">
+            <input class="js-datepciker" type="text" placeholder="Дата">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--time">
+            <input type="text" placeholder="Время" data-mask="00:00 - 00:00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Комментарии" rows="3"></textarea>
+      </div>
+      <div class="modal__cta">
+        <div class="ui-file">
+          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+          <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
+        </div>
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->
   <link rel="stylesheet" href="css/secondary.css" type="text/css">
@@ -427,8 +470,9 @@
   <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
   <script src="components/slick-carousel/slick/slick.min.js"></script>
   <script src="components/masonry/dist/masonry.pkgd.min.js"> </script>
-  <script src="js/libs/jquery.maskedinput.min.js"></script>
+  <script src="components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
   <script src="components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="components/air-datepicker/dist/js/datepicker.min.js"></script>
   <script src="js/libs/scrollify.js"></script>
   <script src="js/main.js"></script>
   <!--endbuild-->

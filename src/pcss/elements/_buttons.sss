@@ -30,6 +30,19 @@ button
     &:hover
       background: white
       color: $fontColor
+    &--fill
+      color: $fontColor
+      background: $colorPrimary
+      border-color: transparent
+      &:hover
+        background: $colorPrimary
+        transform: scale(1.05) translate3d(0,-5px,0)
+        box-shadow: 0 2px 4px color($colorPrimary a(50%))
+  &--muted
+    opacity: .6
+    &:hover
+      opacity: 1
+      
   &--block
     width: 100%
     display: block

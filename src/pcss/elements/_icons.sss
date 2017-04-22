@@ -11,13 +11,20 @@
     background-image: svg-load('../../images/svg/logo.svg')
     size: 207px 65px
   &-scrolldown
-    position: absolute
-    bottom: 25px
-    left: 50%
-    transform: translateX(-50%)
     cursor: pointer
     background-image: svg-load('../../images/svg/ico-scrolldown.svg')
     size: 28px 40px
+    transition: all $transitionSpeed $ease
+    &:hover
+      opacity: .5
+
+  &-nav-arrow
+    cursor: pointer
+    background-image: svg-load('../../images/svg/nav-arrow.svg')
+    size: 10px 20px
+    &--right
+      transform: rotate(180deg)
+      transform-origin: 50% 50%
 
   &-service-tatoo-machine
     opacity: .5

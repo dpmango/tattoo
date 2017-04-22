@@ -1993,6 +1993,41 @@ button:focus {
     font-size: 14px;
     line-height: 1.1;
 }
+.hero__bottom {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    left: 0;
+}
+.hero__bottom__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.hero__bottom__socials a {
+    display: inline-block;
+    margin-right: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.hero__bottom__socials a:last-child {
+    margin-right: 0;
+}
+.hero__bottom__socials a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+}
+.hero__bottom__nav .ico-nav-arrow {
+    margin-right: 8px;
+}
+.hero__bottom__nav .ico-nav-arrow--right {
+    margin-left: 8px;
+}
 /* SERVICE */
 .services {
     position: relative;
@@ -2031,6 +2066,7 @@ button:focus {
         -ms-flex-align: center;
 }
 .services__item {
+    position: relative;
     -webkit-flex: 0 1 33%;
         -ms-flex: 0 1 33%;
             flex: 0 1 33%;
@@ -2039,6 +2075,7 @@ button:focus {
     -webkit-box-flex: 0;
 }
 .services__item__icon {
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2061,7 +2098,30 @@ button:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
 }
+.services__item__icon:after, .services__item__icon:before {
+    position: absolute;
+    top: -10px;
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #ffffff;
+    background: rgba(255, 255, 255, 0.5);
+    content: ' ';
+}
+.services__item__icon:after {
+    left: -10px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.services__item__icon:before {
+    right: -10px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
 .services__item__name {
+    position: relative;
     margin-top: 5vh;
     color: #ffffff;
     color: rgba(255, 255, 255, 0.5);

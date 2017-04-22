@@ -22,63 +22,10 @@ $(document).ready(function(){
     $('.navi').toggleClass('active');
   });
 
-  // scrollify
-  $.scrollify({
-    section : ".section",
-    sectionName : "section-name",
-    interstitialSection : ".seo, .footer",
-    easing: "easeOutExpo",
-    scrollSpeed: 1100,
-    offset : 0,
-    scrollbars: true,
-    standardScrollElements: ".-gallery__grid",
-    setHeights: false,
-    overflowScroll: true,
-    updateHash: true,
-    touchScroll: true,
-    before:function(i, el) {
-      $('.sections-nav__dot').each(function(index, val){
-        if ( $(val).data('section') == i ){
-          $(val).addClass('active');
-        } else{
-          $(val).removeClass('active');
-        }
-      });
-
-      if (i == 0){
-        $('.header').removeClass('header--no-conacts')
-      } else {
-        $('.header').addClass('header--no-conacts')
-      }
-    },
-    after:function() {},
-    afterResize:function() {},
-    afterRender:function() {}
+  // scrolldown icon
+  $('.ico-scrolldown').on('click', function(){
+    $.scrollify.move(1);
   });
-
-  // populate nav sections
-  $('.section').each(function(i, val){
-    var naveName = ""
-    if ( $(val).data('nav-name') ){
-      naveName = $(val).data('nav-name');
-    }
-
-    $('.sections-nav').append('<div class="sections-nav__wrapper"><div class="sections-nav__dot" data-section='+ i +'></div><span>'+naveName+'</span></div>');
-    setScrollifyActiveClass();
-  });
-
-  // scrollify navigation
-  $('.sections-nav').on('click', '.sections-nav__dot', function(){
-    var section = $(this).data('section');
-    $.scrollify.move(section);
-  });
-
-  // first screen - set active class
-  function setScrollifyActiveClass(){
-    var hash = window.location.hash;
-    var scrollifyNumber = parseInt(hash.substring(1)) - 1;
-    $('.sections-nav').find('.sections-nav__dot[data-section='+ scrollifyNumber +']').addClass('active');
-  }
 
   // Masonry
   $('.gallery__grid').masonry({
@@ -86,6 +33,43 @@ $(document).ready(function(){
     columnWidth: 300,
     gutter: 20
   });
+
+  // Hero slider
+  $('.hero__slider').slick({
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 700,
+    vertical: false,
+    adaptiveHeight: false,
+    dots: false,
+    arrows: false,
+    centerPadding: 0,
+    draggable: true,
+    easing: 'linear',
+    infinite: false,
+    lazyLoad: 'ondemand',
+    swipe: true,
+    touchMove: true,
+    fade: false
+  });
+
+  // slider navigation
+  var heroSliderTotal = $('.testimonials__slide').length;
+  $('.js-heroSliderTotal').html(heroSliderTotal);
+
+  $('.hero__slider').on('beforeChange', function(e, s, currentSlide, nextSlide){
+    $('.js-heroSliderCurrent').html(nextSlide + 1 );
+  });
+
+  $('.ico-nav-arrow').on('click', function(){
+    $('.hero__slider').slick('prev');
+  });
+  $('.ico-nav-arrow--right').on('click', function(){
+    $('.hero__slider').slick('next');
+  });
+
+
 
   // Testimonails slider
   $('.testimonials__slider').slick({
@@ -184,6 +168,70 @@ $(document).ready(function(){
   $("input[name='phone']").mask("9 (999) 999-9999");
   $("#tin").mask("99-9999999");
   $("#ssn").mask("999-99-9999");
+
+
+  // scrollify
+  // setTimeout(setScrollify, 300);
+  setScrollify();
+  function setScrollify(){
+    $.scrollify({
+      section : ".section",
+      sectionName : "section-name",
+      interstitialSection : "",
+      easing: "easeOutExpo",
+      scrollSpeed: 1100,
+      offset : 0,
+      scrollbars: true,
+      standardScrollElements: ".seo, .footer, .-gallery__grid",
+      setHeights: true,
+      overflowScroll: true,
+      updateHash: true,
+      touchScroll: true,
+      before:function(i, el) {
+        $('.sections-nav__dot').each(function(index, val){
+          if ( $(val).data('section') == i ){
+            $(val).addClass('active');
+          } else{
+            $(val).removeClass('active');
+          }
+        });
+
+        if (i == 0){
+          $('.header').removeClass('header--no-conacts')
+        } else {
+          $('.header').addClass('header--no-conacts')
+        }
+      },
+      after:function() {},
+      afterResize:function() {},
+      afterRender:function() {}
+    });
+  }
+
+  // populate nav sections
+  $('.section').each(function(i, val){
+    var naveName = ""
+    if ( $(val).data('nav-name') ){
+      naveName = $(val).data('nav-name');
+    }
+    $('.sections-nav').append('<div class="sections-nav__wrapper"><div class="sections-nav__dot" data-section='+ i +'></div><span>'+naveName+'</span></div>');
+  });
+
+  // set active class
+  var hash = window.location.hash.substring(1);
+  if (hash) {
+    var scrollifyNumber = $('.section').index( $('.section[data-section-name='+ hash +']') );
+    $('.sections-nav').find('.sections-nav__dot[data-section='+ scrollifyNumber +']').addClass('active');
+  } else {
+    $('.sections-nav').find('.sections-nav__dot[data-section='+ 0 +']').addClass('active');
+  }
+
+  // scrollify navigation
+  $('.sections-nav').on('click', '.sections-nav__dot', function(){
+    var section = $(this).data('section');
+    $.scrollify.move(section);
+  });
+
 
   // YANDEX MAP
   ymaps.ready(init);

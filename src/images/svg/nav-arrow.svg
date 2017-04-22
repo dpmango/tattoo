@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main" transform="translate(-39.000000, -840.000000)" stroke="#FFFFFF">
+            <g id="Group-24" transform="translate(40.000000, 840.000000)">
+                <polyline id="nav-arrow" transform="translate(5.000000, 10.000000) scale(-1, 1) translate(-5.000000, -10.000000) " points="1.42108547e-14 0 1.42108547e-14 0 10 10 4.65067457e-14 20"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

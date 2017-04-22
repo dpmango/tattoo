@@ -101,6 +101,28 @@
       font-size: 14px
       line-height: 1.1
 
+  &__bottom
+    position: absolute
+    bottom: 25px
+    left: 0
+    right: 0
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &__socials
+      a
+        display: inline-block
+        margin-right: 20px
+        transition: all $transitionSpeed $ease
+        &:last-child
+          margin-right: 0
+        &:hover
+          opacity: .5
+    &__nav
+      .ico-nav-arrow
+        margin-right: 8px
+      .ico-nav-arrow--right
+        margin-left: 8px
 
 // SERVICE
 .services
@@ -122,10 +144,12 @@
     justify-content: center
     align-items: center
   &__item
+    position: relative
     flex: 0 1 33%
     padding: 35px 20px
     text-align: center
     &__icon
+      position: relative
       display: flex
       justify-content: center
       align-items: center
@@ -135,12 +159,27 @@
       border-radius: 50%
       border: 3px solid color(white a(50%))
       transition: all $transitionSpeed $ease
+      &::after, &::before
+        display: block
+        content: ' '
+        size: 24px 3px
+        position: absolute
+        top: -10px
+        background: color(white a(50%))
+      &::after
+        transform: rotate(45deg)
+        left: -10px
+      &::before
+        transform: rotate(-45deg)
+        right: -10px
     &__name
+      position: relative
       font-size: 20px
       letter-spacing: 2.2px
       margin-top: 5vh
       color: color(white a(50%))
       transition: all $transitionSpeed $ease
+
     &:hover
       .services__item__icon
         border: 3px solid $colorPrimary

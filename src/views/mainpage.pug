@@ -14,7 +14,7 @@ doctype html
     // SECTIONS
     .section(data-section-name='hero' data-nav-name="Главная")
       .hero
-        .container
+        .container.container--wide
           .hero__slider
             // slide
             .hero__slide
@@ -79,26 +79,32 @@ doctype html
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-tatoo-machine
+              .services__item__icon-double
               .services__item__name Тaтуировки
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-tattooache
+              .services__item__icon-double
               .services__item__name Татуаж
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-pircing
+              .services__item__icon-double
               .services__item__name Пирсинг
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-chrysanthemum
+              .services__item__icon-double
               .services__item__name Био-тату
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-nano
+              .services__item__icon-double
               .services__item__name Удалениe
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-pen
+              .services__item__icon-double
               .services__item__name Обучение  
 
     // GALLERY SECTION
@@ -326,7 +332,12 @@ doctype html
     // SEO SECTION (no scrollify)
     .seo
       .container
-        .small-title.text-center Добро пожаловать в лучший тату салон в Москве!
+        .seo__links
+          a(href='#') Почему тату-мания?
+          a(href='#') История тату
+          a(href='#') Разное о тату
+        
+        .small-title.text-center.mt60 Добро пожаловать в лучший тату салон в Москве!
         .seo-text.mt25
           p 1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки
           p 2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.

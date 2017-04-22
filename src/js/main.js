@@ -232,10 +232,16 @@ $(document).ready(function () {
 
   // YANDEX MAP
   ymaps.ready(init);
-  var myMap, myPlacemark;
+  var myMap, myMapContact;
 
   function init() {
     myMap = new ymaps.Map("yaMap", {
+      center: [55.76, 37.64],
+      zoom: 15,
+      controls: []
+    });
+
+    myMapContact = new ymaps.Map("yaMapContact", {
       center: [55.76, 37.64],
       zoom: 15,
       controls: []

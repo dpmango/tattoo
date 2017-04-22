@@ -76,27 +76,97 @@
     display: flex
     background: black
     margin: 80px
-    padding: 80px
+    padding: 10vh 80px
     width: 100%
     height: 100%
     max-height: calc(100vh - 160px)
   &__list
-    flex: 1
+    flex: 0 1 auto
     display: flex
     flex-direction: column
     margin: 0
     padding: 0
     font-size: 28px
     letter-spacing: 2.52px
-    li
-      flex: 1
+    > li
+      position: relative
+      flex: 1 0 auto
+      display: flex
+      align-items: center
+      margin-right: 80px
+      > a
+        &::after
+          display: inline-block
+          content: ' '
+          margin-left: 15px
+          opacity: 0
+          background: svg-load('../../images/svg/navi-li-arrow.svg') no-repeat center
+          background-size: cover
+          vertical-align: middle
+          size: 10px 20px
+          transform: translate3d(20px, 0%, 0)
+          transition: all $transitionSpeed $ease
+      &:hover
+        > a
+          color: $colorPrimary
+          transform: translate3d(80px,0,0)
+          &::after
+            transform: translate3d(0px, 0%, 0)
+            opacity: 1
+        ul
+          opacity: 1
+          pointer-events: all
+          transform: translate3d(0,-50%,0)
+      ul
+        display: block
+        position: absolute
+        left: 0
+        margin-left: 200px
+        padding-left: 100px
+        top: 50%
+        font-size: 18px
+        letter-spacing: 1.62px
+        opacity: 0
+        pointer-events: none
+        transform: translate3d(60px,-50%,0)
+        transition: all $transitionSpeed $ease
+        li
+          display: block
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+          a
+            &:hover
+              transform: translate3d(0px,0,0)
       a
+        flex: 1 0 auto
         display: block
         transform: translate3d(0,0,0)
         transition: all $transitionSpeed $ease
         &:hover
           color: $colorPrimary
-          transform: translate3d(80px,0,0)
+
+  &__contacts
+    flex: 0 1 400px
+    margin-left: auto
+    max-width: 400px
+    display: flex
+    flex-direction: column
+    #yaMapContact
+      flex: 1
+      margin-bottom: 4vh
+    .header__contact
+      margin-bottom: 5px
+    &__socials
+      margin-top: 3vh
+      a
+        display: inline-block
+        margin-right: 20px
+        transition: all $transitionSpeed $ease
+        &:last-child
+          margin-right: 0
+        &:hover
+          opacity: .5
 
 
 

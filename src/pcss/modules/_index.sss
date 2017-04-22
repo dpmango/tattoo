@@ -74,8 +74,6 @@
     margin-top: 15vh
     display: flex
     justify-content: space-between
-    margin-left: -30px
-    margin-right: -30px
   &__benefit
     flex: 0 1 33%
     padding-left: 20px
@@ -131,7 +129,8 @@
   &::after
     display: block
     content: ' '
-    position: absolute 0 50% 0 0
+    position: absolute 0 0 0 0
+    width: 600px
     background: url('../images/el/mainpageServicesBG.png') no-repeat left center
     background-size: cover
     z-index: 1
@@ -164,14 +163,35 @@
         content: ' '
         size: 24px 3px
         position: absolute
-        top: -10px
+        top: -14px
         background: color(white a(50%))
+        transition: all $transitionSpeed $ease
       &::after
         transform: rotate(45deg)
         left: -10px
       &::before
         transform: rotate(-45deg)
         right: -10px
+    &__icon-double
+      position: relative
+      width: 120px
+      margin-left: auto
+      margin-right: auto
+      &::after, &::before
+        display: block
+        content: ' '
+        size: 24px 3px
+        position: absolute
+        top: 7px
+        background: color(white a(50%))
+        transition: all $transitionSpeed $ease
+      &::after
+        transform: rotate(-45deg)
+        left: -10px
+      &::before
+        transform: rotate(45deg)
+        right: -10px
+
     &__name
       position: relative
       font-size: 20px
@@ -183,6 +203,11 @@
     &:hover
       .services__item__icon
         border: 3px solid $colorPrimary
+        &::after, &::before
+          background-color: $colorPrimary
+      .services__item__icon-double
+        &::after, &::before
+          background-color: $colorPrimary
       .services__item__name
         color: $colorPrimary
 
@@ -574,4 +599,29 @@
   padding-bottom: 20px
   background: #18181D
   color: white
-  &-text
+  &__links
+    display: flex
+    justify-content: space-between
+    font-size: 20px
+    letter-spacing: 2.2px
+    text-transform: uppercase
+    font-weight: 300
+    a
+      position: relative
+      transition: all $transitionSpeed $ease
+      &:after
+        display: block
+        content: ' '
+        position: absolute
+        left: 50%
+        right: 50%
+        background: $colorPrimary
+        height: 2px
+        bottom: -3px
+        transition: all $transitionSpeed $ease
+      &:hover
+        font-weight: 600
+        color: $colorPrimary
+        &::after
+          left: 0
+          right: 0

@@ -62,10 +62,10 @@ $(document).ready(function(){
     $('.js-heroSliderCurrent').html(nextSlide + 1 );
   });
 
-  $('.ico-nav-arrow').on('click', function(){
+  $('.hero .ico-nav-arrow').on('click', function(){
     $('.hero__slider').slick('prev');
   });
-  $('.ico-nav-arrow--right').on('click', function(){
+  $('.hero .ico-nav-arrow--right').on('click', function(){
     $('.hero__slider').slick('next');
   });
 
@@ -94,6 +94,21 @@ $(document).ready(function(){
   var testimonialsSliderTotal = $('.testimonials__slide').length
   $('.testimonials__slide').each(function(i, val){
     $(val).find('.testimonials__nav').html(i + 1 + ' / ' + testimonialsSliderTotal)
+  });
+
+  // Modal slider
+  function initModalSlider(){
+    $('.modal__slider').slick({
+      slidesToShow: 1,
+      dots: false,
+      arrows: false
+    });
+  }
+  $('.modal__slider .ico-nav-arrow').on('click', function(){
+    $('.modal__slider').slick('prev');
+  });
+  $('.modal__slider .ico-nav-arrow--right').on('click', function(){
+    $('.modal__slider').slick('next');
   });
 
   // Magnific Popup
@@ -127,6 +142,10 @@ $(document).ready(function(){
       beforeOpen: function() {
         startWindowScroll = _window.scrollTop();
         $('html').addClass('mfp-helper');
+      },
+      open: function(){
+        // initialize slick
+        setTimeout(initModalSlider, 500)
       },
       close: function() {
         $('html').removeClass('mfp-helper');

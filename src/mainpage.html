@@ -419,45 +419,93 @@
   <!-- MODALS-->
   <div class="modal zoom-anim-dialog mfp-hide" id="modalOrder">
     <div class="modal__title">Записаться к мастеру</div>
-    <form action="#">
-      <div class="row">
-        <div class="col col--3-6">
-          <div class="ui-input ui-input--icon ui-input--user">
-            <input type="text" placeholder="Ваше имя">
+    <div class="modal__slider">
+      <div class="modal__slide">
+        <div class="modal__slide__subject"><i class="ico ico-nav-arrow"></i><span>На татуировку</span><i class="ico ico-nav-arrow ico-nav-arrow--right"></i></div>
+        <form action="#">
+          <div class="row">
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--user">
+                <input type="text" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--mobile">
+                <input type="text" placeholder="Телефон" data-mask="0 (000) 000-00-00">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col col--3-6">
-          <div class="ui-input ui-input--icon ui-input--mobile">
-            <input type="text" placeholder="Телефон" data-mask="0 (000) 000-00-00">
+          <div class="ui-input ui-input--icon ui-input--email">
+            <input type="email" placeholder="Ваш email">
           </div>
-        </div>
-      </div>
-      <div class="ui-input ui-input--icon ui-input--email">
-        <input type="email" placeholder="Ваш email">
-      </div>
-      <div class="row">
-        <div class="col col--3-6">
-          <div class="ui-input ui-input--icon ui-input--calendar">
-            <input class="js-datepciker" type="text" placeholder="Дата">
+          <div class="row">
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--calendar">
+                <input class="js-datepciker" type="text" placeholder="Дата">
+              </div>
+            </div>
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--time">
+                <input type="text" placeholder="Время" data-mask="00:00 - 00:00">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col col--3-6">
-          <div class="ui-input ui-input--icon ui-input--time">
-            <input type="text" placeholder="Время" data-mask="00:00 - 00:00">
+          <div class="ui-input ui-input--icon ui-input--comment">
+            <textarea placeholder="Комментарии" rows="3"></textarea>
           </div>
-        </div>
+          <div class="modal__cta">
+            <div class="ui-file">
+              <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+              <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
+            </div>
+            <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+          </div>
+        </form>
       </div>
-      <div class="ui-input ui-input--icon ui-input--comment">
-        <textarea placeholder="Комментарии" rows="3"></textarea>
+      <!--slide-->
+      <div class="modal__slide">
+        <div class="modal__slide__subject"><i class="ico ico-nav-arrow"></i><span>На татуаж</span><i class="ico ico-nav-arrow ico-nav-arrow--right"></i></div>
+        <form action="#">
+          <div class="row">
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--user">
+                <input type="text" placeholder="Ваше имя">
+              </div>
+            </div>
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--mobile">
+                <input type="text" placeholder="Телефон" data-mask="0 (000) 000-00-00">
+              </div>
+            </div>
+          </div>
+          <div class="ui-input ui-input--icon ui-input--email">
+            <input type="email" placeholder="Ваш email">
+          </div>
+          <div class="row">
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--calendar">
+                <input class="js-datepciker" type="text" placeholder="Дата">
+              </div>
+            </div>
+            <div class="col col--3-6">
+              <div class="ui-input ui-input--icon ui-input--time">
+                <input type="text" placeholder="Время" data-mask="00:00 - 00:00">
+              </div>
+            </div>
+          </div>
+          <div class="ui-input ui-input--icon ui-input--comment">
+            <textarea placeholder="Комментарии" rows="3"></textarea>
+          </div>
+          <div class="modal__cta">
+            <div class="ui-file">
+              <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+              <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
+            </div>
+            <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+          </div>
+        </form>
       </div>
-      <div class="modal__cta">
-        <div class="ui-file">
-          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
-          <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
-        </div>
-        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
-      </div>
-    </form>
+    </div>
   </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->

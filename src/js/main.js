@@ -188,6 +188,33 @@ $(document).ready(function () {
     }
   });
 
+  $('.popup-master').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide',
+    callbacks: {
+      beforeOpen: function beforeOpen() {},
+      open: function open() {
+        $('body').addClass('popup-enabled');
+        $.scrollify.disable();
+      },
+      close: function close() {
+        $.scrollify.enable();
+        $('body').removeClass('popup-enabled');
+      }
+    }
+  });
+
+  $('.js-close-modal').on('click', function () {
+    $.magnificPopup.close();
+  });
+
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',

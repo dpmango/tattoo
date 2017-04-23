@@ -18,6 +18,17 @@ html.mfp-helper
   margin: 40px auto
   position: relative
   color: white
+  &--master
+    padding: 0
+    margin: 0 auto
+    max-width: 1400px
+    button.mfp-close
+      filter: brightness(50)
+      size: 60px
+      top: 100px
+      &:focus, &:active
+        top: 100px
+
   &__title
     font-family: 'RoadRadio'
     font-size: 28px
@@ -45,6 +56,25 @@ html.mfp-helper
       font-size: 20px
       font-weight: 600
       margin-bottom: 25px
+
+  // masters
+  &__master
+    display: flex
+    min-height: 100vh
+    overflow-y: scroll
+    .master__content
+      flex: 0 1 50%
+      padding-left: 5%
+      display: flex
+      flex-direction: column
+      margin-top: auto
+      padding-top: 100px
+      margin-bottom: 20px
+      padding-right: 3%
+    .master__image
+      flex: 0 1 50%
+      margin-left: auto
+
 
 
 button.mfp-close
@@ -75,6 +105,30 @@ button.mfp-close
     opacity: 0
   &.mfp-bg
     opacity: 0
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.7
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.my-mfp-slide
+  &.mfp-wrap
+    z-index: 6
+  .mfp-container
+    padding: 0
+  .zoom-anim-dialog
+    opacity: 0
+    transition: all $transitionSpeed $ease
+    transform: translate3d(-100%, 0, 0)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+  &.mfp-removing .zoom-anim-dialog
+    transform: translate3d(100%, 0, 0)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    z-index: 6
     transition: opacity 0.3s ease-out
   &.mfp-ready.mfp-bg
     opacity: 0.7

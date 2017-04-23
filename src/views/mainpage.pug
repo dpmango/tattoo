@@ -145,61 +145,107 @@ doctype html
           .section-title Мастера
           .masters__wrapper
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle1.png', srcset='images/homepageMasterCircle1.png 1x, images/homepageMasterCircle1@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle2.png', srcset='images/homepageMasterCircle2.png 1x, images/homepageMasterCircle2@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle3.png', srcset='images/homepageMasterCircle4.png 1x, images/homepageMasterCircle3@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle4.png', srcset='images/homepageMasterCircle4.png 1x, images/homepageMasterCircle4@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle5.png', srcset='images/homepageMasterCircle5.png 1x, images/homepageMasterCircle5@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
-            a(href='#').masters__card
+            a(href='#masterModal').masters__card.popup-master
               .masters__card__image
                 i.ico.ico-zoom
                 picture
                   img(src='images/homepageMasterCircle1.png', srcset='images/homepageMasterCircle1.png 1x, images/homepageMasterCircle1@2x.png 2x')
               .masters__card__name Patrick Jacobs
+              .masters__card__yrs Опыт работы: 10 лет
             // master card
             a(href='#').masters__card.masters__card--more
               .masters__card__image
                 i.ico.ico-zoom
                 i.ico.ico-team
               .masters__card__name Больше мастеров
-    
+          
+          // MASTER MODALS
+          .modal.modal--master.zoom-anim-dialog.mfp-hide#masterModal
+            .modal__master
+              .master__content
+                .master__content__image
+                  picture
+                    img(src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                .master__content__row.mt40
+                  .master__content__scope
+                    .master__content__scope__name Стиль
+                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                  .master__content__scope
+                    .master__content__scope__name опыт работы
+                    a(href='#').hoverable-link 15 лет
+                
+                .master__content__row.mt40
+                  .master__content__award
+                    .text-triangle
+                      span
+                        span 14
+                    span.fz14 Международных наград
+                  .master__content__award
+                    .text-triangle
+                      span
+                        span 25
+                    span.fz14 Международных наград
+                      
+                .fz14.mt40
+                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+                  p Но откуда пошла такая традиция или мода? Что же представляет собой нательная живопись?
+                
+                .text-center.mt30
+                  a(href='#').btn.btn--ghost Узнать подробнее
+                  a(href='#').db.fz14.mt20.js-close-modal Назад
+              .master__image
+                picture
+                  img(src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+            
+                  
     // TESTIMONIALS SECTION
     .section(data-section-name='testimonials' data-nav-name="Отзывы")
       .testimonials
@@ -317,7 +363,7 @@ doctype html
                     p Внимание предложение ограничено, если промокоды сегодня кончились, заходите <br> на наш сайт завтра!
                   .blog__promo__counter
                     span Осталось <br> купонов:
-                    .blog__promo__triangle
+                    .text-triangle
                       span
                         span 14
                       

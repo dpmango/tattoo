@@ -186,6 +186,10 @@ body, html {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
 }
+.row--no-col {
+    margin-right: 0;
+    margin-left: 0;
+}
 .row--condenced {
     margin-right: 0;
     margin-left: 0;
@@ -606,6 +610,12 @@ body, html {
     .text-right--tablet {
         text-align: right;
     }
+}
+.db {
+    display: block;
+}
+.dib {
+    display: inline-block;
 }
 
 /* 2. Elements */
@@ -1916,29 +1926,11 @@ button:focus {
     font-weight: 600;
 }
 .footer__links a {
-    position: relative;
     display: inline-block;
     margin-right: 20px;
 }
 .footer__links a:last-child {
     margin-right: 0;
-}
-.footer__links a:after {
-    position: absolute;
-    right: 0;
-    bottom: -3px;
-    left: 0;
-    display: block;
-    height: 2px;
-    background: #D2A36E;
-    content: ' ';
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-.footer__links a:hover {}
-.footer__links a:hover:after {
-    right: 50%;
-    left: 50%;
 }
 .footer__icons {
     display: -webkit-box;
@@ -2126,6 +2118,27 @@ button:focus {
     font-family: 'RoadRadio';
     line-height: 1;
 }
+.arrow-bar:before, .arrow-bar:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    content: ' ';
+}
+.arrow-bar:before {
+    left: -19px;
+    width: 20px;
+    height: 100%;
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='20px' height='40px' viewBox='0 0 20 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ERectangle 10%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-650.000000, -224.000000)' fill='%23D2A36E'%3E %3Cg id='Group-15' transform='translate(649.000000, 224.000000)'%3E %3Cpolygon id='Rectangle-10' points='1 0 20.5 0 20.5 40 1 40 20.2704506 20'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+    background-size: cover;
+}
+.arrow-bar:after {
+    right: -22.99px;
+    width: 23px;
+    height: 100%;
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='24px' height='40px' viewBox='0 0 24 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Earrow-bar-after%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-767.000000, -172.000000)' fill='%23D2A36E'%3E %3Cg id='Group-15' transform='translate(649.000000, 172.000000)'%3E %3Cpolygon id='arrow-bar-after' points='118.643093 0 141.685481 20 118.643093 40'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+    background-size: cover;
+}
 .section-title {
     position: absolute;
     top: 25px;
@@ -2150,6 +2163,58 @@ button:focus {
 .seo-text p {
     margin: 0;
     padding: 0;
+}
+.text-triangle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    -webkit-align-items: stretch;
+            align-items: stretch;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding: 6px;
+    width: 53px;
+    height: 53px;
+    border: 1px solid #D2A36E;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-box-flex: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+}
+.text-triangle > span {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1 1 0%;
+    border: 2px solid #D2A36E;
+    -webkit-box-flex: 1;
+}
+.text-triangle > span > span {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding-top: 5px;
+    width: 100%;
+    color: #D2A36E;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-size: 24px;
+    font-family: 'RoadRadio';
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
 }
 /* SLICK DOTS */
 .slick-custom-dots .slick-dots {
@@ -2197,6 +2262,27 @@ button:focus {
 .slick-custom-dots .slick-dots li.slick-active button {}
 .slick-custom-dots .slick-dots li.slick-active button:after {
     background: white;
+}
+/* HOVERS */
+.hoverable-link {
+    position: relative;
+}
+.hoverable-link:after {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    display: block;
+    height: 2px;
+    background: #D2A36E;
+    content: ' ';
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.hoverable-link:hover {}
+.hoverable-link:hover:after {
+    right: 50%;
+    left: 50%;
 }
 /* INDEX PAGE */
 .section {
@@ -2280,6 +2366,9 @@ button:focus {
     .sections-nav {
         display: none;
     }
+}
+.popup-enabled .sections-nav {
+    z-index: 0;
 }
 /* HERO */
 .hero {
@@ -2870,6 +2959,20 @@ button:focus {
     margin-top: 10px;
     font-weight: 300;
     font-size: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.masters__card__yrs {
+    margin-top: 2px;
+    color: #D2A36E;
+    letter-spacing: 1.54px;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
 }
 .masters__card:hover .masters__card__image {}
 .masters__card:hover .masters__card__image:before {
@@ -2887,6 +2990,15 @@ button:focus {
     opacity: 1;
     -webkit-transform: translate3d(-50%, -50%, 0);
             transform: translate3d(-50%, -50%, 0);
+}
+.masters__card:hover .masters__card__name {
+    color: #D2A36E;
+    font-weight: 600;
+}
+.masters__card:hover .masters__card__yrs {
+    opacity: .6;
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
 }
 /* TESTIMONIALS */
 .testimonials {
@@ -3187,54 +3299,6 @@ button:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
 }
-.blog__promo__triangle {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: stretch;
-            align-items: stretch;
-    -webkit-justify-content: center;
-            justify-content: center;
-    padding: 6px;
-    width: 53px;
-    height: 53px;
-    border: 1px solid #D2A36E;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-}
-.blog__promo__triangle > span {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1 1 0%;
-    border: 2px solid #D2A36E;
-    -webkit-box-flex: 1;
-}
-.blog__promo__triangle > span > span {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-            justify-content: center;
-    padding-top: 5px;
-    width: 100%;
-    color: #D2A36E;
-    text-align: center;
-    letter-spacing: 1.8px;
-    font-size: 24px;
-    font-family: 'RoadRadio';
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-}
 .blog__promo__form {
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -3414,6 +3478,77 @@ button:focus {
     .text-page__wrapper p {
         font-size: 18px;
     }
+}
+/* MASTER */
+.master {}
+.master__content {}
+.master__content__image {
+    position: relative;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+.master__content__image img {
+    max-width: 100%;
+}
+.master__content__row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+.master__content__row > div {
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    padding-right: 20px;
+    padding-left: 20px;
+    -webkit-box-flex: 0;
+}
+.master__content__scope a {
+    display: inline-block;
+    color: #D2A36E;
+    font-size: 14px;
+}
+.master__content__scope__name {
+    letter-spacing: 1.8px;
+    font-size: 20px;
+    font-family: 'RoadRadio';
+}
+.master__content__award {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.master__content__award >span {
+    margin-left: 20px;
+}
+.master__image {
+    overflow: hidden;
+}
+.master__image picture {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+.master__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    max-width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

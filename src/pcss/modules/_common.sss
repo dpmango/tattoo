@@ -257,25 +257,10 @@
     color: $colorPrimary
     text-decoration: underline
     a
-      position: relative
       display: inline-block
       margin-right: 20px
       &:last-child
         margin-right: 0
-      &:after
-        display: block
-        content: ' '
-        position: absolute
-        left: 0
-        right: 0
-        background: $colorPrimary
-        height: 2px
-        bottom: -3px
-        transition: all $transitionSpeed $ease
-      &:hover
-        &::after
-          left: 50%
-          right: 50%
 
   &__icons
     margin-top: 80px
@@ -399,6 +384,24 @@
   line-height: 1
   font-size: 20px
   background: $colorPrimary
+  &::before, &::after
+    display: block
+    content: ' '
+    position: absolute
+    top: 0
+    bottom: 0
+  &::before
+    left: -19px
+    background: svg-load('../../images/svg/arrow-bar-before.svg') no-repeat center
+    background-size: cover
+    height: 100%
+    width: 20px
+  &::after
+    right: -22.99px
+    background: svg-load('../../images/svg/arrow-bar-after.svg') no-repeat center
+    background-size: cover
+    height: 100%
+    width: 23px
 
 .section-title
   font-family: 'RoadRadio'
@@ -421,6 +424,30 @@
   p
     padding: 0
     margin: 0
+
+.text-triangle
+  flex: 0 0 auto
+  display: flex
+  justify-content: center
+  align-items: stretch
+  size: 53px
+  padding: 6px
+  border: 1px solid $colorPrimary
+  transform: rotate(45deg)
+  > span
+    flex: 1
+    border: 2px solid $colorPrimary
+    > span
+      display: flex
+      text-align: center
+      justify-content: center
+      padding-top: 5px
+      width: 100%
+      transform: rotate(-45deg)
+      color: $colorPrimary
+      font-family: 'RoadRadio'
+      font-size: 24px
+      letter-spacing: 1.8px
 
 
 // SLICK DOTS
@@ -461,3 +488,22 @@
         button
           &::after
             background: white
+
+
+// HOVERS
+.hoverable-link
+  position: relative
+  &:after
+    display: block
+    content: ' '
+    position: absolute
+    left: 0
+    right: 0
+    background: $colorPrimary
+    height: 2px
+    bottom: -3px
+    transition: all $transitionSpeed $ease
+  &:hover
+    &::after
+      left: 50%
+      right: 50%

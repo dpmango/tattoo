@@ -54,6 +54,9 @@
   .sections-nav
     display: none
 
+.popup-enabled
+  .sections-nav
+    z-index: 0
 
 // HERO
 .hero
@@ -400,6 +403,17 @@
       margin-top: 10px
       font-weight: 300
       font-size: 20px
+      transition: all $transitionSpeed $ease
+    &__yrs
+      font-size: 14px
+      opacity: 0
+      font-weight: 600
+      margin-top: 2px
+      color: $colorPrimary
+      letter-spacing: 1.54px
+      transform: translate3d(0, 25px, 0)
+      transition: all $transitionSpeed $ease
+
     &:hover
       .masters__card__image
         &::before
@@ -410,6 +424,12 @@
       .ico-zoom
         opacity: 1
         transform: translate3d(-50%, -50%, 0)
+      .masters__card__name
+        color: $colorPrimary
+        font-weight: 600
+      .masters__card__yrs
+        transform: translate3d(0,0,0)
+        opacity: .6
 
 
 
@@ -604,28 +624,6 @@
       justify-content: space-between
       align-items: center
       margin-bottom: 40px
-    &__triangle
-      display: flex
-      justify-content: center
-      align-items: stretch
-      size: 53px
-      padding: 6px
-      border: 1px solid $colorPrimary
-      transform: rotate(45deg)
-      > span
-        flex: 1
-        border: 2px solid $colorPrimary
-        > span
-          display: flex
-          text-align: center
-          justify-content: center
-          padding-top: 5px
-          width: 100%
-          transform: rotate(-45deg)
-          color: $colorPrimary
-          font-family: 'RoadRadio'
-          font-size: 24px
-          letter-spacing: 1.8px
     &__form
       flex: 1
       margin-top: auto

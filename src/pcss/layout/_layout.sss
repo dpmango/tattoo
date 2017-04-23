@@ -31,6 +31,11 @@ body, html
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+::selection
+  background: $colorPrimary
+  color: white
+
+  
 .container
   position: relative
   z-index: 5
@@ -41,6 +46,8 @@ body, html
   padding-right: 20px
   &--fluid
     max-width: 1440px
+  &--narrow
+    max-width: 940px
   &--wide
     max-width: 1060px
   &--no-pad

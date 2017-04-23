@@ -77,6 +77,14 @@ body, html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+::-moz-selection {
+    background: #D2A36E;
+    color: white;
+}
+::selection {
+    background: #D2A36E;
+    color: white;
+}
 .container {
     position: relative;
     z-index: 5;
@@ -88,6 +96,9 @@ body, html {
 }
 .container--fluid {
     max-width: 1440px;
+}
+.container--narrow {
+    max-width: 940px;
 }
 .container--wide {
     max-width: 1060px;
@@ -3366,5 +3377,43 @@ button:focus {
     }
 }
 /* SOME INNER PAGES CONTENT */
+.text-page {
+    background: #4A4A4A;
+}
+.text-page__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.text-page__wrapper p {
+    color: white;
+    letter-spacing: 1.8px;
+    font-size: 20px;
+    font-family: 'RoadRadio';
+    line-height: 1.2;
+}
+@media(max-width: 768px) {
+    .text-page {}
+    .text-page__wrapper p {
+        font-size: 18px;
+    }
+}
 
 /*# sourceMappingURL=style.css.map */

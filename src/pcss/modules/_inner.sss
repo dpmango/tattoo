@@ -1,1 +1,23 @@
 // SOME INNER PAGES CONTENT
+.text-page
+  background: #4A4A4A
+  &__wrapper
+    padding-top: 80px
+    padding-bottom: 60px
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    p
+      color: white
+      font-family: 'RoadRadio'
+      font-size: 20px
+      line-height: 1.2
+      letter-spacing: 1.8px
+
+@media($tablet)
+  .text-page
+    &__wrapper
+      p
+        font-size: 18px

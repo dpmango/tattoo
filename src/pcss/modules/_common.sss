@@ -12,6 +12,8 @@
     .header__contacts
       transform: translate3d(0, -100px, 0)
       opacity: 0
+  &--static
+    position: absolute
   &__wrapper
     display: flex
     align-items: center
@@ -267,15 +269,6 @@
     display: flex
     align-items: center
     justify-content: space-between
-  &__socials
-    a
-      display: inline-block
-      margin-right: 20px
-      transition: all $transitionSpeed $ease
-      &:last-child
-        margin-right: 0
-      &:hover
-        opacity: .5
   &__developer
     font-size: 12px
     transition: all $transitionSpeed $ease
@@ -425,6 +418,29 @@
     padding: 0
     margin: 0
 
+.breadcrumbs
+  font-size: 14px
+  text-align: center
+  color: color(white a(60%))
+  padding-top: 80px
+  a
+    display: inline-block
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    &::after
+      display: inline-block
+      content: '>'
+      margin: 0 8px
+    &:last-child
+      &::after
+        content: ''
+        margin-right: 0
+    &:hover
+      color: white
+      &::after
+        color: color(white a(60%))
+
+
 .text-triangle
   flex: 0 0 auto
   display: flex
@@ -449,6 +465,15 @@
       font-size: 24px
       letter-spacing: 1.8px
 
+.text-socials
+  a
+    display: inline-block
+    margin-right: 20px
+    transition: all $transitionSpeed $ease
+    &:last-child
+      margin-right: 0
+    &:hover
+      opacity: .5
 
 // SLICK DOTS
 

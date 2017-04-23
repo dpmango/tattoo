@@ -1,0 +1,53 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .contact
+      .container.container--fluid.container--no-pad
+        .section-title Контакты
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Галерея
+          a(href='#') Биомеханика
+          a(href='#') Зеленый тигр на коне
+        .contact__contacts
+          .contact__line
+            .contact__line__left Адрес
+            .contact__line__right Москва, Таганская площадь, 86/1 стр.1, торговый центр АТОМ, 2 этаж
+          .contact__line
+            .contact__line__left Время работы
+            .contact__line__right Ежедневно с 10:00 до 22:00
+          .contact__line
+            .contact__line__left Телефон
+            .contact__line__right
+              a(href='tel:') +7 (495) 640-20-40
+          .contact__line
+            .contact__line__left Email
+            .contact__line__right 
+              a(href='mailto:info@tattooz.ru') info@tattooz.ru
+          .contact__line
+            .contact__line__left Skype
+            .contact__line__right Tattooz777
+          .contact__line
+            .contact__line__left Читайте нас
+            .contact__line__right
+              .text-socials
+                a(href='#')
+                  i.ico.ico-social-vk
+                a(href='#')
+                  i.ico.ico-social-fb    
+                a(href='#')
+                  i.ico.ico-social-insta        
+            
+        .contact__map
+          #contactMap
+    
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

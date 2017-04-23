@@ -1,5 +1,9 @@
-# Gulp Starter Pack
-Gulp starter package to use with PostCss or sass, pug, autoprefixer, babel, compile bootstrap, minify assets and perform other common front-end tasks.
+# TATTOO MANIA - HTML/CSS LAYOUT
+Based on gulp starter pack to use with PostCss, pug, autoprefixer, babel, minify assets and automate other common front-end tasks.
+
+## DEMO LINK
+https://dpmango.github.io/tattoo/src
+
 
 ## Getting stated
 __Development:__
@@ -13,8 +17,6 @@ __Production__
 
 ## Tasks
 - `postcss` - including sass like plugins, autoprefixer, SugarSS
-- `sass` - compile .sass and .scss
-- `bootstrap` - compile custom bootstrap 4 alpha 5 file
 - `pug` - compile pug templates
 - `babel` - compile es2015 javascript code for older browsers
 - `useref` - optimize .css and .js

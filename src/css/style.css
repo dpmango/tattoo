@@ -107,29 +107,6 @@ body, html {
     padding-right: 0;
     padding-left: 0;
 }
-.app {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-}
-.app__content {
-    -webkit-flex-grow: 1;
-            flex-grow: 1;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-}
-.app.lock {
-    overflow-y: hidden;
-    max-height: 100vh;
-}
 /* CUSTOM 6 COL FLEX GRID */
 .row {
     display: -webkit-box;
@@ -150,6 +127,13 @@ body, html {
             flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+}
+.row--reverse {
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
 }
 .row--aic {
     -webkit-align-items: center;
@@ -189,6 +173,25 @@ body, html {
 .row--no-col {
     margin-right: 0;
     margin-left: 0;
+}
+.row--stretch-child > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+            flex-grow: 1;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+@media(max-width: 768px) {
+    .row--stretch-child > div {
+        display: block;
+    }
 }
 .row--condenced {
     margin-right: 0;
@@ -357,7 +360,6 @@ body, html {
     padding-right: 15px;
     padding-left: 15px;
     min-width: 0;
-    min-height: 1px;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
         -ms-flex-negative: 1;
@@ -616,6 +618,9 @@ body, html {
 }
 .dib {
     display: inline-block;
+}
+.img-fluid {
+    max-width: 100%;
 }
 
 /* 2. Elements */
@@ -2147,6 +2152,10 @@ button:focus {
     font-size: 20px;
     font-family: 'RoadRadio';
 }
+.big-text {
+    font-weight: 600;
+    font-size: 20px;
+}
 .seo-text {
     font-size: 14px;
     line-height: 1.145;
@@ -2548,6 +2557,12 @@ button:focus {
         padding-left: 15px;
         max-width: 300px;
         -webkit-box-flex: 0;
+    }
+    .hero__benefit:first-child {
+        padding-left: 15px;
+    }
+    .hero__benefit:last-child {
+        padding-right: 15px;
     }
     .hero__benefit__description {
         font-size: 12px;
@@ -3512,11 +3527,22 @@ button:focus {
         font-size: 18px;
     }
 }
-.contact {
+.page {
     position: relative;
     z-index: 5;
     color: white;
 }
+@media(max-width: 992px) {
+    .page {
+        padding-top: 80px;
+    }
+}
+@media(max-width: 568px) {
+    .page {
+        padding-top: 60px;
+    }
+}
+.contact {}
 .contact__contacts {
     margin-top: 40px;
     padding: 0 5.5%;
@@ -3558,17 +3584,13 @@ button:focus {
     width: 100%;
 }
 @media(max-width: 992px) {
-    .contact {
-        padding-top: 80px;
-    }
+    .contact {}
     .contact__map {
         height: 600px;
     }
 }
 @media(max-width: 568px) {
-    .contact {
-        padding-top: 60px;
-    }
+    .contact {}
     .contact__contacts {
         margin-bottom: 40px;
         padding: 0 20px;
@@ -3590,6 +3612,26 @@ button:focus {
     .contact__map {
         display: none;
     }
+}
+.grid-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1 ;
+        -ms-flex: 1 ;
+            flex: 1 1 0%;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding: 0 10%;
+    -webkit-box-flex: 1 ;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
 }
 /* MASTER */
 .master {}

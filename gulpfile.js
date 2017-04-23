@@ -43,13 +43,10 @@ gulp.task('default', function (callback) {
 
 // Watch
 gulp.task('watch', function(){
-  // uncomment to use with sass
   //gulp.watch('./src/sass/**/*.+(scss|sass)', ['sass']);
-  gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
-  gulp.watch('./src/views/**/*.pug', ['pug']);
-  gulp.watch('./src/*.html', browserSync.reload);
-  gulp.watch('./src/js/es2015/*.js', ['babel']);
-  gulp.watch('./src/js/**/*.js', browserSync.reload);
+  gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss-watch']);
+  gulp.watch('./src/views/**/*.pug', ['pug-watch']);
+  gulp.watch('./src/js/es2015/*.js', ['babel-watch']);
 })
 
 // Build
@@ -92,10 +89,12 @@ gulp.task('postcss', function() {
       .pipe( postcss(processors, { parser: sugarss }) )
       .pipe(rename({ extname: '.css' }))
       .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
+      .pipe( gulp.dest('./src/css') );
+});
+
+gulp.task('postcss-watch', ['postcss'], function (done) {
+  browserSync.reload();
+  done();
 });
 
 gulp.task('sass', function() {
@@ -127,10 +126,12 @@ gulp.task('pug', function buildHTML() {
       .pipe(pug({
         pretty: true
       }))
-      .pipe( gulp.dest('./src/') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
+      .pipe( gulp.dest('./src/') );
+});
+
+gulp.task('pug-watch', ['pug'], function (done) {
+  browserSync.reload();
+  done();
 });
 
 gulp.task('babel', function() {
@@ -138,10 +139,12 @@ gulp.task('babel', function() {
       .pipe(babel({
           presets: ['es2015']
       }))
-      .pipe(gulp.dest('./src/js'))
-      .pipe(browserSync.reload({
-        stream: true
-      }));
+      .pipe(gulp.dest('./src/js'));
+});
+
+gulp.task('babel-watch', ['babel'], function (done) {
+  browserSync.reload();
+  done();
 });
 
 /////

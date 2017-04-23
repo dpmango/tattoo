@@ -22,10 +22,21 @@
       p
         font-size: 18px
 
-.contact
+.page
   position: relative
   z-index: 5
   color: white
+
+@media($desktop)
+  .page
+    padding-top: 80px
+
+@media($mobile)
+  .page
+    padding-top: 60px
+
+
+.contact
   &__contacts
     margin-top: 40px
     padding: 0 5.5%
@@ -52,13 +63,11 @@
 
 @media($desktop)
   .contact
-    padding-top: 80px
     &__map
       height: 600px
 
 @media($mobile)
   .contact
-    padding-top: 60px
     &__contacts
       margin-bottom: 40px
       padding: 0 20px
@@ -70,6 +79,13 @@
     &__map
       display: none
 
+
+.grid-text
+  flex: 1 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding: 0 10%
 
 
 

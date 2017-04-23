@@ -1,4 +1,32 @@
-'use strict';
+"use strict";
+
+// set dalay on resize event to prevent huge memory leaks
+(function ($) {
+  var uniqueCntr = 0;
+  $.fn.resized = function (waitTime, fn) {
+    if (typeof waitTime === "function") {
+      fn = waitTime;
+      waitTime = 50;
+    }
+    var tag = "scrollTimer" + uniqueCntr++;
+    this.resize(function () {
+      var self = $(this);
+      var timer = self.data(tag);
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(function () {
+        self.removeData(tag);
+        fn.call(self[0]);
+      }, waitTime);
+      self.data(tag, timer);
+    });
+  };
+})(jQuery);
+
+/////////////////
+// READY FUNCTION
+/////////////////
 
 $(document).ready(function () {
 
@@ -111,6 +139,40 @@ $(document).ready(function () {
     $('.modal__slider').slick('next');
   });
 
+  // MOBILE SLIDER
+  var _servicesSlickMobile = $('.services__wrapper');
+  var servicesSlickMobileOptions = {
+    slidesToShow: 1,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 568,
+      settings: "unslick"
+    }]
+  };
+  _servicesSlickMobile.slick(servicesSlickMobileOptions);
+
+  // toggle slick/unslick on manual resize (feature not implemented in original slick)
+  // https://github.com/kenwheeler/slick/issues/542
+  _window.resized(300, function (e) {
+    if (_window.width() > 568) {
+      if (_servicesSlickMobile.hasClass('slick-initialized')) {
+        _servicesSlickMobile.slick('unslick');
+      }
+      return;
+    }
+    if (!_servicesSlickMobile.hasClass('slick-initialized')) {
+      return _servicesSlickMobile.slick(servicesSlickMobileOptions);
+    }
+  });
+
+  // BLOG TOGGLER
+  $('.js-toggle-blog').on('click', function () {
+    $(this).closest('.blog').addClass('expanded');
+    $(this).fadeOut();
+  });
+
   // Magnific Popup
   $('.js-magnific-fullpage').magnificPopup({
     type: 'image',
@@ -171,7 +233,6 @@ $(document).ready(function () {
 
   // scrollify
   // setTimeout(setScrollify, 300);
-  setScrollify();
   function setScrollify() {
     $.scrollify({
       section: ".section",
@@ -182,7 +243,7 @@ $(document).ready(function () {
       offset: 0,
       scrollbars: true,
       standardScrollElements: ".seo, .footer, .-gallery__grid",
-      setHeights: true,
+      setHeights: false,
       overflowScroll: true,
       updateHash: true,
       touchScroll: true,
@@ -206,6 +267,22 @@ $(document).ready(function () {
       afterRender: function afterRender() {}
     });
   }
+
+  function checkMobileScrollify() {
+    if (_window.width() < 768) {
+      $.scrollify.disable();
+    } else {
+      $.scrollify.enable();
+    }
+  }
+
+  setScrollify();
+  checkMobileScrollify();
+
+  // disable on mobile
+  _window.resized(100, function () {
+    checkMobileScrollify();
+  });
 
   // populate nav sections
   $('.section').each(function (i, val) {
@@ -265,10 +342,10 @@ $(document).ready(function () {
   });
 
   // YANDEX MAP
-  ymaps.ready(init);
+  ymaps.ready(initMaps);
   var myMap, myMapContact;
 
-  function init() {
+  function initMaps() {
     myMap = new ymaps.Map("yaMap", {
       center: [55.76, 37.64],
       zoom: 15,
@@ -288,4 +365,111 @@ $(document).ready(function () {
     //
     // myMap.geoObjects.add(myPlacemark);
   }
+
+  // _window.resized(1000, function(){
+  //   ymaps.ready(initMaps);
+  // });
+
+  ////////////////
+  // FORM VALIDATIONS
+  ////////////////
+
+  var validateErrorPlacement = function validateErrorPlacement(error, element) {
+    error.addClass('ui-input__validation');
+    error.appendTo(element.parent("div"));
+  };
+  var validateHighlight = function validateHighlight(element) {
+    $(element).parent('div').addClass("has-error");
+  };
+  var validateUnhighlight = function validateUnhighlight(element) {
+    $(element).parent('div').removeClass("has-error");
+  };
+  var validateSubmitHandler = function validateSubmitHandler(form) {
+    $(form).addClass('loading');
+    $.ajax({
+      type: "POST",
+      url: $(form).attr('action'),
+      data: $(form).serialize(),
+      success: function success(response) {
+        $(form).removeClass('loading');
+        var data = $.parseJSON(response);
+        if (data.status == 'success') {
+          // do something I can't test yet :)
+        } else {
+          $(form).find('[data-error]').html(data.message).show();
+        }
+      }
+    });
+  };
+
+  var validatePhone = {
+    required: true,
+    normalizer: function normalizer(value) {
+      var PHONE_MASK = '+X (XXX) XXX-XXXX';
+      if (!value || value === PHONE_MASK) {
+        return value;
+      } else {
+        return value.replace(/[^\d]/g, '');
+      }
+    },
+    minlength: 11,
+    digits: true
+  };
+
+  ////////
+  // FORMS
+
+  // modal entry form
+  $(".js-entry-form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      phone: validatePhone
+    },
+    messages: {
+      name: "Заполните это поле",
+      email: {
+        required: "Заполните это поле",
+        email: "Email содержит неправильный формат"
+      },
+      phone: {
+        required: "Заполните это поле",
+        minlength: "Введите корректный телефон"
+      }
+    }
+  });
+
+  // blog form
+  $(".blog__promo__form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      phone: validatePhone
+    },
+    messages: {
+      name: "Заполните это поле",
+      email: {
+        required: "Заполните это поле",
+        email: "Email содержит неправильный формат"
+      },
+      phone: {
+        required: "Заполните это поле",
+        minlength: "Введите корректный телефон"
+      }
+    }
+  });
 });

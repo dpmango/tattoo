@@ -58,18 +58,23 @@
       background: svg-load('../../images/svg/input-comment.svg') no-repeat 10px 10px
       background-size: 18px 20px
 
-  &--error
+  &.has-error
     input
       display: block
       width: 100%
       border-color: $colorRed
     .ui-input__validation
-      display: block
+      display: inline-block
 
   &__validation
     display: none
-    color: $colorRed
+    margin-top: 5px
+    background: $colorRed
+    border-radius: 5px
+    padding: 3px 8px 2px 8px
+    color: white
     font-size: 12px
+    line-height: 1
 
   &__placeholder
     display: inline-block

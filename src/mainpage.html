@@ -135,7 +135,7 @@
     <div class="services">
       <div class="container">
         <div class="section-title">Услуги</div>
-        <div class="services__wrapper"><a class="services__item" href="#">
+        <div class="services__wrapper slick-custom-dots"><a class="services__item" href="#">
             <div class="services__item__icon"><i class="ico ico-service-tatoo-machine"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Тaтуировки</div></a><a class="services__item" href="#">
@@ -350,30 +350,32 @@
               </div></a>
           </div>
           <!-- column-->
-          <div class="blog__col">
+          <div class="blog__col blog__col--promo">
             <div class="blog__promo">
-              <div class="blog__card__title">Купон <br>  на скидку</div>
-              <div class="blog__promo__text">
-                <p>Хочешь сделать татуировку <br> со скидкой? <br> Получи уникальный промокод прямо сейчас и обменяй его <br> на скидку в нашем салоне!</p>
-                <p>Внимание предложение ограничено, если промокоды сегодня кончились, заходите <br> на наш сайт завтра!</p>
-              </div>
-              <div class="blog__promo__counter"><span>Осталось <br> купонов:</span>
-                <div class="blog__promo__triangle"><span><span>14</span></span></div>
+              <div class="blog__promo__description">
+                <div class="blog__card__title">Купон <br>  на скидку</div>
+                <div class="blog__promo__text">
+                  <p>Хочешь сделать татуировку <br> со скидкой? <br> Получи уникальный промокод прямо сейчас и обменяй его <br> на скидку в нашем салоне!</p>
+                  <p>Внимание предложение ограничено, если промокоды сегодня кончились, заходите <br> на наш сайт завтра!</p>
+                </div>
+                <div class="blog__promo__counter"><span>Осталось <br> купонов:</span>
+                  <div class="blog__promo__triangle"><span><span>14</span></span></div>
+                </div>
               </div>
               <form class="blog__promo__form" action="#">
                 <div class="ui-input">
-                  <input type="text" placeholder="имя">
+                  <input type="text" placeholder="имя" name="name">
                 </div>
                 <div class="ui-input">
-                  <input type="email" placeholder="email">
+                  <input type="email" placeholder="email" name="email">
                 </div>
                 <div class="ui-input">
-                  <input type="tel" placeholder="телефон">
+                  <input type="tel" placeholder="телефон" name="phone" data-mask="0 (000) 000-00-00">
                 </div>
                 <button class="btn btn--ghost btn--block mt30" type="submit">Получить купон </button>
               </form>
             </div>
-          </div>
+          </div><a class="toggler-more js-toggle-blog" href="#">Показать больше</a>
         </div>
       </div>
     </div>
@@ -397,9 +399,9 @@
     <div class="container container--fluid">
       <div class="footer__menu"><a href="#">О салоне</a><a href="#">Услуги</a><a href="#">Галерея</a><a href="#">Эскизы</a><a href="#">отзывы</a><a href="#">Цены</a><a href="#">обучение</a><a href="#">Контакты</a></div>
     </div>
-    <div class="container container--fluid">
+    <div class="container container--fluid container--no-pad">
       <div class="footer__wrapper">
-        <div class="footer__contacts"><i class="ico ico-18plus"></i>
+        <div class="footer__contacts">
           <div class="footer__contact"><i class="ico ico-location"> </i><span>Москва, Кутузовский пр-т, 27</span></div>
           <div class="footer__contact"><i class="ico ico-phone"></i><a href="tel:">8 (495) 123 45 67</a></div>
           <div class="footer__contact"><i class="ico ico-email"></i><a href="mailto:info@tattooz.ru">info@tattooz.ru</a></div>
@@ -408,7 +410,7 @@
           <div class="footer__icons">
             <div class="footer__socials"><a href="#"><i class="ico ico-social-vk"></i></a><a href="#"><i class="ico ico-social-fb">   </i></a><a href="#"><i class="ico ico-social-insta"></i></a></div><a class="footer__developer" href="#" target="_blank"><span>Made in</span><i class="ico ico-developer-logo"></i></a>
           </div>
-          <div class="footer__copy">© Все права защищены, «Медик Лайн» 2011</div>
+          <div class="footer__copy">© Все права защищены, «Медик Лайн» 2011</div><a class="footer__developer footer__developer--mobile" href="#" target="_blank"><span>Made in</span><i class="ico ico-developer-logo"></i></a><i class="ico ico-18plus"></i>
         </div>
         <div class="footer__maps">
           <div id="yaMap"></div>
@@ -422,36 +424,36 @@
     <div class="modal__slider">
       <div class="modal__slide">
         <div class="modal__slide__subject"><i class="ico ico-nav-arrow"></i><span>На татуировку</span><i class="ico ico-nav-arrow ico-nav-arrow--right"></i></div>
-        <form action="#">
+        <form class="js-entry-form" action="#">
           <div class="row">
             <div class="col col--3-6">
               <div class="ui-input ui-input--icon ui-input--user">
-                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Ваше имя" name="name">
               </div>
             </div>
             <div class="col col--3-6">
               <div class="ui-input ui-input--icon ui-input--mobile">
-                <input type="text" placeholder="Телефон" data-mask="0 (000) 000-00-00">
+                <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
               </div>
             </div>
           </div>
           <div class="ui-input ui-input--icon ui-input--email">
-            <input type="email" placeholder="Ваш email">
+            <input type="email" placeholder="Ваш email" name="email">
           </div>
           <div class="row">
             <div class="col col--3-6">
               <div class="ui-input ui-input--icon ui-input--calendar">
-                <input class="js-datepciker" type="text" placeholder="Дата">
+                <input class="js-datepciker" type="text" placeholder="Дата" name="date">
               </div>
             </div>
             <div class="col col--3-6">
               <div class="ui-input ui-input--icon ui-input--time">
-                <input type="text" placeholder="Время" data-mask="00:00 - 00:00">
+                <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
               </div>
             </div>
           </div>
           <div class="ui-input ui-input--icon ui-input--comment">
-            <textarea placeholder="Комментарии" rows="3"></textarea>
+            <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
           </div>
           <div class="modal__cta">
             <div class="ui-file">

@@ -68,3 +68,15 @@
       bottom: 0
       transform: rotate(-90deg)
       transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+@media($mobile)
+  .hamburger-box
+    width: 30px
+    height: 20px
+
+  .hamburger-inner
+    width: 30px
+    height: 3px
+    &::before, &::after
+      width: 30px
+      height: 3px

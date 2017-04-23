@@ -75,7 +75,7 @@ doctype html
       .services
         .container
           .section-title Услуги
-          .services__wrapper
+          .services__wrapper.slick-custom-dots
             a(href='#').services__item
               .services__item__icon
                 i.ico.ico-service-tatoo-machine
@@ -308,27 +308,30 @@ doctype html
                     i.ico.ico-counter-eye
                     span 7
             // column
-            .blog__col
+            .blog__col.blog__col--promo
               .blog__promo
-                .blog__card__title Купон <br>  на скидку
-                .blog__promo__text
-                  p Хочешь сделать татуировку <br> со скидкой? <br> Получи уникальный промокод прямо сейчас и обменяй его <br> на скидку в нашем салоне!
-                  p Внимание предложение ограничено, если промокоды сегодня кончились, заходите <br> на наш сайт завтра!
-                .blog__promo__counter
-                  span Осталось <br> купонов:
-                  .blog__promo__triangle
-                    span
-                      span 14
+                .blog__promo__description
+                  .blog__card__title Купон <br>  на скидку
+                  .blog__promo__text
+                    p Хочешь сделать татуировку <br> со скидкой? <br> Получи уникальный промокод прямо сейчас и обменяй его <br> на скидку в нашем салоне!
+                    p Внимание предложение ограничено, если промокоды сегодня кончились, заходите <br> на наш сайт завтра!
+                  .blog__promo__counter
+                    span Осталось <br> купонов:
+                    .blog__promo__triangle
+                      span
+                        span 14
                       
                 form.blog__promo__form(action='#')
                   .ui-input
-                    input(type='text' placeholder='имя')
+                    input(type='text' placeholder='имя' name='name')
                   .ui-input
-                    input(type='email' placeholder='email')    
+                    input(type='email' placeholder='email' name='email')    
                   .ui-input
-                    input(type='tel' placeholder='телефон')   
+                    input(type='tel' placeholder='телефон' name='phone' data-mask="0 (000) 000-00-00")   
                   button(type='submit').btn.btn--ghost.btn--block.mt30 Получить купон 
-  
+            
+            a(href='#').toggler-more.js-toggle-blog Показать больше
+            
     // SEO SECTION (no scrollify)
     .seo
       .container
@@ -347,3 +350,5 @@ doctype html
           p В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a>
                   
     include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

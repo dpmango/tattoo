@@ -9,10 +9,9 @@ footer.footer
       a(href='#') Цены
       a(href='#') обучение
       a(href='#') Контакты
-  .container.container--fluid
+  .container.container--fluid.container--no-pad
     .footer__wrapper
       .footer__contacts
-        i.ico.ico-18plus
         .footer__contact
           i.ico.ico-location 
           span Москва, Кутузовский пр-т, 27
@@ -40,107 +39,12 @@ footer.footer
             i.ico.ico-developer-logo
         
         .footer__copy © Все права защищены, «Медик Лайн» 2011
+        a(href='#' target='_blank').footer__developer.footer__developer--mobile
+          span Made in
+          i.ico.ico-developer-logo
+        i.ico.ico-18plus
               
           
       .footer__maps
         #yaMap
       
-// MODALS
-.modal.zoom-anim-dialog.mfp-hide#modalOrder
-  .modal__title Записаться к мастеру
-  .modal__slider
-    .modal__slide
-      .modal__slide__subject
-        i.ico.ico-nav-arrow
-        span На татуировку
-        i.ico.ico-nav-arrow.ico-nav-arrow--right
-      form(action="#")
-        .row
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--user
-              input(type='text' placeholder='Ваше имя') 
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--mobile
-              input(type='text' placeholder='Телефон' data-mask="0 (000) 000-00-00") 
-
-        .ui-input.ui-input--icon.ui-input--email
-          input(type='email' placeholder='Ваш email') 
-
-        .row
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--calendar
-              input(type='text' placeholder='Дата').js-datepciker
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--time
-              input(type='text' placeholder='Время' data-mask="00:00 - 00:00")
-        
-        .ui-input.ui-input--icon.ui-input--comment
-          textarea(placeholder='Комментарии' rows='3')
-        
-        .modal__cta
-          .ui-file
-            input(type='file' data-multiple-caption='выбрано {count} файлов', multiple='')
-            .ui-file__btn
-              span Прикрепить файл
-              i.ico.ico-add-attachment
-          button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться
-    
-    //slide
-    .modal__slide
-      .modal__slide__subject
-        i.ico.ico-nav-arrow
-        span На татуаж
-        i.ico.ico-nav-arrow.ico-nav-arrow--right
-          
-      form(action="#")
-        .row
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--user
-              input(type='text' placeholder='Ваше имя') 
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--mobile
-              input(type='text' placeholder='Телефон' data-mask="0 (000) 000-00-00") 
-
-        .ui-input.ui-input--icon.ui-input--email
-          input(type='email' placeholder='Ваш email') 
-
-        .row
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--calendar
-              input(type='text' placeholder='Дата').js-datepciker
-          .col.col--3-6
-            .ui-input.ui-input--icon.ui-input--time
-              input(type='text' placeholder='Время' data-mask="00:00 - 00:00")
-        
-        .ui-input.ui-input--icon.ui-input--comment
-          textarea(placeholder='Комментарии' rows='3')
-        
-        .modal__cta
-          .ui-file
-            input(type='file' data-multiple-caption='выбрано {count} файлов', multiple='')
-            .ui-file__btn
-              span Прикрепить файл
-              i.ico.ico-add-attachment
-          button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться
-                           
-             
-
-// SECONDARY STYLES
-//build:css css/secondary.css
-link(rel="stylesheet" href="css/secondary.css" type="text/css")
-//endbuild
-
-// SCRIPTS
-script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
-
-//build:js js/scripts.min.js
-script(src="components/jquery/dist/jquery.min.js")
-script(src="components/magnific-popup/dist/jquery.magnific-popup.min.js")
-script(src="components/slick-carousel/slick/slick.min.js")
-script(src="components/masonry/dist/masonry.pkgd.min.js")  
-script(src="components/jquery-mask-plugin/dist/jquery.mask.min.js")
-script(src="components/jquery-validation/dist/jquery.validate.min.js")
-script(src="components/air-datepicker/dist/js/datepicker.min.js")
-script(src="js/libs/scrollify.js")
-script(src="js/main.js")
-//endbuild

@@ -10,6 +10,8 @@
   &-logo
     background-image: svg-load('../../images/svg/logo.svg')
     size: 207px 65px
+    @media($mobile)
+      size: 142px 44px
   &-scrolldown
     cursor: pointer
     background-image: svg-load('../../images/svg/ico-scrolldown.svg')
@@ -17,6 +19,10 @@
     transition: all $transitionSpeed $ease
     &:hover
       opacity: .5
+    @media($tablet)
+      background-image: svg-load('../../images/svg/ico-touchscroll.svg')
+      size: 30px 40px
+
 
   &-nav-arrow
     cursor: pointer
@@ -29,7 +35,7 @@
   &-service-tatoo-machine
     opacity: .5
     background-image: svg-load('../../images/svg/ico-service-tatoo-machine.svg', fill='#FFFFFF')
-    size: 53px 69px
+    size: 70px 90px
   &-service-tattooache
     opacity: .5
     background-image: svg-load('../../images/svg/ico-service-tattooache.svg', fill='#FFFFFF')
@@ -108,6 +114,8 @@
   &-18plus
     background-image: svg-load('../../images/svg/ico-18plus.svg')
     size: 86px 99px
+    @media(width <= 840px)
+      size: 70px 80px
 
 
 // hoverable states

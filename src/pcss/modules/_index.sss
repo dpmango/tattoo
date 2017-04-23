@@ -50,6 +50,10 @@
     &:last-child
       margin-bottom: 0
 
+@media($tablet)
+  .sections-nav
+    display: none
+
 
 // HERO
 .hero
@@ -121,6 +125,24 @@
         margin-right: 8px
       .ico-nav-arrow--right
         margin-left: 8px
+
+@media($tablet)
+  .hero
+    &__benefits
+      margin-top: 10vh
+      display: flex
+      flex-wrap: wrap
+      flex-direction: column
+    &__benefit
+      margin-bottom: 4vh
+      flex: 0 1 auto
+      max-width: 300px
+      margin-left: auto
+      margin-right: auto
+      padding-left: 15px
+      padding-right: 15px
+      &__description
+        font-size: 12px
 
 // SERVICE
 .services
@@ -210,6 +232,20 @@
           background-color: $colorPrimary
       .services__item__name
         color: $colorPrimary
+
+@media($mobile)
+  .services
+    &::after
+      width: auto
+      background: url('../images/el/mainpageServicesBgMobile@2x.png') no-repeat center center
+      background-size: cover
+    &::before
+      display: block
+      content: ' '
+      position: absolute 0 0 0 0
+      background: color(#202020 a(80%))
+      z-index: 3
+
 
 // Gallery
 .gallery
@@ -480,6 +516,8 @@
     min-height: 100vh
     display: flex
     flex-wrap: wrap
+  .toggler-more
+    display: none
   &__col
     flex: 0 1 33%
     padding-left: 10px
@@ -592,6 +630,55 @@
       flex: 1
       margin-top: auto
 
+@media(width <= 940px)
+  .blog
+    &__wrapper
+      justify-content: center
+    &__col
+      flex-basis: 300px
+      &--promo
+        flex-basis: 100%
+    &__promo
+      min-height: 1px
+      flex-direction: row
+      align-items: center
+      &__description
+        flex: 0 1 auto
+        padding-right: 30px
+        max-width: 300px
+        margin-right: auto
+      &__form
+        flex: 0 0 270px
+        margin-top: 0
+      &__counter
+        margin-bottom: 10px
+        justify-content: flex-start
+      &__triangle
+        margin-left: 30px
+
+@media(width <= 640px)
+  .blog
+    &.expanded
+      .blog__col
+        display: block
+    &__col
+      display: none
+      &:first-child
+        display: block
+      &--promo
+        display: none !important
+    .toggler-more
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      font-size: 18px
+      background: $colorPrimary
+      text-align: center
+      padding: 20px
+      color: $fontColor
+
 
 // SEO
 .seo
@@ -625,3 +712,7 @@
         &::after
           left: 0
           right: 0
+
+@media($tablet)
+  .seo
+    display: none

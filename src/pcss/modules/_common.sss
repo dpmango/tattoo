@@ -56,6 +56,18 @@
     span, a
       padding-left: 30px
 
+@media(width <= 900px)
+  .header
+    &__contacts
+      display: none
+
+@media($mobile)
+  .header
+    .btn
+      display: none
+    &__hamburger
+      size: 60px
+      font-size: 11px
 
 // MENU
 .navi
@@ -190,6 +202,9 @@
       font-size: 20px
       letter-spacing: 1.8px
       position: relative
+      margin-right: 10px
+      &:last-child
+        margin-right: 0
       &:after
         display: block
         content: ' '
@@ -210,6 +225,7 @@
     max-width: 1280px
     margin-left: auto
     margin-right: auto
+    padding-left: 20px
   &__contacts
     position: relative
     flex: 0 1 50%
@@ -284,6 +300,8 @@
       vertical-align: -1px
     &:hover
       transform: scale(1.2)
+    &--mobile
+      display: none
   &__copy
     font-size: 10px
     margin-top: 20px
@@ -294,8 +312,72 @@
     flex: 0 1 50%
     display: flex
     flex-direction: column
+    overflow: hidden
     #yaMap
       flex: 1
+
+@media(width <= 1070px)
+  .footer
+    .ico-18plus
+      right: 40px
+    &__contacts
+      flex-basis: 60%
+    &__maps
+      flex-basis: 40%
+
+@media($desktop)
+  .footer
+    &__menu
+      a
+        font-size: 18px
+
+@media(width <= 840px)
+  .footer
+    padding-top: 0
+    &__menu
+      display: none
+    &__wrapper
+      flex-direction: column-reverse
+      padding-left: 0
+      padding-top: 0
+    &__contacts
+      display: block
+      flex-basis: auto
+      padding-left: 20px
+      padding-right: 20px
+      margin-top: 35px
+    &__maps
+      flex-basis: 250px
+    &__links
+      margin-top: 25px
+    &__icons
+      margin-top: 30px
+    &__developer
+      display: none
+      &--mobile
+        display: block
+        margin-bottom: 15px
+    &__copy
+      margin-bottom: 15px
+    .ico-18plus
+      position: static
+      float: right
+      margin-top: -120px
+
+@media($mobile)
+  .footer
+    &__maps
+      flex-basis: 200px
+
+@media(width <= 400px)
+  .footer
+    &__copy
+      width: 175px
+      font-size: 10px
+      line-height: 1.6
+    .ico-18plus
+      margin-top: -125px
+
 
 // TYPOGRAPHY
 .mega-title
@@ -339,3 +421,43 @@
   p
     padding: 0
     margin: 0
+
+
+// SLICK DOTS
+
+.slick-custom-dots
+  .slick-dots
+    margin: 0
+    padding: 0
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 25px
+    li
+      margin-right: 15px
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+      button
+        position: relative
+        -webkit-appearance: none
+        font-size: 0
+        box-shadow: none
+        border: 0
+        background: none
+        cursor: pointer
+        &::after
+          display: block
+          content: ' '
+          size: 8px
+          position: absolute
+          top: 0
+          bottom: 0
+          transform: rotate(45deg)
+          border: 2px solid white
+          transition: all $transitionSpeed $ease
+
+      &.slick-active
+        button
+          &::after
+            background: white

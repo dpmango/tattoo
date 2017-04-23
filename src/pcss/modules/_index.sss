@@ -417,6 +417,8 @@
       letter-spacing: 1.54px
       transform: translate3d(0, 25px, 0)
       transition: all $transitionSpeed $ease
+    &__mobile
+      display: none
 
     &:hover
       .masters__card__image
@@ -435,6 +437,43 @@
         transform: translate3d(0,0,0)
         opacity: .6
 
+@media(width <= 900px)
+  .masters
+    &__card
+      flex-basis: 33%
+
+@media($tablet)
+  .masters
+    &__card
+      text-align: left
+      &__image
+        size: 140px
+      &__name
+        font-size: 20px
+        font-weight: 600
+        text-align: center
+      &__mobile
+        display: block
+        margin-left: auto
+        margin-right: auto
+        max-width: 260px
+        .small-title
+          margin-top: 25px
+        .fz14
+          margin-top: 15px
+
+      &:hover
+        .masters__card__image
+          &::before
+            display: none
+          &::after
+            display: none
+        .ico-zoom
+          display: none
+        .masters__card__name
+          color: white
+        .masters__card__yrs
+          opacity: 0
 
 
 // TESTIMONIALS

@@ -2164,6 +2164,9 @@ button:focus {
     margin: 0;
     padding: 0;
 }
+.c-primary {
+    color: #D2A36E;
+}
 .breadcrumbs {
     padding-top: 80px;
     color: #ffffff;
@@ -3022,6 +3025,9 @@ button:focus {
     -webkit-transform: translate3d(0, 25px, 0);
             transform: translate3d(0, 25px, 0);
 }
+.masters__card__mobile {
+    display: none;
+}
 .masters__card:hover .masters__card__image {}
 .masters__card:hover .masters__card__image:before {
     opacity: 1;
@@ -3047,6 +3053,57 @@ button:focus {
     opacity: .6;
     -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
+}
+@media(max-width: 900px) {
+    .masters {}
+    .masters__card {
+        -webkit-flex-basis: 33%;
+                flex-basis: 33%;
+            -ms-flex-preferred-size: 33%;
+    }
+}
+@media(max-width: 768px) {
+    .masters {}
+    .masters__card {
+        text-align: left;
+    }
+    .masters__card__image {
+        width: 140px;
+        height: 140px;
+    }
+    .masters__card__name {
+        text-align: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .masters__card__mobile {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 260px;
+    }
+    .masters__card__mobile .small-title {
+        margin-top: 25px;
+    }
+    .masters__card__mobile .fz14 {
+        margin-top: 15px;
+    }
+    .masters__card:hover .masters__card__image {}
+    .masters__card:hover .masters__card__image:before {
+        display: none;
+    }
+    .masters__card:hover .masters__card__image:after {
+        display: none;
+    }
+    .masters__card:hover .ico-zoom {
+        display: none;
+    }
+    .masters__card:hover .masters__card__name {
+        color: white;
+    }
+    .masters__card:hover .masters__card__yrs {
+        opacity: 0;
+    }
 }
 /* TESTIMONIALS */
 .testimonials {

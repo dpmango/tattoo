@@ -110,7 +110,8 @@ $(document).ready(function(){
   });
 
 
-  // MOBILE SLIDER
+  // MOBILE SLIDERS
+  // Services
   var _servicesSlickMobile = $('.services__wrapper');
   var servicesSlickMobileOptions = {
     slidesToShow: 1,
@@ -140,11 +141,53 @@ $(document).ready(function(){
     }
   });
 
+  // MASTERS
+  var _mastersSlickMobile = $('.masters__wrapper');
+  var mastersSlickMobileOptions = {
+    slidesToShow: 1,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  }
+  _mastersSlickMobile.slick(mastersSlickMobileOptions);
+
+  _window.resized(300, function(e){
+    if ( _window.width() > 768 ) {
+      if (_mastersSlickMobile.hasClass('slick-initialized')) {
+        _mastersSlickMobile.slick('unslick');
+      }
+      return
+    }
+    if (!_mastersSlickMobile.hasClass('slick-initialized')) {
+      return _mastersSlickMobile.slick(mastersSlickMobileOptions);
+    }
+  });
+
+
   // BLOG TOGGLER
   $('.js-toggle-blog').on('click', function(){
     $(this).closest('.blog').addClass('expanded');
     $(this).fadeOut();
   });
+
+  // creates pseudo links
+  $('span[data-link]').on('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    window.location.href = $(this).data('link');
+  });
+
+
+  //////////////
+  // MODALS
+  //////////////
 
   // Magnific Popup
   $('.js-magnific-fullpage').magnificPopup({

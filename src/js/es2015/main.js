@@ -39,7 +39,7 @@ $(document).ready(function(){
   });
 
   // listen horizontal scroll
-  $('.gallery__grid').scrolled(20, function() {
+  $('.gallery__grid').scroll(function() {
     var $el = $('.gallery__grid');
     var $elAttr = $('.gallery__grid').attr('style');
 
@@ -72,6 +72,15 @@ $(document).ready(function(){
   $('.gallery').on('click', '.gallery__filter--hidden.show .ico-filter-toggle', function(e){
     $(this).closest('.gallery__filter').removeClass('show');
     e.stopPropagation();
+  });
+
+  // GAllery filter
+  $('.gallery__filter__head__selected').on('click', function(){
+    $(this).closest('.gallery__filter__wrapper').addClass('active');
+  });
+
+  $('.gallery__filter').on('click', '.gallery__filter__head__dropdown span', function(){
+    $(this).closest('.gallery__filter__wrapper').removeClass('active');
   });
 
 

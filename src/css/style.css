@@ -2806,6 +2806,22 @@ button:focus {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
 }
+.gallery__filter__wrapper.active .gallery__filter__head {}
+.gallery__filter__wrapper.active .gallery__filter__head:after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+.gallery__filter__wrapper.active .gallery__filter__head__dropdown {
+    opacity: 1;
+    pointer-events: all;
+}
+.gallery__filter__wrapper.active .gallery__filter__head__selected {
+    opacity: 0;
+}
+.gallery__filter__wrapper.active .gallery__filter__content {
+    opacity: 0;
+}
 .gallery__filter--hidden {
     background: #D2A36E;
     cursor: pointer;
@@ -2834,18 +2850,49 @@ button:focus {
             transform: rotate(0deg);
 }
 .gallery__filter__head {
+    position: relative;
     -webkit-flex: 0 0 100px;
         -ms-flex: 0 0 100px;
             flex: 0 0 100px;
     -webkit-box-flex: 0;
 }
+.gallery__filter__head:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: block;
+    width: 10px;
+    height: 7px;
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='10px' height='7px' viewBox='0 0 10 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ETriangle%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-165.000000, -1826.000000)' fill='%23FFFFFF'%3E %3Cpolygon id='Triangle' transform='translate(170.000000, 1829.500000) scale(-1, -1) translate(-170.000000, -1829.500000) ' points='170 1826 175 1833 165 1833'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+    background-size: cover;
+    content: ' ';
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
 .gallery__filter__head__label {
     font-size: 12px;
 }
 .gallery__filter__head__selected {
+    margin-top: 5px;
     letter-spacing: 1.8px;
     font-size: 20px;
     font-family: 'RoadRadio';
+    cursor: pointer;
+}
+.gallery__filter__head__dropdown {
+    margin-top: -23px;
+    background: black;
+    letter-spacing: 1.8px;
+    font-size: 20px;
+    font-family: 'RoadRadio';
+    opacity: 0;
+    pointer-events: none;
+}
+.gallery__filter__head__dropdown span {
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 .gallery__filter__content {
     display: -webkit-box;
@@ -2858,6 +2905,8 @@ button:focus {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     -webkit-box-flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2906,19 +2955,35 @@ button:focus {
 }
 .gallery__grid__scrollbar__dot {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     display: block;
-    margin-top: -10px;
+    margin-top: -8px;
     width: 20px;
     height: 20px;
     border: 2px solid #D2A36E;
     border-radius: 50%;
     content: ' ';
-    -webkit-transition: -webkit-transform .15s linear;
-    transition: -webkit-transform .15s linear;
-    transition: transform .15s linear;
-    transition: transform .15s linear, -webkit-transform .15s linear;
+}
+.gallery__grid__scrollbar__dot:before, .gallery__grid__scrollbar__dot:after {
+    position: absolute;
+    top: 2px;
+    display: block;
+    width: 6px;
+    height: 12px;
+    background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='9px' height='14px' viewBox='0 0 9 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ERectangle 88 Copy 3%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-257.000000, -2464.000000)' stroke-width='2' stroke='%23D2A36E'%3E %3Cg id='Group-23' transform='translate(259.000000, 2461.000000)'%3E %3Cpolyline id='Rectangle-88-Copy-3' transform='translate(3.000000, 10.000000) scale(-1, 1) translate(-3.000000, -10.000000) ' points='7.10542736e-15 4 7.10542736e-15 4 6 10 2.64829619e-14 16'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
+    background-size: cover;
+    content: ' ';
+}
+.gallery__grid__scrollbar__dot:before {
+    left: -15px;
+}
+.gallery__grid__scrollbar__dot:after {
+    top: 3px;
+    right: -15px;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 .gallery__grid__scrollbar__dot__wrap {
     position: relative;

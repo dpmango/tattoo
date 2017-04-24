@@ -283,6 +283,18 @@
       padding: 20px
       display: flex
       flex-direction: column
+      &.active
+        .gallery__filter__head
+          &::after
+            transform: rotate(180deg)
+          &__dropdown
+            opacity: 1
+            pointer-events: all
+          &__selected
+            opacity: 0
+        .gallery__filter__content
+          opacity: 0
+
     &--hidden
       cursor: pointer
       background: $colorPrimary
@@ -301,16 +313,45 @@
 
     &__head
       flex: 0 0 100px
+      position: relative
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 3
+        background: svg-load('../../images/svg/ico-dropdown-toggle.svg') no-repeat center
+        size: 10px 7px
+        background-size: cover
+        transition: all $transitionSpeed $ease
       &__label
         font-size: 12px
       &__selected
         font-family: 'RoadRadio'
         font-size: 20px
         letter-spacing: 1.8px
+        margin-top: 5px
+        cursor: pointer
+      &__dropdown
+        font-family: 'RoadRadio'
+        font-size: 20px
+        letter-spacing: 1.8px
+        opacity: 0
+        background: black
+        pointer-events: none
+        margin-top: -23px
+        span
+          display: block
+          margin-bottom: 15px
+          cursor: pointer
+
+
     &__content
       flex: 1
       display: flex
       flex-direction: column
+      transition: all $transitionSpeed $ease
     &__item
       flex: 1
       font-size: 14px
@@ -346,12 +387,25 @@
         content: ' '
         position: absolute
         left: 0
-        top: 50%
+        top: 0
         size: 20px
-        margin-top: -10px
+        margin-top: -8px
         border: 2px solid $colorPrimary
         border-radius: 50%
-        transition: transform .15s linear
+        &::before, &::after
+          display: block
+          content: ' '
+          position: absolute
+          top: 2px
+          background: svg-load('../../images/svg/scrollbar-nav.svg') no-repeat center
+          size: 6px 12px
+          background-size: cover
+        &::before
+          left: -15px
+        &::after
+          right: -15px
+          top: 3px
+          transform: rotate(180deg)
         &__wrap
           position: relative
           width: 100%

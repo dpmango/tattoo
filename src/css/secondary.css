@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     content: ' ';
     vertical-align: middle;
-    font-style: normal;
+    font-style: normal;/* &-questionmark *//*   background-image: svg-load('../../images/svg/ico-questionmark.svg') *//*   size: 20px */
 }
 .ico-logo {
     width: 207px;
@@ -180,6 +180,21 @@
         width: 70px;
         height: 80px;
     }
+}
+.ico-questionmark {
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/el/ico-questionmark@2x.png');
+}
+.ico-pagination-end {
+    width: 7px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='7px' height='14px' viewBox='0 0 7 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ETriangle 2%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-280.000000, -4823.000000)' fill='%23FFFFFF'%3E %3Cg id='Group-12' transform='translate(280.000000, 4820.000000)'%3E %3Cpolygon id='Triangle-2' transform='translate(3.500000, 10.000000) scale(-1, 1) rotate(90.000000) translate(-3.500000, -10.000000) ' points='3.5 6.5 10.5 13.5 -3.5 13.5'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-pagination-end--right {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 /* hoverable states */
 .services__item:hover .ico {

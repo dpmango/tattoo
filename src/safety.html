@@ -238,6 +238,45 @@
       </div>
     </div>
   </div>
+  <!-- GET PRICE-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalGetPrice">
+    <div class="modal__title">Узнать стоимость эскиза</div>
+    <form class="js-getprice-form mt30" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--calendar">
+            <input class="js-datepciker" type="text" placeholder="Дата" name="date">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--time">
+            <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->
   <link rel="stylesheet" href="css/secondary.css" type="text/css">

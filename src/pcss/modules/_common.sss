@@ -625,6 +625,38 @@
     .slick-dots
       top: 180px
 
+
+// PAGINATIOMN
+.pagination
+  font-size: 14px
+  display: flex
+  align-content: center
+  ul
+    flex: 1
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: center
+    li
+      color: white
+      margin-right: 15px
+      display: inline-block
+      padding: 2px 7px
+      transition: all $transitionSpeed $ease
+      &:last-child
+        margin-right: 0
+      &.active
+        color: $fontColor
+        background: $colorPrimary
+      .ico-pagination-end
+        opacity: .6
+        transition: all $transitionSpeed $ease
+        &:hover
+          opacity: 1
+      &:hover:not(.active)
+        background: color($colorPrimary a(80%))
+
+
 // HOVERS
 .hoverable-link
   position: relative

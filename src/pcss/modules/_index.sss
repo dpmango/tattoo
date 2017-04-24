@@ -441,6 +441,8 @@
     &__card
       position: relative
       margin-right: 20px
+      color: $colorPrimary
+      text-align: center
       picture
         max-width: 100%
       .ico-zoom
@@ -451,6 +453,43 @@
         z-index: 3
         transform: translate3d(-50%, -30%, 0)
         transition: all $transitionSpeed $ease
+
+      &__name
+        position: absolute
+        z-index: 3
+        left: 35px
+        right: 35px
+        bottom: 30%
+        font-family: 'RoadRadio'
+        font-size: 20px
+        letter-spacing: 1.8px
+        opacity: 0
+        transform: translate3d(0%, 20px, 0)
+        transition: all $transitionSpeed $ease
+      &__author
+        position: absolute
+        z-index: 3
+        left: 35px
+        right: 35px
+        bottom: 20%
+        font-weight: 600
+        font-size: 14px
+        line-height: 1.4
+        text-decoration: underline
+        opacity: 0
+        transform: translate3d(0%, 20px, 0)
+        transition: all $transitionSpeed $ease
+      &__price
+        position: absolute
+        top: 40px
+        right: 40px
+        z-index: 3
+        opacity: 0
+        transform: translate3d(0%, 30px, 0)
+        transition: all $transitionSpeed $ease
+        .ico
+          margin-left: 10px
+
       &::after
         display: block
         content: ' '
@@ -476,7 +515,20 @@
           position: absolute 20px
         .ico-zoom
           opacity: 1
-          transform: translate3d(-50%, -50%, 0)
+          transform: translate3d(-50%, -60%, 0)
+          &:hover
+            transform: scale(1.1) translate3d(-50%, -60%, 0)
+            transform-origin: center center
+        .gallery__grid__card__name
+          opacity: 1
+          transform: translate3d(0%, 0%, 0)
+        .gallery__grid__card__author
+          opacity: .6
+          transform: translate3d(0%, 0%, 0)
+        .gallery__grid__card__price
+          opacity: 1
+          transform: translate3d(0%, 0%, 0)
+
 
 @media($tablet)
   .gallery

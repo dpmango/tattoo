@@ -76,3 +76,31 @@
               i.ico.ico-add-attachment
           button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться
              
+// GET PRICE
+.modal.zoom-anim-dialog.mfp-hide#modalGetPrice
+  .modal__title Узнать стоимость эскиза
+  form(action="#").js-getprice-form.mt30
+    .row
+      .col.col--3-6
+        .ui-input.ui-input--icon.ui-input--user
+          input(type='text' placeholder='Ваше имя' name='name') 
+      .col.col--3-6
+        .ui-input.ui-input--icon.ui-input--mobile
+          input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
+
+    .ui-input.ui-input--icon.ui-input--email
+      input(type='email' placeholder='Ваш email' name='email') 
+
+    .row
+      .col.col--3-6
+        .ui-input.ui-input--icon.ui-input--calendar
+          input(type='text' placeholder='Дата' name='date').js-datepciker
+      .col.col--3-6
+        .ui-input.ui-input--icon.ui-input--time
+          input(type='text' placeholder='Время' name='time' data-mask="00:00 - 00:00")
+    
+    .ui-input.ui-input--icon.ui-input--comment
+      textarea(placeholder='Комментарии' rows='3' name='comment')
+    
+    .modal__cta
+      button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться

@@ -153,8 +153,13 @@ doctype html
                 .gallery__grid__card
                   picture
                     img(src='images/homepageGallery'+ i +'.png', srcset='images/homepageGallery'+ i +'.png 1x, images/homepageGallery'+ i +'@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      span Узнать стоимость
+                      i.ico.ico-questionmark
                     a.js-magnific-fullpage(href='images/homepageGallery'+ i +'@2x.png')
                       i.ico.ico-zoom
+                    .gallery__grid__card__name Корабль в бутылке
+                    .gallery__grid__card__author Евгений
               - }
             .gallery__grid__scrollbar
               .gallery__grid__scrollbar__wrapper
@@ -428,6 +433,26 @@ doctype html
                   .blog__card__metrics
                     i.ico.ico-counter-eye
                     span 7
+              
+              // pagination
+              .pagination.hidden--desktop
+                ul
+                  li.first
+                    a(href='#') 
+                    i.ico.ico-pagination-end
+                  li.active
+                    a(href='#') 1
+                  li
+                    a(href='#') 2
+                  li
+                    a(href='#') 3
+                  li
+                    a(href='#') 4
+                  li.last
+                    a(href='#')
+                      i.ico.ico-pagination-end.ico-pagination-end--right
+                        
+            
             // column
             .blog__col
               // item

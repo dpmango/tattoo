@@ -2511,6 +2511,60 @@ button:focus {
         top: 180px;
     }
 }
+/* PAGINATIOMN */
+.pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-content: center;
+            align-content: center;
+    font-size: 14px;
+        -ms-flex-line-pack: center;
+}
+.pagination ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1 1 0%;
+    -webkit-align-items: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.pagination ul li {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 2px 7px;
+    color: white;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.pagination ul li .ico-pagination-end {
+    opacity: .6;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.pagination ul li .ico-pagination-end:hover {
+    opacity: 1;
+}
+.pagination ul li:last-child {
+    margin-right: 0;
+}
+.pagination ul li.active {
+    background: #D2A36E;
+    color: #18181D;
+}
+.pagination ul li:hover:not(.active) {
+    background: #d2a36e;
+    background: rgba(210, 163, 110, 0.8);
+}
 /* HOVERS */
 .hoverable-link {
     position: relative;
@@ -3233,6 +3287,8 @@ button:focus {
 .gallery__grid__card {
     position: relative;
     margin-right: 20px;
+    color: #D2A36E;
+    text-align: center;
 }
 .gallery__grid__card picture {
     max-width: 100%;
@@ -3247,6 +3303,51 @@ button:focus {
     transition: all .3s ease-in-out;
     -webkit-transform: translate3d(-50%, -30%, 0);
             transform: translate3d(-50%, -30%, 0);
+}
+.gallery__grid__card__name {
+    position: absolute;
+    right: 35px;
+    bottom: 30%;
+    left: 35px;
+    z-index: 3;
+    letter-spacing: 1.8px;
+    font-size: 20px;
+    font-family: 'RoadRadio';
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate3d(0%, 20px, 0);
+            transform: translate3d(0%, 20px, 0);
+}
+.gallery__grid__card__author {
+    position: absolute;
+    right: 35px;
+    bottom: 20%;
+    left: 35px;
+    z-index: 3;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate3d(0%, 20px, 0);
+            transform: translate3d(0%, 20px, 0);
+}
+.gallery__grid__card__price {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 3;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate3d(0%, 30px, 0);
+            transform: translate3d(0%, 30px, 0);
+}
+.gallery__grid__card__price .ico {
+    margin-left: 10px;
 }
 .gallery__grid__card:after {
     position: absolute;
@@ -3280,8 +3381,30 @@ button:focus {
 }
 .gallery__grid__card:hover .ico-zoom {
     opacity: 1;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -60%, 0);
+            transform: translate3d(-50%, -60%, 0);
+}
+.gallery__grid__card:hover .ico-zoom:hover {
+    -webkit-transform: scale(1.1) translate3d(-50%, -60%, 0);
+            transform: scale(1.1) translate3d(-50%, -60%, 0);
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+}
+.gallery__grid__card:hover .gallery__grid__card__name {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+            transform: translate3d(0%, 0%, 0);
+}
+.gallery__grid__card:hover .gallery__grid__card__author {
+    opacity: .6;
+    -webkit-transform: translate3d(0%, 0%, 0);
+            transform: translate3d(0%, 0%, 0);
+}
+.gallery__grid__card:hover .gallery__grid__card__price {
+    opacity: 1;
+    -webkit-transform: translate3d(0%, 0%, 0);
+            transform: translate3d(0%, 0%, 0);
 }
 .gallery__grid__card:hover:after {
     opacity: 1;

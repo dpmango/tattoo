@@ -259,18 +259,46 @@
   background: #18181D
   color: white
   &__wrapper
+    position: relative
     padding-top: 100px
     padding-bottom: 30px
     min-height: 100vh
     display: flex
     overflow: hidden
   &__filter
-    position: relative
+    position: absolute
+    top: 100px
+    left: 0
+    z-index: 5
     flex: 0 0 200px
-    padding: 20px
+    width: 200px
+    height: calc(100vh - 130px)
     display: flex
     flex-direction: column
     background: black
+    transition: all $transitionSpeed $ease
+    &__wrapper
+      position: relative
+      flex: 1
+      padding: 20px
+      display: flex
+      flex-direction: column
+    &--hidden
+      cursor: pointer
+      background: $colorPrimary
+      transform: translate3d(-180px,0,0)
+      .ico-filter-toggle
+        transform: rotate(180deg)
+        filter: invert(1)
+      &.show
+        background: black
+        cursor: auto
+        transform: translate3d(0px,0,0)
+        .ico-filter-toggle
+          cursor: pointer
+          transform: rotate(0deg)
+          filter: invert(0)
+
     &__head
       flex: 0 0 100px
       &__label
@@ -294,9 +322,53 @@
       &:hover
         color: $colorPrimary
   &__grid
+    padding-left: 220px
     overflow-x: auto
     // max-height: calc(100vh - 130px)
     height: calc(100vh - 130px)
+    &::-webkit-scrollbar
+      display: none
+    &__scrollbar
+      position: absolute
+      left: 220px
+      right: 20px
+      bottom: 35px
+      background: #2E2E32
+      height: 6px
+      border-radius: 30px
+      &.full-width
+        left: 40px
+      &__wrapper
+        position: relative
+        height: 6px
+      &__dot
+        display: block
+        content: ' '
+        position: absolute
+        left: 0
+        top: 50%
+        size: 20px
+        margin-top: -10px
+        border: 2px solid $colorPrimary
+        border-radius: 50%
+        transition: transform .15s linear
+        &__wrap
+          position: relative
+          width: 100%
+          height: 20px
+          &::after
+            display: block
+            content: ' '
+            position: absolute
+            top: 50%
+            left: 50%
+            background: $colorPrimary
+            size: 10px
+            margin-left: -5px
+            margin-top: -7px
+            border-radius: 50%
+
+
     &__card
       position: relative
       margin-right: 20px

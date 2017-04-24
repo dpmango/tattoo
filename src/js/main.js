@@ -40,6 +40,39 @@ $(document).ready(function () {
     }
   });
 
+  // listen horizontal scroll
+  $('.gallery__grid').scrolled(20, function () {
+    var $el = $('.gallery__grid');
+    var $elAttr = $('.gallery__grid').attr('style');
+
+    var currPos = $el.scrollLeft();
+    var scrolledPercent = Math.abs(100 * currPos / (_window.width() - parseInt($elAttr.match(/\d+/))));
+    var setScrollPos = scrolledPercent * ((_window.width() - 70) / 100);
+
+    if (currPos > 190) {
+      $('.gallery__filter').addClass('gallery__filter--hidden');
+      $('.gallery__grid__scrollbar').addClass('full-width');
+    } else {
+      $('.gallery__filter').removeClass('gallery__filter--hidden');
+      $('.gallery__grid__scrollbar').removeClass('full-width');
+    }
+
+    // update scrollbar
+    $('.gallery__grid__scrollbar__dot').css('transform', 'translate3d(' + setScrollPos + 'px, 0,0)');
+  });
+
+  // togglers
+  $('.gallery').on('click', '.gallery__filter--hidden', function () {
+    if ($(this).is('.show')) {} else {
+      $(this).addClass('show');
+    }
+  });
+
+  $('.gallery').on('click', '.gallery__filter--hidden.show .ico-filter-toggle', function (e) {
+    $(this).closest('.gallery__filter').removeClass('show');
+    e.stopPropagation();
+  });
+
   // Hero slider
   $('.hero__slider').slick({
     autoplay: true,

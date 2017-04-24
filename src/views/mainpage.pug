@@ -115,20 +115,21 @@ doctype html
           .section-title Галерея
           .gallery__wrapper
             .gallery__filter
-              i.ico.ico-filter-toggle
-              .gallery__filter__head
-                .gallery__filter__head__label Фильтр
-                .gallery__filter__head__selected Популярные
-              .gallery__filter__content
-                .gallery__filter__item(data-filter='') Все
-                .gallery__filter__item(data-filter='') Мужские тату
-                .gallery__filter__item(data-filter='') Женские тату
-                .gallery__filter__item(data-filter='') Маленькие тату
-                .gallery__filter__item(data-filter='') Большие тату
-                .gallery__filter__item(data-filter='') Тату надписи
-                .gallery__filter__item(data-filter='') Черно-белые татуировки
-                .gallery__filter__item(data-filter='') Цветные татуировки
-                .gallery__filter__item(data-filter='') Исправления (кавер ап)
+              .gallery__filter__wrapper
+                i.ico.ico-filter-toggle
+                .gallery__filter__head
+                  .gallery__filter__head__label Фильтр
+                  .gallery__filter__head__selected Популярные
+                .gallery__filter__content
+                  .gallery__filter__item(data-filter='') Все
+                  .gallery__filter__item(data-filter='') Мужские тату
+                  .gallery__filter__item(data-filter='') Женские тату
+                  .gallery__filter__item(data-filter='') Маленькие тату
+                  .gallery__filter__item(data-filter='') Большие тату
+                  .gallery__filter__item(data-filter='') Тату надписи
+                  .gallery__filter__item(data-filter='') Черно-белые татуировки
+                  .gallery__filter__item(data-filter='') Цветные татуировки
+                  .gallery__filter__item(data-filter='') Исправления (кавер ап)
 
             .gallery__grid
               - for (var i = 1; i < 11; i++) {
@@ -138,6 +139,11 @@ doctype html
                     a.js-magnific-fullpage(href='images/homepageGallery'+ i +'@2x.png')
                       i.ico.ico-zoom
               - }
+            .gallery__grid__scrollbar
+              .gallery__grid__scrollbar__wrapper
+                .gallery__grid__scrollbar__dot
+                  .gallery__grid__scrollbar__dot__wrap
+                      
   
     // MASTERS SECTION
     .section(data-section-name='masters' data-nav-name="Мастера")

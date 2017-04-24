@@ -221,11 +221,15 @@
 
 @media($mobile)
   .navi
+    flex-direction: column
     &__wrapper
       margin-left: 20px
       margin-right: 20px
       padding-left: 20px
       padding-right: 20px
+      margin-bottom: 20px
+      max-width: calc(100% - 40px)
+      max-height: calc(100vh - 170px)
 
 @media(width <= 475px)
   .navi
@@ -499,6 +503,10 @@
   .big-text
     font-size: 18px
 
+@media(width <= 414px)
+  .mega-title
+    font-size: 34px
+
 .breadcrumbs
   font-size: 14px
   text-align: center
@@ -556,16 +564,28 @@
     &:hover
       opacity: .5
 
-// SLICK DOTS
+.mobile-cta-line
+  display: none
+  justify-content: space-between
+  width: 280px
+  margin-left: auto
+  margin-right: auto
 
+@media($mobile)
+  .mobile-cta-line
+    display: flex
+
+// SLICK DOTS
 .slick-custom-dots
   .slick-dots
     margin: 0
     padding: 0
     position: absolute
     left: 50%
+    width: 100%
     transform: translateX(-50%)
     bottom: 25px
+    text-align: center
     li
       margin-right: 15px
       cursor: pointer

@@ -75,7 +75,37 @@ html.mfp-helper
       flex: 0 1 50%
       margin-left: auto
 
+@media(width <= 900px)
+  .modal
+    &__master
+      .master__content
+        padding-top: 80px
+        margin-left: auto
+        margin-right: auto
+      .master__image
+        display: none
 
+@media($tablet)
+  .modal
+    &--master
+      button.mfp-close
+        size: 40px
+
+
+@media(width <= 630px)
+  .modal
+    padding-left: 5%
+    padding-right: 5%
+
+@media($mobile)
+  .modal
+    &__title
+      font-size: 20px
+    &__cta
+      padding-top: 15px
+      flex-direction: column
+      .btn
+        margin-top: 15px
 
 button.mfp-close
   background: svg-load('../../images/svg/close-btn.svg') no-repeat center
@@ -89,6 +119,15 @@ button.mfp-close
     top: 30px
   &:hover
     filter: brightness(50)
+
+@media($mobile)
+  button.mfp-close
+    top: 5px
+    right: 5px
+    size: 25px
+    filter: brightness(50)
+    &:focus, &:active
+      top: 5px
 
 // Fade-zoom animation for first dialog
 

@@ -364,7 +364,7 @@ $(document).ready(function(){
 	});
 
   // scrollify
-  // setTimeout(setScrollify, 300);
+  setTimeout(setScrollify, 100);
   function setScrollify(){
     $.scrollify({
       section : ".section",
@@ -408,7 +408,7 @@ $(document).ready(function(){
     }
   }
 
-  setScrollify();
+  // setScrollify();
   checkMobileScrollify();
 
   // disable on mobile

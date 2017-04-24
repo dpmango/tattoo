@@ -128,7 +128,6 @@
       >span
         margin-left: 20px
 
-
   &__image
     overflow: hidden
     picture
@@ -143,3 +142,16 @@
       transform: translate(-50%, -50%)
       display: inline-block
       max-width: 100%
+
+@media($mobile)
+  .master
+    &__content
+      &__row
+        flex-direction: column
+        margin-left: 0px
+        margin-right: 0px
+        > div
+          flex: 0 0 auto
+          padding-left: 0px
+          padding-right: 0px
+          margin-bottom: 30px

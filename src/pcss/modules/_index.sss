@@ -114,6 +114,9 @@
     &__wrapper
       display: flex
       justify-content: space-between
+      align-items: center
+      > div
+        flex: 0 0 130px
     &__socials
       a
         display: inline-block
@@ -153,6 +156,9 @@
 
 @media($mobile)
   .hero
+    &__wrapper
+      padding-top: 65px
+      padding-bottom: 65px
     &__bottom
       &__wrapper
         justify-content: center
@@ -160,6 +166,8 @@
         display: none
       &__nav
         display: none
+    &__benefits
+      margin-top: 5vh
 
 
 // SERVICE
@@ -726,7 +734,8 @@
     &__content
       min-height: 1px
       margin-top: 50px
-      flex: 1 1 100%
+      flex: 1 0 auto
+      padding-bottom: 20px
       position: relative
     &__picture
       flex: 0 0 300px

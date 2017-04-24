@@ -1108,6 +1108,47 @@ html.mfp-helper body {
     margin-left: auto;
     -webkit-box-flex: 0;
 }
+@media(max-width: 900px) {
+    .modal {}
+    .modal__master .master__content {
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 80px;
+    }
+    .modal__master .master__image {
+        display: none;
+    }
+}
+@media(max-width: 768px) {
+    .modal {}
+    .modal--master button.mfp-close {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media(max-width: 630px) {
+    .modal {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+@media(max-width: 568px) {
+    .modal {}
+    .modal__title {
+        font-size: 20px;
+    }
+    .modal__cta {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding-top: 15px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .modal__cta .btn {
+        margin-top: 15px;
+    }
+}
 button.mfp-close {
     top: 30px;
     right: 30px;
@@ -1125,6 +1166,19 @@ button.mfp-close:focus, button.mfp-close:active {
 button.mfp-close:hover {
     -webkit-filter: brightness(50);
             filter: brightness(50);
+}
+@media(max-width: 568px) {
+    button.mfp-close {
+        top: 5px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        -webkit-filter: brightness(50);
+                filter: brightness(50);
+    }
+    button.mfp-close:focus, button.mfp-close:active {
+        top: 5px;
+    }
 }
 /* Fade-zoom animation for first dialog */
 .my-mfp-zoom-in .zoom-anim-dialog {

@@ -151,6 +151,17 @@
       &__description
         font-size: 12px
 
+@media($mobile)
+  .hero
+    &__bottom
+      &__wrapper
+        justify-content: center
+      &__socials
+        display: none
+      &__nav
+        display: none
+
+
 // SERVICE
 .services
   position: relative
@@ -345,8 +356,6 @@
           display: block
           margin-bottom: 15px
           cursor: pointer
-
-
     &__content
       flex: 1
       display: flex
@@ -421,8 +430,6 @@
             margin-left: -5px
             margin-top: -7px
             border-radius: 50%
-
-
     &__card
       position: relative
       margin-right: 20px
@@ -463,6 +470,21 @@
           opacity: 1
           transform: translate3d(-50%, -50%, 0)
 
+@media($tablet)
+  .gallery
+    &__grid
+      padding-left: 0px
+      &__card
+        picture
+          img
+            max-width: 260px
+@media($mobile)
+  .gallery
+    &__grid
+      &__card
+        picture
+          img
+            max-width: 220px
 
 // SERVICE
 .masters

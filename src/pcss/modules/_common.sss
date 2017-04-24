@@ -182,6 +182,64 @@
         &:hover
           opacity: .5
 
+@media(height <= 640px)
+  .navi
+    &__wrapper
+      margin-bottom: 30px
+      max-height: calc(100vh - 110px)
+
+@media(height <= 580px)
+  .navi
+    &__wrapper
+      padding-top: 5vh
+      padding-bottom: 5vh
+
+@media($wide)
+  .navi
+    &__wrapper
+      padding-left: 40px
+      padding-right: 40px
+    &__list
+      > li
+        &:hover
+          > a
+            transform: translate3d(40px,0,0)
+        ul
+          margin-left: 160px
+          padding-left: 60px
+@media(width <= 1050px)
+  .navi
+    &__contacts
+      flex: 0 1 300px
+      overflow: hidden
+      max-width: 300px
+
+@media(width <= 920px)
+  .navi
+    &__contacts
+      display: none
+
+@media($mobile)
+  .navi
+    &__wrapper
+      margin-left: 20px
+      margin-right: 20px
+      padding-left: 20px
+      padding-right: 20px
+
+@media(width <= 475px)
+  .navi
+    &__list
+      > li
+        &:hover
+          > a
+            transform: translate3d(0px,0,0)
+            &::after
+              opacity: 0
+          ul
+            opacity: 0
+            pointer-events: none
+            transform: translate3d(0,0%,0)
 
 
 // FOOTER
@@ -424,6 +482,22 @@
 
 .c-primary
   color: $colorPrimary
+
+@media($tablet)
+  .mega-title
+    font-size: 42px
+  .section-title
+    font-size: 24px
+
+@media($mobile)
+  .section-title
+    font-size: 20px
+  .mega-title
+    font-size: 38px
+  .small-title
+    font-size: 18px
+  .big-text
+    font-size: 18px
 
 .breadcrumbs
   font-size: 14px

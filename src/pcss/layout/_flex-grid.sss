@@ -163,17 +163,33 @@
   @media($mobile)
     padding-right: 15px
 
-.hidden--desktop
-  display: block
-  @media($desktop)
-    display: none
+.visible--mobile
+  display: none !important
+  @media($mobile)
+    display: block !important
+
+.hidden--mobile
+  display: block !important
+  @media($mobile)
+    display: none !important
+
+.visible--tablet
+  display: none !important
+  @media($tablet)
+    display: block !important
+
+.hidden--tablet
+  display: block !important
+  @media($tablet)
+    display: none !important
 
 .visible--desktop
-  display: none
+  display: none !important
   @media($desktop)
-    display: block
+    display: block !important
 
-.visible--mobile
-  display: none
-  @media($mobile)
-    display: block
+.hidden--desktop
+  display: block !important
+  @media($desktop)
+    display: none !important
+    

@@ -28,10 +28,14 @@ $(document).ready(function(){
   });
 
   // Masonry
-  $('.gallery__grid').masonry({
+
+  $('.gallery__grid').isotope({
+    layoutMode: 'masonryHorizontal',
     itemSelector: '.gallery__grid__card',
-    columnWidth: 300,
-    gutter: 20
+    masonryHorizontal: {
+      rowHeight: 200,
+      gutter: 20
+    }
   });
 
   // Hero slider
@@ -86,6 +90,14 @@ $(document).ready(function(){
     swipe: true,
     touchMove: true,
     fade: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true
+        }
+      }
+    ]
   });
 
   // slider navigation
@@ -174,6 +186,15 @@ $(document).ready(function(){
   $('.js-toggle-blog').on('click', function(){
     $(this).closest('.blog').addClass('expanded');
     $(this).fadeOut();
+  });
+
+  // prevent modal on mobile masters click
+  // -- refactor ???
+  $('.masters__card').on('click', function(e){
+    return false;
+    e.stopPropagation();
+    e.preventDefault();
+
   });
 
   // creates pseudo links
@@ -288,7 +309,7 @@ $(document).ready(function(){
       scrollSpeed: 1100,
       offset : 0,
       scrollbars: true,
-      standardScrollElements: ".seo, .footer, .-gallery__grid",
+      standardScrollElements: ".seo, .footer, .gallery__grid",
       setHeights: false,
       overflowScroll: true,
       updateHash: true,

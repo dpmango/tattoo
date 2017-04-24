@@ -424,7 +424,7 @@
 
 .c-primary
   color: $colorPrimary
-  
+
 .breadcrumbs
   font-size: 14px
   text-align: center
@@ -521,6 +521,15 @@
           &::after
             background: white
 
+.testimonials__slider.slick-custom-dots
+  .slick-dots
+    bottom: auto
+    top: 250px
+
+@media($mobile)
+  .testimonials__slider.slick-custom-dots
+    .slick-dots
+      top: 180px
 
 // HOVERS
 .hoverable-link

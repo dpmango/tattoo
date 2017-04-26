@@ -3347,10 +3347,7 @@ button:focus {
     overflow-x: auto;
     padding-left: 220px;
     height: -webkit-calc(100vh - 130px);
-    height: calc(100vh - 130px);/* max-height: calc(100vh - 130px) */
-}
-.gallery__grid::-webkit-scrollbar {
-    display: none;
+    height: calc(100vh - 130px);/* max-height: calc(100vh - 130px) *//* &::-webkit-scrollbar *//*   display: none */
 }
 .gallery__grid__scrollbar {
     position: absolute;

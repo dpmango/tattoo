@@ -152,22 +152,22 @@
       <div class="container">
         <div class="section-title">Услуги</div>
         <div class="services__wrapper slick-custom-dots"><a class="services__item" href="#">
-            <div class="services__item__icon"><i class="ico ico-service-tatoo-machine"></i></div>
+            <div class="services__item__icon"><i class="icon-ico-service-tatoo-machine"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Тaтуировки</div></a><a class="services__item" href="#">
-            <div class="services__item__icon"><i class="ico ico-service-tattooache"></i></div>
+            <div class="services__item__icon"><i class="icon-ico-service-tattooache"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Татуаж</div></a><a class="services__item" href="#">
-            <div class="services__item__icon"><i class="ico ico-service-pircing"></i></div>
+            <div class="services__item__icon"><i class="icon-ico-service-pircing"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Пирсинг</div></a><a class="services__item" href="#">
-            <div class="services__item__icon"><i class="ico ico-service-chrysanthemum"></i></div>
+            <div class="services__item__icon"><i class="icon-ico-service-chrysanthemum"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Био-тату</div></a><a class="services__item" href="#">
-            <div class="services__item__icon"><i class="ico ico-service-nano"></i></div>
+            <div class="services__item__icon"><i class="icon-ico-service-nano"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Удалениe</div></a><a class="services__item" href="#">
-            <div class="services__item__icon"><i class="ico ico-service-pen"></i></div>
+            <div class="services__item__icon"><i class="icon-ico-service-pen"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Обучение  </div></a></div>
       </div>
@@ -184,81 +184,86 @@
               <div class="gallery__filter__head">
                 <div class="gallery__filter__head__label">Фильтр</div>
                 <div class="gallery__filter__head__selected">Популярные</div>
-                <div class="gallery__filter__head__dropdown"><span data-filter="styles">Стили</span><span data-filter="styles">Популярные</span><span data-filter="styles">Жанры</span></div>
+                <div class="gallery__filter__head__dropdown"><span data-filter="styles">Стили</span><span class="active" data-filter="popular">Популярные</span><span data-filter="types">Жанры</span></div>
               </div>
-              <div class="gallery__filter__content">
-                <div class="gallery__filter__item" data-filter="">Все</div>
-                <div class="gallery__filter__item" data-filter="">Мужские тату</div>
-                <div class="gallery__filter__item" data-filter="">Женские тату</div>
-                <div class="gallery__filter__item" data-filter="">Маленькие тату</div>
-                <div class="gallery__filter__item" data-filter="">Большие тату</div>
-                <div class="gallery__filter__item" data-filter="">Тату надписи</div>
-                <div class="gallery__filter__item" data-filter="">Черно-белые татуировки</div>
-                <div class="gallery__filter__item" data-filter="">Цветные татуировки</div>
-                <div class="gallery__filter__item" data-filter="">Исправления (кавер ап)</div>
+              <div class="gallery__filter__content" data-filter="styles">
+                <div class="gallery__filter__item" data-filter="">Стиль 1</div>
+                <div class="gallery__filter__item" data-filter="">Стиль 2</div>
+                <div class="gallery__filter__item" data-filter="">Стиль 3</div>
+                <div class="gallery__filter__item" data-filter="">Стиль 4</div>
+                <div class="gallery__filter__item" data-filter="">Стиль 5</div>
+                <div class="gallery__filter__item" data-filter="">Стиль 6</div>
+                <div class="gallery__filter__item" data-filter="">Стиль 7</div>
+              </div>
+              <div class="gallery__filter__content active" data-filter="popular">
+                <div class="gallery__filter__item active" data-filter="*">Все</div>
+                <div class="gallery__filter__item" data-filter=".f-man">Мужские тату</div>
+                <div class="gallery__filter__item" data-filter=".f-women">Женские тату</div>
+                <div class="gallery__filter__item" data-filter=".f-small">Маленькие тату</div>
+                <div class="gallery__filter__item" data-filter=".f-big">Большие тату</div>
+                <div class="gallery__filter__item" data-filter=".f-lettering">Тату надписи</div>
+                <div class="gallery__filter__item" data-filter=".f-black-and-white">Черно-белые татуировки</div>
+                <div class="gallery__filter__item" data-filter=".f-color">Цветные татуировки</div>
+                <div class="gallery__filter__item" data-filter=".f-cover-up">Исправления (кавер ап)</div>
+              </div>
+              <div class="gallery__filter__content" data-filter="types">
+                <div class="gallery__filter__item" data-filter="">Жанр 1</div>
+                <div class="gallery__filter__item" data-filter="">Жанр 2</div>
+                <div class="gallery__filter__item" data-filter="">Жанр 3</div>
+                <div class="gallery__filter__item" data-filter="">Жанр 4</div>
+                <div class="gallery__filter__item" data-filter="">Жанр 5</div>
               </div>
             </div>
           </div>
           <div class="gallery__grid">
-            <div class="gallery__grid__card">
+            <!-- grid card-->
+            <div class="gallery__grid__card f-man">
               <picture><img src="images/homepageGallery1.png" srcset="images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a>
                 <div class="gallery__grid__card__name">Корабль в бутылке</div>
                 <div class="gallery__grid__card__author">Евгений</div>
               </picture>
             </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery2.png" srcset="images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery2@2x.png"><i class="ico ico-zoom"></i></a>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-women">
+              <picture><img src="images/homepageGallery2.png" srcset="images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-women">
+              <picture><img src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-lettering">
+              <picture><img src="images/homepageGallery4.png" srcset="images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-big">
+              <picture><img src="images/homepageGallery5.png" srcset="images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a>
                 <div class="gallery__grid__card__name">Корабль в бутылке</div>
                 <div class="gallery__grid__card__author">Евгений</div>
               </picture>
             </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery3@2x.png"><i class="ico ico-zoom"></i></a>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-small">
+              <picture><img src="images/homepageGallery6.png" srcset="images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-lettering">
+              <picture><img src="images/homepageGallery7.png" srcset="images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-black-and-white">
+              <picture><img src="images/homepageGallery8.png" srcset="images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+            </div>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-man">
+              <picture><img src="images/homepageGallery9.png" srcset="images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a>
                 <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
+                <div class="gallery__grid__card__author">Евгений  </div>
               </picture>
             </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery4.png" srcset="images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery4@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
-            </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery5.png" srcset="images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery5@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
-            </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery6.png" srcset="images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery6@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
-            </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery7.png" srcset="images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery7@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
-            </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery8.png" srcset="images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery8@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
-            </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery9.png" srcset="images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery9@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
-            </div>
-            <div class="gallery__grid__card">
-              <picture><img src="images/homepageGallery10.png" srcset="images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery10@2x.png"><i class="ico ico-zoom"></i></a>
-                <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                <div class="gallery__grid__card__author">Евгений</div>
-              </picture>
+            <!-- grid card-->
+            <div class="gallery__grid__card f-man">
+              <picture><img src="images/homepageGallery10.png" srcset="images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
             </div>
           </div>
           <div class="gallery__grid__scrollbar">
@@ -275,10 +280,12 @@
   <!-- MASTERS SECTION-->
   <div class="section" data-section-name="masters" data-nav-name="Мастера">
     <div class="masters">
+      <div class="masters__bg-right"></div>
+      <div class="masters__bg-left"></div>
       <div class="container">
         <div class="section-title">Мастера</div>
         <div class="masters__wrapper slick-custom-dots">
-          <!-- master card--><a class="masters__card popup-master" href="#masterModal">
+          <!-- master card--><a class="masters__card popup-master" href="#masterModal" data-bg-left="images/el/mainpageServicesBG.jpg" data-bg-right="images/el/mainpageServicesBG.jpg">
             <div class="masters__card__image"><i class="ico ico-zoom"></i>
               <picture><img src="images/homepageMasterCircle1.png" srcset="images/homepageMasterCircle1.png 1x, images/homepageMasterCircle1@2x.png 2x"></picture>
             </div>
@@ -293,7 +300,7 @@
               <div class="fz14 c-primary">mustang</div>
               <div class="text-center mt40"><span class="btn btn--ghost" data-link="#">Узнать подробнее</span></div>
             </div></a>
-          <!-- master card--><a class="masters__card popup-master" href="#masterModal">
+          <!-- master card--><a class="masters__card popup-master" href="#masterModal" data-bg-left="images/el/mainpageServicesBG.jpg" data-bg-right="images/el/mainpageServicesBG.jpg">
             <div class="masters__card__image"><i class="ico ico-zoom"></i>
               <picture><img src="images/homepageMasterCircle2.png" srcset="images/homepageMasterCircle2.png 1x, images/homepageMasterCircle2@2x.png 2x"></picture>
             </div>
@@ -308,7 +315,7 @@
               <div class="fz14 c-primary">mustang</div>
               <div class="text-center mt40"><span class="btn btn--ghost" data-link="#">Узнать подробнее</span></div>
             </div></a>
-          <!-- master card--><a class="masters__card popup-master" href="#masterModal">
+          <!-- master card--><a class="masters__card popup-master" href="#masterModal" data-bg-left="images/el/mainpageServicesBG.jpg" data-bg-right="images/el/mainpageServicesBG.jpg">
             <div class="masters__card__image"><i class="ico ico-zoom"></i>
               <picture><img src="images/homepageMasterCircle3.png" srcset="images/homepageMasterCircle4.png 1x, images/homepageMasterCircle3@2x.png 2x"></picture>
             </div>
@@ -323,7 +330,7 @@
               <div class="fz14 c-primary">mustang</div>
               <div class="text-center mt40"><span class="btn btn--ghost" data-link="#">Узнать подробнее</span></div>
             </div></a>
-          <!-- master card--><a class="masters__card popup-master" href="#masterModal">
+          <!-- master card--><a class="masters__card popup-master" href="#masterModal" data-bg-left="images/el/mainpageServicesBG.jpg" data-bg-right="images/el/mainpageServicesBG.jpg">
             <div class="masters__card__image"><i class="ico ico-zoom"></i>
               <picture><img src="images/homepageMasterCircle4.png" srcset="images/homepageMasterCircle4.png 1x, images/homepageMasterCircle4@2x.png 2x"></picture>
             </div>
@@ -353,7 +360,7 @@
               <div class="fz14 c-primary">mustang</div>
               <div class="text-center mt40"><span class="btn btn--ghost" data-link="#">Узнать подробнее</span></div>
             </div></a>
-          <!-- master card--><a class="masters__card popup-master" href="#masterModal">
+          <!-- master card--><a class="masters__card popup-master" href="#masterModal" data-bg-left="images/el/mainpageServicesBG.jpg" data-bg-right="images/el/mainpageServicesBG.jpg">
             <div class="masters__card__image"><i class="ico ico-zoom"></i>
               <picture><img src="images/homepageMasterCircle6.png" srcset="images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x"></picture>
             </div>
@@ -436,14 +443,14 @@
             <div class="testimonials__slide">
               <div class="testimonials__slide__wrapper">
                 <div class="testimonials__content">
-                  <div class="testimonials__actions"><a href="#"><i class="ico ico-photo-camera"></i><span>Фото работы</span></a><a href="#"><i class="ico ico-user-group"></i><span>Фото с мастером</span></a></div>
+                  <div class="testimonials__actions"><a class="active" href="#" data-toggle="testimonial"><i class="ico ico-photo-camera"></i><span>Фото работы</span></a><a href="#" data-toggle="master"><i class="ico ico-user-group"></i><span>Фото с мастером</span></a></div>
                   <div class="testimonials__text">Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)</div>
                   <div class="testimonials__author">Екатерина Иванова</div>
-                  <div class="testimonials__cta"><a class="btn btn--ghost" href="#">Оставить отзыв</a></div>
+                  <div class="testimonials__cta"><a class="btn btn--ghost popup-with-zoom-anim" href="#modalFeedback">Оставить отзыв</a></div>
                   <div class="testimonials__nav"></div>
                 </div>
                 <div class="testimonials__picture">
-                  <picture><img src="images/testimonialsPic.png" srcset="images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x"></picture>
+                  <picture><img class="active" data-type="testimonial" src="images/testimonialsPic.png" srcset="images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x"><img data-type="master" src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"></picture>
                 </div>
               </div>
             </div>
@@ -451,14 +458,14 @@
             <div class="testimonials__slide">
               <div class="testimonials__slide__wrapper">
                 <div class="testimonials__content">
-                  <div class="testimonials__actions"><a href="#"><i class="ico ico-photo-camera"></i><span>Фото работы</span></a><a href="#"><i class="ico ico-user-group"></i><span>Фото с мастером</span></a></div>
+                  <div class="testimonials__actions"><a class="active" href="#" data-toggle="testimonial"><i class="ico ico-photo-camera"></i><span>Фото работы</span></a><a href="#" data-toggle="master"><i class="ico ico-user-group"></i><span>Фото с мастером</span></a></div>
                   <div class="testimonials__text">Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)</div>
                   <div class="testimonials__author">Екатерина Иванова</div>
-                  <div class="testimonials__cta"><a class="btn btn--ghost" href="#">Оставить отзыв</a></div>
+                  <div class="testimonials__cta"><a class="btn btn--ghost popup-with-zoom-anim" href="#modalFeedback">Оставить отзыв</a></div>
                   <div class="testimonials__nav"></div>
                 </div>
                 <div class="testimonials__picture">
-                  <picture><img src="images/testimonialsPic.png" srcset="images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x"></picture>
+                  <picture><img class="active" data-type="testimonial" src="images/testimonialsPic.png" srcset="images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x"><img data-type="master" src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"></picture>
                 </div>
               </div>
             </div>
@@ -554,15 +561,33 @@
   <!-- SEO SECTION (no scrollify)-->
   <div class="seo">
     <div class="container">
-      <div class="seo__links"><a href="#">Почему тату-мания?</a><a href="#">История тату</a><a href="#">Разное о тату</a></div>
-      <div class="small-title text-center mt60">Добро пожаловать в лучший тату салон в Москве!</div>
-      <div class="seo-text mt25">
-        <p>1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки</p>
-        <p>2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.</p>
-        <p>3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!</p>
-        <p>4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.</p>
-        <p>5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. </p>
-        <p>В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a></p>
+      <div class="seo__links"><a class="active" href="#" data-tab="1">Почему тату-мания?</a><a href="#" data-tab="2">История тату</a><a href="#" data-tab="3">Разное о тату</a></div>
+      <div class="seo__tab active" data-tab="1">
+        <div class="small-title text-center mt60">Добро пожаловать в лучший тату салон в Москве!</div>
+        <div class="seo-text mt25">
+          <p>1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки</p>
+          <p>2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.</p>
+          <p>3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!</p>
+          <p>4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.</p>
+          <p>5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. </p>
+          <p>В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a></p>
+        </div>
+      </div>
+      <div class="seo__tab" data-tab="2">
+        <div class="small-title text-center mt60">лучший тату салон в Москве!</div>
+        <div class="seo-text mt25">
+          <p>1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки</p>
+          <p>2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.</p>
+          <p>3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!</p>
+        </div>
+      </div>
+      <div class="seo__tab" data-tab="3">
+        <div class="small-title text-center mt60">Добро пожаловать в лучший тату салон в Москве!</div>
+        <div class="seo-text mt25">
+          <p>4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.</p>
+          <p>5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. </p>
+          <p>В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a></p>
+        </div>
       </div>
     </div>
   </div>
@@ -675,6 +700,37 @@
         <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
       </div>
       <div class="modal__cta">
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
+  <!-- Feedback-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalFeedback">
+    <div class="modal__title">Оставить отзыв</div>
+    <form class="js-getprice-form mt30" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Отзыв" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <div class="ui-file">
+          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+          <div class="ui-file__btn"><span>Прикрепить фото</span><i class="ico ico-add-attachment"></i></div>
+        </div>
         <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
       </div>
     </form>

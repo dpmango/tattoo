@@ -92,32 +92,32 @@ doctype html
           .services__wrapper.slick-custom-dots
             a(href='#').services__item
               .services__item__icon
-                i.ico.ico-service-tatoo-machine
+                i.icon-ico-service-tatoo-machine
               .services__item__icon-double
               .services__item__name Тaтуировки
             a(href='#').services__item
               .services__item__icon
-                i.ico.ico-service-tattooache
+                i.icon-ico-service-tattooache
               .services__item__icon-double
               .services__item__name Татуаж
             a(href='#').services__item
               .services__item__icon
-                i.ico.ico-service-pircing
+                i.icon-ico-service-pircing
               .services__item__icon-double
               .services__item__name Пирсинг
             a(href='#').services__item
               .services__item__icon
-                i.ico.ico-service-chrysanthemum
+                i.icon-ico-service-chrysanthemum
               .services__item__icon-double
               .services__item__name Био-тату
             a(href='#').services__item
               .services__item__icon
-                i.ico.ico-service-nano
+                i.icon-ico-service-nano
               .services__item__icon-double
               .services__item__name Удалениe
             a(href='#').services__item
               .services__item__icon
-                i.ico.ico-service-pen
+                i.icon-ico-service-pen
               .services__item__icon-double
               .services__item__name Обучение  
 
@@ -135,32 +135,130 @@ doctype html
                   .gallery__filter__head__selected Популярные
                   .gallery__filter__head__dropdown
                     span(data-filter='styles') Стили
-                    span(data-filter='styles') Популярные
-                    span(data-filter='styles') Жанры
-                .gallery__filter__content
-                  .gallery__filter__item(data-filter='') Все
-                  .gallery__filter__item(data-filter='') Мужские тату
-                  .gallery__filter__item(data-filter='') Женские тату
-                  .gallery__filter__item(data-filter='') Маленькие тату
-                  .gallery__filter__item(data-filter='') Большие тату
-                  .gallery__filter__item(data-filter='') Тату надписи
-                  .gallery__filter__item(data-filter='') Черно-белые татуировки
-                  .gallery__filter__item(data-filter='') Цветные татуировки
-                  .gallery__filter__item(data-filter='') Исправления (кавер ап)
-
+                    span(data-filter='popular').active Популярные
+                    span(data-filter='types') Жанры
+                .gallery__filter__content(data-filter='styles')
+                  .gallery__filter__item(data-filter='') Стиль 1
+                  .gallery__filter__item(data-filter='') Стиль 2
+                  .gallery__filter__item(data-filter='') Стиль 3
+                  .gallery__filter__item(data-filter='') Стиль 4
+                  .gallery__filter__item(data-filter='') Стиль 5
+                  .gallery__filter__item(data-filter='') Стиль 6
+                  .gallery__filter__item(data-filter='') Стиль 7
+                .gallery__filter__content(data-filter='popular').active
+                  .gallery__filter__item(data-filter='*').active Все
+                  .gallery__filter__item(data-filter='.f-man') Мужские тату
+                  .gallery__filter__item(data-filter='.f-women') Женские тату
+                  .gallery__filter__item(data-filter='.f-small') Маленькие тату
+                  .gallery__filter__item(data-filter='.f-big') Большие тату
+                  .gallery__filter__item(data-filter='.f-lettering') Тату надписи
+                  .gallery__filter__item(data-filter='.f-black-and-white') Черно-белые татуировки
+                  .gallery__filter__item(data-filter='.f-color') Цветные татуировки
+                  .gallery__filter__item(data-filter='.f-cover-up') Исправления (кавер ап)
+                .gallery__filter__content(data-filter='types')
+                  .gallery__filter__item(data-filter='') Жанр 1
+                  .gallery__filter__item(data-filter='') Жанр 2
+                  .gallery__filter__item(data-filter='') Жанр 3
+                  .gallery__filter__item(data-filter='') Жанр 4
+                  .gallery__filter__item(data-filter='') Жанр 5
+                                  
             .gallery__grid
-              - for (var i = 1; i < 11; i++) {
-                .gallery__grid__card
-                  picture
-                    img(src='images/homepageGallery'+ i +'.png', srcset='images/homepageGallery'+ i +'.png 1x, images/homepageGallery'+ i +'@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery'+ i +'@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-              - }
+              // grid card
+              .gallery__grid__card.f-man
+                picture
+                  img(src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    span Узнать стоимость
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+                  .gallery__grid__card__name Корабль в бутылке
+                  .gallery__grid__card__author Евгений
+              // grid card
+              .gallery__grid__card.f-women
+                picture
+                  img(src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+
+              // grid card
+              .gallery__grid__card.f-women
+                picture
+                  img(src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+
+              // grid card
+              .gallery__grid__card.f-lettering
+                picture
+                  img(src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+
+              // grid card
+              .gallery__grid__card.f-big
+                picture
+                  img(src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    span Узнать стоимость
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+                  .gallery__grid__card__name Корабль в бутылке
+                  .gallery__grid__card__author Евгений
+              // grid card
+              .gallery__grid__card.f-small
+                picture
+                  img(src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+
+              // grid card
+              .gallery__grid__card.f-lettering
+                picture
+                  img(src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+
+              // grid card
+              .gallery__grid__card.f-black-and-white
+                picture
+                  img(src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+
+              // grid card
+              .gallery__grid__card.f-man
+                picture
+                  img(src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    span Узнать стоимость
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+                  .gallery__grid__card__name Корабль в бутылке
+                  .gallery__grid__card__author Евгений  
+              // grid card
+              .gallery__grid__card.f-man
+                picture
+                  img(src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
+                  a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                    i.ico.ico-questionmark
+                  a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                    i.ico.ico-zoom
+                          
             .gallery__grid__scrollbar
               .gallery__grid__scrollbar__wrapper
                 .gallery__grid__scrollbar__dot
@@ -170,11 +268,14 @@ doctype html
     // MASTERS SECTION
     .section(data-section-name='masters' data-nav-name="Мастера")
       .masters
+        .masters__bg-right
+        .masters__bg-left
+        
         .container
           .section-title Мастера
           .masters__wrapper.slick-custom-dots
             // master card
-            a(href='#masterModal').masters__card.popup-master
+            a(href='#masterModal').masters__card.popup-master(data-bg-left='images/el/mainpageServicesBG.jpg' data-bg-right='images/el/mainpageServicesBG.jpg')
               .masters__card__image
                 i.ico.ico-zoom
                 picture
@@ -192,7 +293,7 @@ doctype html
                   span(data-link='#').btn.btn--ghost Узнать подробнее
                 
             // master card
-            a(href='#masterModal').masters__card.popup-master
+            a(href='#masterModal').masters__card.popup-master(data-bg-left='images/el/mainpageServicesBG.jpg' data-bg-right='images/el/mainpageServicesBG.jpg')
               .masters__card__image
                 i.ico.ico-zoom
                 picture
@@ -210,7 +311,7 @@ doctype html
                   span(data-link='#').btn.btn--ghost Узнать подробнее
                 
             // master card
-            a(href='#masterModal').masters__card.popup-master
+            a(href='#masterModal').masters__card.popup-master(data-bg-left='images/el/mainpageServicesBG.jpg' data-bg-right='images/el/mainpageServicesBG.jpg')
               .masters__card__image
                 i.ico.ico-zoom
                 picture
@@ -229,7 +330,7 @@ doctype html
                 
                 
             // master card
-            a(href='#masterModal').masters__card.popup-master
+            a(href='#masterModal').masters__card.popup-master(data-bg-left='images/el/mainpageServicesBG.jpg' data-bg-right='images/el/mainpageServicesBG.jpg')
               .masters__card__image
                 i.ico.ico-zoom
                 picture
@@ -267,7 +368,7 @@ doctype html
                 
                 
             // master card
-            a(href='#masterModal').masters__card.popup-master
+            a(href='#masterModal').masters__card.popup-master(data-bg-left='images/el/mainpageServicesBG.jpg' data-bg-right='images/el/mainpageServicesBG.jpg')
               .masters__card__image
                 i.ico.ico-zoom
                 picture
@@ -363,45 +464,47 @@ doctype html
                 .testimonials__slide__wrapper
                   .testimonials__content
                     .testimonials__actions
-                      a(href='#')
+                      a(href='#' data-toggle='testimonial').active
                         i.ico.ico-photo-camera
                         span Фото работы
-                      a(href='#')
+                      a(href='#' data-toggle='master')
                         i.ico.ico-user-group
                         span Фото с мастером
                             
                     .testimonials__text Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)
                     .testimonials__author Екатерина Иванова
                     .testimonials__cta
-                        a(href='#').btn.btn--ghost Оставить отзыв
+                        a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Оставить отзыв
                     .testimonials__nav
                       
                     
                   .testimonials__picture
                     picture
-                      img(src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x')
+                      img(data-type='testimonial' src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x').active
+                      img(data-type='master' src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
                       
               // single slide
               .testimonials__slide
                 .testimonials__slide__wrapper
                   .testimonials__content
                     .testimonials__actions
-                      a(href='#')
+                      a(href='#' data-toggle='testimonial').active
                         i.ico.ico-photo-camera
                         span Фото работы
-                      a(href='#')
+                      a(href='#' data-toggle='master')
                         i.ico.ico-user-group
                         span Фото с мастером
                             
                     .testimonials__text Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)
                     .testimonials__author Екатерина Иванова
                     .testimonials__cta
-                        a(href='#').btn.btn--ghost Оставить отзыв
+                        a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Оставить отзыв
                     .testimonials__nav
                     
                   .testimonials__picture
                     picture
-                      img(src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x')
+                      img(data-type='testimonial' src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x').active
+                      img(data-type='master' src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
                       
     // BLOG SECTION
     .section(data-section-name='blog' data-nav-name="Блог")
@@ -506,19 +609,31 @@ doctype html
     .seo
       .container
         .seo__links
-          a(href='#') Почему тату-мания?
-          a(href='#') История тату
-          a(href='#') Разное о тату
-        
-        .small-title.text-center.mt60 Добро пожаловать в лучший тату салон в Москве!
-        .seo-text.mt25
-          p 1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки
-          p 2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.
-          p 3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!
-          p 4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.
-          p 5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. 
-          p В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a>
-                  
+          a(href='#' data-tab='1').active Почему тату-мания?
+          a(href='#' data-tab='2') История тату
+          a(href='#' data-tab='3') Разное о тату
+        .seo__tab(data-tab='1').active
+          .small-title.text-center.mt60 Добро пожаловать в лучший тату салон в Москве!
+          .seo-text.mt25
+            p 1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки
+            p 2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.
+            p 3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!
+            p 4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.
+            p 5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. 
+            p В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a>
+        .seo__tab(data-tab='2')
+          .small-title.text-center.mt60 лучший тату салон в Москве!
+          .seo-text.mt25
+            p 1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки
+            p 2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.
+            p 3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!
+        .seo__tab(data-tab='3')
+          .small-title.text-center.mt60 Добро пожаловать в лучший тату салон в Москве!
+          .seo-text.mt25
+            p 4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.
+            p 5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. 
+            p В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a>
+                                        
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

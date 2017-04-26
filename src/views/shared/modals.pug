@@ -74,3 +74,30 @@
     
     .modal__cta
       button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться
+
+
+// Feedback
+.modal.zoom-anim-dialog.mfp-hide#modalFeedback
+  .modal__title Оставить отзыв
+  form(action="#").js-getprice-form.mt30
+    .row
+      .col.col--3-6
+        .ui-input.ui-input--icon.ui-input--user
+          input(type='text' placeholder='Ваше имя' name='name') 
+      .col.col--3-6
+        .ui-input.ui-input--icon.ui-input--mobile
+          input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
+
+    .ui-input.ui-input--icon.ui-input--email
+      input(type='email' placeholder='Ваш email' name='email') 
+
+    .ui-input.ui-input--icon.ui-input--comment
+      textarea(placeholder='Отзыв' rows='3' name='comment')
+    
+    .modal__cta
+      .ui-file
+        input(type='file' data-multiple-caption='выбрано {count} файлов', multiple='')
+        .ui-file__btn
+          span Прикрепить фото
+          i.ico.ico-add-attachment
+      button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться

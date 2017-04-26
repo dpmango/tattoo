@@ -32,20 +32,23 @@ $(document).ready(function () {
     $('.about-logo-overlay').removeClass('active');
   });
 
+  // HEADER BG ON SCROLL
+  _window.scrolled(50, function (e) {
+    headerMobileBg();
+  });
+  _window.resized(50, function () {
+    headerMobileBg();
+  });
+  function headerMobileBg() {
+    if (_window.width() < 768 && _window.scrollTop() > 50) {
+      $('.header').addClass('header--mobile-bg');
+    } else {
+      $('.header').removeClass('header--mobile-bg');
+    }
+  }
   // scrolldown icon
   $('.ico-scrolldown').on('click', function () {
     $.scrollify.move(1);
-  });
-
-  // Masonry
-
-  $('.gallery__grid').isotope({
-    layoutMode: 'masonryHorizontal',
-    itemSelector: '.gallery__grid__card',
-    masonryHorizontal: {
-      rowHeight: 200,
-      gutter: 20
-    }
   });
 
   // listen horizontal scroll
@@ -99,13 +102,75 @@ $(document).ready(function () {
     setGalleryFilterDisplay();
   });
 
-  // GAllery filter
+  // Gallery filter
   $('.gallery__filter__head__selected').on('click', function () {
     $(this).closest('.gallery__filter__wrapper').addClass('active');
   });
 
   $('.gallery__filter').on('click', '.gallery__filter__head__dropdown span', function () {
     $(this).closest('.gallery__filter__wrapper').removeClass('active');
+
+    $('.gallery__filter__head__selected').text($(this).text());
+    var selectedEl = $(this).data('filter');
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    $(this).closest('.gallery__filter').find('.gallery__filter__content').each(function (i, val) {
+      if ($(val).data('filter') == selectedEl) {
+        $(val).addClass('active');
+      } else {
+        $(val).removeClass('active');
+      }
+    });
+  });
+
+  // Masonry
+  var $masonryGrid = $('.gallery__grid');
+  function initMasonry() {
+    $masonryGrid.isotope({
+      layoutMode: 'masonryHorizontal',
+      itemSelector: '.gallery__grid__card',
+      masonryHorizontal: {
+        rowHeight: 200,
+        gutter: 20
+      }
+    });
+  }
+  setTimeout(initMasonry, 250);
+
+  // ISITOPE FILTER
+  $('.gallery__filter__item').on('click', function () {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    var parseFilter = $(this).data('filter');
+    $masonryGrid.isotope({
+      filter: parseFilter,
+      layoutMode: 'masonryHorizontal',
+      itemSelector: '.gallery__grid__card',
+      masonryHorizontal: {
+        rowHeight: 200,
+        gutter: 20
+      }
+    });
+  });
+
+  // MASTERS HOVER FUNCTIONS
+  $('.masters__card').on('mouseenter', function () {
+    var bgLeft = $(this).data('bg-left');
+    var bgRight = $(this).data('bg-right');
+
+    console.log(bgLeft);
+    console.log(bgRight);
+
+    if (bgLeft && bgRight) {
+      $('.masters__bg-left').css('background-image', 'url(../' + bgLeft + ')');
+      $('.masters__bg-right').css('background-image', 'url(../' + bgRight + ')');
+    }
+  });
+  $('.masters__card').on('mouseleave', function () {
+    $('.masters__bg-left').css('background-image', 'url(../images/el/mainpageMastersBgLeft.png)');
+    $('.masters__bg-right').css('background-image', 'url(../images/el/mainpageMastersBgRight.png)');
   });
 
   // Hero slider
@@ -251,6 +316,38 @@ $(document).ready(function () {
     $(this).fadeOut();
   });
 
+  // TESTIMONAIALS TOGGLER
+  $('.testimonials__actions').on('click', 'a', function (e) {
+    var selectedType = $(this).data('toggle');
+
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    $(this).closest('.testimonials__slide').find('.testimonials__picture img').each(function (i, val) {
+      if ($(val).data('type') == selectedType) {
+        $(val).fadeIn();
+      } else {
+        $(val).fadeOut();
+      }
+    });
+  });
+
+  // SEO TABS TOGGLER
+  $('.seo__links').on('click', 'a', function (e) {
+    var selectedTab = $(this).data('tab');
+
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+
+    $(this).closest('.container').find('.seo__tab').each(function (i, val) {
+      if ($(val).data('tab') == selectedTab) {
+        $(val).fadeIn();
+      } else {
+        $(val).hide();
+      }
+    });
+  });
+
   // prevent modal on mobile masters click
   // -- refactor ???
   $('.masters__card').on('click', function (e) {
@@ -381,7 +478,7 @@ $(document).ready(function () {
       scrollSpeed: 1100,
       offset: 0,
       scrollbars: true,
-      standardScrollElements: ".seo, .footer, .gallery__grid",
+      standardScrollElements: ".seo, .footer, .gallery__grid, .gallery__filter",
       setHeights: false,
       overflowScroll: true,
       updateHash: true,

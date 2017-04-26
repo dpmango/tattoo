@@ -64,7 +64,29 @@ html.mfp-helper
     display: flex
     min-height: 100vh
     overflow-y: scroll
+    &::after
+      display: block
+      content: ' '
+      background: url('../images/el/modalMasterBG.jpg') no-repeat top left
+      width: 720px
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      z-index: 1
+    &::before
+      display: block
+      content: ' '
+      width: 720px
+      background: linear-gradient(to right, color(#2E2E32 a(0%)),color(#2E2E32 a(100%)))
+      z-index: 2
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
     .master__content
+      position: relative
+      z-index: 5
       flex: 0 1 50%
       padding-left: 5%
       display: flex
@@ -74,6 +96,8 @@ html.mfp-helper
       margin-bottom: 20px
       padding-right: 3%
     .master__image
+      position: relative
+      z-index: 5
       flex: 0 1 50%
       margin-left: auto
 

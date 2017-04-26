@@ -8,12 +8,15 @@
   left: 0
   right: 0
   z-index: 9
+  transition: background $transitionSpeed $ease
   &--no-conacts
     .header__contacts
       transform: translate3d(0, -100px, 0)
       opacity: 0
   &--static
     position: absolute
+  &--mobile-bg
+    background: #2E2E31
   &__wrapper
     display: flex
     align-items: center
@@ -617,7 +620,7 @@
         &::after
           display: block
           content: ' '
-          size: 8px
+          size: 6px
           position: absolute
           top: 0
           bottom: 0

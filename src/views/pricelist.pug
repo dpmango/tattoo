@@ -1,0 +1,181 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .page.page--pricelist
+      .container.container--1280
+        .section-title Цены            
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Галерея
+          a(href='#') Биомеханика
+          a(href='#') Зеленый тигр на коне
+        
+        // row
+        .row.row--wide.row--column--tablet.mt25
+          .col.col--3-6
+            .small-title.mt50 Татуировки
+            .price-table
+              .price-row
+                .price-row__left Татуировка 5 x 5 см
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span от 1500 руб
+              .price-row
+                .price-row__left Татуировка 10 x 5 см
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span от 3000 руб
+              .price-row
+                .price-row__left Реставрация татировки
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span от 3000 руб  
+              .price-row
+                .price-row__left Исправление татировки
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span от 3000 руб  
+              .price-row
+                .price-row__left Коррекция татуировки в течение 3х недель
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span бесплатно 
+              .price-row
+                .price-row__left Био-тату
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span от 500 руб
+                  
+            // next price section
+            .small-title.mt50 Удаление татуировки
+            .price-table
+              .price-row
+                .price-row__left Удаление
+                .price-row__right
+                  a(href='#')
+                    i.ico.ico-eye
+                  span от 500 руб
+              .lh1.mt30 Лазерное удаление татуировок (Nd-Yag и Q-switch KTP)  без рубцов и ожогов!
+
+          .col.col--3-6
+            .text-slider.slick-center-arrows
+              .text-slider__slide
+                .text-slider__content
+                  picture
+                    img(src='images/priceGal.png', srcset='images/priceGal.png 1x, images/priceGal@2x.png 2x')
+                  .text-slider__centrify
+                    .text-slider__title Мужские тату
+                    .text-slider__price от 3 000 руб
+                  a(href='#').btn.btn--ghost Перейти к галерее
+              .text-slider__slide
+                .text-slider__content
+                  picture
+                    img(src='images/priceGal.png', srcset='images/priceGal.png 1x, images/priceGal@2x.png 2x')
+                  .text-slider__centrify
+                    .text-slider__title Мужские тату
+                    .text-slider__price от 3 000 руб
+                  a(href='#').btn.btn--ghost Перейти к галерее
+        
+        // row
+        .row.row--wide.row--column--tablet
+          .col.col--3-6
+            .small-title.mt50 Перманентный макияж бровей
+            .price-table
+              .price-row
+                .price-row__left По технике «Теневая растушевка» 
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left По технике растушевка
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски»
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски 3D» (микроблейдинг)
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left Смешанная техника (шотирование+волоски)
+                .price-row__right Бесплатно
+              .price-row
+                .price-row__left Коррекция
+                .price-row__right 50% от стоимости работы
+          // col
+          .col.col--3-6
+            .small-title.mt50 Перманентный макияж бровей
+            .price-table
+              .price-row
+                .price-row__left По технике «Теневая растушевка» 
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left По технике растушевка
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски»
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски 3D» (микроблейдинг)
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left Смешанная техника (шотирование+волоски)
+                .price-row__right Бесплатно
+                                  
+        // row
+        .row.row--wide.row--column--tablet
+          .col.col--3-6
+            .small-title.mt50 Перманентный макияж бровей
+            .price-table
+              .price-row
+                .price-row__left По технике «Теневая растушевка» 
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left По технике растушевка
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски»
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски 3D» (микроблейдинг)
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left Смешанная техника (шотирование+волоски)
+                .price-row__right Бесплатно
+              .price-row
+                .price-row__left Коррекция
+                .price-row__right 50% от стоимости работы
+          // col
+          .col.col--3-6
+            .small-title.mt50 Перманентный макияж бровей
+            .price-table
+              .price-row
+                .price-row__left По технике «Теневая растушевка» 
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left По технике растушевка
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски»
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left По технике «Волоски 3D» (микроблейдинг)
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left Смешанная техника (шотирование+волоски)
+                .price-row__right Бесплатно
+                                                            
+                            
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

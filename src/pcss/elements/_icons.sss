@@ -17,11 +17,26 @@
     background-image: svg-load('../../images/svg/ico-scrolldown.svg')
     size: 28px 40px
     transition: all $transitionSpeed $ease
+    // easeInOutCubic
+    animation: scrolldown 2.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+    &::after
+      display: block
+      content: ' '
+      border-radius: 5px
+      background: white
+      width: 3.7px
+      height: 8.7px
+      margin-left: 12.5px
+      margin-top: 7px
+      animation: scrolldown2 2.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
     &:hover
       opacity: .5
     @media($tablet)
       background-image: svg-load('../../images/svg/ico-touchscroll.svg')
       size: 30px 40px
+      animation: none
+      &::after
+        display: none
 
 
   &-nav-arrow
@@ -127,6 +142,13 @@
     size: 7px 14px
     &--right
       transform: rotate(180deg)
+  &-eye
+    background-image: svg-load('../../images/svg/ico-eye.svg')
+    size: 32px 20px
+  &-panel-toggle
+    background-image: svg-load('../../images/svg/panel-toggle.svg')
+    size: 30px 24px
+
 
 
 

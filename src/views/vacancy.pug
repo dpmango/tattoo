@@ -1,0 +1,103 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .page.page--vacancy
+      .container.container--1280
+        .section-title Вакансии            
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Галерея
+          a(href='#') Биомеханика
+          a(href='#') Зеленый тигр на коне
+        
+        // PANEL
+        .panel.opened
+          .panel__toggler
+            span мастер татуировки
+            i.ico.ico-panel-toggle
+          .panel__content
+            .row.row--wide.row--column--tablet
+              .col.col--3-6
+                .fz14
+                  p Студия Тату Мания проводит конкурсный отбор и приглашает на работу мастера художественной татуировки с опытом работы более 5 лет. Художественное образование обязательно. График работы 2/2. Достойная заработная плата.
+                  p Все рабочее оборудование – тату машинки и держатели - проходят необходимые ступени стерилизации после каждого клиента, по стандартам, принятым в медицинских учреждениях. Во-первых, это механическая чистка, во-вторых, экспозиция в дезинфицирующем растворе, в-третьих, ультразвуковая чистка в специальном ультразвуковом аппарате, и наконец - термальная очистка с применением высокого давления и температуры в автоклаве. Именно эти этапы очистки позволяют полностью устранять все возможные микробы и микроорганизмы
+              .col.col--3-6
+                form(action="#").js-vacancy-form
+                  .row
+                    .col.col--3-6
+                      .ui-input.ui-input--icon.ui-input--user
+                        input(type='text' placeholder='Ваше имя' name='name') 
+                    .col.col--3-6
+                      .ui-input.ui-input--icon.ui-input--mobile
+                        input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
+
+                  .ui-input.ui-input--icon.ui-input--email
+                    input(type='email' placeholder='Ваш email' name='email') 
+                  
+                  .text-center
+                    button(type='submit').btn.btn--ghost Отправить
+        
+        // PANEL
+        .panel
+          .panel__toggler
+            span мастер татуажа
+            i.ico.ico-panel-toggle
+          .panel__content
+            .row.row--wide.row--column--tablet
+              .col.col--3-6
+                .fz14
+                  p Студия Тату Мания проводит конкурсный отбор и приглашает на работу мастера художественной татуировки с опытом работы более 5 лет. Художественное образование обязательно. График работы 2/2. Достойная заработная плата.
+                  p Все рабочее оборудование – тату машинки и держатели - проходят необходимые ступени стерилизации после каждого клиента, по стандартам, принятым в медицинских учреждениях. Во-первых, это механическая чистка, во-вторых, экспозиция в дезинфицирующем растворе, в-третьих, ультразвуковая чистка в специальном ультразвуковом аппарате, и наконец - термальная очистка с применением высокого давления и температуры в автоклаве. Именно эти этапы очистки позволяют полностью устранять все возможные микробы и микроорганизмы
+              .col.col--3-6
+                form(action="#").js-vacancy-form
+                  .row
+                    .col.col--3-6
+                      .ui-input.ui-input--icon.ui-input--user
+                        input(type='text' placeholder='Ваше имя' name='name') 
+                    .col.col--3-6
+                      .ui-input.ui-input--icon.ui-input--mobile
+                        input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
+
+                  .ui-input.ui-input--icon.ui-input--email
+                    input(type='email' placeholder='Ваш email' name='email') 
+                  
+                  .text-center
+                    button(type='submit').btn.btn--ghost Отправить
+        // PANEL
+        .panel
+          .panel__toggler
+            span мастер мастеров
+            i.ico.ico-panel-toggle
+          .panel__content
+            .row.row--wide.row--column--tablet
+              .col.col--3-6
+                .fz14
+                  p Студия Тату Мания проводит конкурсный отбор и приглашает на работу мастера художественной татуировки с опытом работы более 5 лет. Художественное образование обязательно. График работы 2/2. Достойная заработная плата.
+                  p Все рабочее оборудование – тату машинки и держатели - проходят необходимые ступени стерилизации после каждого клиента, по стандартам, принятым в медицинских учреждениях. Во-первых, это механическая чистка, во-вторых, экспозиция в дезинфицирующем растворе, в-третьих, ультразвуковая чистка в специальном ультразвуковом аппарате, и наконец - термальная очистка с применением высокого давления и температуры в автоклаве. Именно эти этапы очистки позволяют полностью устранять все возможные микробы и микроорганизмы
+              .col.col--3-6
+                form(action="#").js-vacancy-form
+                  .row
+                    .col.col--3-6
+                      .ui-input.ui-input--icon.ui-input--user
+                        input(type='text' placeholder='Ваше имя' name='name') 
+                    .col.col--3-6
+                      .ui-input.ui-input--icon.ui-input--mobile
+                        input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
+
+                  .ui-input.ui-input--icon.ui-input--email
+                    input(type='email' placeholder='Ваш email' name='email') 
+                  
+                  .text-center
+                    button(type='submit').btn.btn--ghost Отправить
+                                        
+                                        
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

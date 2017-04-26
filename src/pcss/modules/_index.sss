@@ -7,15 +7,15 @@
 
 .sections-nav
   position: fixed
-  right: 30px
+  right: 33px
   top: 50%
   transform: translateY(-50%)
   z-index: 7
   &__wrapper
     position: relative
   &__dot
-    size: 20px
-    margin-bottom: 30px
+    size: 15px
+    margin-bottom: 40px
     background: transparent
     border: 2px solid color(white a(50%))
     transform: rotate(45deg)
@@ -23,8 +23,8 @@
     transition: all $transitionSpeed $ease
     + span
       position: absolute
-      top: 2px
-      right: 35px
+      top: 0px
+      right: 30px
       color: white
       font-size: 14px
       opacity: 0
@@ -178,10 +178,17 @@
     display: block
     content: ' '
     position: absolute 0 0 0 0
-    width: 600px
-    background: url('../images/el/mainpageServicesBG.png') no-repeat left center
+    width: 720px
+    background: url('../images/el/mainpageServicesBG.jpg') no-repeat left center
     background-size: cover
     z-index: 1
+  &::before
+    display: block
+    content: ' '
+    position: absolute 0 0 0 0
+    width: 720px
+    background: linear-gradient(to right, color(#2E2E32 a(0%)),color(#2E2E32 a(100%)))
+    z-index: 2
   &__wrapper
     padding-top: 80px
     padding-bottom: 60px

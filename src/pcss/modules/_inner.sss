@@ -26,6 +26,19 @@
   position: relative
   z-index: 5
   color: white
+  &--pricelist
+    &::before
+      position: absolute
+      top: 80px
+      left: 0
+      display: block
+      content: ' '
+      background: url('../images/el/pricelistBG.png') no-repeat top left
+      size: 560px 840px
+      mix-blend-mode: multiply
+      opacity: .2
+  &--vacancy
+    padding-bottom: 80px
 
 @media($desktop)
   .page
@@ -90,7 +103,7 @@
   display: flex
   flex-direction: column
   justify-content: center
-  padding: 0 10%
+  padding: 20px 10%
 
 
 
@@ -155,3 +168,99 @@
           padding-left: 0px
           padding-right: 0px
           margin-bottom: 30px
+
+// TABLE ROW (PRICELIST)
+.price-table
+  padding-top: 20px
+
+.price-row
+  margin-top: 20px
+  background: black
+  min-height: 40px
+  padding: 3px 20px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__left
+    flex: 0 1 auto
+  &__right
+    flex: 0 0 auto
+    margin-left: auto
+    text-align: right
+    padding-left: 20px
+  .ico-eye
+    margin-right: 20px
+
+
+.text-slider
+  margin-left: -40px
+  margin-right: -40px
+  color: white
+  &__content
+    position: relative
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0 0 0 0
+      background: color(#09090B a(40%))
+      z-index: 2
+  picture
+    img
+      max-width: 100%
+  &__centrify
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    z-index: 3
+    padding: 0 70px
+    text-align: center
+    transform: translate(-50%, -50%)
+    font-family: 'RoadRadio'
+  &__title
+    font-size: 36px
+    letter-spacing: 4px
+  &__price
+    padding-top: 15px
+    font-size: 20px
+    letter-spacing: 1.8px
+  .btn
+    position: absolute
+    z-index: 3
+    bottom: 40px
+    left: 50%
+    transform: translateX(-50%)
+
+
+// PANEL (Vacancy)
+.panel
+  margin-top: 20px
+  &.opened
+    .panel__content
+      display: block
+    .panel__toggler
+      .ico-panel-toggle
+        transform: translateY(-50%)
+        
+  &__toggler
+    position: relative
+    font-family: 'RoadRadio'
+    font-size: 20px
+    letter-spacing: 1.8px
+    background: $colorPrimary
+    color: $fontColor
+    height: 80px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    .ico-panel-toggle
+      position: absolute
+      right: 25px
+      top: 50%
+      transform: translateY(-50%) rotate(180deg)
+      transition: all $transitionSpeed $ease
+  &__content
+    display: none
+    padding: 70px 0

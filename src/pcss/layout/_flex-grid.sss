@@ -32,11 +32,17 @@
       @media($tablet)
         display: block
   &--condenced
-    .col
+    > .col
       padding-left: 0
       padding-right: 0
     margin-left: 0
     margin-right: 0
+  &--wide
+    margin-left: -40px
+    margin-right: -40px
+    > .col
+      padding-left: 40px
+      padding-right: 40px
   @media($desktop)
     &--wrap--desktop
       flex-wrap: wrap
@@ -192,4 +198,3 @@
   display: block !important
   @media($desktop)
     display: none !important
-    

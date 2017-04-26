@@ -22,6 +22,15 @@ $(document).ready(function(){
     $('.navi').toggleClass('active');
   });
 
+  // LOGO overlay
+  $('.header .ico-logo').on('mouseenter', function(){
+    $('.about-logo-overlay').addClass('active')
+  });
+  $('.header .ico-logo').on('mouseleave', function(){
+    $('.about-logo-overlay').removeClass('active')
+  });
+
+
   // scrolldown icon
   $('.ico-scrolldown').on('click', function(){
     $.scrollify.move(1);
@@ -106,6 +115,7 @@ $(document).ready(function(){
   // Hero slider
   $('.hero__slider').slick({
     autoplay: true,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 700,
@@ -268,6 +278,20 @@ $(document).ready(function(){
     e.stopPropagation();
 
     window.location.href = $(this).data('link');
+  });
+
+  //////////////
+  // INNER
+  //////////////
+  $('.text-slider').slick({
+    slidesToShow: 1,
+    dots: false,
+    arrows: true
+  });
+
+  // PANEL TOGGLER
+  $('.panel__toggler').on('click', function(){
+    $(this).parent().toggleClass('opened')
   });
 
 

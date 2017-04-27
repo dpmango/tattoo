@@ -241,7 +241,7 @@
     .panel__toggler
       .ico-panel-toggle
         transform: translateY(-50%)
-        
+
   &__toggler
     position: relative
     font-family: 'RoadRadio'
@@ -264,3 +264,96 @@
   &__content
     display: none
     padding: 70px 0
+
+
+// SKETCHES / IMAGES GRID
+.images-filter
+  margin-top: 25px
+  display: flex
+  &__title
+    flex: 0 0 120px
+    font-size: 14px
+  &__content
+    flex: 1 1 auto
+    display: flex
+    flex-wrap: wrap
+  &__item
+    font-size: 14px
+    background: black
+    border-radius: 20px
+    padding: 3px 30px
+    margin-right: 10px
+    cursor: pointer
+    margin-bottom: 10px
+    transition: all $transitionSpeed $ease
+    &:hover, &.active
+      background: $colorPrimary
+
+.images-category
+  margin-top: 30px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  &__item
+    background: black
+    font-family: 'RoadRadio'
+    font-size: 20px
+    line-height: 1
+    letter-spacing: 1.8px
+    width: 200px
+    padding: 10px
+    text-align: center
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    &:hover, &.active
+      background: $colorPrimary
+
+.images-grid
+  margin: 50px -10px 80px -10px
+  display: flex
+  flex-wrap: wrap
+  &__card
+    position: relative
+    flex: 0 1 25%
+    padding-left: 10px
+    padding-right: 10px
+    margin-bottom: 20px
+    overflow: hidden
+    font-size: 0
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0 10px
+      background: color(#09090B a(80%))
+    &__wrapper
+      position: relative
+    img
+      width: 100%
+    &__title
+      font-family: 'RoadRadio'
+      font-size: 20px
+      line-height: 1.2
+      letter-spacing: 1.8px
+      position: absolute
+      z-index: 2
+      top: 50%
+      left: 50%
+      text-align: center
+      width: 100%
+      transform: translate(-50%, -50%)
+
+@media($desktop)
+  .images-grid
+    &__card
+      flex-basis: 33%
+
+
+@media($tablet)
+  .images-grid
+    &__card
+      flex-basis: 50%
+
+@media($mobile-s)
+  .images-grid
+    &__card
+      flex-basis: 100%

@@ -603,6 +603,9 @@ body, html {
 .mt100 {
     margin-top: 100px;
 }
+.mb60 {
+    margin-bottom: 60px;
+}
 /* Paddings */
 .pt5 {
     padding-top: 5px;
@@ -641,6 +644,9 @@ body, html {
     padding-top: 100px;
 }
 @media(max-width: 568px) {
+    .mt30--mobile {
+        margin-top: 30px;
+    }
     .mt20--mobile {
         margin-top: 20px;
     }
@@ -2654,6 +2660,56 @@ button:focus {
     background: #d2a36e;
     background: rgba(210, 163, 110, 0.8);
 }
+.pagination-full {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.pagination-full__prev, .pagination-full__next {
+    -webkit-flex: 0 0 40px;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+    -webkit-box-flex: 0;
+}
+.pagination-full__list {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    -webkit-box-flex: 1;
+}
+.pagination-full__list li {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 2px 7px;
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.6);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.pagination-full__list li:last-child {
+    margin-right: 0;
+}
+.pagination-full__list li.active, .pagination-full__list li:hover {
+    color: white;
+}
+.pagination-full__list li.active {
+    font-weight: 600;
+}
 /* HOVERS */
 .hoverable-link {
     position: relative;
@@ -3863,6 +3919,22 @@ button:focus {
     background: #18181D;
     color: white;
 }
+.testimonials--inner {
+    background: transparent;
+}
+.testimonials--inner .testimonials__slide {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.testimonials--inner .testimonials__slide__wrapper {
+    min-height: 420px;
+    height: 420px;
+    background: #18181D;
+}
+.testimonials--inner .testimonials__content {
+    min-height: 420px;
+    height: 420px;
+}
 .testimonials__slider {
     opacity: 1;
 }
@@ -4785,6 +4857,163 @@ button:focus {
 .panel__content {
     display: none;
     padding: 70px 0;
+}
+/* SKETCHES / IMAGES GRID */
+.images-filter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 25px;
+}
+.images-filter__title {
+    -webkit-flex: 0 0 120px;
+        -ms-flex: 0 0 120px;
+            flex: 0 0 120px;
+    font-size: 14px;
+    -webkit-box-flex: 0;
+}
+.images-filter__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-flex: 1;
+}
+.images-filter__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 3px 30px;
+    border-radius: 20px;
+    background: black;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.images-filter__item:hover, .images-filter__item.active {
+    background: #D2A36E;
+}
+.images-category {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.images-category__item {
+    padding: 10px;
+    width: 200px;
+    background: black;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-size: 20px;
+    font-family: 'RoadRadio';
+    line-height: 1;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.images-category__item:hover, .images-category__item.active {
+    background: #D2A36E;
+}
+.images-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 50px -10px 80px -10px;
+}
+.images-grid__card {
+    position: relative;
+    -webkit-flex: 0 1 25%;
+        -ms-flex: 0 1 25%;
+            flex: 0 1 25%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 0;
+    -webkit-box-flex: 0;
+}
+.images-grid__card img {
+    width: 100%;
+}
+.images-grid__card:after {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    left: 10px;
+    display: block;
+    background: #09090b;
+    background: rgba(9, 9, 11, 0.8);
+    content: ' ';
+}
+.images-grid__card__wrapper {
+    position: relative;
+}
+.images-grid__card__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1.8px;
+    font-size: 20px;
+    font-family: 'RoadRadio';
+    line-height: 1.2;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+@media(max-width: 992px) {
+    .images-grid {}
+    .images-grid__card {
+        -webkit-flex-basis: 33%;
+                flex-basis: 33%;
+            -ms-flex-preferred-size: 33%;
+    }
+}
+@media(max-width: 768px) {
+    .images-grid {}
+    .images-grid__card {
+        -webkit-flex-basis: 50%;
+                flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+    }
+}
+@media(max-width: 414px) {
+    .images-grid {}
+    .images-grid__card {
+        -webkit-flex-basis: 100%;
+                flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+    }
+}
+/* SERVICES */
+.service {
+    position: relative;
+    z-index: 5;
+    background: #18181D;
+    color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

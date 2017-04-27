@@ -702,6 +702,34 @@
       &:hover:not(.active)
         background: color($colorPrimary a(80%))
 
+.pagination-full
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 30px
+  margin-top: 30px
+  &__prev, &__next
+    flex: 0 0 40px
+  &__list
+    flex: 1 1 auto
+    text-align: center
+    margin: 0
+    padding: 0
+    font-size: 18px
+    li
+      color: color(white a(60%))
+      margin-right: 15px
+      display: inline-block
+      padding: 2px 7px
+      transition: all $transitionSpeed $ease
+      &:last-child
+        margin-right: 0
+      &.active, &:hover
+        color: white
+      &.active
+        font-weight: 600
+
+
 
 // HOVERS
 .hoverable-link

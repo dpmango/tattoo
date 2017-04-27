@@ -412,6 +412,11 @@ $(document).ready(function(){
     $(this).parent().toggleClass('opened')
   });
 
+  // SERVICE PAGE
+  if ( $('.service').length > 0 || $('.page--testimonials').length > 0  ){
+    $('.header').addClass('header--no-conacts')
+  }
+
 
   //////////////
   // MODALS

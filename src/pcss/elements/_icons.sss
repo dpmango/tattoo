@@ -159,8 +159,22 @@
   &-panel-toggle
     background-image: svg-load('../../images/svg/panel-toggle.svg')
     size: 30px 24px
+  &-nav-left
+    background-image: svg-load('../../images/svg/slick-arrow.svg')
+    size: 20px 40px
+    opacity: .6
+    transition: opacity $transitionSpeed $ease
+    &:hover
+      opacity: 1
 
-
+  &-nav-right
+    background-image: svg-load('../../images/svg/slick-arrow.svg')
+    size: 20px 40px
+    transform: rotate(180deg)
+    opacity: .6
+    transition: opacity $transitionSpeed $ease
+    &:hover
+      opacity: 1
 
 
 

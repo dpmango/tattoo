@@ -1,0 +1,68 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .page.page--sketches
+      .container.container--1280
+        .section-title Галерея            
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Галерея
+          
+        // filter main
+        .images-category
+          .images-category__item Татуировка
+          .images-category__item Исправление
+          .images-category__item Пирсинг
+          .images-category__item Татуаж
+          .images-category__item Био-тату
+          
+        // filter
+        .images-filter
+          .images-filter__title Стиль
+          .images-filter__content
+            .images-filter__item Традишнл
+            .images-filter__item Био-механика
+            .images-filter__item Чикано
+            .images-filter__item Традишнл
+            .images-filter__item Био-механика
+            .images-filter__item Чикано
+            .images-filter__item Традишнл
+            .images-filter__item Био-механика
+            .images-filter__item Чикано
+            .images-filter__item Традишнл
+            .images-filter__item Био-механика
+            .images-filter__item Чикано
+        // filter
+        .images-filter
+          .images-filter__title Часть тела
+          .images-filter__content
+            .images-filter__item Рука
+            .images-filter__item Спина
+            .images-filter__item Голова
+            .images-filter__item Нога
+            .images-filter__item Рука
+            .images-filter__item Спина
+            .images-filter__item Рука
+            .images-filter__item Спина
+            
+        .images-grid
+          - for (var i = 1; i < 17; i++) {
+           a(href='#').images-grid__card
+            .images-grid__card__wrapper
+              img(src='images/sketches/sketchImage_'+ i +'.jpg', srcset='images/sketches/sketchImage_'+ i +'.jpg 1x, images/sketches/sketchImage_'+ i +'@2x.jpg 2x')
+              .images-grid__card__title Надписи
+          - }
+        
+        
+                                        
+                                        
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

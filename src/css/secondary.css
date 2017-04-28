@@ -91,13 +91,10 @@
 .ico-filter-toggle {
     position: absolute;
     top: 50%;
-    right: 5px;
-    width: 8px;
-    height: 16px;
+    right: 7px;
+    width: 11px;
+    height: 20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='12px' height='18px' viewBox='0 0 12 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23FFFFFF'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ERectangle 88 Copy 3%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.6'%3E %3Cg id='main' transform='translate(-183.000000, -2111.000000)' stroke-width='3' stroke='%23FFFFFF'%3E %3Cpolyline id='Rectangle-88-Copy-3' transform='translate(190.000000, 2120.000000) scale(-1, 1) translate(-190.000000, -2120.000000) ' points='186 2112 186 2112 194 2120 186 2128'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
 }
 .ico-zoom {
     width: 55px;
@@ -1754,16 +1751,18 @@ button.mfp-close:hover {
     width: 52px;
     height: 20px;
     background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='56px' height='20px' viewBox='0 0 56 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Escrollbar-group%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-257.000000, -2461.000000)'%3E %3Cg id='Group-23' transform='translate(259.000000, 2461.000000)'%3E %3Cg id='scrollbar-group'%3E %3Ccircle id='Oval-21-Copy' fill='%23D2A36E' cx='26' cy='10' r='5'/%3E %3Ccircle id='Oval-21-Copy' stroke='%23D2A36E' stroke-width='2' cx='26' cy='10' r='9'/%3E %3Cpolyline id='Rectangle-88-Copy-3' stroke='%23D2A36E' stroke-width='2' points='46 4 46 4 52 10 46 16'/%3E %3Cpolyline id='Rectangle-88-Copy-3' stroke='%23D2A36E' stroke-width='2' transform='translate(3.000000, 10.000000) scale(-1, 1) translate(-3.000000, -10.000000) ' points='7.10542736e-15 4 7.10542736e-15 4 6 10 2.64829619e-14 16'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
-    background-size: cover;
+    background-size: contain;
     content: ' ';
 }
 .scrollbar-rail > .scroll-element.scroll-x {
-    bottom: 0;
-    left: 0;
+    right: 250px;
+    right: 0px;
+    bottom: 0px;
+    left: 250px;
     padding: 3px 0 2px;
-    min-width: 100%;
-    width: 100%;
-    height: 20px;
+    width: -webkit-calc(100% - 500px);
+    width: calc(100% - 500px);
+    height: 20px;/* min-width: 100% */
 }
 .scrollbar-rail > .scroll-element.scroll-y {
     display: none;/* height: 100% *//* min-height: 100% *//* padding: 0 2px 0 3px *//* right: 0 *//* top: 0 *//* width: 12px */
@@ -1823,6 +1822,20 @@ button.mfp-close:hover {
 }
 .scrollbar-rail > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
     top: -25px;
+}
+@media(max-width: 1200px) {
+    .scrollbar-rail > .scroll-element.scroll-x {
+        left: 200px;
+        width: -webkit-calc(100% - 200px);
+        width: calc(100% - 200px);
+    }
+}
+@media(max-width: 768px) {
+    .scrollbar-rail > .scroll-element.scroll-x {
+        left: 20px;
+        width: -webkit-calc(100% - 20px);
+        width: calc(100% - 20px);
+    }
 }
 /* */
 /* // SCROLLBAR DYNAMIC */

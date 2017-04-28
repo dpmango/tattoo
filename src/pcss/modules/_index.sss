@@ -350,11 +350,13 @@
       .ico-filter-toggle
         transform: rotate(180deg)
         filter: invert(1)
+        right: 3px
       &.show
         background: black
         cursor: auto
         transform: translate3d(0px,0,0)
         .ico-filter-toggle
+          right: 5px
           cursor: pointer
           transform: rotate(0deg)
           filter: invert(0)
@@ -417,9 +419,10 @@
         color: $colorPrimary
   &__grid
     padding-left: 220px
-    overflow-x: auto
+    // overflow-x: auto
     // max-height: calc(100vh - 130px)
-    height: calc(100vh - 130px)
+    height: calc(100vh - 140px)
+    margin-bottom: 15px
     // &::-webkit-scrollbar
     //   display: none
     &__scrollbar
@@ -574,6 +577,11 @@
         picture
           img
             max-width: 260px
+        &__name, &__author
+          display: none
+        &__price
+          font-size: 0
+
 @media($mobile)
   .gallery
     &__grid
@@ -581,6 +589,12 @@
         picture
           img
             max-width: 220px
+        &__price
+          top: 20px
+          right: 20px
+        &:hover
+          &::before
+            position: absolute 10px
 
 // SERVICE
 .masters
@@ -602,7 +616,7 @@
       transition: all $transitionSpeed $ease
   &__bg-left
     background-position: left center
-    width: 55%
+    width: 50%
     background-image: url('../images/el/mainpageMastersBgLeft.png')
     z-index: 3
     &::after
@@ -610,9 +624,9 @@
       background: linear-gradient(to right, color(#2E2E32 a(0%)),color(#2E2E32 a(100%)))
       z-index: 4
   &__bg-right
-    left: 55%
+    left: 50%
     background-position: right center
-    width: 45%
+    width: 50%
     background-image: url('../images/el/mainpageMastersBgRight.png')
     z-index: 1
     &::after
@@ -1054,6 +1068,7 @@
         display: block
     &__col
       display: none
+      flex-basis: 600px
       &:first-child
         display: block
       &--promo

@@ -401,12 +401,20 @@
       height: 6px
 
     &.scroll-x
-      bottom: 0
+      bottom: 0px
       height: 20px
-      left: 0
-      min-width: 100%
+      left: 250px
+      right: 250px
+      right: 0px
+      // min-width: 100%
       padding: 3px 0 2px
-      width: 100%
+      width: calc(100% - 500px)
+      @media($wide)
+        left: 200px
+        width: calc(100% - 200px)
+      @media($tablet)
+        width: calc(100% - 20px)
+        left: 20px
     &.scroll-y
       display: none
       // height: 100%
@@ -423,7 +431,7 @@
         top: 0px
         background: svg-load('../../images/svg/scrollbar-group.svg') no-repeat center
         size: 52px 20px
-        background-size: cover
+        background-size: contain
 
   .scroll-content
     &.scroll-scrolly_visible

@@ -153,7 +153,12 @@ $(document).ready(function(){
       }
     });
   }
-  setTimeout(initMasonry, 250);
+  if ( _window.width() > 768 ){
+    setTimeout(initMasonry, 250);
+  } else {
+    setTimeout(initMasonry, 500);
+  }
+
 
   // ISITOPE FILTER
   $('.gallery__filter__item').on('click', function(){
@@ -179,20 +184,20 @@ $(document).ready(function(){
 
     if (bgLeft && bgRight){
       $('.masters__bg-left').css(
-        'background-image', 'url(../' + bgLeft + ')'
+        'background-image', 'url(' + bgLeft + ')'
       )
       $('.masters__bg-right').css(
-        'background-image', 'url(../' + bgRight + ')'
+        'background-image', 'url(' + bgRight + ')'
       )
     }
 
   });
   $('.masters__card').on('mouseleave', function(){
     $('.masters__bg-left').css(
-      'background-image', 'url(../images/el/mainpageMastersBgLeft.png)'
+      'background-image', 'url(images/el/mainpageMastersBgLeft.png)'
     )
     $('.masters__bg-right').css(
-      'background-image', 'url(../images/el/mainpageMastersBgRight.png)'
+      'background-image', 'url(images/el/mainpageMastersBgRight.png)'
     )
   });
 
@@ -224,9 +229,9 @@ $(document).ready(function(){
           infinite: true,
           autoplay: false,
           draggable: false,
-          swipe: true,
+          swipe: false,
           touchMove: true,
-          verticalSwiping: true
+          verticalSwiping: false
         }
       }
     ]

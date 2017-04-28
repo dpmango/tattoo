@@ -1102,27 +1102,16 @@ html.mfp-helper body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
-.modal__slider {
-    overflow: hidden;
-    margin-top: 40px;
-    margin-right: -100px;
-    margin-left: -100px;
-    max-height: 48px;
-}
-.modal__slide {
-    padding-right: 100px;
-    padding-left: 100px;
-}
-.modal__slide__subject {
-    display: -webkit-flex;
-    display: -ms-flex;
+.modal__slide-subject {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
             align-items: center;
     -webkit-justify-content: space-between;
             justify-content: space-between;
+    margin-top: 40px;
     margin-bottom: 25px;
     text-align: center;
     font-weight: 600;
@@ -1131,6 +1120,16 @@ html.mfp-helper body {
         -ms-flex-pack: justify;
     -webkit-box-align: center;
         -ms-flex-align: center;
+}
+.modal__slide-subject .ico {
+    -webkit-flex: 0 0 12px;
+        -ms-flex: 0 0 12px;
+            flex: 0 0 12px;
+    -webkit-box-flex: 0;
+}
+.modal__slider {
+    overflow: hidden;
+    max-height: 23px;
 }
 .modal__master {
     display: -webkit-box;

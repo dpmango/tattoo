@@ -216,7 +216,20 @@ $(document).ready(function(){
     lazyLoad: 'ondemand',
     swipe: true,
     touchMove: true,
-    fade: false
+    fade: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          infinite: true,
+          autoplay: false,
+          draggable: false,
+          swipe: true,
+          touchMove: true,
+          verticalSwiping: true
+        }
+      }
+    ]
   });
 
   // slider navigation
@@ -275,10 +288,10 @@ $(document).ready(function(){
       arrows: false
     });
   }
-  $('.modal__slider .ico-nav-arrow').on('click', function(){
+  $('.modal__slide-subject .ico-nav-arrow').on('click', function(){
     $('.modal__slider').slick('prev');
   });
-  $('.modal__slider .ico-nav-arrow--right').on('click', function(){
+  $('.modal__slide-subject .ico-nav-arrow--right').on('click', function(){
     $('.modal__slider').slick('next');
   });
 
@@ -339,6 +352,47 @@ $(document).ready(function(){
     }
     if (!_mastersSlickMobile.hasClass('slick-initialized')) {
       return _mastersSlickMobile.slick(mastersSlickMobileOptions);
+    }
+  });
+
+  // HERO BENEFITS
+  var _heroBenefitsSlickMobile = $('.hero__benefits');
+  var heroBenefitsSlickMobileOptions = {
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    slidesToShow: 1,
+    dots: false,
+    arrows: false,
+    mobileFirst: true,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "unslick"
+      }
+    ]
+  }
+  _heroBenefitsSlickMobile.slick(heroBenefitsSlickMobileOptions);
+
+  _window.resized(300, function(e){
+    if ( _window.width() > 768 ) {
+      if (_heroBenefitsSlickMobile.hasClass('slick-initialized')) {
+        _heroBenefitsSlickMobile.slick('unslick');
+      }
+      return
+    }
+    if (!_heroBenefitsSlickMobile.hasClass('slick-initialized')) {
+      return _heroBenefitsSlickMobile.slick(heroBenefitsSlickMobileOptions);
+    }
+  });
+
+  _heroBenefitsSlickMobile.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    event.stopPropagation();
+    console.log(currentSlide);
+    console.log(slick.slideCount - 1);
+    if ( currentSlide == slick.slideCount - 1 ){
+      $('.hero__slider').slick('next');
     }
   });
 

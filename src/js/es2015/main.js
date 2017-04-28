@@ -192,6 +192,8 @@ $(document).ready(function(){
     }
 
   });
+
+
   $('.masters__card').on('mouseleave', function(){
     $('.masters__bg-left').css(
       'background-image', 'url(images/el/mainpageMastersBgLeft.png)'
@@ -394,8 +396,6 @@ $(document).ready(function(){
 
   _heroBenefitsSlickMobile.on('beforeChange', function(event, slick, currentSlide, nextSlide){
     event.stopPropagation();
-    console.log(currentSlide);
-    console.log(slick.slideCount - 1);
     if ( currentSlide == slick.slideCount - 1 ){
       $('.hero__slider').slick('next');
     }
@@ -645,5 +645,17 @@ $(document).ready(function(){
     var section = $(this).data('section');
     $.scrollify.move(section);
   });
+
+
+  // PRELOAD IMAGES
+  function preloadImg(src) {
+    $('<img/>')[0].src = src;
+  }
+  preloadImg('images/masters/mainpageMastersBgLeft_1.jpg');
+  preloadImg('images/masters/mainpageMastersBgLeft_2.jpg');
+  preloadImg('images/masters/mainpageMastersBgLeft_3.jpg');
+  preloadImg('images/masters/mainpageMastersBgRight_1.jpg');
+  preloadImg('images/masters/mainpageMastersBgRight_2.jpg');
+  preloadImg('images/masters/mainpageMastersBgRight_3.jpg');
 
 });

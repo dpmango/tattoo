@@ -1,0 +1,176 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .blog
+      .container.container--1280
+        .section-title Блог            
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Галерея
+          a(href='#') Биомеханика
+          a(href='#') Зеленый тигр на коне
+      
+      .container.container--narrow
+        .blog__content
+          h1.blog__title татуировка клевер со скидкой 20%  Разработка эскиза бесплатно!
+          
+          .promo-block__counter.promo-block__counter--with-text.mt50
+            .promo-block__counter__content
+              .div
+                .promo-block__counter__title Осталось промо-кодов:
+                .promo-block__counter__subtitle Предложение ограничено!
+              .text-triangle
+                span
+                  span 14
+            .promo-block__counter__small
+              p Уже получили купоны: 27 человек
+              p До конца акции: 5 дней
+                
+          a(href='#').btn.btn--ghost.btn--ghost--fill.mt40 Получить промо-код
+          
+          picture.mt35
+            img(src='images/blog/blogPic.png', srcset='images/blog/blogPic.png 1x, images/blog/blogPic@2x.png 2x')
+
+          .small-title.mt50 Описание акции
+          p.mt40 Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
+          .small-title.mt50 Условия акции
+          p.mt40 Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
+          
+          
+          .blog__share
+            .blog__share__comments
+              i.ico.ico-chat
+              span 25
+            .blog__share__socials
+              a(href='#')
+                i.ico.ico-share-social-fb
+              a(href='#')
+                i.ico.ico-share-social-vk
+              a(href='#')
+                i.ico.ico-share-social-tw
+              
+        .blog__comments
+          .small-title Комментарии
+          form(action='#').blog__comments__form
+            .ui-input.ui-input--icon.ui-input--comment
+              textarea(rows='3' placeholder='Напишите комментарий')
+            button(type='submit').btn.btn--ghost.btn--ghost--fill Отправить
+          // comment item
+          .blog__comments__item
+            .blog__comments__item__avatar
+              img(src='images/blog/blogComment_1.png')
+            .blog__comments__item__content
+              .blog__comments__item__head
+                .blog__comments__item__author Jack Summers
+                .blog__comments__item__date 01-24-2017 14:21
+              .blog__comments__item__text
+                p Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа модели развития. Не следует, однако забывать, что сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития.
+              a(href='#').blog__comments__item__reply Ответить
+          
+          // comment item child
+          .blog__comments__item.blog__comments__item--child
+            .blog__comments__item__avatar
+              img(src='images/blog/blogComment_2.png')
+            .blog__comments__item__content
+              .blog__comments__item__head
+                .blog__comments__item__author <span>Администратор</span> > Jack Summers
+                .blog__comments__item__date 01-24-2017 14:21
+              .blog__comments__item__text
+                p Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа модели развития. Не следует, однако забывать, что сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития.
+              a(href='#').blog__comments__item__reply Ответить
+          // comment item
+          .blog__comments__item
+            .blog__comments__item__avatar
+            .blog__comments__item__content
+              .blog__comments__item__head
+                .blog__comments__item__author Jack Summers
+                .blog__comments__item__date 01-24-2017 14:21
+              .blog__comments__item__text
+                p Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа модели развития. Не следует, однако забывать, что сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития.
+              a(href='#').blog__comments__item__reply Ответить
+              
+          // comment item
+          .blog__comments__item
+            .blog__comments__item__avatar
+              img(src='images/blog/blogComment_1.png')
+            .blog__comments__item__content
+              .blog__comments__item__head
+                .blog__comments__item__author Jack Summers
+                .blog__comments__item__date 01-24-2017 14:21
+              .blog__comments__item__text
+                p Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа модели развития. Не следует, однако забывать, что сложившаяся структура организации способствует подготовки и реализации дальнейших направлений развития.
+              a(href='#').blog__comments__item__reply Ответить
+              
+              
+        .blog.blog--inner
+          .container
+            .text-center
+              .small-title Популярные статьи
+            .blog__wrapper
+              // column
+              .blog__col
+                // item
+                a(href='#').blog__card.blog__card--image
+                  .blog__card__wrapper
+                    img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                    .blog__card__title Decorate For Less With Art Posters
+                    .blog__card__metrics
+                      i.ico.ico-counter-eye
+                      span 7
+                // item
+                a(href='#').blog__card
+                  .blog__card__wrapper
+                    .blog__card__title Astronomy Or Astrology
+                    .blog__card__metrics
+                      i.ico.ico-counter-eye
+                      span 7
+              
+              // column
+              .blog__col
+                // item
+                a(href='#').blog__card.blog__card--dark
+                  .blog__card__wrapper
+                    .blog__card__title Is It Good To Hire A Personal Chef
+                    .blog__card__metrics
+                      i.ico.ico-counter-eye
+                      span 7
+                // item
+                a(href='#').blog__card
+                  .blog__card__wrapper
+                    .blog__card__title The Amazing Hubble
+                    .blog__card__metrics
+                      i.ico.ico-counter-eye
+                      span 7
+                
+              // column
+              .blog__col
+                // item
+                a(href='#').blog__card.blog__card--image
+                  .blog__card__wrapper
+                    img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                    .blog__card__title New Ideas For A Low Cost Vacation On Water
+                    .blog__card__metrics
+                      i.ico.ico-counter-eye
+                      span 7
+                // item
+                a(href='#').blog__card.blog__card--dark
+                  .blog__card__wrapper
+                    .blog__card__title Party Jokes Startling But Unnecessary
+                    .blog__card__metrics
+                      i.ico.ico-counter-eye
+                      span 7
+                      
+              a(href='#').toggler-more.js-toggle-blog Показать больше
+          
+                                                
+                            
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

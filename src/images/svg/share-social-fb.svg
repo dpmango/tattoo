@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>share-social-fb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="share" transform="translate(-680.000000, -20.000000)">
+            <g id="share-social-fb" transform="translate(680.000000, 20.000000)">
+                <circle id="Oval-3" fill="#3B5998" cx="20" cy="20" r="20"></circle>
+                <path d="M16.7766471,11.3487671 L16.7766471,15.149863 L14,15.149863 L14,19.7990137 L16.7766471,19.7990137 L16.7766471,33.6164384 L22.4805882,33.6164384 L22.4805882,19.8005479 L26.3083235,19.8005479 C26.3083235,19.8005479 26.6669706,17.5712877 26.8417059,15.1333699 L22.5027647,15.1333699 L22.5027647,11.9540274 C22.5027647,11.4791781 23.1240882,10.8409315 23.7396765,10.8409315 L26.8478235,10.8409315 L26.8478235,6 L22.6209118,6 C16.6363235,6 16.7766471,10.6537534 16.7766471,11.3487671 Z" id="Fill-1" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

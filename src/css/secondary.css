@@ -24,7 +24,7 @@
     background-repeat: no-repeat;
     content: ' ';
     vertical-align: middle;
-    font-style: normal;/* &-service-tatoo-machine *//*   opacity: .5 *//*   background-image: svg-load('../../images/svg/ico-service-tatoo-machine.svg', fill='#FFFFFF') *//*   size: 70px 90px *//* &-service-tattooache *//*   opacity: .5 *//*   background-image: svg-load('../../images/svg/ico-service-tattooache.svg', fill='#FFFFFF') *//*   size: 56px 45px *//* &-service-pircing *//*   opacity: .5 *//*   background-image: svg-load('../../images/svg/ico-service-pircing.svg', fill='#FFFFFF') *//*   size: 33px 57px *//* &-service-chrysanthemum *//*   opacity: 0.6 *//*   background-image: svg-load('../../images/svg/ico-service-chrysanthemum.svg', fill='#FFFFFF') *//*   size: 60px *//* &-service-nano *//*   opacity: .5 *//*   background-image: svg-load('../../images/svg/ico-service-nano.svg', fill='#FFFFFF') *//*   size: 62px 60px *//* &-service-pen *//*   opacity: .5 *//*   background-image: svg-load('../../images/svg/ico-service-pen.svg', fill='#FFFFFF') *//*   size: 52px *//* &-questionmark *//*   background-image: svg-load('../../images/svg/ico-questionmark.svg') *//*   size: 20px */
+    font-style: normal;/* &-questionmark *//*   background-image: svg-load('../../images/svg/ico-questionmark.svg') *//*   size: 20px */
 }
 .ico-logo {
     width: 207px;
@@ -222,22 +222,21 @@
 .ico-nav-right:hover {
     opacity: 1;
 }
+.ico-404-smile {
+    width: 133px;
+    height: 133px;
+    background-image: url('../images/el/404-smile@2x.png');
+    vertical-align: top;
+}
+.ico-star-rating {
+    width: 22px;
+    height: 41px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='22px' height='21px' viewBox='0 0 22 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EStar 1%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='gallery_picabout' transform='translate(-477.000000, -2044.000000)' fill='%23D2A36E'%3E %3Cg id='Group-6' transform='translate(0.000000, 1258.000000)'%3E %3Cg id='Group-7-Copy' transform='translate(0.000000, 262.000000)'%3E %3Cg id='Оценка:--+-Group-Copy' transform='translate(397.000000, 524.000000)'%3E %3Cg id='Group' transform='translate(79.500000, 0.000000)'%3E %3Cpolygon id='Star-1' points='11.5097561 17.25 4.74449121 20.8036954 6.03654183 13.2768477 0.56332756 7.94630456 8.12712365 6.84815228 11.5097561 0 14.8923885 6.84815228 22.4561846 7.94630456 16.9829704 13.2768477 18.275021 20.8036954'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-star-rating--blank {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='22px' height='21px' viewBox='0 0 22 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-star-rating-blank%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.487262228'%3E %3Cg id='gallery_picabout' transform='translate(-537.000000, -2044.000000)' fill='%23FFFFFF'%3E %3Cg id='Group-6' transform='translate(0.000000, 1258.000000)'%3E %3Cg id='Group-7-Copy' transform='translate(0.000000, 262.000000)'%3E %3Cg id='Оценка:--+-Group-Copy' transform='translate(397.000000, 524.000000)'%3E %3Cg id='Group' transform='translate(79.500000, 0.000000)'%3E %3Cpolygon id='ico-star-rating-blank' points='71.5 17.25 64.7347351 20.8036954 66.0267857 13.2768477 60.5535715 7.94630456 68.1173676 6.84815228 71.5 0 74.8826324 6.84815228 82.4464285 7.94630456 76.9732143 13.2768477 78.2652649 20.8036954'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
 /* hoverable states */
-/* .services__item:hover */
-/*   .ico */
-/*     opacity: 1 */
-/*     &-service-tatoo-machine */
-/*       background-image: svg-load('../../images/svg/ico-service-tatoo-machine.svg', fill=$colorPrimary) */
-/*     &-service-tattooache */
-/*       background-image: svg-load('../../images/svg/ico-service-tattooache.svg', fill=$colorPrimary) */
-/*     &-service-pircing */
-/*       background-image: svg-load('../../images/svg/ico-service-pircing.svg', fill=$colorPrimary) */
-/*     &-service-chrysanthemum */
-/*       background-image: svg-load('../../images/svg/ico-service-chrysanthemum.svg', fill=$colorPrimary) */
-/*     &-service-nano */
-/*       background-image: svg-load('../../images/svg/ico-service-nano.svg', fill=$colorPrimary) */
-/*     &-service-pen */
-/*       background-image: svg-load('../../images/svg/ico-service-pen.svg', fill=$colorPrimary) */
 .testimonials__actions a:hover .ico, .testimonials__actions a.active .ico {}
 .testimonials__actions a:hover .ico-photo-camera, .testimonials__actions a.active .ico-photo-camera {
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='14px' height='12px' viewBox='0 0 14 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23D2A36E'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-photo-camera%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-101.000000, -3558.000000)'%3E %3Cg id='Group-16' transform='translate(101.000000, 3554.000000)'%3E %3Cg id='ico-photo-camera' transform='translate(0.000000, 4.000000)'%3E %3Cpath d='M13.3615556,2.43489908 C12.9995556,2.07622018 12.5624444,1.89688073 12.0507778,1.89688073 L10.4287778,1.89688073 L10.0594444,0.921137615 C9.96744444,0.686752294 9.79988889,0.484623853 9.556,0.314311927 C9.31211111,0.144880734 9.06244444,0.0596697248 8.80644444,0.0596697248 L5.09855556,0.0596697248 C4.84244444,0.0596697248 4.59244444,0.144880734 4.349,0.314311927 C4.105,0.484623853 3.93711111,0.686752294 3.84544444,0.921137615 L3.47611111,1.89688073 L1.85422222,1.89688073 C1.342,1.89688073 0.905333333,2.07622018 0.543,2.43489908 C0.181,2.79346789 0,3.22656881 0,3.73354128 L0,10.1632294 C0,10.6702018 0.181,11.1033028 0.543,11.4619817 C0.905333333,11.8206606 1.342,11.9998899 1.85422222,11.9998899 L12.0507778,11.9998899 C12.5624444,11.9998899 12.9995556,11.8206606 13.3615556,11.4619817 C13.7235556,11.1033028 13.9045556,10.6702018 13.9045556,10.1632294 L13.9045556,3.73354128 C13.9045556,3.22656881 13.7235556,2.79346789 13.3615556,2.43489908 Z M9.24433333,9.21974312 C8.60977778,9.84836697 7.84544444,10.1632294 6.95222222,10.1632294 C6.059,10.1632294 5.29511111,9.84836697 4.66011111,9.21974312 C4.02522222,8.59056881 3.70788889,7.83324771 3.70788889,6.94866055 C3.70788889,6.06363303 4.02555556,5.30675229 4.66011111,4.67757798 C5.29511111,4.04840367 6.059,3.73354128 6.95222222,3.73354128 C7.84544444,3.73354128 8.60933333,4.04840367 9.24433333,4.67757798 C9.87933333,5.30631193 10.1966667,6.06363303 10.1966667,6.94866055 C10.1966667,7.83324771 9.87933333,8.59056881 9.24433333,9.21974312 Z' id='Fill-1'/%3E %3Cpath d='M6.95222222,4.88179817 C6.37755556,4.88179817 5.88666667,5.08392661 5.47877778,5.48818349 C5.07077778,5.89244037 4.86677778,6.37926606 4.86677778,6.94866055 C4.86677778,7.51761468 5.07077778,8.00433028 5.47877778,8.40858716 C5.88666667,8.81284404 6.37755556,9.01497248 6.95222222,9.01497248 C7.52688889,9.01497248 8.01822222,8.81284404 8.42622222,8.40858716 C8.83422222,8.00433028 9.03822222,7.51761468 9.03822222,6.94866055 C9.03822222,6.37926606 8.83422222,5.89244037 8.42622222,5.48818349 C8.01822222,5.08392661 7.52688889,4.88179817 6.95222222,4.88179817 Z' id='Fill-2'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");

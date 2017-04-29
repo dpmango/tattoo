@@ -29,13 +29,26 @@
       </div>
     </div>
   </header>
+  <div class="about-logo-overlay">
+    <div class="text-page">
+      <div class="container container--narrow">
+        <div class="text-page__wrapper">
+          <div class="text-center">
+            <p>Тату салон Perpetuum Tattoo начал свою историю в 1996 году.</p>
+            <p>Большой путь пройден с тех пор, менялись тенденции, направления и стили художественной татуировки, менялись технологии, совершенствовалось оборудование в тату индустрии, появлялись новые пигменты и препараты для татуажа.</p>
+            <p>Мода на трайбалы сменялась модой на иероглифы, в свою очередь, уступая место этническим мотивам, и только неизменным оставалась наша любовь к этому искусству, к этому магическому, завораживающему ритуалу инициации – обретению себя, рождению нового Я, с помощью нательной живописи.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- MENU-->
-  <navi class="navi">
+  <nav class="navi">
     <div class="navi__wrapper">
       <ul class="navi__list">
-        <li><a href="#">О салоне</a></li>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Галерея</a>
+        <li><a href="about.html">О салоне</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="gallery.html">Галерея</a>
           <ul>
             <li><a href="#">Татуировки</a></li>
             <li><a href="#">татуаж</a></li>
@@ -44,11 +57,11 @@
             <li><a href="#">пирсинг</a></li>
           </ul>
         </li>
-        <li><a href="#">Эскизы  </a></li>
-        <li><a href="#">Отзывы</a></li>
-        <li><a href="#">Цены</a></li>
+        <li><a href="sketches.html">Эскизы  </a></li>
+        <li><a href="testimonials.html">Отзывы</a></li>
+        <li><a href="pricelist.html">Цены</a></li>
         <li><a href="#">Обучение</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="contact.html">Контакты</a></li>
       </ul>
       <div class="navi__contacts">
         <div id="yaMapContact"></div>
@@ -60,7 +73,7 @@
       </div>
     </div>
     <div class="mobile-cta-line"><a class="btn btn--primary btn--rounded popup-with-zoom-anim" href="#modalOrder">Записаться <br> к мастеру</a><a class="btn btn--circle" href="#"><i class="ici ico-location"></i></a><a class="btn btn--circle" href="#"><i class="ici ico-phone"></i></a></div>
-  </navi>
+  </nav>
   <div class="text-page">
     <div class="container container--narrow">
       <div class="text-page__wrapper">
@@ -75,93 +88,121 @@
   <!-- MODALS-->
   <div class="modal zoom-anim-dialog mfp-hide" id="modalOrder">
     <div class="modal__title">Записаться к мастеру</div>
-    <div class="modal__slider">
-      <div class="modal__slide">
-        <div class="modal__slide__subject"><i class="ico ico-nav-arrow"></i><span>На татуировку</span><i class="ico ico-nav-arrow ico-nav-arrow--right"></i></div>
-        <form class="js-entry-form" action="#">
-          <div class="row">
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--user">
-                <input type="text" placeholder="Ваше имя" name="name">
-              </div>
-            </div>
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--mobile">
-                <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
-              </div>
-            </div>
-          </div>
-          <div class="ui-input ui-input--icon ui-input--email">
-            <input type="email" placeholder="Ваш email" name="email">
-          </div>
-          <div class="row">
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--calendar">
-                <input class="js-datepciker" type="text" placeholder="Дата" name="date">
-              </div>
-            </div>
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--time">
-                <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
-              </div>
-            </div>
-          </div>
-          <div class="ui-input ui-input--icon ui-input--comment">
-            <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
-          </div>
-          <div class="modal__cta">
-            <div class="ui-file">
-              <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
-              <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
-            </div>
-            <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
-          </div>
-        </form>
-      </div>
-      <!--slide-->
-      <div class="modal__slide">
-        <div class="modal__slide__subject"><i class="ico ico-nav-arrow"></i><span>На татуаж</span><i class="ico ico-nav-arrow ico-nav-arrow--right"></i></div>
-        <form action="#">
-          <div class="row">
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--user">
-                <input type="text" placeholder="Ваше имя">
-              </div>
-            </div>
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--mobile">
-                <input type="text" placeholder="Телефон" data-mask="0 (000) 000-00-00">
-              </div>
-            </div>
-          </div>
-          <div class="ui-input ui-input--icon ui-input--email">
-            <input type="email" placeholder="Ваш email">
-          </div>
-          <div class="row">
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--calendar">
-                <input class="js-datepciker" type="text" placeholder="Дата">
-              </div>
-            </div>
-            <div class="col col--3-6">
-              <div class="ui-input ui-input--icon ui-input--time">
-                <input type="text" placeholder="Время" data-mask="00:00 - 00:00">
-              </div>
-            </div>
-          </div>
-          <div class="ui-input ui-input--icon ui-input--comment">
-            <textarea placeholder="Комментарии" rows="3"></textarea>
-          </div>
-          <div class="modal__cta">
-            <div class="ui-file">
-              <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
-              <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
-            </div>
-            <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
-          </div>
-        </form>
-      </div>
+    <div class="modal__slide-subject"> <i class="ico ico-nav-arrow"></i>
+      <div class="modal__slider">
+        <div class="modal__slide"><span>На татуировку </span></div>
+        <div class="modal__slide"><span>На татуаж      </span></div>
+      </div><i class="ico ico-nav-arrow ico-nav-arrow--right"></i>
     </div>
+    <form class="js-entry-form" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--calendar">
+            <input class="js-datepciker" type="text" placeholder="Дата" name="date">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--time">
+            <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <div class="ui-file">
+          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+          <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
+        </div>
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
+  <!-- GET PRICE-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalGetPrice">
+    <div class="modal__title">Узнать стоимость эскиза</div>
+    <form class="js-getprice-form mt30" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--calendar">
+            <input class="js-datepciker" type="text" placeholder="Дата" name="date">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--time">
+            <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
+  <!-- Feedback-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalFeedback">
+    <div class="modal__title">Оставить отзыв</div>
+    <form class="js-getprice-form mt30" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Отзыв" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <div class="ui-file">
+          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+          <div class="ui-file__btn"><span>Прикрепить фото</span><i class="ico ico-add-attachment"></i></div>
+        </div>
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
   </div>
   <!-- SECONDARY STYLES-->
   <link rel="stylesheet" href="css/secondary.css">

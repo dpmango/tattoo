@@ -1,0 +1,214 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    include shared/menu.pug
+    
+    // SERVICE PAGE
+    .service.service--delete
+      .section-title Пирсинг
+      .breadcrumbs
+        a(href='#') Главная
+        a(href='#') Услуги
+        a(href='#') Удалениие татуировки
+      
+      // GALLERY SECTION
+      .gallery
+        .container.container--fluid.container--no-pad
+          .gallery__wrapper
+            .gallery__filter
+              .gallery__filter__wrapper
+                i.ico.ico-filter-toggle
+                .gallery__filter__head
+                  .gallery__filter__head__label Фильтр
+                  .gallery__filter__head__selected Популярные
+                  .gallery__filter__head__dropdown
+                    span(data-filter='styles') Стили
+                    span(data-filter='popular').active Популярные
+                    span(data-filter='types') Жанры
+                .gallery__filter__content(data-filter='styles')
+                  .gallery__filter__item(data-filter='') Стиль 1
+                  .gallery__filter__item(data-filter='') Стиль 2
+                  .gallery__filter__item(data-filter='') Стиль 3
+                  .gallery__filter__item(data-filter='') Стиль 4
+                  .gallery__filter__item(data-filter='') Стиль 5
+                  .gallery__filter__item(data-filter='') Стиль 6
+                  .gallery__filter__item(data-filter='') Стиль 7
+                .gallery__filter__content(data-filter='popular').active
+                  .gallery__filter__item(data-filter='*').active Все
+                  .gallery__filter__item(data-filter='.f-man') Мужские тату
+                  .gallery__filter__item(data-filter='.f-women') Женские тату
+                  .gallery__filter__item(data-filter='.f-small') Маленькие тату
+                  .gallery__filter__item(data-filter='.f-big') Большие тату
+                  .gallery__filter__item(data-filter='.f-lettering') Тату надписи
+                  .gallery__filter__item(data-filter='.f-black-and-white') Черно-белые татуировки
+                  .gallery__filter__item(data-filter='.f-color') Цветные татуировки
+                  .gallery__filter__item(data-filter='.f-cover-up') Исправления (кавер ап)
+                .gallery__filter__content(data-filter='types')
+                  .gallery__filter__item(data-filter='') Жанр 1
+                  .gallery__filter__item(data-filter='') Жанр 2
+                  .gallery__filter__item(data-filter='') Жанр 3
+                  .gallery__filter__item(data-filter='') Жанр 4
+                  .gallery__filter__item(data-filter='') Жанр 5
+            
+           
+            .scrollbar-rail
+              .gallery__grid
+                // grid card
+                .gallery__grid__card.f-man
+                  picture
+                    img(src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      span Узнать стоимость
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+                    .gallery__grid__card__name Корабль в бутылке
+                    .gallery__grid__card__author Евгений
+                // grid card
+                .gallery__grid__card.f-women
+                  picture
+                    img(src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+
+                // grid card
+                .gallery__grid__card.f-women
+                  picture
+                    img(src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+
+                // grid card
+                .gallery__grid__card.f-lettering
+                  picture
+                    img(src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+
+                // grid card
+                .gallery__grid__card.f-big
+                  picture
+                    img(src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      span Узнать стоимость
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+                    .gallery__grid__card__name Корабль в бутылке
+                    .gallery__grid__card__author Евгений
+                // grid card
+                .gallery__grid__card.f-small
+                  picture
+                    img(src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+
+                // grid card
+                .gallery__grid__card.f-lettering
+                  picture
+                    img(src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+
+                // grid card
+                .gallery__grid__card.f-black-and-white
+                  picture
+                    img(src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+
+                // grid card
+                .gallery__grid__card.f-man
+                  picture
+                    img(src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      span Узнать стоимость
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+                    .gallery__grid__card__name Корабль в бутылке
+                    .gallery__grid__card__author Евгений  
+                // grid card
+                .gallery__grid__card.f-man
+                  picture
+                    img(src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+                                
+      // TESTIMONIALS SECTION
+      .testimonials
+        .container.container--fluid.container--no-pad
+        // slick slider
+        .testimonials__slider.slick-custom-dots
+          // single slide
+          .testimonials__slide
+            .testimonials__slide__wrapper
+              .testimonials__content
+                .testimonials__actions
+                  a(href='#' data-toggle='testimonial').active
+                    i.ico.ico-photo-camera
+                    span Фото работы
+                  a(href='#' data-toggle='master')
+                    i.ico.ico-user-group
+                    span Фото с мастером
+                        
+                .testimonials__text Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)
+                .testimonials__author Екатерина Иванова
+                .testimonials__cta
+                    a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Оставить отзыв
+                .testimonials__nav
+                  
+                
+              .testimonials__picture
+                picture
+                  img(data-type='testimonial' src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x').active
+                  img(data-type='master' src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
+                  
+          // single slide
+          .testimonials__slide
+            .testimonials__slide__wrapper
+              .testimonials__content
+                .testimonials__actions
+                  a(href='#' data-toggle='testimonial').active
+                    i.ico.ico-photo-camera
+                    span Фото работы
+                  a(href='#' data-toggle='master')
+                    i.ico.ico-user-group
+                    span Фото с мастером
+                        
+                .testimonials__text Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)
+                .testimonials__author Екатерина Иванова
+                .testimonials__cta
+                    a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Оставить отзыв
+                .testimonials__nav
+                
+              .testimonials__picture
+                picture
+                  img(data-type='testimonial' src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x').active
+                  img(data-type='master' src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
+
+    
+    include shared/promo-block.pug
+                          
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

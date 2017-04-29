@@ -1,0 +1,24 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    include shared/menu.pug
+    
+    // 404 page
+    .text-page.text-page--error
+      .section-title Страница не найдена
+      .container.container--narrow
+        .text-page__wrapper
+          .text-center
+            .error__head
+              span 4
+              i.ico.ico-404-smile
+              span 4
+            .error__text Упс! Кажется, что-то пошло не так :( <span>Попробуйте еще раз</span>
+            
+    include shared/modals.pug
+    include shared/scripts.pug

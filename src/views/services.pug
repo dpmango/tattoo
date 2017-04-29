@@ -1,0 +1,80 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .page.page--services
+      .container.container--1280
+        .section-title Услуги            
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Услуги
+        
+        // SERVICES
+        .services-list.services__wrapper.slick-custom-dots
+          a(href='#').services-list__item
+            .services-list__item__image
+              img(src='images/services/serivceBG_1.jpg')
+            .services-list__item__content
+              .services-list__item__icon
+                i.icon-ico-service-tatoo-machine
+              .services-list__item__name Тaтуировки
+          a(href='#').services-list__item
+            .services-list__item__image
+              img(src='images/services/serivceBG_2.jpg')
+            .services-list__item__content
+              .services-list__item__icon
+                i.icon-ico-service-tattooache
+              .services-list__item__name Татуаж
+          a(href='#').services-list__item
+            .services-list__item__image
+              img(src='images/services/serivceBG_3.jpg')
+            .services-list__item__content
+              .services-list__item__icon
+                i.icon-ico-service-pircing
+              .services-list__item__name Пирсинг
+          a(href='#').services-list__item
+            .services-list__item__image
+              img(src='images/services/serivceBG_4.jpg')
+            .services-list__item__content
+              .services-list__item__icon
+                i.icon-ico-service-chrysanthemum
+              .services-list__item__name Био-тату
+          a(href='#').services-list__item
+            .services-list__item__image
+              img(src='images/services/serivceBG_5.jpg')
+            .services-list__item__content
+              .services-list__item__icon
+                i.icon-ico-service-nano
+              .services-list__item__name Удалениe
+          a(href='#').services-list__item
+            .services-list__item__image
+              img(src='images/services/serivceBG_6.jpg')
+            .services-list__item__content
+              .services-list__item__icon
+                i.icon-ico-service-pen
+              .services-list__item__name Обучение  
+
+    include shared/promo-block.pug
+
+    // SEO SECTION (no scrollify)
+    .seo
+      .container
+        .small-title.text-center Добро пожаловать в лучший тату салон в Москве!
+        .seo-text.mt25
+          p 1) Только профессиональные художники - изготовление эскиза любой сложности в кратчайшие сроки
+          p 2) Ваша татуировка выполняется лучшими мастерами Москвы. Мы гарантируем самый высокий уровень качества исполнения вашей работы.
+          p 3) Абсолютная безопасность – только одноразовые расходные материалы, уровень стерильности соответствует самому жесткому стандарту ЕС!
+          p 4) Бесплатная консультация и высокий уровень сервиса. Посетив нашу студию, вы сможете оценить безупречный уровень обслуживания по 10 бальной шкале и оставить свой отзыв.
+          p 5) Мы Вам очень рады и сделаем все возможное, чтобы вы остались довольны. Это основной принцип работы студии Татумания. 
+          p В «Tattoo-Мании» работают настоящие профессионалы и фанаты своего дела. Художники регулярно участвуют в профессиональных конвенциях и занимают на них призовые места. Наш салон татуировок – это слаженная команда профессионалов, которая поможет вам в реализации своих идей на самом высоком уровне. <a href='#'>Подробнее...</a>
+        
+                                            
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

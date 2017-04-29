@@ -1,0 +1,237 @@
+<!DOCTYPE html><!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Tattoo mania</title>
+  <!--build:css css/styles.css-->
+  <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="components/magnific-popup/dist/magnific-popup.css" type="text/css">
+  <link rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!--endbuild-->
+  <meta name="description" content=""><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+  <!-- HEADER::START-->
+  <header class="header">
+    <div class="container container--fluid">
+      <div class="header__wrapper"><a href="#"><i class="ico ico-logo"></i></a>
+        <div class="header__contacts">
+          <div class="header__contact"><i class="ico ico-location"> </i><span>Москва, Кутузовский пр-т, 27</span></div>
+          <div class="header__contact"><i class="ico ico-phone"></i><a href="tel:">8 (495) 123 45 67</a></div>
+        </div>
+        <div class="header__menu"><a class="btn btn--primary popup-with-zoom-anim" href="#modalOrder">Записаться <br> к мастеру</a>
+          <div class="header__hamburger js-main-hamb">
+            <button class="hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            <div class="header__hamburger__name">Меню</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="about-logo-overlay">
+    <div class="text-page">
+      <div class="container container--narrow">
+        <div class="text-page__wrapper">
+          <div class="text-center">
+            <p>Тату салон Perpetuum Tattoo начал свою историю в 1996 году.</p>
+            <p>Большой путь пройден с тех пор, менялись тенденции, направления и стили художественной татуировки, менялись технологии, совершенствовалось оборудование в тату индустрии, появлялись новые пигменты и препараты для татуажа.</p>
+            <p>Мода на трайбалы сменялась модой на иероглифы, в свою очередь, уступая место этническим мотивам, и только неизменным оставалась наша любовь к этому искусству, к этому магическому, завораживающему ритуалу инициации – обретению себя, рождению нового Я, с помощью нательной живописи.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MENU-->
+  <nav class="navi">
+    <div class="navi__wrapper">
+      <ul class="navi__list">
+        <li><a href="about.html">О салоне</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="gallery.html">Галерея</a>
+          <ul>
+            <li><a href="#">Татуировки</a></li>
+            <li><a href="#">татуаж</a></li>
+            <li><a href="#">кавер-ап</a></li>
+            <li><a href="#">Тату на шрамах</a></li>
+            <li><a href="#">пирсинг</a></li>
+          </ul>
+        </li>
+        <li><a href="sketches.html">Эскизы  </a></li>
+        <li><a href="testimonials.html">Отзывы</a></li>
+        <li><a href="pricelist.html">Цены</a></li>
+        <li><a href="#">Обучение</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+      <div class="navi__contacts">
+        <div id="yaMapContact"></div>
+        <div class="navi__contacts__body">
+          <div class="header__contact"><i class="ico ico-location"> </i><span>Москва, Кутузовский пр-т, 27</span></div>
+          <div class="header__contact"><i class="ico ico-phone"></i><a href="tel:">8 (495) 123 45 67</a></div>
+        </div>
+        <div class="navi__contacts__socials"><a href="#"><i class="ico ico-social-vk"></i></a><a href="#"><i class="ico ico-social-fb">   </i></a><a href="#"><i class="ico ico-social-insta"></i></a></div>
+      </div>
+    </div>
+    <div class="mobile-cta-line"><a class="btn btn--primary btn--rounded popup-with-zoom-anim" href="#modalOrder">Записаться <br> к мастеру</a><a class="btn btn--circle" href="#"><i class="ici ico-location"></i></a><a class="btn btn--circle" href="#"><i class="ici ico-phone"></i></a></div>
+  </nav>
+  <!-- 404 page-->
+  <div class="text-page text-page--error">
+    <div class="section-title">Страница не найдена</div>
+    <div class="container container--narrow">
+      <div class="text-page__wrapper">
+        <div class="text-center">
+          <div class="error__head"><span>4</span><i class="ico ico-404-smile"></i><span>4</span></div>
+          <div class="error__text">Упс! Кажется, что-то пошло не так :( <span>Попробуйте еще раз</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODALS-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalOrder">
+    <div class="modal__title">Записаться к мастеру</div>
+    <div class="modal__slide-subject"> <i class="ico ico-nav-arrow"></i>
+      <div class="modal__slider">
+        <div class="modal__slide"><span>На татуировку </span></div>
+        <div class="modal__slide"><span>На татуаж      </span></div>
+      </div><i class="ico ico-nav-arrow ico-nav-arrow--right"></i>
+    </div>
+    <form class="js-entry-form" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--calendar">
+            <input class="js-datepciker" type="text" placeholder="Дата" name="date">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--time">
+            <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <div class="ui-file">
+          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+          <div class="ui-file__btn"><span>Прикрепить файл</span><i class="ico ico-add-attachment"></i></div>
+        </div>
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
+  <!-- GET PRICE-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalGetPrice">
+    <div class="modal__title">Узнать стоимость эскиза</div>
+    <form class="js-getprice-form mt30" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--calendar">
+            <input class="js-datepciker" type="text" placeholder="Дата" name="date">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--time">
+            <input type="text" placeholder="Время" name="time" data-mask="00:00 - 00:00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Комментарии" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
+  <!-- Feedback-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalFeedback">
+    <div class="modal__title">Оставить отзыв</div>
+    <form class="js-getprice-form mt30" action="#">
+      <div class="row">
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--user">
+            <input type="text" placeholder="Ваше имя" name="name">
+          </div>
+        </div>
+        <div class="col col--3-6">
+          <div class="ui-input ui-input--icon ui-input--mobile">
+            <input type="text" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
+          </div>
+        </div>
+      </div>
+      <div class="ui-input ui-input--icon ui-input--email">
+        <input type="email" placeholder="Ваш email" name="email">
+      </div>
+      <div class="ui-input ui-input--icon ui-input--comment">
+        <textarea placeholder="Отзыв" rows="3" name="comment"></textarea>
+      </div>
+      <div class="modal__cta">
+        <div class="ui-file">
+          <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">
+          <div class="ui-file__btn"><span>Прикрепить фото</span><i class="ico ico-add-attachment"></i></div>
+        </div>
+        <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
+      </div>
+    </form>
+  </div>
+  <!-- SECONDARY STYLES-->
+  <!--build:css css/secondary.css-->
+  <link rel="stylesheet" href="css/secondary.css" type="text/css">
+  <!--endbuild-->
+  <!-- SCRIPTS-->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <!--build:js js/scripts.min.js-->
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+  <script src="components/slick-carousel/slick/slick.min.js"></script>
+  <script src="components/masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="components/isotope/dist/isotope.pkgd.min.js"></script>
+  <script src="components/isotope-masonry-horizontal/masonry-horizontal.js"></script>
+  <script src="components/isotope-packery/packery-mode.pkgd.min.js"> </script>
+  <script src="components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="components/air-datepicker/dist/js/datepicker.min.js"></script>
+  <script src="js/libs/scrollify.js"></script>
+  <script src="js/libs/scrollbar.js"></script>
+  <script src="js/constructor.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/maps.js"></script>
+  <!--endbuild-->
+</body>

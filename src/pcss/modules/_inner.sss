@@ -2,6 +2,9 @@
 .text-page
   background: url('../images/el/textpageBG.jpg') no-repeat center
   background-size: cover
+  &--error
+    background-image: url('../images/el/404BG.jpg')
+    color: white
   &__wrapper
     padding-top: 80px
     padding-bottom: 60px
@@ -40,6 +43,8 @@
       opacity: .2
   &--vacancy
     padding-bottom: 80px
+  &--services
+    background: #18181D
 
 @media($desktop)
   .page
@@ -143,6 +148,7 @@
         margin-left: 20px
 
   &__image
+    flex: 1
     overflow: hidden
     picture
       position: relative
@@ -232,6 +238,22 @@
     left: 50%
     transform: translateX(-50%)
 
+.master-portfolio
+  padding-top: 50px
+  padding-bottom: 80px
+  padding-left: 80px
+  &__head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+  &__slider
+    margin-left: -80px
+    img
+      display: block
+      margin-right: 20px
+      &:first-child
+        padding-left: 80px
 
 // PANEL (Vacancy)
 .panel
@@ -358,3 +380,210 @@
   .images-grid
     &__card
       flex-basis: 100%
+
+
+// IMAGES MASONRY
+.images-masonry
+  margin-top: 40px
+  margin-bottom: 15px
+  &__gutter
+    width: 1.5%
+  &__card
+    width: 23.5%
+    position: relative
+    color: $colorPrimary
+    text-align: center
+    font-size: 0
+    &--wide
+      width: 48.5%
+    picture
+      img
+        max-width: 100%
+    .ico-zoom
+      position: absolute
+      top: 50%
+      left: 50%
+      opacity: 0
+      z-index: 3
+      transform: translate3d(-50%, -30%, 0)
+      transition: all $transitionSpeed $ease
+
+    &::after
+      display: block
+      content: ' '
+      opacity: 0
+      position: absolute 0
+      background: color(#09090B a(80%))
+      z-index: 1
+      transition: all $transitionSpeed $ease
+    &::before
+      display: block
+      content: ''
+      position: absolute 0
+      background: trasnaprent
+      opacity: 0
+      border: 3px solid $colorPrimary
+      z-index: 2
+      transition: all $transitionSpeed $ease
+    &:hover
+      &::after
+        opacity: 1
+      &::before
+        opacity: 1
+        position: absolute 20px
+      .ico-zoom
+        opacity: 1
+        transform: translate3d(-50%, -60%, 0)
+        &:hover
+          transform: scale(1.1) translate3d(-50%, -60%, 0)
+          transform-origin: center center
+
+
+// SERVICES
+.services-list
+  display: flex
+  flex-wrap: wrap
+  padding: 20px 0px
+  &__item
+    position: relative
+    flex: 0 1 50%
+    padding: 0 20px
+    margin-bottom: 40px
+    text-align: center
+    height: 260px
+    overflow: hidden
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0 20px
+      background: color(#09090B a(60%))
+      z-index: 2
+    &::before
+      display: block
+      content: ' '
+      position: absolute 0px 20px
+      border: 3px solid $colorPrimary
+      z-index: 3
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    &__image
+      position: relative
+      z-index: 1
+      height: 260px
+      overflow: hidden
+      max-width: 100%
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: auto
+        height: 260px
+    &__content
+      position: absolute 0 0 0 0
+      z-index: 3
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__icon
+      display: flex
+      justify-content: center
+      align-items: center
+      size: 120px
+      font-size: 55px
+      margin-left: auto
+      margin-right: auto
+      border-radius: 50%
+      border: 3px solid white
+      transition: all $transitionSpeed $ease
+      i
+        color: white
+        transition: all $transitionSpeed $ease
+
+    &__name
+      font-family: 'RoadRadio'
+      font-size: 20px
+      letter-spacing: 2.2px
+      margin-top: 40px
+      color: white
+      transition: all $transitionSpeed $ease
+
+    &:hover
+      &::before
+        opacity: 1
+        position: absolute 10px 30px
+      .services-list__item__icon
+        border: 3px solid $colorPrimary
+        i
+          color: $colorPrimary
+      .services-list__item__name
+        color: $colorPrimary
+
+// PROMO BLOCK
+.promo-block
+  position: relative
+  padding: 50px 0
+  color: $fonColor
+  background: #D2A36E
+  overflow: hidden
+  &::after
+    display: block
+    content: ' '
+    position: absolute
+    right: 0
+    top: 50%
+    height: 100%
+    width: 1000px
+    z-index: 1
+    background: url('../images/el/promoBlockBG.png') no-repeat center
+    background-size: cover
+    transform: translateY(-50%)
+  &__description
+    display: flex
+    justify-content: space-between
+  &__title
+    font-family: 'RoadRadio'
+    font-size: 28px
+    letter-spacing: 2.52px
+  &__counter
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+    &__content
+      flex: 1
+      margin-right: 35px
+    &__title
+      font-family: 'RoadRadio'
+      font-size: 20px
+      letter-spacing: 1.8px
+    &__subtitle
+      font-size: 14px
+
+  &__form
+    flex: 1
+    margin-top: auto
+    display: flex
+    justify-content: space-between
+    .ui-input
+      margin-bottom: 0
+      input
+        background-color: color(white a(25%))
+        border-color: transparent
+        color: $fonColor
+
+
+// 404
+.error__head
+  color: white
+  font-size: 144px
+  font-weight: 600
+.error__text
+  font-size: 24px
+  letter-spacing: 0.9px
+  span
+    display: block
+    font-size: 14px
+    letter-spacing: 0.42px
+    margin-top: 25px

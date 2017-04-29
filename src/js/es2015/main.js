@@ -367,7 +367,7 @@ $(document).ready(function(){
   var heroBenefitsSlickMobileOptions = {
     autoplay: true,
     autoplaySpeed: 3000,
-    fade: true,
+    fade: false,
     slidesToShow: 1,
     dots: false,
     arrows: false,
@@ -472,10 +472,46 @@ $(document).ready(function(){
   });
 
   // SERVICE PAGE
-  if ( $('.service').length > 0 || $('.page--testimonials').length > 0  ){
+  if ( $('.service').length > 0 || $('.page--testimonials').length > 0 || $('.text-page--error').length > 0 ){
     $('.header').addClass('header--no-conacts')
   }
 
+  // Masonry for inner page
+  var $masonryGridImages = $('.images-masonry');
+  function initMasonryInner(){
+    $masonryGridImages.isotope({
+      layoutMode: 'packery',
+      itemSelector: '.images-masonry__card',
+      percentPosition: true,
+      packery: {
+        gutter: '.images-masonry__gutter'
+      }
+    });
+  }
+  if ( _window.width() > 768 ){
+    setTimeout(initMasonryInner, 250);
+  } else {
+    setTimeout(initMasonryInner, 500);
+  }
+
+
+  // MASTER PORTFOLIO
+  $('.master-portfolio__slider').slick({
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
+    variableWidth: true,
+    speed: 700,
+    dots: false,
+    arrows: false,
+    centerPadding: 20,
+    draggable: true,
+    easing: 'linear',
+    infinite: false,
+    lazyLoad: 'ondemand',
+
+  });
 
   //////////////
   // MODALS

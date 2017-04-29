@@ -1,0 +1,221 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-static.pug
+    include shared/menu.pug
+    
+    .page.page--masters
+      .container.container--fluid.container--no-pad
+        .section-title Наши мастера
+        .breadcrumbs
+          a(href='#') Главная
+          a(href='#') Галерея
+          a(href='#') Биомеханика
+          a(href='#') Зеленый тигр на коне
+          
+      .container.container--1280
+        // filter main
+        .images-category
+          .images-category__item Татуировка
+          .images-category__item Исправление
+          .images-category__item Пирсинг
+          .images-category__item Татуаж
+          .images-category__item Био-тату
+          
+      .container.container--fluid.container--no-pad
+        // row
+        .row.row--condenced.row--stretch-child.row--reverse.mt25.row--column--tablet.bg-black
+          .col.col--3-6
+            .master__image
+              picture
+                img(src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+            
+          .col.col--3-6
+            .grid-text
+              .master__content
+                .master__content__row.row--aic
+                  .master__content__image
+                    picture
+                      img(src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                  .master__content__scope
+                    .master__content__scope__name Борис
+                    a(href='#').hoverable-link Мастер пирсинга
+                    
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name Стиль
+                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                  .master__content__scope
+                    .master__content__scope__name опыт работы
+                    a(href='#').hoverable-link 15 лет
+                
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name любимая краска
+                    a(href='#').hoverable-link Intense
+                  .master__content__scope
+                    .master__content__scope__name марка машинки
+                    a(href='#').hoverable-link Mustang
+                      
+                .fz14.mt40.mt20--mobile
+                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+
+                .text-center.mt30
+                  a(href='#').btn.btn--ghost Узнать подробнее
+
+        // row
+        .row.row--condenced.row--stretch-child.mt25.row--column--tablet.bg-black
+          .col.col--3-6
+            .master__image
+              picture
+                img(src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+          
+          .col.col--3-6
+            .grid-text
+              .master__content
+                .master__content__row.row--aic
+                  .master__content__image
+                    picture
+                      img(src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                  .master__content__scope
+                    .master__content__scope__name Борис
+                    a(href='#').hoverable-link Мастер пирсинга
+                    
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name Стиль
+                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                  .master__content__scope
+                    .master__content__scope__name опыт работы
+                    a(href='#').hoverable-link 15 лет
+                
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name любимая краска
+                    a(href='#').hoverable-link Intense
+                  .master__content__scope
+                    .master__content__scope__name марка машинки
+                    a(href='#').hoverable-link Mustang
+                      
+                .fz14.mt40.mt20--mobile
+                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+
+                .text-center.mt30
+                  a(href='#').btn.btn--ghost Узнать подробнее
+
+        // row
+        .row.row--condenced.row--stretch-child.row--reverse.mt25.row--column--tablet.bg-black
+          .col.col--3-6
+            .master__image
+              picture
+                img(src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+          
+          .col.col--3-6
+            .grid-text
+              .master__content
+                .master__content__row.row--aic
+                  .master__content__image
+                    picture
+                      img(src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                  .master__content__scope
+                    .master__content__scope__name Борис
+                    a(href='#').hoverable-link Мастер пирсинга
+                    
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name Стиль
+                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                  .master__content__scope
+                    .master__content__scope__name опыт работы
+                    a(href='#').hoverable-link 15 лет
+                
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name любимая краска
+                    a(href='#').hoverable-link Intense
+                  .master__content__scope
+                    .master__content__scope__name марка машинки
+                    a(href='#').hoverable-link Mustang
+                      
+                .fz14.mt40.mt20--mobile
+                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+
+                .text-center.mt30
+                  a(href='#').btn.btn--ghost Узнать подробнее
+
+        // row
+        .row.row--condenced.row--stretch-childmt25.row--column--tablet.bg-black
+          .col.col--3-6
+            .master__image
+              picture
+                img(src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+          
+          .col.col--3-6
+            .grid-text
+              .master__content
+                .master__content__row.row--aic
+                  .master__content__image
+                    picture
+                      img(src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                  .master__content__scope
+                    .master__content__scope__name Борис
+                    a(href='#').hoverable-link Мастер пирсинга
+                    
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name Стиль
+                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                  .master__content__scope
+                    .master__content__scope__name опыт работы
+                    a(href='#').hoverable-link 15 лет
+                
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name любимая краска
+                    a(href='#').hoverable-link Intense
+                  .master__content__scope
+                    .master__content__scope__name марка машинки
+                    a(href='#').hoverable-link Mustang
+                      
+                .fz14.mt40.mt20--mobile
+                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+
+                .text-center.mt30
+                  a(href='#').btn.btn--ghost Узнать подробнее
+      
+      // PAGINTAION
+      .container.container--1280.mt20
+        a(href='#').btn.btn--ghost.btn--block.btn--no-br Показать еще
+        
+        // list
+        .pagination-full
+          .pagination-full__prev
+            a(href='#') 
+              i.ico.ico-nav-left
+          ul.pagination-full__list
+            li.active
+              a(href='#') 1
+            li
+              a(href='#') 2
+            li
+              a(href='#') 3
+            li
+              a(href='#') 4
+            li
+              a(href='#') 5
+            li
+              span ...
+            li
+              a(href='#') 65
+          .pagination-full__next
+            a(href='#') 
+              i.ico.ico-nav-right
+                                              
+            
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

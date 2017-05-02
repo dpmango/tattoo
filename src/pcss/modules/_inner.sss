@@ -111,29 +111,23 @@
   justify-content: center
   padding: 20px 10%
 
-
-.img-v-fluid
-  display: flex
-  flex-direction: column
-  overflow: hidden
-  picture
-    position: relative
-    flex: 1 1 100%
-  img
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    height: 100%
-    width: auto
-    max-width: auto
-
-@media($tablet)
+@media($tablet-from)
   .img-v-fluid
+    display: flex
+    flex-direction: column
+    overflow: hidden
     picture
-      img
-        position: relative
-        transform: none
+      position: relative
+      flex: 1 1 100%
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      height: 100%
+      width: auto
+      max-width: auto
+
 
 // MASTER
 

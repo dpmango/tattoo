@@ -89,6 +89,8 @@ $(document).ready(function(){
     }
   });
 
+  $('.scrollbar-macosx').scrollbar();
+
   // togglers
   $('.gallery').on('click', '.gallery__filter--hidden', function(){
     if ( $(this).is('.show') ){
@@ -212,7 +214,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 700,
-    vertical: true,
+    vertical: false,
     adaptiveHeight: false,
     dots: false,
     arrows: false,
@@ -513,6 +515,46 @@ $(document).ready(function(){
 
   });
 
+  // Service fullwith slider
+  $('.service-slider__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 700,
+    vertical: false,
+    adaptiveHeight: false,
+    dots: false,
+    arrows: false,
+    centerPadding: 0,
+    draggable: true,
+    easing: 'linear',
+    infinite: false,
+    lazyLoad: 'ondemand',
+    swipe: true,
+    touchMove: true,
+    fade: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true
+        }
+      }
+    ]
+  });
+
+  // slider navigation
+  var serviceSliderTotal = $('.service-slider__slide').length
+  $('.service-slider__slide').each(function(i, val){
+    $(val).find('.service-slider__slide__nav span').html(i + 1 + ' / ' + testimonialsSliderTotal)
+  });
+
+  $('.service-slider__slide__nav .ico-nav-arrow').on('click', function(){
+    $('.service-slider__slider').slick('prev');
+  });
+  $('.service-slider__slide__nav .ico-nav-arrow--right').on('click', function(){
+    $('.service-slider__slider').slick('next');
+  });
+
   //////////////
   // MODALS
   //////////////
@@ -528,7 +570,7 @@ $(document).ready(function(){
 			verticalFit: true
 		},
 		zoom: {
-			enabled: true,
+			enabled: false,
 			duration: 300
 		}
 	});

@@ -4,3 +4,165 @@
   position: relative
   z-index: 5
   color: white
+  &-slider
+    background: #2E2E31
+    &__slide
+      &__wrapper
+        min-height: 100vh
+        display: flex
+        align-items: center
+        justify-content: space-between
+      &__nav
+        position: absolute
+        z-index: 3
+        top: 60px
+        right: 80px
+        color: white
+        font-size: 14px
+    &__content
+      flex: 1 1 50%
+      padding: 50px 20px 60px 20px
+      min-height: 100vh
+      display: flex
+      flex-direction: column
+      justify-content: center
+      &__text
+        margin-top: auto
+        font-size: 14px
+        line-height: 1.2
+    &__picture
+      position: relative
+      flex: 0 1 50%
+      min-height: 100vh
+      margin-left: 20px
+      margin-left: auto
+      overflow: hidden
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 1
+        transform: translate(-50%, -50%)
+        height: 100vh
+        &.active
+          display: inline-block
+      &::after
+        display: block
+        content: ' '
+        position: absolute 0 0 0 0
+        z-index: 2
+        background: linear-gradient(to left, color(#2E2E32 a(0%)), color(#2E2E32 a(100%)))
+
+      .btn
+        position: absolute
+        right: 80px
+        bottom: 80px
+        z-index: 3
+
+  &-price
+    background: #2E2E31
+    padding-top: 60px
+    padding-bottom: 40px
+    &__wrapper
+      display: flex
+      flex-wrap: wrap
+      margin-left: -40px
+      margin-right: -40px
+      margin-top: 50px
+    &__card
+      display: block
+      flex: 0 1 25%
+      padding-left: 40px
+      padding-right: 40px
+      &__image
+        position: relative
+        overflow: hidden
+        height: 240px
+        img
+          height: 100%
+          width: auto
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          z-index: 1
+        &::after
+          display: block
+          content: ' '
+          position: absolute 0 0 0 0
+          z-index: 2
+          background: color(#18181D a(80%))
+        .ico-eye
+          position: absolute
+          top: 20px
+          right: 20px
+          opacity: .6
+          z-index: 3
+      &__name
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 100%
+        z-index: 3
+        transform: translate(-50%, -50%)
+        font-size: 20px
+        font-weight: 600
+        text-align: center
+        span
+          display: block
+          font-size: 14px
+          font-weight: 400
+          margin-top: 5px
+      &__price
+        background: $colorPrimary
+        padding: 20px 0
+        font-size: 20px
+        letter-spacing: 1.8px
+        text-align: center
+        color: $fontColor
+
+  &-benefits
+    &__wrapper
+      display: flex
+    &__card
+      position: relative
+      flex: 0 1 50%
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 1
+      &::after
+        display: block
+        content: ' '
+        position: absolute 0
+        background: color(#18181D a(60%))
+        z-index: 2
+      &__content
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        z-index: 3
+        height: 160px
+        margin-left: 80px
+      &__icon
+        flex: 0 0 80px
+        size: 80px
+        font-size: 45px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 2px solid white
+        border-radius: 50%
+      &__right
+        flex: 1 1 auto
+        margin-left: 40px
+      &__name
+        font-size: 20px
+        font-weight: 600
+      &__desc
+        font-size: 14px
+        font-weight: 600
+        margin-top: 5px

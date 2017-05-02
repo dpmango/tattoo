@@ -590,6 +590,23 @@
         background-color: color(white a(25%))
         border-color: transparent
         color: $fonColor
+        &::-webkit-input-placeholder
+          color: $fontColor
+        &::-moz-placeholder
+          color: $fontColor
+        &:-moz-placeholder
+          color: $fontColor
+        &:-ms-input-placeholder
+          color: $fontColor
+      &--user
+        input
+          background: color(white a(25%)) svg-load('../../images/svg/input-user-dark.svg') no-repeat 10px center
+      &--mobile
+        input
+          background: color(white a(25%)) svg-load('../../images/svg/input-mobile-dark.svg') no-repeat 10px center
+      &--email
+        input
+          background: color(white a(25%)) svg-load('../../images/svg/input-email-dark.svg') no-repeat 10px center
 
 
 // 404

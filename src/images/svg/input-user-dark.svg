@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="19px" viewBox="0 0 13 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch -->
+    <title>input-user-dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="services_tattoo" transform="translate(-112.000000, -4052.000000)" fill="#18181D">
+            <g id="Group-11" transform="translate(0.000000, 3900.000000)">
+                <g id="Group-8" transform="translate(100.000000, 141.000000)">
+                    <g id="input-user-dark" transform="translate(12.000000, 11.000000)">
+                        <path d="M6.67614321,0 C8.70642222,0 10.3523185,1.70249023 10.3523185,3.80262109 C10.3523185,5.90275195 8.70642222,7.60527539 6.67614321,7.60527539 C4.6458642,7.60527539 3,5.90275195 3,3.80262109 C3,1.70249023 4.6458642,0 6.67614321,0" id="Fill-1"></path>
+                        <path d="M11.2447111,18.5 C12.2001309,18.5 12.9746741,17.6988086 12.9746741,16.7105176 C12.9746741,13.0044512 10.0701531,10 6.48732099,10 C2.90452099,10 0,13.0044512 0,16.7105176 C0,17.6988086 0.77454321,18.5 1.72996296,18.5 L11.2447111,18.5" id="Fill-3"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

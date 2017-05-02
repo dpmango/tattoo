@@ -66,14 +66,14 @@
     &__wrapper
       display: flex
       flex-wrap: wrap
-      margin-left: -40px
-      margin-right: -40px
+      margin-left: -3%
+      margin-right: -3%
       margin-top: 50px
     &__card
       display: block
       flex: 0 1 25%
-      padding-left: 40px
-      padding-right: 40px
+      padding-left: 3%
+      padding-right: 3%
       &__image
         position: relative
         overflow: hidden
@@ -122,22 +122,49 @@
         color: $fontColor
 
   &-benefits
+    background: #2E2E31
+    padding-top: 50px
+    margin-top: 40px
     &__wrapper
       display: flex
+      flex-wrap: wrap
     &__card
       position: relative
       flex: 0 1 50%
+      overflow: hidden
+      &:hover
+        &::after
+          background: color(#18181D a(80%))
+        &::before
+          position: absolute 10px
+          opacity: 1
+        .service-benefits__card__icon
+          border-color: $colorPrimary
+          color: $colorPrimary
+        .service-benefits__card__name
+          color: $colorPrimary
+        .service-benefits__card__desc
+          color: $colorPrimary
       img
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
         z-index: 1
+      &::before
+        display: block
+        content: ' '
+        position: absolute 0
+        z-index: 3
+        border: 3px solid $colorPrimary
+        transition: all $transitionSpeed $ease
+        opacity: 0
       &::after
         display: block
         content: ' '
         position: absolute 0
         background: color(#18181D a(60%))
+        transition: all $transitionSpeed $ease
         z-index: 2
       &__content
         display: flex
@@ -156,13 +183,17 @@
         align-items: center
         border: 2px solid white
         border-radius: 50%
+        transition: all $transitionSpeed $ease
       &__right
         flex: 1 1 auto
         margin-left: 40px
+        padding-right: 20px
       &__name
         font-size: 20px
         font-weight: 600
+        transition: all $transitionSpeed $ease
       &__desc
         font-size: 14px
         font-weight: 600
-        margin-top: 5px
+        margin-top: 12px
+        transition: all $transitionSpeed $ease

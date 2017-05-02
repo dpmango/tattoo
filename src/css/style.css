@@ -2370,6 +2370,8 @@ button:focus {
     top: 25px;
     left: 50%;
     z-index: 5;
+    margin: 0;
+    padding: 0;
     letter-spacing: 3px;
     font-size: 28px;
     font-family: 'RoadRadio';
@@ -2559,7 +2561,7 @@ button:focus {
             transform: translateX(-50%);
 }
 .slick-custom-dots .slick-dots li {
-    margin-right: 15px;
+    width: 25px;
     cursor: pointer;
 }
 .slick-custom-dots .slick-dots li button {
@@ -2767,8 +2769,10 @@ button:focus {
 }
 /* INDEX PAGE */
 .section {
+    overflow-x: hidden;
     overflow-y: scroll;
     min-height: 100vh;
+    max-width: 100%;
 }
 .section > div {
     min-height: 100vh;
@@ -3335,6 +3339,10 @@ button:focus {
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
 }
+.gallery__filter--hidden .gallery__filter__wrapper {}
+.gallery__filter--hidden .gallery__filter__wrapper:after {
+    display: none;
+}
 .gallery__filter--hidden.show {
     background: black;
     cursor: auto;
@@ -3870,6 +3878,9 @@ button:focus {
         text-align: center;
         font-weight: 600;
         font-size: 20px;
+    }
+    .masters__card__yrs {
+        display: none;
     }
     .masters__card__mobile {
         display: block;
@@ -4695,6 +4706,44 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
 }
+.img-v-fluid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.img-v-fluid picture {
+    position: relative;
+    -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    -webkit-box-flex: 1;
+}
+.img-v-fluid img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: auto;
+    width: auto;
+    height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+@media(max-width: 768px) {
+    .img-v-fluid picture img {
+        position: relative;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+}
 /* MASTER */
 .master {}
 .master__content {}
@@ -4748,24 +4797,38 @@ button:focus {
     margin-left: 20px;
 }
 .master__image {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1 1 0%;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: hidden;
     -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
 }
 .master__image picture {
     position: relative;
     display: block;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1 1 0%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    -webkit-box-flex: 1;
 }
 .master__image img {
     position: absolute;
     top: 50%;
     left: 50%;
     display: inline-block;
-    max-width: 100%;
+    width: auto;
+    height: 100%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -5630,16 +5693,16 @@ button:focus {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     margin-top: 50px;
-    margin-right: -40px;
-    margin-left: -40px;
+    margin-right: -3%;
+    margin-left: -3%;
 }
 .service-price__card {
     display: block;
     -webkit-flex: 0 1 25%;
         -ms-flex: 0 1 25%;
             flex: 0 1 25%;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 3%;
+    padding-left: 3%;
     -webkit-box-flex: 0;
 }
 .service-price__card__image {
@@ -5704,18 +5767,26 @@ button:focus {
     letter-spacing: 1.8px;
     font-size: 20px;
 }
-.service-benefits {}
+.service-benefits {
+    margin-top: 40px;
+    padding-top: 50px;
+    background: #2E2E31;
+}
 .service-benefits__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 .service-benefits__card {
     position: relative;
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+    overflow: hidden;
     -webkit-box-flex: 0;
 }
 .service-benefits__card img {
@@ -5726,6 +5797,42 @@ button:focus {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+}
+.service-benefits__card:hover .service-benefits__card__icon {
+    border-color: #D2A36E;
+    color: #D2A36E;
+}
+.service-benefits__card:hover .service-benefits__card__name {
+    color: #D2A36E;
+}
+.service-benefits__card:hover .service-benefits__card__desc {
+    color: #D2A36E;
+}
+.service-benefits__card:hover:after {
+    background: #18181d;
+    background: rgba(24, 24, 29, 0.8);
+}
+.service-benefits__card:hover:before {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    opacity: 1;
+}
+.service-benefits__card:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    display: block;
+    border: 3px solid #D2A36E;
+    content: ' ';
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .service-benefits__card:after {
     position: absolute;
@@ -5738,6 +5845,8 @@ button:focus {
     background: #18181d;
     background: rgba(24, 24, 29, 0.6);
     content: ' ';
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .service-benefits__card__content {
     position: relative;
@@ -5774,6 +5883,8 @@ button:focus {
     border: 2px solid white;
     border-radius: 50%;
     font-size: 45px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     -webkit-box-flex: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -5785,16 +5896,21 @@ button:focus {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-left: 40px;
+    padding-right: 20px;
     -webkit-box-flex: 1;
 }
 .service-benefits__card__name {
     font-weight: 600;
     font-size: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .service-benefits__card__desc {
-    margin-top: 5px;
+    margin-top: 12px;
     font-weight: 600;
     font-size: 14px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 /* BLOG */
 .blog p {

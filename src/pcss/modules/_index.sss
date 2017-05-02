@@ -2,6 +2,8 @@
 .section
   min-height: 100vh
   overflow-y: scroll
+  max-width: 100%
+  overflow-x: hidden
   > div
     min-height: 100vh
 
@@ -359,6 +361,9 @@
         transform: rotate(180deg)
         filter: invert(1)
         right: 3px
+      .gallery__filter__wrapper
+        &::after
+          display: none
       &.show
         background: black
         cursor: auto
@@ -721,6 +726,8 @@
         font-size: 20px
         font-weight: 600
         text-align: center
+      &__yrs
+        display: none
       &__mobile
         display: block
         margin-left: auto

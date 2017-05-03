@@ -207,7 +207,7 @@ $(document).ready(function () {
     centerPadding: 0,
     draggable: true,
     easing: 'linear',
-    infinite: false,
+    infinite: true,
     lazyLoad: 'ondemand',
     swipe: true,
     touchMove: true,
@@ -344,7 +344,7 @@ $(document).ready(function () {
   // HERO BENEFITS
   var _heroBenefitsSlickMobile = $('.hero__benefits');
   var heroBenefitsSlickMobileOptions = {
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     fade: false,
     slidesToShow: 1,
@@ -370,6 +370,14 @@ $(document).ready(function () {
       return _heroBenefitsSlickMobile.slick(heroBenefitsSlickMobileOptions);
     }
   });
+
+  // manual autoplay
+  if (_window.width() < 768) {
+    setInterval(heroBenefitsSlickMobileAutoplay, 3000);
+  }
+  function heroBenefitsSlickMobileAutoplay() {
+    $('.hero__slide.slick-active').find('.hero__benefits').slick('next');
+  }
 
   _heroBenefitsSlickMobile.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     event.stopPropagation();

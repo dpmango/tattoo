@@ -62,7 +62,7 @@
   &-price
     background: #2E2E31
     padding-top: 60px
-    padding-bottom: 40px
+    padding-bottom: 80px
     &__wrapper
       display: flex
       flex-wrap: wrap
@@ -123,9 +123,9 @@
 
   &-benefits
     background: #2E2E31
-    padding-top: 50px
-    margin-top: 40px
+
     &__wrapper
+      padding-top: 50px
       display: flex
       flex-wrap: wrap
     &__card
@@ -197,3 +197,44 @@
         font-weight: 600
         margin-top: 12px
         transition: all $transitionSpeed $ease
+
+  &-masters
+    position: relative
+    background: #18181D
+    &::before
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      z-index: 1
+      display: block
+      content: ' '
+      background: url('../images/services/serviceMastersBG.png') no-repeat center
+      width: 720px
+    &__wrapper
+      position: relative
+      z-index: 2
+      display: flex
+      min-height: 100vh
+    &__text
+      flex: 0 1 50%
+      display: flex
+      flex-direction: column
+      padding-top: 60px
+      padding-bottom: 70px
+      &__content
+        flex: 0
+        margin-top: auto
+    &__list
+      flex: 0 1 50%
+      .masters__wrapper
+        padding-top: 30px
+        min-height: 1px
+      .masters__card
+        padding: 25px 0
+        padding-bottom: 0
+
+      .masters__card__image
+        size: 100px
+        .ico-zoom
+          size: 40px

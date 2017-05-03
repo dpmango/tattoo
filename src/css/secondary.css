@@ -228,6 +228,24 @@
     background-image: url('../images/el/404-smile@2x.png');
     vertical-align: top;
 }
+@media(max-width: 768px) {
+    .ico-404-smile {
+        width: 125px;
+        height: 125px;
+    }
+}
+@media(max-width: 568px) {
+    .ico-404-smile {
+        width: 118px;
+        height: 118px;
+    }
+}
+@media(max-width: 414px) {
+    .ico-404-smile {
+        width: 102px;
+        height: 102px;
+    }
+}
 .ico-star-rating {
     width: 22px;
     height: 41px;

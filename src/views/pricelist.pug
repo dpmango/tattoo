@@ -22,37 +22,37 @@ doctype html
           .col.col--3-6
             .small-title.mt50 Татуировки
             .price-table
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Татуировка 5 x 5 см
                 .price-row__right
                   a(href='#')
                     i.ico.ico-eye
                   span от 1500 руб
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Татуировка 10 x 5 см
                 .price-row__right
                   a(href='#')
                     i.ico.ico-eye
                   span от 3000 руб
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Реставрация татировки
                 .price-row__right
                   a(href='#')
                     i.ico.ico-eye
                   span от 3000 руб  
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Исправление татировки
                 .price-row__right
                   a(href='#')
                     i.ico.ico-eye
                   span от 3000 руб  
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Коррекция татуировки в течение 3х недель
                 .price-row__right
                   a(href='#')
                     i.ico.ico-eye
                   span бесплатно 
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Био-тату
                 .price-row__right
                   a(href='#')
@@ -62,7 +62,7 @@ doctype html
             // next price section
             .small-title.mt50 Удаление татуировки
             .price-table
-              .price-row
+              .price-row.price-row--with-ico
                 .price-row__left Удаление
                 .price-row__right
                   a(href='#')
@@ -90,7 +90,7 @@ doctype html
                   a(href='#').btn.btn--ghost Перейти к галерее
         
         // row
-        .row.row--wide.row--column--tablet
+        .row.row--wide.row--column--tablet.page--pricelist-bg
           .col.col--3-6
             .small-title.mt50 Перманентный макияж бровей
             .price-table
@@ -135,47 +135,93 @@ doctype html
         // row
         .row.row--wide.row--column--tablet
           .col.col--3-6
-            .small-title.mt50 Перманентный макияж бровей
+            .small-title.mt50 Перманентный макияж глаз
             .price-table
               .price-row
-                .price-row__left По технике «Теневая растушевка» 
+                .price-row__left Верхняя стрелка
                 .price-row__right 11 500 руб
               .price-row
-                .price-row__left По технике растушевка
+                .price-row__left Нижняя стрелка
                 .price-row__right от 3000 руб
               .price-row
-                .price-row__left По технике «Волоски»
+                .price-row__left Верхнее «межресничное» пространство
                 .price-row__right от 3000 руб
-              .price-row
-                .price-row__left По технике «Волоски 3D» (микроблейдинг)
-                .price-row__right от 3000 руб
-              .price-row
-                .price-row__left Смешанная техника (шотирование+волоски)
-                .price-row__right Бесплатно
               .price-row
                 .price-row__left Коррекция
                 .price-row__right 50% от стоимости работы
-          // col
-          .col.col--3-6
-            .small-title.mt50 Перманентный макияж бровей
+            
+            // next
+            .small-title.mt50 Пирсинг
             .price-table
               .price-row
-                .price-row__left По технике «Теневая растушевка» 
+                .price-row__left Классический пирсинг
                 .price-row__right 11 500 руб
               .price-row
-                .price-row__left По технике растушевка
+                .price-row__left Интимный пирсинг
                 .price-row__right от 3000 руб
               .price-row
-                .price-row__left По технике «Волоски»
+                .price-row__left Экстремальный пирсинг
                 .price-row__right от 3000 руб
               .price-row
-                .price-row__left По технике «Волоски 3D» (микроблейдинг)
+                .price-row__left Чистка каналов, исправление чужих работ
+                .price-row__right 50% от стоимости работы
+          // col
+          .col.col--3-6
+            .small-title.mt50 Другие виды татуажа
+            .price-table
+              .price-row
+                .price-row__left «Ареолы сосков»
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left Испанская «мушка»
                 .price-row__right от 3000 руб
               .price-row
-                .price-row__left Смешанная техника (шотирование+волоски)
-                .price-row__right Бесплатно
+                .price-row__left Коррекция
+                .price-row__right от 3000 руб
                                                             
-                            
+        // row
+        .row.row--wide
+          .col.col--full
+            .small-title.mt50 Обучение
+          
+        .row.row--column--tablet.row--wrap
+          .col.col--2-6
+            .price-table
+              .price-row
+                .price-row__left Обучение татуировке
+              .price-row
+                .price-row__left Обучение перманентому макияжу
+              .price-row
+                .price-row__left Обучение пирсингу
+
+          // col
+          .col.col--2-6
+            .price-table
+              .price-row
+                .price-row__left В группе
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left В группе
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left В группе
+                .price-row__right от 3000 руб
+                
+          // col
+          .col.col--2-6
+            .price-table
+              .price-row
+                .price-row__left Индивидуально
+                .price-row__right 11 500 руб
+              .price-row
+                .price-row__left Индивидуально
+                .price-row__right от 3000 руб
+              .price-row
+                .price-row__left Индивидуально
+                .price-row__right от 3000 руб
+                                                                                        
+
+    include shared/footer-seo.pug
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

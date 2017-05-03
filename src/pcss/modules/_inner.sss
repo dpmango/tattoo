@@ -20,17 +20,30 @@
       line-height: 1.2
       letter-spacing: 1.8px
 
+@media($desktop)
+  .text-page--error
+    padding-top: 80px
+    .text-page__wrapper
+      min-height: calc(100vh - 80px)
+
 @media($tablet)
   .text-page
     &__wrapper
       p
         font-size: 18px
 
+@media($mobile)
+  .text-page--error
+    padding-top: 60px
+    .text-page__wrapper
+      min-height: calc(100vh - 60px)
+
 .page
   position: relative
   z-index: 5
   color: white
   &--pricelist
+    padding-bottom: 80px
     &::before
       position: absolute
       top: 80px
@@ -39,8 +52,19 @@
       content: ' '
       background: url('../images/el/pricelistBG.png') no-repeat top left
       size: 560px 840px
-      mix-blend-mode: multiply
-      opacity: .2
+      opacity: 1
+  &--pricelist-bg
+    position: relative
+    &::before
+      position: absolute
+      top: 0px
+      right: 0
+      z-index: -1
+      display: block
+      content: ' '
+      background: url('../images/el/pricelistBG2.png') no-repeat top left
+      size: 610px 1355px
+      opacity: 1
   &--vacancy
     padding-bottom: 80px
   &--services
@@ -119,6 +143,7 @@
     picture
       position: relative
       flex: 1 1 100%
+      width: 100%
     img
       position: absolute
       top: 50%
@@ -126,8 +151,16 @@
       transform: translate(-50%, -50%)
       height: 100%
       width: auto
-      max-width: auto
+      min-height: 100%
+      min-width: 100%
+      width: auto
+      height: auto
 
+@media($tablet)
+  .img-v-fluid
+    img
+      width: 100%
+      max-width: 100%
 
 // MASTER
 
@@ -208,15 +241,27 @@
   display: flex
   justify-content: space-between
   align-items: center
+  &--with-ico
+    .price-row__right
+      flex: 0 0 170px
+      justify-content: space-between
   &__left
     flex: 0 1 auto
   &__right
     flex: 0 0 auto
+    display: flex
+    justify-content: flex-end
+    align-items: center
     margin-left: auto
     text-align: right
     padding-left: 20px
+
   .ico-eye
     margin-right: 20px
+    transition: all $transitionSpeed $ease
+    &:hover
+      opacity: .7
+
 
 
 .text-slider
@@ -642,3 +687,17 @@
     font-size: 14px
     letter-spacing: 0.42px
     margin-top: 25px
+
+@media($tablet)
+  .error__head
+    font-size: 120px
+  .error__text
+    font-size: 20px
+
+@media($mobile)
+  .error__head
+    font-size: 110px
+
+@media($mobile-s)
+  .error__head
+    font-size: 100px

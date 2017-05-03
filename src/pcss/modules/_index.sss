@@ -794,6 +794,8 @@
     .testimonials__content
       min-height: 420px
       height: 420px
+    .testimonials__actions
+      margin-top: 0
 
   &__slider
     opacity: 1
@@ -929,6 +931,15 @@
 
 @media($tablet)
   .testimonials
+    &--inner
+      .testimonials__slide__wrapper
+        background: #18181D
+        min-height: 1px
+        height: auto
+      .testimonials__content
+        min-height: 1px
+        height: auto
+        margin-bottom: 20px
     &__slide
       &__wrapper
         flex-direction: column-reverse
@@ -940,6 +951,9 @@
       padding-bottom: 20px
       position: relative
     &__picture
+      width: calc(100% + 40px)
+      margin-left: -20px
+      margin-right: 20px
       flex: 0 0 300px
       picture
         height: 300px
@@ -949,6 +963,8 @@
         img
           position: static
           transform: none
+          width: calc(100% + 40px)
+          max-width: calc(100% + 40px)
     &__actions
       display: none
     &__nav
@@ -956,6 +972,9 @@
 
 @media($mobile)
   .testimonials
+    &--inner
+      .testimonials__content
+        margin-bottom: 15px
     &__picture
       flex: 0 0 220px
       picture

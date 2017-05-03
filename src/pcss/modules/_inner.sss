@@ -457,11 +457,16 @@
       background: $colorPrimary
 
 .images-category
-  margin-top: 30px
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
+  width: 100% !important
+  padding-bottom: 20px !important
+  > .images-category
+    display: flex
+    justify-content: space-between
+.images-category
+  margin-top: 20px
+  overflow-y: scroll
   &__item
+    flex: 0 0 200px
     background: black
     font-family: 'RoadRadio'
     font-size: 20px
@@ -469,9 +474,12 @@
     letter-spacing: 1.8px
     width: 200px
     padding: 10px
+    margin-right: 20px
+    margin-left: 20px
     text-align: center
     cursor: pointer
     transition: all $transitionSpeed $ease
+
     &:hover, &.active
       background: $colorPrimary
 

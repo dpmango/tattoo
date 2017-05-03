@@ -91,6 +91,7 @@ $(document).ready(function () {
   });
 
   $('.scrollbar-macosx').scrollbar();
+  $('.images-category').scrollbar();
 
   // togglers
   $('.gallery').on('click', '.gallery__filter--hidden', function () {

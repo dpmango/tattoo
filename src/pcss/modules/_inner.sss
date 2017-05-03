@@ -483,11 +483,6 @@
 
 @media($tablet)
   .images-filter
-    display: none
-    &.active
-      display: block
-    &__toggle-mobile
-      display: block
     &__title
       display: none
       &--mobile
@@ -498,6 +493,14 @@
     &__item
       display: inline-block
       margin-bottom: 20px
+
+@media($mobile)
+  .images-filter
+    display: none
+    &.active
+      display: block
+    &__toggle-mobile
+      display: block
 
 
 

@@ -5212,15 +5212,7 @@ button:focus {
     }
 }
 @media(max-width: 768px) {
-    .images-filter {
-        display: none;
-    }
-    .images-filter.active {
-        display: block;
-    }
-    .images-filter__toggle-mobile {
-        display: block;
-    }
+    .images-filter {}
     .images-filter__title {
         display: none;
     }
@@ -5234,6 +5226,17 @@ button:focus {
     .images-filter__item {
         display: inline-block;
         margin-bottom: 20px;
+    }
+}
+@media(max-width: 568px) {
+    .images-filter {
+        display: none;
+    }
+    .images-filter.active {
+        display: block;
+    }
+    .images-filter__toggle-mobile {
+        display: block;
     }
 }
 .images-category {

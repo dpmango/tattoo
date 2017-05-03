@@ -133,6 +133,31 @@
         margin-right: 8px
       .ico-nav-arrow--right
         margin-left: 8px
+      .slick-arrow
+        -webkit-apperance: none
+        font-size: 0
+        border: 0
+        box-shadow: none
+        margin: 0
+        padding: 0
+        vertical-align: middle
+        cursor: pointer
+        background: transparent
+        &::after
+          display: inline-block
+          background-repeat: no-repeat
+          background-size: cover
+          content: ' '
+          cursor: pointer
+          background-image: svg-load('../../images/svg/nav-arrow.svg')
+          size: 10px 20px
+      .slick-prev
+        margin-right: 8px
+      .slick-next
+        &::after
+          transform: rotate(180deg)
+          transform-origin: 50% 50%
+        margin-left: 8px
 
 @media($tablet)
   .hero
@@ -329,6 +354,7 @@
       position: relative
       flex: 1
       padding: 20px
+      padding-bottom: 0
       display: flex
       flex-direction: column
       &.active
@@ -347,11 +373,11 @@
         display: block
         content: ' '
         position: absolute
-        bottom: -20px
+        bottom: 0px
         left: 0
         right: 0
         height: 50px
-        background: linear-gradient(to top, color(black a(0%)), color(black a(100%)))
+        background: linear-gradient(to bottom, color(black a(0%)), color(black a(100%)))
 
     &--hidden
       cursor: pointer

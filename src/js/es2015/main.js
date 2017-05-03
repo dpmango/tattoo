@@ -217,7 +217,8 @@ $(document).ready(function(){
     vertical: false,
     adaptiveHeight: false,
     dots: false,
-    arrows: false,
+    arrows: true,
+    appendArrows: $('.hero__bottom__nav'),
     centerPadding: 0,
     draggable: true,
     easing: 'linear',
@@ -249,12 +250,12 @@ $(document).ready(function(){
     $('.js-heroSliderCurrent').html(nextSlide + 1 );
   });
 
-  $('.hero .ico-nav-arrow').on('click', function(){
-    $('.hero__slider').slick('prev');
-  });
-  $('.hero .ico-nav-arrow--right').on('click', function(){
-    $('.hero__slider').slick('next');
-  });
+  // $('.hero .ico-nav-arrow').on('click', function(){
+  //   $('.hero__slider').slick('prev');
+  // });
+  // $('.hero .ico-nav-arrow--right').on('click', function(){
+  //   $('.hero__slider').slick('next');
+  // });
 
   // Testimonails slider
   $('.testimonials__slider').slick({

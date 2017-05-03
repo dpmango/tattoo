@@ -439,9 +439,27 @@
 .images-filter
   margin-top: 25px
   display: flex
+  &__toggle-mobile
+    display: none
+    text-align: center
+    margin-bottom: 20px
+    margin-top: 20px
+    .ico
+      margin-left: 25px
+      transform-origin: 50% 50%
+      transform: rotate(180deg)
+      transition: all $transitionSpeed $ease
+    .btn:hover
+      .ico
+        filter: invert(1)
+    &.active
+      .ico
+        transform: none
   &__title
     flex: 0 0 120px
     font-size: 14px
+    &--mobile
+      display: none
   &__content
     flex: 1 1 auto
     display: flex
@@ -450,13 +468,38 @@
     font-size: 14px
     background: black
     border-radius: 20px
-    padding: 3px 30px
-    margin-right: 10px
+    padding: 3px 10px
+    margin-right: 15px
     cursor: pointer
     margin-bottom: 10px
     transition: all $transitionSpeed $ease
     &:hover, &.active
       background: $colorPrimary
+
+@media($desktop)
+  .images-filter
+    &__title
+      flex-basis: 80px
+
+@media($tablet)
+  .images-filter
+    display: none
+    &.active
+      display: block
+    &__toggle-mobile
+      display: block
+    &__title
+      display: none
+      &--mobile
+        display: inline-block
+        margin-right: 15px
+    &__content
+      display: block
+    &__item
+      display: inline-block
+      margin-bottom: 20px
+
+
 
 .images-category
   width: 100% !important
@@ -486,10 +529,11 @@
       background: $colorPrimary
 
 .images-grid
-  margin: 50px -10px 80px -10px
+  margin: 40px -10px 60px -10px
   display: flex
   flex-wrap: wrap
   &__card
+    font-size: 0
     position: relative
     flex: 0 1 25%
     padding-left: 10px
@@ -502,6 +546,24 @@
       content: ' '
       position: absolute 0 10px
       background: color(#09090B a(80%))
+      transition: all $transitionSpeed $ease
+    &::before
+      display: block
+      content: ' '
+      position: absolute 0 10px
+      border: 3px solid $colorPrimary
+      opacity: 0
+      z-index: 2
+      transition: all $transitionSpeed $ease
+    &:hover
+      &::after
+        background: color(#09090B a(60%))
+      &::before
+        opacity: 1
+        position: absolute 10px 20px
+      .images-grid__card__title
+        color: $colorPrimary
+
     &__wrapper
       position: relative
     img
@@ -518,6 +580,7 @@
       text-align: center
       width: 100%
       transform: translate(-50%, -50%)
+      transition: all $transitionSpeed $ease
 
 @media($desktop)
   .images-grid
@@ -529,6 +592,11 @@
   .images-grid
     &__card
       flex-basis: 50%
+
+@media($mobile)
+  .images-grid
+    margin-top: 20px
+
 
 @media($mobile-s)
   .images-grid

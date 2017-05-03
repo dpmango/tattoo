@@ -228,6 +228,11 @@
 .ico-nav-right:hover {
     opacity: 1;
 }
+.ico-filter-toggle-mobile {
+    width: 16px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='16px' height='14px' viewBox='0 0 16 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ETriangle 3%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='mobile_gallery' transform='translate(-202.000000, -133.000000)' fill='%23FFFFFF'%3E %3Cg id='Group-Copy-2' transform='translate(82.000000, 120.000000)'%3E %3Cpolygon id='Triangle-3' transform='translate(128.000000, 19.787879) scale(1, -1) rotate(180.000000) translate(-128.000000, -19.787879) ' points='128 13 136 26.5757576 120 26.5757576'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
 .ico-404-smile {
     width: 133px;
     height: 133px;

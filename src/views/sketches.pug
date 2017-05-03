@@ -15,10 +15,15 @@ doctype html
           a(href='#') Главная
           a(href='#') Эскизы
         
+        .images-filter__toggle-mobile
+          a(href='#').btn.btn--ghost 
+            span Фильтр
+            i.ico.ico-filter-toggle-mobile
         // filter
         .images-filter
           .images-filter__title Стиль
           .images-filter__content
+            .images-filter__title--mobile Стиль
             .images-filter__item Традишнл
             .images-filter__item Био-механика
             .images-filter__item Чикано
@@ -41,9 +46,7 @@ doctype html
               .images-grid__card__title Надписи
           - }
         
-        
-                                        
-                                        
+
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

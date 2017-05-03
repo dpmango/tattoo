@@ -5140,12 +5140,41 @@ button:focus {
     display: flex;
     margin-top: 25px;
 }
+.images-filter__toggle-mobile {
+    display: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.images-filter__toggle-mobile .ico {
+    margin-left: 25px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.images-filter__toggle-mobile .btn:hover .ico {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+}
+.images-filter__toggle-mobile.active .ico {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+}
 .images-filter__title {
     -webkit-flex: 0 0 120px;
         -ms-flex: 0 0 120px;
             flex: 0 0 120px;
     font-size: 14px;
     -webkit-box-flex: 0;
+}
+.images-filter__title--mobile {
+    display: none;
 }
 .images-filter__content {
     display: -webkit-box;
@@ -5161,9 +5190,9 @@ button:focus {
     -webkit-box-flex: 1;
 }
 .images-filter__item {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: 10px;
-    padding: 3px 30px;
+    padding: 3px 10px;
     border-radius: 20px;
     background: black;
     font-size: 14px;
@@ -5173,6 +5202,39 @@ button:focus {
 }
 .images-filter__item:hover, .images-filter__item.active {
     background: #D2A36E;
+}
+@media(max-width: 992px) {
+    .images-filter {}
+    .images-filter__title {
+        -webkit-flex-basis: 80px;
+                flex-basis: 80px;
+            -ms-flex-preferred-size: 80px;
+    }
+}
+@media(max-width: 768px) {
+    .images-filter {
+        display: none;
+    }
+    .images-filter.active {
+        display: block;
+    }
+    .images-filter__toggle-mobile {
+        display: block;
+    }
+    .images-filter__title {
+        display: none;
+    }
+    .images-filter__title--mobile {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .images-filter__content {
+        display: block;
+    }
+    .images-filter__item {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
 }
 .images-category {
     padding-bottom: 20px !important;
@@ -5222,7 +5284,7 @@ button:focus {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    margin: 50px -10px 80px -10px;
+    margin: 40px -10px 60px -10px;
 }
 .images-grid__card {
     position: relative;
@@ -5233,6 +5295,7 @@ button:focus {
     margin-bottom: 20px;
     padding-right: 10px;
     padding-left: 10px;
+    font-size: 0;
     font-size: 0;
     -webkit-box-flex: 0;
 }
@@ -5249,6 +5312,37 @@ button:focus {
     background: #09090b;
     background: rgba(9, 9, 11, 0.8);
     content: ' ';
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.images-grid__card:before {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    left: 10px;
+    z-index: 2;
+    display: block;
+    border: 3px solid #D2A36E;
+    content: ' ';
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.images-grid__card:hover .images-grid__card__title {
+    color: #D2A36E;
+}
+.images-grid__card:hover:after {
+    background: #09090b;
+    background: rgba(9, 9, 11, 0.6);
+}
+.images-grid__card:hover:before {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    bottom: 10px;
+    left: 20px;
+    opacity: 1;
 }
 .images-grid__card__wrapper {
     position: relative;
@@ -5264,6 +5358,8 @@ button:focus {
     font-size: 20px;
     font-family: 'RoadRadio';
     line-height: 1.2;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -5282,6 +5378,11 @@ button:focus {
         -webkit-flex-basis: 50%;
                 flex-basis: 50%;
             -ms-flex-preferred-size: 50%;
+    }
+}
+@media(max-width: 568px) {
+    .images-grid {
+        margin-top: 20px;
     }
 }
 @media(max-width: 414px) {

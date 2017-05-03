@@ -45,7 +45,7 @@ $(document).ready(function(){
         $('.header').addClass('header--mobile-bg');
       } else {
         $('.header').removeClass('header--mobile-bg');
-      }  
+      }
     }
   }
   // scrolldown icon
@@ -514,6 +514,12 @@ $(document).ready(function(){
     setTimeout(initMasonryInner, 500);
   }
 
+
+  // togle images grid filter (mobile)
+  $('.images-filter__toggle-mobile').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('active');
+  });
 
   // MASTER PORTFOLIO
   $('.master-portfolio__slider').slick({

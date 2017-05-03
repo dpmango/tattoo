@@ -42,34 +42,44 @@
   position: relative
   z-index: 5
   color: white
+  &::before, &::after
+    position: absolute
+    display: block
+    content: ' '
+    z-index: -1
   &--pricelist
     padding-bottom: 80px
     &::before
-      position: absolute
-      top: 80px
+      top: 0px
       left: 0
-      display: block
-      content: ' '
       background: url('../images/el/pricelistBG.png') no-repeat top left
       size: 560px 840px
-      opacity: 1
-  &--pricelist-bg
-    position: relative
-    &::before
+    &::after
       position: absolute
-      top: 0px
+      top: 765px
       right: 0
-      z-index: -1
-      display: block
-      content: ' '
-      background: url('../images/el/pricelistBG2.png') no-repeat top left
+      background: url('../images/el/pricelistBG2.png') no-repeat top right
       size: 610px 1355px
-      opacity: 1
   &--vacancy
     padding-bottom: 80px
+    &::after
+      top: 0px
+      left: 0
+      background: url('../images/el/pricelistBG.png') no-repeat top left
+      size: 560px 840px
+    &::before
+      top: 0px
+      right: 0
+      background: url('../images/el/pricelistBG2.png') no-repeat top right
+      size: 610px 1355px
   &--services
     background: #18181D
 
+@media(width <= 1100px)
+  .page
+    &--vacancy
+      &::before
+        display: none
 @media($desktop)
   .page
     padding-top: 80px
@@ -77,6 +87,14 @@
 @media($mobile)
   .page
     padding-top: 60px
+    &--pricelist
+      padding-bottom: 40px
+      &::before
+        display: none
+      &::after
+        display: none
+    &--vacancy
+      padding-bottom: 40px
 
 
 .contact
@@ -262,11 +280,39 @@
     &:hover
       opacity: .7
 
+@media($mobile)
+  .price-table
+    padding-top: 0
+  .price-row
+    padding-left: 10px
 
+@media($mobile-s)
+  .price-row
+    position: relative
+    flex-direction: column
+    align-items: flex-start
+    &--with-ico
+      .price-row__right
+        flex: 0 0 auto
+        justify-content: flex-start
+        .ico
+          position: absolute
+          top: 50%
+          right: 0px
+          transform: translateY(-50%)
+    &__left
+      padding-right: 40px
+    &__right
+      padding-right: 40px
+      margin-left: 0
+      text-align: left
+      padding-left: 0px
+      justify-content: flex-start
 
 .text-slider
-  margin-left: -40px
-  margin-right: -40px
+  margin-right: -3%
+  margin-left: -6%
+  width: 112%
   color: white
   &__content
     position: relative
@@ -303,6 +349,13 @@
     left: 50%
     transform: translateX(-50%)
 
+@media($desktop)
+  .text-slider
+    &__centrify
+      padding: 0 50px
+    &__title
+      font-size: 30px
+
 .master-portfolio
   padding-top: 50px
   padding-bottom: 80px
@@ -329,7 +382,6 @@
     .panel__toggler
       .ico-panel-toggle
         transform: translateY(-50%)
-
   &__toggler
     position: relative
     font-family: 'RoadRadio'
@@ -343,15 +395,42 @@
     justify-content: center
     align-items: center
     cursor: pointer
+    transition: all $transitionSpeed $ease
     .ico-panel-toggle
       position: absolute
       right: 25px
       top: 50%
       transform: translateY(-50%) rotate(180deg)
       transition: all $transitionSpeed $ease
+    &:hover
+      opacity: .8
   &__content
     display: none
-    padding: 70px 0
+    padding: 60px 0 35px 0
+    p
+      line-height: 1.2
+
+@media($desktop)
+  .panel
+    &__content
+      padding: 40px 0 25px 0
+
+@media($tablet)
+  .panel
+    &__content
+      padding: 20px 0 25px 0
+      form
+        margin-top: 20px
+    &__toggler
+      height: 65px
+
+@media($mobile)
+  .panel
+    &__toggler
+      justify-content: flex-start
+      text-align: left
+      padding-left: 20px
+      padding-right: 60px
 
 
 // SKETCHES / IMAGES GRID

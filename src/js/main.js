@@ -454,6 +454,10 @@ $(document).ready(function () {
   $('.panel__toggler').on('click', function () {
     $(this).parent().toggleClass('opened');
   });
+  // collapse panel on mobile by default
+  if (_window.width() < 568) {
+    $('.panel').removeClass('opened');
+  }
 
   // SERVICE PAGE
   if ($('.service').length > 0 || $('.page--testimonials').length > 0 || $('.text-page--error').length > 0) {

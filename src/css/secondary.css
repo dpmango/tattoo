@@ -197,6 +197,12 @@
     height: 24px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='30px' height='24px' viewBox='0 0 30 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ETriangle 5%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='vacancy' transform='translate(-1305.000000, -169.000000)' fill='%23000000'%3E %3Cpolygon id='Triangle-5' transform='translate(1320.000000, 181.000000) scale(-1, 1) translate(-1320.000000, -181.000000) ' points='1320 169 1335 193 1305 193'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
+@media(max-width: 768px) {
+    .ico-panel-toggle {
+        width: 24px;
+        height: 18px;
+    }
+}
 .ico-nav-left {
     width: 20px;
     height: 40px;

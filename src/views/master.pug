@@ -9,7 +9,7 @@ doctype html
     include shared/menu.pug
     
     .page.page--master
-      .container.container--fluid.container--no-pad
+      .container.container--fluid.container--no-pad.bg-black
         h1.section-title Мастер татуировки Борис
         .breadcrumbs
           a(href='#') Главная
@@ -17,19 +17,11 @@ doctype html
           a(href='#') Биомеханика
           a(href='#') Зеленый тигр на коне
           
-      .container.container--1280
-        // filter main
-        .images-category
-          .images-category__item Татуировка
-          .images-category__item Исправление
-          .images-category__item Пирсинг
-          .images-category__item Татуаж
-          .images-category__item Био-тату
           
       .container.container--fluid.container--no-pad
         // row
-        .row.row--condenced.row--stretch-child.row--reverse.mt25.row--column--tablet.bg-black
-          .col.col--3-6
+        .row.row--condenced.row--stretch-child.row--reverse.pt25.row--column--tablet.bg-black
+          .col.col--3-6.img-v-fluid
             .master__image
               picture
                 img(src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
@@ -64,34 +56,52 @@ doctype html
                 .fz14.mt40.mt20--mobile
                   p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
 
-                .text-center.mt30
-                  a(href='#').btn.btn--ghost Узнать подробнее
+                  p Но откуда пошла такая традиция или мода? Что же представляет собой нательная живопись?
+
+                  p Это рисунок, надпись, символ, наносимые на тело методом ввода иглой краски разных цветов под кожу. Еще в давние времена люди делали себе на теле различные рисунки,  с помощью них определяли их принадлежность к классу, роду и, в некоторых случаях, наделяли волшебной силой.
+
+                  p Татуировки бывают различных видов и стилей, каждый из которых мог бы определять вашу этническую группу, взгляды, религию, статус и многое другое.
+                  p Как таковая, нательная живопись не имеет гендерной принадлежности, кроме татуажа,  но условно татуировки делятся на мужские и женские.
 
         // MASTER PORTFOLIO SECTION
         .master-portfolio
           .master-portfolio__head
             .small-title Работы мастера
-          .master-portfolio__slider
-            img(src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
-            img(src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
-            img(src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
-            img(src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
-            img(src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
-            img(src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
-            img(src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
-            img(src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
-            img(src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
-            img(src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+            .master-portfolio__head__nav
+              i.ico.ico-nav-arrow
+              i.ico.ico-nav-arrow.ico-nav-arrow--right
+          .master-portfolio__slider.popup-gallery
+            a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+            a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+            a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+            a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+            a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+            a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+            a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+            a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+            a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+            a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+              img(src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
 
           
         // TESTIMONIALS SECTION
-        .testimonials
+        .testimonials.testimonials--master
           // slick slider
           .testimonials__slider.slick-custom-dots
             // single slide
             .testimonials__slide
               .testimonials__slide__wrapper
                 .testimonials__content
+                  .small-title Отзывы клиентов студии
                   .testimonials__actions.testimonials__actions--imagable
                     a(href='#' data-toggle='testimonial').active
                       .testimonials__actions__image
@@ -126,6 +136,7 @@ doctype html
             .testimonials__slide
               .testimonials__slide__wrapper
                 .testimonials__content
+                  .small-title Отзывы клиентов студии
                   .testimonials__actions.testimonials__actions--imagable
                     a(href='#' data-toggle='testimonial').active
                       .testimonials__actions__image

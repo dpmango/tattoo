@@ -155,6 +155,11 @@
   justify-content: center
   padding: 45px 10%
 
+@media($mobile)
+  .grid-text
+    padding-top: 25px
+    padding-bottom: 25px
+
 @media($tablet-from)
   .img-v-fluid
     display: flex
@@ -183,14 +188,15 @@
       max-width: 100%
 
 // MASTER
-
 .master
   &__content
     &__image
       position: relative
       size: 160px
       overflow: hidden
-      border-radius: 50%
+      picture
+
+        border-radius: 50%
       img
         max-width: 100%
     &__row
@@ -217,6 +223,7 @@
         margin-left: 20px
 
   &__image
+    width: 100%
     flex: 1
     display: flex
     flex-direction: column
@@ -233,12 +240,15 @@
       left: 50%
       transform: translate(-50%, -50%)
       display: inline-block
-      height: 100%
-      width: auto
+
 
 @media($mobile)
   .master
     &__content
+      &__image
+        size: 120px
+      &__scope
+        margin-bottom: 20px
       &__row
         flex-direction: column
         margin-left: 0px
@@ -367,13 +377,86 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 40px
+    &__nav
+      padding-right: 80px
+      i.ico
+        cursor: pointer
+        opacity: .6
+        transition: all $transitionSpeed $ease
+        &:first-child
+          margin-right: 35px
+        &:hover
+          opacity: 1
   &__slider
     margin-left: -80px
-    img
-      display: block
+    &__item
+      position: relative
+      display: inline-block
       margin-right: 20px
+      &::before, &::after
+        display: block
+        content: ' '
+        position: absolute
+      &::after
+        position: absolute 0
+        opacity: 0
+        background: color(#09090B a(60%)) svg-load('../../images/svg/ico-zoom.svg') no-repeat center
+        background-size: 40px
+        transition: all $transitionSpeed $ease
+      &::before
+        position: absolute 0
+        border: 3px solid $colorPrimary
+        opacity: 0
+        z-index: 2
+        transition: all $transitionSpeed $ease
+      &:hover
+        &::after
+          opacity: 1
+        &::before
+          position: absolute 10px
+          opacity: 1
       &:first-child
         padding-left: 80px
+        &::after, &::before
+          left: 80px
+
+        &:hover
+          &::before
+            position: absolute 10px 10px 10px 90px
+
+@media($tablet)
+  .master-portfolio
+    padding-left: 40px
+    &__head
+      &__nav
+        padding-right: 40px
+    &__slider
+      margin-left: -40px
+      &__item
+        &:first-child
+          padding-left: 40px
+          &::after, &::before
+            left: 40px
+          &:hover
+            &::before
+              position: absolute 10px 10px 10px 50px
+
+@media($mobile)
+  .master-portfolio
+    padding-left: 20px
+    &__head
+      &__nav
+        display: none
+    &__slider
+      margin-left: -20px
+      &__item
+        &:first-child
+          padding-left: 20px
+          &::after, &::before
+            left: 20px
+          &:hover
+            &::before
+              position: absolute 10px 10px 10px 30px
 
 // PANEL (Vacancy)
 .panel

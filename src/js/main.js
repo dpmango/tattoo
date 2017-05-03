@@ -494,11 +494,12 @@ $(document).ready(function () {
   // MASTER PORTFOLIO
   $('.master-portfolio__slider').slick({
     autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: false,
     variableWidth: true,
-    speed: 700,
+    speed: 500,
     dots: false,
     arrows: false,
     centerPadding: 20,
@@ -506,7 +507,13 @@ $(document).ready(function () {
     easing: 'linear',
     infinite: false,
     lazyLoad: 'ondemand'
+  });
 
+  $('.master-portfolio__head__nav .ico-nav-arrow:first-child').on('click', function () {
+    $('.master-portfolio__slider').slick('prev');
+  });
+  $('.master-portfolio__head__nav .ico-nav-arrow--right').on('click', function () {
+    $('.master-portfolio__slider').slick('next');
   });
 
   // Service fullwith slider
@@ -624,15 +631,16 @@ $(document).ready(function () {
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
-    tLoading: 'Loading image #%curr%...',
+    tLoading: 'Загрузка изображений #%curr%...',
     mainClass: 'mfp-img-mobile',
+    closeBtnInside: false,
     gallery: {
       enabled: true,
       navigateByImgClick: true,
       preload: [0, 1]
     },
     image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+      tError: '<a href="%url%">Иозбражение #%curr%</a> не неайдено.'
     }
   });
 

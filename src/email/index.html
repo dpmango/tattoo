@@ -21,6 +21,20 @@
     <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
     <!--[if !mso]><!-->
     <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <style>
+      @font-face {
+        font-weight: 400;
+        font-style: normal;
+        font-family: 'RoadRadio';
+        src: url('assets/fonts/RoadRadio.eot?#iefix') format('embedded-opentype'),  url('assets/fonts/RoadRadio.otf')  format('opentype'), url('assets/fonts/RoadRadio.woff') format('woff'), url('assets/fonts/RoadRadio.ttf')  format('truetype'), url('assets/fonts/RoadRadio.svg#RoadRadio') format('svg');
+      }
+      @font-face {
+          font-weight: 400;
+          font-style: normal;
+          font-family: 'Geometria';
+          src: url('assets/fonts/Geometria.eot?#iefix') format('embedded-opentype'),  url('assets/fonts/Geometria.otf')  format('opentype'), url('assets/fonts/Geometria.woff') format('woff'), url('assets/fonts/Geometria.ttf')  format('truetype'), url('assets/fonts/Geometria.svg#Geometria') format('svg');
+      }
+    </style>
     <!--<![endif]-->
     <!-- Web Font / @font-face : END -->
     <!-- CSS Reset -->
@@ -41,6 +55,7 @@
         * {
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
+            font-family: 'Geometria', sans-serif;
         }
 
         /* What it does: Centers email on Android 4.4 */
@@ -193,12 +208,20 @@
       </div>
       <!-- Visually Hidden Preheader Text : END -->
 
-      <!-- Email Body : BEGIN -->
+      <!-- TOP PADDING : BEGIN -->
+      <table align="center" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;" width="600">
+        <tr>
+          <td bgcolor="2E2E31" style="padding: 20px 0; text-align: center">
+          </td>
+        </tr>
+      </table>
+      <!-- TOP PADDING : END -->
 
+      <!-- Email Body : BEGIN -->
       <table align="center" aria-hidden="true" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;" width="600">
         <!-- Email Header : BEGIN -->
         <tr>
-          <td bgcolor="18181D" style="padding: 20px 0; text-align: center">
+          <td bgcolor="18181D" style="padding: 20px 0 10px 0; text-align: center">
             <img alt="logo" aria-hidden="true" border="0" height="65" src="assets/logo.png" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="207">
           </td>
         </tr>
@@ -214,9 +237,9 @@
         <!-- 1 Column Text + Button : BEGIN -->
 
         <tr>
-          <td bgcolor="#18181D" style="padding: 35px 40px 20px; text-align: left;">
-            <h1 style="margin: 0; font-family: sans-serif; font-size: 28px; line-height: 34px; color: #D2A36E; font-weight: normal; text-transform: uppercase;">
-              татуировка клевер со скидкой 20%! Разработка эскиза бесплатно!
+          <td bgcolor="#18181D" style="padding: 35px 40px 25px; text-align: left;">
+            <h1 style="margin: 0; font-family: 'RoadRadio', sans-serif; font-size: 28px; line-height: 34px; color: #D2A36E; font-weight: normal; text-transform: uppercase;">
+              татуировка клевер со <br> скидкой 20%! Разработка <br> эскиза бесплатно!
             </h1>
           </td>
         </tr>
@@ -226,17 +249,23 @@
             <p style="margin: 0;">
               Болевой порог у всех разный. Есть люди, которые воют от первого укола, а некоторые могут лежать под машинкой три часа, писать SMS и смотреть фильмы с планшета, даже не поморщившись. И те и другие — исключения. В целом, татуировка — болезненный, но, как правило, терпимый процесс.
             </p>
+            <br>
             <p style="margin: 0;">
               На силу ощущений влияет время сеанса (чем дольше, тем больнее), наличие или отсутствие анестезии (используются обезболивающие крема), индивидуальные особенности человека и расположение рисунка. Есть места, где будет особенно неприятно. А на других бить татуировку попросту бессмысленно, и дело даже не в боли. Просто кожа там меняется слишком быстро, и рисунок вскоре превратится в кашу.
             </p>
           </td>
         </tr>
 
+        <tr>
+          <td bgcolor="#18181D" style="padding: 0 40px 10px; font-family: 'RoadRadio', sans-serif; font-size: 20px; color: #FFFFFF; text-align: left;">
+            Лучшие татуировки месяца
+          </td>
+        </tr>
         <!-- 1 Column Text + Button : END -->
 
         <!-- 2 Even Columns : BEGIN -->
         <tr>
-          <td align="center" bgcolor="#18181D" style="padding: 10px;" valign="top">
+          <td align="center" bgcolor="#18181D" style="padding: 10px 25px 10px;" valign="top">
             <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tr>
                 <!-- Column : BEGIN -->
@@ -245,7 +274,7 @@
                   <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                       <td style="padding: 10px; text-align: center">
-                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_1.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="270">
+                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_1.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="240">
                       </td>
                     </tr>
 
@@ -264,7 +293,7 @@
                   <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                       <td style="padding: 10px; text-align: center">
-                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_2.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="270">
+                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_2.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="240">
                       </td>
                     </tr>
 
@@ -286,7 +315,7 @@
 
         <!-- 2 Even Columns : BEGIN -->
         <tr>
-          <td align="center" bgcolor="#18181D" style="padding: 10px;" valign="top">
+          <td align="center" bgcolor="#18181D" style="padding: 0px 25px 10px;" valign="top">
             <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
               <tr>
                 <!-- Column : BEGIN -->
@@ -295,7 +324,7 @@
                   <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                       <td style="padding: 10px; text-align: center">
-                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_3.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="270">
+                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_3.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="240">
                       </td>
                     </tr>
 
@@ -314,7 +343,7 @@
                   <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation">
                     <tr>
                       <td style="padding: 10px; text-align: center">
-                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_4.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="270">
+                        <img alt="alt_text" aria-hidden="true" border="0" class="fluid" height="270" src="assets/placeholder_4.png" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" width="240">
                       </td>
                     </tr>
 
@@ -336,24 +365,38 @@
 
         <!-- 1 Column Text + SOCIAL : BEGIN -->
         <tr>
-          <td bgcolor="#18181D" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 14px; line-height: 17px; color: #FFFFFF; text-align: left;">
+          <td bgcolor="#18181D" style="padding: 25px 40px 30px; font-family: sans-serif; font-size: 14px; line-height: 17px; color: #FFFFFF; text-align: left;">
             <p style="margin: 0;">
               Мы активно стараемся улучшить наш сайт! Так что если вы вдруг найдете ошибку на нашем сайте, то смело присылайте ее нам на info@ptattoo.ru и мы вышлем в знак благодарности небольшой купон на скидку.
             </p>
           </td>
         </tr>
-
+        <tr>
+          <td align="center" bgcolor="#18181D" style="padding: 0 40px 15px; font-family: 'RoadRadio', sans-serif; font-size: 20px; line-height: 17px; color: #FFFFFF; text-align: center;">
+            SHARE TATTOO WITH US
+          </td>
+        </tr>
         <tr>
           <td bgcolor="#18181D" style="padding: 0 40px 40px; font-family: sans-serif; font-size: 14px; line-height: 17px; color: #FFFFFF; text-align: center;">
-            <a href="#">
-              <img src='assets/social-vk.png'>
-            </a>
-            <a href="#">
-              <img src='assets/social-fb.png'>
-            </a>
-            <a href="#">
-              <img src='assets/social-tw.png'>
-            </a>
+            <table aria-hidden="true" border="0" cellpadding="0" cellspacing="0" role="presentation">
+              <tr>
+                <td style="padding: 0px 20px; text-align: center">
+                  <a href="#">
+                    <img src='assets/social-vk.png'>
+                  </a>
+                </td>
+                <td style="padding: 0px 20px;; text-align: center">
+                  <a href="#">
+                    <img src='assets/social-fb.png'>
+                  </a>
+                </td>
+                <td style="padding: 0px 20px;; text-align: center">
+                  <a href="#">
+                    <img src='assets/social-tw.png'>
+                  </a>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
         <!-- 1 Column Text + SOCIAL : END -->

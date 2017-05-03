@@ -38,10 +38,14 @@ $(document).ready(function(){
     headerMobileBg();
   });
   function headerMobileBg(){
-    if ( _window.width() < 768 && _window.scrollTop() > 50 ){
-      $('.header').addClass('header--mobile-bg');
+    if ( $('.header').is('.header--static') ){
+
     } else {
-      $('.header').removeClass('header--mobile-bg');
+      if ( _window.width() < 768 && _window.scrollTop() > 50 ){
+        $('.header').addClass('header--mobile-bg');
+      } else {
+        $('.header').removeClass('header--mobile-bg');
+      }  
     }
   }
   // scrolldown icon

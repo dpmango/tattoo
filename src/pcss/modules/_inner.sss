@@ -95,7 +95,9 @@
         display: none
     &--vacancy
       padding-bottom: 40px
-
+    &--services
+      .services__wrapper
+        min-height: calc(100vh - 120px)
 
 .contact
   &__contacts
@@ -639,6 +641,7 @@
       justify-content: center
       align-items: center
     &__icon
+      position: relative
       display: flex
       justify-content: center
       align-items: center
@@ -652,6 +655,39 @@
       i
         color: white
         transition: all $transitionSpeed $ease
+      &::after, &::before
+        display: none
+        content: ' '
+        size: 24px 3px
+        position: absolute
+        top: -14px
+        background: white
+        transition: all $transitionSpeed $ease
+      &::after
+        transform: rotate(45deg)
+        left: -10px
+      &::before
+        transform: rotate(-45deg)
+        right: -10px
+    &__icon-double
+      position: relative
+      width: 120px
+      margin-left: auto
+      margin-right: auto
+      &::after, &::before
+        display: none
+        content: ' '
+        size: 24px 3px
+        position: absolute
+        top: 7px
+        background: white
+        transition: all $transitionSpeed $ease
+      &::after
+        transform: rotate(-45deg)
+        left: -10px
+      &::before
+        transform: rotate(45deg)
+        right: -10px
 
     &__name
       font-family: 'RoadRadio'
@@ -669,8 +705,43 @@
         border: 3px solid $colorPrimary
         i
           color: $colorPrimary
+        &::after, &::before
+          background-color: $colorPrimary
+      .services-list__item__icon-double
+        &::after, &::before
+          background-color: $colorPrimary
       .services-list__item__name
         color: $colorPrimary
+
+@media($mobile)
+  .services-list
+    margin-left: -20px
+    margin-right: -20px
+    margin-top: 20px
+    position: relative
+    background: url('../images/el/mainpageServicesBgMobile@2x.png') no-repeat center center
+    background-size: cover
+    &::before
+      display: block
+      content: ' '
+      position: absolute 0 0 0 0
+      background: color(#202020 a(80%))
+      z-index: 1
+    .slick-list, .slick-dots
+      position: relative
+      z-index: 2
+    &__item
+      &::after, &::before
+        display: none
+      &__image
+        display: none
+      &__icon
+        &::after, &::before
+          display: block
+      &__icon-double
+        &::after, &::before
+          display: block
+
 
 // PROMO BLOCK
 .promo-block
@@ -688,7 +759,7 @@
     height: 100%
     width: 1000px
     z-index: 1
-    background: url('../images/el/promoBlockBG.png') no-repeat center
+    background: url('../images/el/promoBlockBG.png') no-repeat center right
     background-size: cover
     transform: translateY(-50%)
   &__description
@@ -698,6 +769,8 @@
     font-family: 'RoadRadio'
     font-size: 28px
     letter-spacing: 2.52px
+    br
+      display: none
   &__counter
     display: flex
     justify-content: space-between
@@ -728,6 +801,8 @@
       font-family: 'RoadRadio'
       font-size: 20px
       letter-spacing: 1.8px
+      br
+        display: none
     &__subtitle
       font-size: 14px
 
@@ -736,8 +811,11 @@
     margin-top: auto
     display: flex
     justify-content: space-between
+    button
+      flex-shrink: 0
     .ui-input
       margin-bottom: 0
+      margin-right: 20px
       input
         background-color: color(white a(25%))
         border-color: transparent
@@ -760,6 +838,57 @@
         input
           background: color(white a(25%)) svg-load('../../images/svg/input-email-dark.svg') no-repeat 10px center
 
+@media($desktop)
+  .promo-block
+    &::after
+      right: -25%
+
+@media($tablet)
+  .promo-block
+    padding: 35px 0
+    position: relative
+    background: url('../images/el/promoBlockBGMobile.png') no-repeat center center
+    background-size: cover
+    &::after
+      position: absolute 0
+      background: linear-gradient(to right, color(#D2A36E a(0%)), color(#D2A36E a(100%)))
+      width: 100%
+      height: auto
+      transform: none
+    &__form
+      flex-direction: column
+      max-width: 350px
+      margin-left: auto
+      margin-right: auto
+      .ui-input
+        margin-bottom: 20px
+        margin-right: 0
+
+@media(width <= 680px)
+  .promo-block
+    &__description
+      flex-direction: column
+    &__counter
+      margin-top: 20px
+
+@media($mobile)
+  .promo-block
+    padding: 20px 0
+    &__description
+      max-width: 350px
+      margin-left: auto
+      margin-right: auto
+    &__title
+      font-size: 20px
+      br
+        display: block
+    &__counter
+      &__title
+        font-size: 16px
+        br
+          display: block
+      &__subtitle
+        margin-top: 10px
 
 // 404
 .error__head

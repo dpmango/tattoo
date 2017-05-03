@@ -8,7 +8,7 @@ doctype html
     include shared/header-static.pug
     include shared/menu.pug
     
-    .blog
+    .blog.blog--page
       .container.container--1280
         h1.section-title Блог            
         .breadcrumbs
@@ -18,28 +18,36 @@ doctype html
           a(href='#') Зеленый тигр на коне
       
       .container.container--narrow
+        // blog navigation
+        .blog__prev
+          a(href='#')
+            i.ico.ico-nav-arrow
+        .blog__next
+          a(href='#')
+            i.ico.ico-nav-arrow.ico-nav-arrow--right
+              
         .blog__content
           h1.blog__title Боль и красота: что нужно знать, прежде чем делать татуировку
-          p.mt60 Татуировки давно перестали быть аксессуаром исключительно моряков и заключённых. Их носят совершенно разные люди, чтобы выразить себя, подчеркнуть какую-то часть тела или, наоборот, скрыть шрам. Просто для красоты, в конце концов. Но помимо общеизвестных фактов (боль, важность санитарных условий при нанесении), об искусстве татуировки есть масса домыслов. И информации, не очевидной для большинства.
-          .small-title.mt50 Размер имеет значение
-          p Маленькая татуировка редко бывает хорошей. Если это плотно забитый чёрный круг диаметром в 2 сантиметра — ещё куда ни шло, но чем больше в рисунке деталей (контуров, переходов цвета и т. д.), тем крупнее он должен быть.
+          p.mt60.mt40--mobile Татуировки давно перестали быть аксессуаром исключительно моряков и заключённых. Их носят совершенно разные люди, чтобы выразить себя, подчеркнуть какую-то часть тела или, наоборот, скрыть шрам. Просто для красоты, в конце концов. Но помимо общеизвестных фактов (боль, важность санитарных условий при нанесении), об искусстве татуировки есть масса домыслов. И информации, не очевидной для большинства.
+          .small-title.mt50.mt30--mobile Размер имеет значение
+          p.mt30.mt20--mobile Маленькая татуировка редко бывает хорошей. Если это плотно забитый чёрный круг диаметром в 2 сантиметра — ещё куда ни шло, но чем больше в рисунке деталей (контуров, переходов цвета и т. д.), тем крупнее он должен быть.
           p Это важно не только из-за эстетики. Тонкий контур (меньше пары миллиметров) хуже держится и со временем начнёт «плыть». Если татуировка чёрная, это уже не исправить.
           p Размер рисунка, в свою очередь, диктует место нанесения, и есть стили, которые при всём желании не сделать мелко. Если вы хотите реалистичный портрет, готовьте плечо, спину или другую большую зону.
-          .small-title.mt50 Мастера выбирают по портфолио
-          picture.mt35
+          .small-title.mt50.mt30--mobile Мастера выбирают по портфолио
+          picture.mt35.mt20--mobile
             img(src='images/blog/blogPic.png', srcset='images/blog/blogPic.png 1x, images/blog/blogPic@2x.png 2x')
-          p.mt60 Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
+          p.mt60.mt40--mobile Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
           
-          .small-title.mt50 Больно будет, вопрос — насколько
-          picture.mt35
+          .small-title.mt50.mt30--mobile Больно будет, вопрос — насколько
+          picture.mt35.mt20--mobile
             img(src='images/blog/blogPic_2.png', srcset='images/blog/blogPic_2.png 1x, images/blog/blogPic_2@2x.png 2x')
-          p.mt40 Болевой порог у всех разный. Есть люди, которые воют от первого укола, а некоторые могут лежать под машинкой три часа, писать SMS и смотреть фильмы с планшета, даже не поморщившись. И те и другие — исключения. В целом, татуировка — болезненный, но, как правило, терпимый процесс.
+          p.mt40.mt30--mobile Болевой порог у всех разный. Есть люди, которые воют от первого укола, а некоторые могут лежать под машинкой три часа, писать SMS и смотреть фильмы с планшета, даже не поморщившись. И те и другие — исключения. В целом, татуировка — болезненный, но, как правило, терпимый процесс.
           p На силу ощущений влияет время сеанса (чем дольше, тем больнее), наличие или отсутствие анестезии (используются обезболивающие крема), индивидуальные особенности человека и расположение рисунка. Есть места, где будет особенно неприятно. А на других бить татуировку попросту бессмысленно, и дело даже не в боли. Просто кожа там меняется слишком быстро, и рисунок вскоре превратится в кашу.
           .small-title.mt50 Хорошая татуировка стоит дорого
-          p.mt60 Стоимость татуировки обычно измеряется в часах работы мастера, и «вилка» цены очень широкая. На итоговой цифре сказываются опыт мастера, его известность и загруженность, расположение салона, размер и сложность рисунка, стоимость материалов. Изредка мастера могут сделать тату бесплатно (или со скидкой), если у них руки чешутся набить какой-то конкретный эскиз, но таких надо искать, и это, скорее, редкость.
+          p.mt60.mt40--mobile Стоимость татуировки обычно измеряется в часах работы мастера, и «вилка» цены очень широкая. На итоговой цифре сказываются опыт мастера, его известность и загруженность, расположение салона, размер и сложность рисунка, стоимость материалов. Изредка мастера могут сделать тату бесплатно (или со скидкой), если у них руки чешутся набить какой-то конкретный эскиз, но таких надо искать, и это, скорее, редкость.
           
           .blog__share
-            .blog__share__comments
+            a(href='#sectionComments').blog__share__comments
               i.ico.ico-chat
               span 25
             .blog__share__socials
@@ -50,7 +58,7 @@ doctype html
               a(href='#')
                 i.ico.ico-share-social-tw
               
-        .blog__comments
+        .blog__comments#sectionComments
           .small-title Комментарии
           form(action='#').blog__comments__form
             .ui-input.ui-input--icon.ui-input--comment
@@ -104,66 +112,65 @@ doctype html
               
               
         .blog.blog--inner
-          .container
-            .text-center
-              .small-title Популярные статьи
-            .blog__wrapper
-              // column
-              .blog__col
-                // item
-                a(href='#').blog__card.blog__card--image
-                  .blog__card__wrapper
-                    img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
-                    .blog__card__title Decorate For Less With Art Posters
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                // item
-                a(href='#').blog__card
-                  .blog__card__wrapper
-                    .blog__card__title Astronomy Or Astrology
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
+          .text-center
+            .small-title Популярные статьи
+          .blog__wrapper
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--image
+                .blog__card__wrapper
+                  img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                  .blog__card__title Decorate For Less With Art Posters
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card
+                .blog__card__wrapper
+                  .blog__card__title Astronomy Or Astrology
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+            
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--dark
+                .blog__card__wrapper
+                  .blog__card__title Is It Good To Hire A Personal Chef
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card
+                .blog__card__wrapper
+                  .blog__card__title The Amazing Hubble
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
               
-              // column
-              .blog__col
-                // item
-                a(href='#').blog__card.blog__card--dark
-                  .blog__card__wrapper
-                    .blog__card__title Is It Good To Hire A Personal Chef
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                // item
-                a(href='#').blog__card
-                  .blog__card__wrapper
-                    .blog__card__title The Amazing Hubble
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                
-              // column
-              .blog__col
-                // item
-                a(href='#').blog__card.blog__card--image
-                  .blog__card__wrapper
-                    img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
-                    .blog__card__title New Ideas For A Low Cost Vacation On Water
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                // item
-                a(href='#').blog__card.blog__card--dark
-                  .blog__card__wrapper
-                    .blog__card__title Party Jokes Startling But Unnecessary
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                      
-              a(href='#').toggler-more.js-toggle-blog Показать больше
-          
-                                                
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--image
+                .blog__card__wrapper
+                  img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                  .blog__card__title New Ideas For A Low Cost Vacation On Water
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card.blog__card--dark
+                .blog__card__wrapper
+                  .blog__card__title Party Jokes Startling But Unnecessary
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+                    
+            a(href='#').toggler-more.js-toggle-blog Показать больше
+        
+                                              
                             
     include shared/footer.pug
     include shared/modals.pug

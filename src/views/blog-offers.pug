@@ -8,7 +8,7 @@ doctype html
     include shared/header-static.pug
     include shared/menu.pug
     
-    .blog
+    .blog.blog--page
       .container.container--1280
         h1.section-title Блог            
         .breadcrumbs
@@ -18,6 +18,13 @@ doctype html
           a(href='#') Зеленый тигр на коне
       
       .container.container--narrow
+        // blog navigation
+        .blog__prev
+          a(href='#')
+            i.ico.ico-nav-arrow
+        .blog__next
+          a(href='#')
+            i.ico.ico-nav-arrow.ico-nav-arrow--right
         .blog__content
           h1.blog__title татуировка клевер со скидкой 20%  Разработка эскиза бесплатно!
           
@@ -32,20 +39,21 @@ doctype html
             .promo-block__counter__small
               p Уже получили купоны: 27 человек
               p До конца акции: 5 дней
-                
-          a(href='#').btn.btn--ghost.btn--ghost--fill.mt40 Получить промо-код
           
-          picture.mt35
+          .text-center--desktop
+            a(href='#').btn.btn--ghost.btn--ghost--fill.mt40.mt20--mobile Получить промо-код
+          
+          picture.mt35.mt20--mobile
             img(src='images/blog/blogPic.png', srcset='images/blog/blogPic.png 1x, images/blog/blogPic@2x.png 2x')
 
-          .small-title.mt50 Описание акции
-          p.mt40 Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
-          .small-title.mt50 Условия акции
-          p.mt40 Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
+          .small-title.mt50.mt30--mobile Описание акции
+          p.mt40.mt20--mobile Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
+          .small-title.mt50.mt30--mobile Условия акции
+          p.mt40.mt20--mobile Тату-мастера, как дизайнеры или иллюстраторы, почти всегда специализируются на каком-то стиле. Это стоит использовать. Ваш знакомый татуировщик может дать скидку, но речь о рисунке на всю жизнь. Если нужен японский дракон, ищите мастера, который работает именно в этом стиле и делает его потрясающе.
           
           
           .blog__share
-            .blog__share__comments
+            a(href='#sectionComments').blog__share__comments
               i.ico.ico-chat
               span 25
             .blog__share__socials
@@ -110,64 +118,63 @@ doctype html
               
               
         .blog.blog--inner
-          .container
-            .text-center
-              .small-title Популярные статьи
-            .blog__wrapper
-              // column
-              .blog__col
-                // item
-                a(href='#').blog__card.blog__card--image
-                  .blog__card__wrapper
-                    img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
-                    .blog__card__title Decorate For Less With Art Posters
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                // item
-                a(href='#').blog__card
-                  .blog__card__wrapper
-                    .blog__card__title Astronomy Or Astrology
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
+          .text-center
+            .small-title Популярные статьи
+          .blog__wrapper
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--image
+                .blog__card__wrapper
+                  img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                  .blog__card__title Decorate For Less With Art Posters
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card
+                .blog__card__wrapper
+                  .blog__card__title Astronomy Or Astrology
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+            
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--dark
+                .blog__card__wrapper
+                  .blog__card__title Is It Good To Hire A Personal Chef
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card
+                .blog__card__wrapper
+                  .blog__card__title The Amazing Hubble
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
               
-              // column
-              .blog__col
-                // item
-                a(href='#').blog__card.blog__card--dark
-                  .blog__card__wrapper
-                    .blog__card__title Is It Good To Hire A Personal Chef
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                // item
-                a(href='#').blog__card
-                  .blog__card__wrapper
-                    .blog__card__title The Amazing Hubble
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                
-              // column
-              .blog__col
-                // item
-                a(href='#').blog__card.blog__card--image
-                  .blog__card__wrapper
-                    img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
-                    .blog__card__title New Ideas For A Low Cost Vacation On Water
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                // item
-                a(href='#').blog__card.blog__card--dark
-                  .blog__card__wrapper
-                    .blog__card__title Party Jokes Startling But Unnecessary
-                    .blog__card__metrics
-                      i.ico.ico-counter-eye
-                      span 7
-                      
-              a(href='#').toggler-more.js-toggle-blog Показать больше
+            // column
+            .blog__col
+              // item
+              a(href='#').blog__card.blog__card--image
+                .blog__card__wrapper
+                  img.blog__card__image(src='images/homepageBlogRecord.png', srcset='images/homepageBlogRecord.png 1x, images/homepageBlogRecord@2x.png 2x')
+                  .blog__card__title New Ideas For A Low Cost Vacation On Water
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+              // item
+              a(href='#').blog__card.blog__card--dark
+                .blog__card__wrapper
+                  .blog__card__title Party Jokes Startling But Unnecessary
+                  .blog__card__metrics
+                    i.ico.ico-counter-eye
+                    span 7
+                    
+            a(href='#').toggler-more.js-toggle-blog Показать больше
           
                                                 
                             

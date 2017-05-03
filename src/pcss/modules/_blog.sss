@@ -1,5 +1,19 @@
 // BLOG
 .blog
+  &__prev, &__next
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    opacity: .6
+    transition: all $transitionSpeed $ease
+    .ico-nav-arrow
+      size: 30px 60px
+    &:hover
+      opacity: 1
+  &__prev
+    left: 40px
+  &__next
+    right: 40px
   &__content
     margin-top: 20px
     background: #18181D
@@ -28,16 +42,22 @@
     &__comments
       display: flex
       align-items: center
+      transition: all $transitionSpeed $ease
       span
         display: inline-block
         margin-left: 10px
+      &:hover
+        opacity: .7
 
     &__socials
       margin-left: auto
       a
         margin-right: 40px
+        transition: all $transitionSpeed $ease
         &:last-child
           margin-right: 0
+        &:hover
+          opacity: .7
 
   &__comments
     margin-top: 60px
@@ -71,6 +91,7 @@
         span
           color: $colorPrimary
       &__date
+        text-align: right
         font-size: 14px
         color: color(white a(60%))
       &__text
@@ -85,3 +106,123 @@
         padding-top: 15px
         font-size: 18px
         color: color(white a(60%))
+
+
+@media(width <= 1100px)
+  .blog
+    &__prev
+      left: 15px
+    &__next
+      right: 15px
+    &__content, &__comments
+      margin-left: 40px
+      margin-right: 40px
+    &--page
+      .blog__wrapper
+        margin-left: 40px
+        margin-right: 40px
+
+@media($desktop)
+  .blog
+    &--page
+      padding-top: 80px
+
+@media(width <= 940px)
+  .blog--page
+    .blog__col
+      &:nth-child(3)
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-basis: 600px
+        .blog__card
+          flex: 0 1 50%
+          margin-right: 20px
+          &:last-child
+            margin-right: auto
+
+@media($tablet)
+  .blog
+    &__prev, &__next
+      display: none
+    &__content, &__comments
+      margin-left: 0px
+      margin-right: 0px
+    &--page
+      .blog__wrapper
+        margin-left: 0px
+        margin-right: 0px
+    &__share
+      margin-top: 40px
+    &__comments
+      margin-top: 40px
+      &__item
+        &--child
+          padding-left: 40px
+    .blog__col
+      &:nth-child(3)
+        display: none
+
+@media(width <= 640px)
+  .blog
+    &--page
+      .toggler-more
+        margin-left: -20px
+        margin-right: -20px
+
+@media($mobile)
+  .blog
+    &--inner
+      padding-top: 40px
+    &--page
+      padding-top: 60px
+      .blog__wrapper
+        margin-left: 0px
+        margin-right: 0px
+    &__content, &__comments
+      margin-left: -20px
+      margin-right: -20px
+    &__content
+      padding: 30px 20px 0 20px
+      img
+        margin-left: -20px
+        margin-right: -20px
+        max-width: calc(100% + 40px)
+    &__share
+      &__socials
+        a
+          margin-right: 20px
+    &__comments
+      margin-top: 20px
+      padding: 30px 20px 40px 20px
+      &__form
+        margin-top: 10px
+        padding-bottom: 20px
+      &__item
+        &__avatar
+          flex: 0 0 40px
+          width: 40px
+          height: 40px
+          background-size: 24px 26px
+        &__head
+          padding-top: 11px
+        &__date
+          padding-top: 3px
+        &__reply
+          display: none
+        &--child
+          padding-left: 0px
+
+@media(width <= 450px)
+  .blog
+    &__comments
+      &__item
+        &__head
+          padding-top: 5px
+          flex-direction: column
+          justify-content: flex-start
+          align-items: flex-start
+        &__text
+          margin-left: -60px
+        &__date
+          text-align: left

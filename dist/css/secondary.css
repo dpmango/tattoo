@@ -164,7 +164,7 @@
 .ico-18plus {
     width: 86px;
     height: 99px;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='90px' height='103px' viewBox='0 0 90 103' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-18plus%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='footer' transform='translate(-551.000000, -139.000000)'%3E %3Cg id='ico-18plus' transform='translate(553.000000, 141.000000)'%3E %3Ctext id='18+' font-family='RoadRadio' font-size='42' font-weight='normal' letter-spacing='1.27272713' fill='%23D2A36E'%3E %3Ctspan x='15' y='61'%3E18+%3C/tspan%3E %3C/text%3E %3Cpolygon id='Polygon' stroke='%23D2A36E' stroke-width='3' points='42.8060797 0 85.6121593 24.7141016 85.6121593 74.1423048 42.8060797 98.8564065 -1.02140518e-13 74.1423048 -1.29674049e-13 24.7141016'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='90px' height='103px' viewBox='0 0 90 103' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-18plus%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='footer' transform='translate(-551.000000, -139.000000)'%3E %3Cg id='ico-18plus' transform='translate(553.000000, 141.000000)'%3E %3Cpath d='M16.218,37.774 L16.218,41.596 L20.67,41.596 L20.67,61 L24.912,61 L24.912,37.774 L16.218,37.774 Z M42.0187271,37.228 C49.5367271,37.228 52.2247271,40.252 52.2247271,43.696 C52.2247271,45.67 51.3427271,47.308 49.7467271,48.106 C52.5187271,49.072 53.9887271,51.004 53.9887271,54.112 C53.9887271,58.9 49.5787271,61.588 42.0187271,61.588 C34.4587271,61.588 30.0487271,59.11 30.0487271,54.028 C30.0487271,51.55 31.6867271,49.03 34.2067271,48.148 C32.6527271,47.182 31.8127271,45.922 31.8127271,43.864 C31.8127271,39.076 36.6847271,37.228 42.0187271,37.228 Z M46.7227271,50.962 L37.5247271,49.954 C35.2567271,50.542 34.3327271,52.138 34.3327271,53.734 C34.3327271,56.128 36.4747271,57.85 42.0187271,57.85 C47.3107271,57.85 49.7047271,56.296 49.7047271,53.902 C49.7047271,52.18 48.6967271,51.172 46.7227271,50.962 Z M39.1627271,46.258 L46.3867271,47.014 C47.6047271,46.174 48.0247271,45.25 48.0247271,44.116 C48.0247271,41.974 46.3867271,40.924 42.0187271,40.924 C37.1467271,40.924 36.0127271,42.142 36.0127271,43.906 C36.0127271,45.418 37.0207271,46.006 39.1627271,46.258 Z M58.3694543,47.266 L58.3694543,50.836 L63.7034543,50.836 L63.7034543,56.086 L67.6094543,56.086 L67.6094543,50.836 L72.9854543,50.836 L72.9854543,47.266 L67.6094543,47.266 L67.6094543,41.848 L63.7034543,41.848 L63.7034543,47.266 L58.3694543,47.266 Z' id='18+' fill='%23D2A36E'/%3E %3Cpolygon id='Polygon' stroke='%23D2A36E' stroke-width='3' points='42.8060797 0 85.6121593 24.7141016 85.6121593 74.1423048 42.8060797 98.8564065 -1.02140518e-13 74.1423048 -1.29674049e-13 24.7141016'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 @media(max-width: 840px) {
     .ico-18plus {
@@ -197,6 +197,12 @@
     height: 24px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='30px' height='24px' viewBox='0 0 30 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ETriangle 5%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='vacancy' transform='translate(-1305.000000, -169.000000)' fill='%23000000'%3E %3Cpolygon id='Triangle-5' transform='translate(1320.000000, 181.000000) scale(-1, 1) translate(-1320.000000, -181.000000) ' points='1320 169 1335 193 1305 193'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
+@media(max-width: 768px) {
+    .ico-panel-toggle {
+        width: 24px;
+        height: 18px;
+    }
+}
 .ico-nav-left {
     width: 20px;
     height: 40px;
@@ -222,11 +228,34 @@
 .ico-nav-right:hover {
     opacity: 1;
 }
+.ico-filter-toggle-mobile {
+    width: 16px;
+    height: 14px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='16px' height='14px' viewBox='0 0 16 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ETriangle 3%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='mobile_gallery' transform='translate(-202.000000, -133.000000)' fill='%23FFFFFF'%3E %3Cg id='Group-Copy-2' transform='translate(82.000000, 120.000000)'%3E %3Cpolygon id='Triangle-3' transform='translate(128.000000, 19.787879) scale(1, -1) rotate(180.000000) translate(-128.000000, -19.787879) ' points='128 13 136 26.5757576 120 26.5757576'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
 .ico-404-smile {
     width: 133px;
     height: 133px;
     background-image: url('../images/el/404-smile@2x.png');
     vertical-align: top;
+}
+@media(max-width: 768px) {
+    .ico-404-smile {
+        width: 125px;
+        height: 125px;
+    }
+}
+@media(max-width: 568px) {
+    .ico-404-smile {
+        width: 118px;
+        height: 118px;
+    }
+}
+@media(max-width: 414px) {
+    .ico-404-smile {
+        width: 102px;
+        height: 102px;
+    }
 }
 .ico-star-rating {
     width: 22px;
@@ -235,6 +264,29 @@
 }
 .ico-star-rating--blank {
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='22px' height='21px' viewBox='0 0 22 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-star-rating-blank%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.487262228'%3E %3Cg id='gallery_picabout' transform='translate(-537.000000, -2044.000000)' fill='%23FFFFFF'%3E %3Cg id='Group-6' transform='translate(0.000000, 1258.000000)'%3E %3Cg id='Group-7-Copy' transform='translate(0.000000, 262.000000)'%3E %3Cg id='Оценка:--+-Group-Copy' transform='translate(397.000000, 524.000000)'%3E %3Cg id='Group' transform='translate(79.500000, 0.000000)'%3E %3Cpolygon id='ico-star-rating-blank' points='71.5 17.25 64.7347351 20.8036954 66.0267857 13.2768477 60.5535715 7.94630456 68.1173676 6.84815228 71.5 0 74.8826324 6.84815228 82.4464285 7.94630456 76.9732143 13.2768477 78.2652649 20.8036954'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-chat {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #D2A36E;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='19px' height='19px' viewBox='0 0 19 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Echat%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='share' transform='translate(-51.000000, -32.000000)' fill='%23FFFFFF'%3E %3Cpath d='M64.3007917,32 L56.6992083,32 C53.5574792,32 51,34.5574792 51,37.6996042 L51,42.134125 C51,45.1709583 53.3872708,47.6603542 56.384125,47.8242292 L56.384125,50.4668125 C56.384125,50.7636875 56.6251875,51.00475 56.9220625,51.00475 C57.0641667,51.00475 57.19875,50.9489375 57.300875,50.8468125 L57.894625,50.2530625 C59.4546042,48.6930833 61.5299583,47.8333333 63.7363333,47.8333333 L64.2992083,47.8333333 C67.4425208,47.8333333 70,45.2758542 70,42.134125 L70,37.6996042 C70,34.5574792 67.4425208,32 64.3007917,32 Z' id='chat'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    background-size: 19px;
+}
+.ico-share-social-fb {
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eshare-social-fb%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='share' transform='translate(-680.000000, -20.000000)'%3E %3Cg id='share-social-fb' transform='translate(680.000000, 20.000000)'%3E %3Ccircle id='Oval-3' fill='%233B5998' cx='20' cy='20' r='20'/%3E %3Cpath d='M16.7766471,11.3487671 L16.7766471,15.149863 L14,15.149863 L14,19.7990137 L16.7766471,19.7990137 L16.7766471,33.6164384 L22.4805882,33.6164384 L22.4805882,19.8005479 L26.3083235,19.8005479 C26.3083235,19.8005479 26.6669706,17.5712877 26.8417059,15.1333699 L22.5027647,15.1333699 L22.5027647,11.9540274 C22.5027647,11.4791781 23.1240882,10.8409315 23.7396765,10.8409315 L26.8478235,10.8409315 L26.8478235,6 L22.6209118,6 C16.6363235,6 16.7766471,10.6537534 16.7766471,11.3487671 Z' id='Fill-1' fill='%23FFFFFF'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-share-social-vk {
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eshare-social-vk%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='share' transform='translate(-760.000000, -20.000000)'%3E %3Cg id='share-social-vk' transform='translate(760.000000, 20.000000)'%3E %3Ccircle id='Oval-3-Copy' fill='%2345668E' cx='20' cy='20' r='20'/%3E %3Cpath d='M27.8628416,20.8643353 C27.8628416,20.8643353 31.0132677,16.4202618 31.3264212,14.9597575 C31.43063,14.4381865 31.2011247,14.145945 30.6586416,14.145945 L27.9254899,14.145945 C27.2995343,14.145945 27.0699411,14.4172744 26.8822599,14.8137246 C26.8822599,14.8137246 25.404446,17.9623056 23.6065372,19.9464019 C23.0292593,20.5879097 22.7357877,20.7809507 22.4171865,20.7809507 C22.1602671,20.7809507 22.0416484,20.5666462 22.0416484,19.9880503 L22.0416484,14.9180213 C22.0416484,14.2086811 21.9582638,14 21.3740445,14 L16.9925314,14 C16.6586416,14 16.4500483,14.1940954 16.4500483,14.4590106 C16.4500483,15.1270539 17.4723662,15.2778315 17.4723662,17.0879536 L17.4723662,20.8225991 C17.4723662,21.5737633 17.43063,21.865829 17.075916,21.865829 C16.1370706,21.865829 13.9045778,18.6319304 12.6527546,14.9597575 C12.4023372,14.2086811 12.1310957,14 11.4217556,14 L8.68851595,14 C8.29215359,14 8,14.2711537 8,14.6676039 C8,15.3978561 8.85537299,18.7778754 12.214656,23.3055092 C14.4679729,26.3517266 17.43063,28 20.1013092,28 C21.7286706,28 22.1251208,27.7288463 22.1251208,27.0402425 L22.1251208,24.7033653 C22.1251208,24.1191459 22.354714,23.8688164 22.6884281,23.8688164 C23.0639663,23.8688164 23.7268254,23.9894561 25.2756348,25.5170899 C27.1116774,27.2697478 27.2369739,28 28.2384676,28 L31.3055092,28 C31.6183991,28 31.9105527,27.8539671 31.9105527,27.3323082 C31.9105527,26.6437044 31.0132677,25.4128811 29.6363237,23.9522889 C29.0729286,23.2012125 28.1549073,22.3874879 27.8628416,22.0119497 C27.4455672,21.5737633 27.5707759,21.3233459 27.8628416,20.8643353' id='Fill-1' fill='%23FFFFFF'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-share-social-tw {
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eshare-social-tw%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='share' transform='translate(-840.000000, -20.000000)'%3E %3Cg id='share-social-tw' transform='translate(840.000000, 20.000000)'%3E %3Ccircle id='Oval-3-Copy-2' fill='%2300ACED' cx='20' cy='20' r='20'/%3E %3Cpath d='M30.6938462,14.845 C29.9723077,15.157 29.1907692,15.373 28.3738462,15.4675 C29.2092308,14.98 29.8461538,14.2075 30.1523077,13.2865 C29.3707692,13.738 28.5061538,14.0665 27.58,14.242 C26.8476923,13.48 25.7953846,13 24.6353846,13 C22.4061538,13 20.5969231,14.764 20.5969231,16.9375 C20.5969231,17.248 20.6338462,17.5465 20.7,17.8345 C17.34,17.6695 14.3661538,16.105 12.3707692,13.72 C12.0215385,14.3005 11.8230769,14.98 11.8230769,15.7015 C11.8230769,17.0665 12.5384615,18.274 13.62,18.976 C12.9584615,18.9595 12.34,18.778 11.7938462,18.484 L11.7938462,18.532 C11.7938462,20.4415 13.1876923,22.0345 15.0323077,22.399 C14.6953846,22.486 14.3353846,22.5325 13.9692308,22.5325 C13.7107692,22.5325 13.4584615,22.51 13.2061538,22.4635 C13.7230769,24.028 15.2123077,25.1635 16.98,25.1995 C15.5969231,26.254 13.8538462,26.881 11.9615385,26.881 C11.6369231,26.881 11.3184615,26.863 11,26.8285 C12.7907692,27.9475 14.9123077,28.597 17.1953846,28.597 C24.6230769,28.597 28.6861538,22.597 28.6861538,17.395 L28.6738462,16.885 C29.4676923,16.3285 30.1523077,15.637 30.6938462,14.845 Z' id='twitter-logo-silhouette-(1)' fill='%23FFFFFF'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 /* hoverable states */
 .testimonials__actions a:hover .ico, .testimonials__actions a.active .ico {}
@@ -245,6 +297,18 @@
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='19px' height='12px' viewBox='0 0 19 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%23D2A36E'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eico-user-group%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-261.000000, -3558.000000)'%3E %3Cg id='Group-14' transform='translate(261.000000, 3554.000000)'%3E %3Cpath d='M12.6031661,9.14438789 C14.0304747,9.14438789 15.1216988,8.0310742 15.1216988,6.56951514 C15.1216988,5.11331369 14.0304747,4 12.6031661,4 C11.1758575,4 10.0846334,5.11331369 10.0846334,6.56951514 C10.0846334,8.0310742 11.1758575,9.14438789 12.6031661,9.14438789 Z M5.88357804,9.14438789 C7.3108866,9.14438789 8.40211073,8.0310742 8.40211073,6.56951514 C8.40211073,5.11331369 7.3108866,4 5.88357804,4 C4.45101816,4 3.35979403,5.11331369 3.35979403,6.56951514 C3.35979403,8.0310742 4.45101816,9.14438789 5.88357804,9.14438789 Z M5.88357804,10.8556121 C3.95109257,10.8556121 0,11.8853469 0,13.8569515 L0,16 L11.7619048,16 L11.7619048,13.8569515 C11.7619048,11.8853469 7.81501325,10.8556121 5.88357804,10.8556121 Z M12.6031661,10.8556121 C12.3532033,10.8556121 12.0990395,10.8556121 11.7619048,10.9434771 C12.7712083,11.6303241 13.4444274,12.6557728 13.4444274,13.8569515 L13.4444274,16 L18.4867441,16 L18.4867441,13.8569515 C18.4867441,11.8853469 14.5356516,10.8556121 12.6031661,10.8556121 Z' id='ico-user-group'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 /* ICONMOON */
+.icon-ico-moustache:before {
+    content: "\e906";
+}
+.icon-ico-paint-brush:before {
+    content: "\e907";
+}
+.icon-ico-shield:before {
+    content: "\e908";
+}
+.icon-ico-thumb-up:before {
+    content: "\e909";
+}
 .icon-ico-service-chrysanthemum:before {
     content: "\e900";
 }
@@ -1530,192 +1594,95 @@ button.mfp-close:hover {
 /*     &.scroll-y.scroll-scrollx_visible .scroll-element_size */
 /*       top: -14px */
 /* */
-/* // SCROLLBAR MAC OS X ************** */
-/* */
-/* .scrollbar-macosx */
-/*   > .scroll-element */
-/*     background: none */
-/*     border: none */
-/*     margin: 0 */
-/*     padding: 0 */
-/*     position: absolute */
-/*     z-index: 10 */
-/*     div */
-/*       background: none */
-/*       border: none */
-/*       margin: 0 */
-/*       padding: 0 */
-/*       position: absolute */
-/*       z-index: 10 */
-/*       display: block */
-/*       height: 100% */
-/*       left: 0 */
-/*       top: 0 */
-/*       width: 100% */
-/*     .scroll-element_track */
-/*       display: none */
-/*     .scroll-bar */
-/*       background-color: #6C6E71 */
-/*       display: block */
-/*       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" */
-/*       filter: alpha(opacity = 0) */
-/*       opacity: 0 */
-/*       -webkit-border-radius: 7px */
-/*       -moz-border-radius: 7px */
-/*       border-radius: 7px */
-/*       -webkit-transition: opacity 0.2s linear */
-/*       -moz-transition: opacity 0.2s linear */
-/*       -o-transition: opacity 0.2s linear */
-/*       -ms-transition: opacity 0.2s linear */
-/*       transition: opacity 0.2s linear */
-/*   &:hover > .scroll-element .scroll-bar */
-/*     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" */
-/*     filter: alpha(opacity = 70) */
-/*     opacity: 0.7 */
-/*   > .scroll-element */
-/*     &.scroll-draggable .scroll-bar */
-/*       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" */
-/*       filter: alpha(opacity = 70) */
-/*       opacity: 0.7 */
-/*     &.scroll-x */
-/*       bottom: 0px */
-/*       height: 0px */
-/*       left: 0 */
-/*       min-width: 100% */
-/*       overflow: visible */
-/*       width: 100% */
-/*     &.scroll-y */
-/*       height: 100% */
-/*       min-height: 100% */
-/*       right: 0px */
-/*       top: 0 */
-/*       width: 0px */
-/*     &.scroll-x .scroll-bar */
-/*       height: 7px */
-/*       min-width: 10px */
-/*       top: -9px */
-/*     &.scroll-y .scroll-bar */
-/*       left: -9px */
-/*       min-height: 10px */
-/*       width: 7px */
-/*     &.scroll-x */
-/*       .scroll-element_outer */
-/*         left: 2px */
-/*       .scroll-element_size */
-/*         left: -4px */
-/*     &.scroll-y */
-/*       .scroll-element_outer */
-/*         top: 2px */
-/*       .scroll-element_size */
-/*         top: -4px */
-/*     &.scroll-x.scroll-scrolly_visible .scroll-element_size */
-/*       left: -11px */
-/*     &.scroll-y.scroll-scrollx_visible .scroll-element_size */
-/*       top: -11px */
-/* */
-/* */
-/* // SCROLLBAR LIGHT ************** */
-/* */
-/* .scrollbar-light > */
-/*   .scroll-element */
-/*     border: none */
-/*     margin: 0 */
-/*     overflow: hidden */
-/*     padding: 0 */
-/*     position: absolute */
-/*     z-index: 10 */
-/*     div */
-/*       border: none */
-/*       margin: 0 */
-/*       overflow: hidden */
-/*       padding: 0 */
-/*       position: absolute */
-/*       z-index: 10 */
-/*       display: block */
-/*       height: 100% */
-/*       left: 0 */
-/*       top: 0 */
-/*       width: 100% */
-/*     background-color: #ffffff */
-/*     .scroll-element_outer */
-/*       -webkit-border-radius: 10px */
-/*       -moz-border-radius: 10px */
-/*       border-radius: 10px */
-/*     .scroll-element_size */
-/*       background: #dbdbdb */
-/*       background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGU4ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+") */
-/*       background: -moz-linear-gradient(left, #dbdbdb 0%, #e8e8e8 100%) */
-/*       background: -webkit-gradient(linear, left top, right top, color-stop(0%, #dbdbdb), color-stop(100%, #e8e8e8)) */
-/*       background: -webkit-linear-gradient(left, #dbdbdb 0%, #e8e8e8 100%) */
-/*       background: -o-linear-gradient(left, #dbdbdb 0%, #e8e8e8 100%) */
-/*       background: -ms-linear-gradient(left, #dbdbdb 0%, #e8e8e8 100%) */
-/*       background: linear-gradient(to right, #dbdbdb 0%, #e8e8e8 100%) */
-/*       -webkit-border-radius: 10px */
-/*       -moz-border-radius: 10px */
-/*       border-radius: 10px */
-/*     &.scroll-x */
-/*       bottom: 0 */
-/*       height: 17px */
-/*       left: 0 */
-/*       min-width: 100% */
-/*       width: 100% */
-/*     &.scroll-y */
-/*       height: 100% */
-/*       min-height: 100% */
-/*       right: 0 */
-/*       top: 0 */
-/*       width: 17px */
-/*     .scroll-bar */
-/*       background: #fefefe */
-/*       background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNWY1ZjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+") */
-/*       background: -moz-linear-gradient(left, #fefefe 0%, #f5f5f5 100%) */
-/*       background: -webkit-gradient(linear, left top, right top, color-stop(0%, #fefefe), color-stop(100%, #f5f5f5)) */
-/*       background: -webkit-linear-gradient(left, #fefefe 0%, #f5f5f5 100%) */
-/*       background: -o-linear-gradient(left, #fefefe 0%, #f5f5f5 100%) */
-/*       background: -ms-linear-gradient(left, #fefefe 0%, #f5f5f5 100%) */
-/*       background: linear-gradient(to right, #fefefe 0%, #f5f5f5 100%) */
-/*       border: 1px solid #dbdbdb */
-/*       -webkit-border-radius: 10px */
-/*       -moz-border-radius: 10px */
-/*       border-radius: 10px */
-/*   .scroll-content */
-/*     &.scroll-scrolly_visible */
-/*       left: -17px */
-/*       margin-left: 17px */
-/*     &.scroll-scrollx_visible */
-/*       top: -17px */
-/*       margin-top: 17px */
-/*   .scroll-element */
-/*     &.scroll-x .scroll-bar */
-/*       height: 10px */
-/*       min-width: 10px */
-/*       top: 0px */
-/*     &.scroll-y .scroll-bar */
-/*       left: 0px */
-/*       min-height: 10px */
-/*       width: 10px */
-/*     &.scroll-x */
-/*       .scroll-element_outer */
-/*         height: 12px */
-/*         left: 2px */
-/*         top: 2px */
-/*       .scroll-element_size */
-/*         left: -4px */
-/*     &.scroll-y */
-/*       .scroll-element_outer */
-/*         left: 2px */
-/*         top: 2px */
-/*         width: 12px */
-/*       .scroll-element_size */
-/*         top: -4px */
-/*     &.scroll-x.scroll-scrolly_visible .scroll-element_size */
-/*       left: -19px */
-/*     &.scroll-y.scroll-scrollx_visible .scroll-element_size */
-/*       top: -19px */
-/*     &.scroll-x.scroll-scrolly_visible .scroll-element_track */
-/*       left: -19px */
-/*     &.scroll-y.scroll-scrollx_visible .scroll-element_track */
-/*       top: -19px */
+/* SCROLLBAR MAC OS X ************** */
+.scrollbar-macosx > .scroll-element, .images-category > .scroll-element {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.scrollbar-macosx > .scroll-element div, .images-category > .scroll-element div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+}
+.scrollbar-macosx > .scroll-element .scroll-element_track, .images-category > .scroll-element .scroll-element_track {
+    display: none;
+}
+.scrollbar-macosx > .scroll-element .scroll-bar, .images-category > .scroll-element .scroll-bar {
+    display: block;
+    border-radius: 7px;
+    background-color: #6C6E71;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity = 0);
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+.scrollbar-macosx > .scroll-element, .images-category > .scroll-element {}
+.scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar, .images-category > .scroll-element.scroll-draggable .scroll-bar {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity = 70);
+}
+.scrollbar-macosx > .scroll-element.scroll-x, .images-category > .scroll-element.scroll-x {
+    bottom: 0px;
+    left: 0;
+    overflow: visible;
+    min-width: 100%;
+    width: 100%;
+    height: 0px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y, .images-category > .scroll-element.scroll-y {
+    top: 0;
+    right: 0px;
+    min-height: 100%;
+    width: 0px;
+    height: 100%;
+}
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-bar, .images-category > .scroll-element.scroll-x .scroll-bar {
+    top: -9px;
+    min-width: 10px;
+    height: 7px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar, .images-category > .scroll-element.scroll-y .scroll-bar {
+    left: -9px;
+    min-height: 10px;
+    width: 7px;
+}
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer, .images-category > .scroll-element.scroll-x .scroll-element_outer {
+    left: 2px;
+}
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size, .images-category > .scroll-element.scroll-x .scroll-element_size {
+    left: -4px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer, .images-category > .scroll-element.scroll-y .scroll-element_outer {
+    top: 2px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size, .images-category > .scroll-element.scroll-y .scroll-element_size {
+    top: -4px;
+}
+.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size, .images-category > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -11px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size, .images-category > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -11px;
+}
+.scrollbar-macosx:hover > .scroll-element .scroll-bar, .images-category:hover > .scroll-element .scroll-bar {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity = 70);
+}
 /* SCROLLBAR RAIL ************** */
 .scrollbar-rail > .scroll-element {
     position: absolute;
@@ -1837,212 +1804,6 @@ button.mfp-close:hover {
     }
 }
 /* */
-/* // SCROLLBAR DYNAMIC */
-/* */
-/* .scrollbar-dynamic > .scroll-element */
-/*   background: none */
-/*   border: none */
-/*   margin: 0 */
-/*   padding: 0 */
-/*   position: absolute */
-/*   z-index: 10 */
-/*   div */
-/*     background: none */
-/*     border: none */
-/*     margin: 0 */
-/*     padding: 0 */
-/*     position: absolute */
-/*     z-index: 10 */
-/*     display: block */
-/*     height: 100% */
-/*     left: 0 */
-/*     top: 0 */
-/*     width: 100% */
-/*   &.scroll-x */
-/*     bottom: 2px */
-/*     height: 7px */
-/*     left: 0 */
-/*     min-width: 100% */
-/*     width: 100% */
-/*   &.scroll-y */
-/*     height: 100% */
-/*     min-height: 100% */
-/*     right: 2px */
-/*     top: 0 */
-/*     width: 7px */
-/*   .scroll-element_outer */
-/*     opacity: 0.3 */
-/*     -webkit-border-radius: 12px */
-/*     -moz-border-radius: 12px */
-/*     border-radius: 12px */
-/*   .scroll-element_size */
-/*     background-color: #cccccc */
-/*     opacity: 0 */
-/*     -webkit-border-radius: 12px */
-/*     -moz-border-radius: 12px */
-/*     border-radius: 12px */
-/*     -webkit-transition: opacity 0.2s */
-/*     -moz-transition: opacity 0.2s */
-/*     -o-transition: opacity 0.2s */
-/*     -ms-transition: opacity 0.2s */
-/*     transition: opacity 0.2s */
-/*   .scroll-bar */
-/*     background-color: #6c6e71 */
-/*     -webkit-border-radius: 7px */
-/*     -moz-border-radius: 7px */
-/*     border-radius: 7px */
-/*   &.scroll-x .scroll-bar */
-/*     bottom: 0 */
-/*     height: 7px */
-/*     min-width: 24px */
-/*     top: auto */
-/*   &.scroll-y .scroll-bar */
-/*     left: auto */
-/*     min-height: 24px */
-/*     right: 0 */
-/*     width: 7px */
-/*   &.scroll-x .scroll-element_outer */
-/*     bottom: 0 */
-/*     top: auto */
-/*     left: 2px */
-/*     -webkit-transition: height 0.2s */
-/*     -moz-transition: height 0.2s */
-/*     -o-transition: height 0.2s */
-/*     -ms-transition: height 0.2s */
-/*     transition: height 0.2s */
-/*   &.scroll-y .scroll-element_outer */
-/*     left: auto */
-/*     right: 0 */
-/*     top: 2px */
-/*     -webkit-transition: width 0.2s */
-/*     -moz-transition: width 0.2s */
-/*     -o-transition: width 0.2s */
-/*     -ms-transition: width 0.2s */
-/*     transition: width 0.2s */
-/*   &.scroll-x .scroll-element_size */
-/*     left: -4px */
-/*   &.scroll-y .scroll-element_size */
-/*     top: -4px */
-/*   &.scroll-x.scroll-scrolly_visible .scroll-element_size */
-/*     left: -11px */
-/*   &.scroll-y.scroll-scrollx_visible .scroll-element_size */
-/*     top: -11px */
-/*   &:hover .scroll-element_outer, &.scroll-draggable .scroll-element_outer */
-/*     overflow: hidden */
-/*     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" */
-/*     filter: alpha(opacity = 70) */
-/*     opacity: 0.7 */
-/*   &:hover .scroll-element_outer .scroll-element_size, &.scroll-draggable .scroll-element_outer .scroll-element_size */
-/*     opacity: 1 */
-/*   &:hover .scroll-element_outer .scroll-bar, &.scroll-draggable .scroll-element_outer .scroll-bar */
-/*     height: 100% */
-/*     width: 100% */
-/*     -webkit-border-radius: 12px */
-/*     -moz-border-radius: 12px */
-/*     border-radius: 12px */
-/*   &.scroll-x */
-/*     &:hover .scroll-element_outer, &.scroll-draggable .scroll-element_outer */
-/*       height: 20px */
-/*       min-height: 7px */
-/*   &.scroll-y */
-/*     &:hover .scroll-element_outer, &.scroll-draggable .scroll-element_outer */
-/*       min-width: 7px */
-/*       width: 20px */
-/* */
-/* */
-/* // SCROLLBAR GOOGLE CHROME */
-/* */
-/* .scrollbar-chrome > */
-/*   .scroll-element */
-/*     border: none */
-/*     margin: 0 */
-/*     overflow: hidden */
-/*     padding: 0 */
-/*     position: absolute */
-/*     z-index: 10 */
-/*     div */
-/*       border: none */
-/*       margin: 0 */
-/*       overflow: hidden */
-/*       padding: 0 */
-/*       position: absolute */
-/*       z-index: 10 */
-/*       display: block */
-/*       height: 100% */
-/*       left: 0 */
-/*       top: 0 */
-/*       width: 100% */
-/*     background-color: #ffffff */
-/*     .scroll-element_track */
-/*       background: #f1f1f1 */
-/*       border: 1px solid #dbdbdb */
-/*     &.scroll-x */
-/*       bottom: 0 */
-/*       height: 16px */
-/*       left: 0 */
-/*       min-width: 100% */
-/*       width: 100% */
-/*     &.scroll-y */
-/*       height: 100% */
-/*       min-height: 100% */
-/*       right: 0 */
-/*       top: 0 */
-/*       width: 16px */
-/*     .scroll-bar */
-/*       background-color: #d9d9d9 */
-/*       border: 1px solid #bdbdbd */
-/*       cursor: default */
-/*       -webkit-border-radius: 2px */
-/*       -moz-border-radius: 2px */
-/*       border-radius: 2px */
-/*       &:hover */
-/*         background-color: #c2c2c2 */
-/*         border-color: #a9a9a9 */
-/*     &.scroll-draggable .scroll-bar */
-/*       background-color: #919191 */
-/*       border-color: #7e7e7e */
-/*   .scroll-content */
-/*     &.scroll-scrolly_visible */
-/*       left: -16px */
-/*       margin-left: 16px */
-/*     &.scroll-scrollx_visible */
-/*       top: -16px */
-/*       margin-top: 16px */
-/*   .scroll-element */
-/*     &.scroll-x .scroll-bar */
-/*       height: 8px */
-/*       min-width: 10px */
-/*       top: 3px */
-/*     &.scroll-y .scroll-bar */
-/*       left: 3px */
-/*       min-height: 10px */
-/*       width: 8px */
-/*     &.scroll-x */
-/*       .scroll-element_outer */
-/*         border-left: 1px solid #dbdbdb */
-/*       .scroll-element_track */
-/*         height: 14px */
-/*         left: -3px */
-/*       .scroll-element_size */
-/*         height: 14px */
-/*         left: -4px */
-/*     &.scroll-y */
-/*       .scroll-element_outer */
-/*         border-top: 1px solid #dbdbdb */
-/*       .scroll-element_track */
-/*         top: -3px */
-/*         width: 14px */
-/*       .scroll-element_size */
-/*         top: -4px */
-/*         width: 14px */
-/*     &.scroll-x.scroll-scrolly_visible .scroll-element_size */
-/*       left: -19px */
-/*     &.scroll-y.scroll-scrollx_visible .scroll-element_size */
-/*       top: -19px */
-/*     &.scroll-x.scroll-scrolly_visible .scroll-element_track */
-/*       left: -19px */
-/*     &.scroll-y.scroll-scrollx_visible .scroll-element_track */
-/*       top: -19px */
 @-webkit-keyframes scrolldown {
     0% {
         -webkit-transform: translate3d(0,0,0);

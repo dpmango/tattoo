@@ -3805,6 +3805,12 @@ button:focus {
     .testimonials--inner .testimonials__content {
         margin-bottom: 15px;
     }
+    .testimonials--master .testimonials__content {
+        padding-top: 30px;
+    }
+    .testimonials--master .testimonials__cta {
+        margin-top: 8vh;
+    }
     .testimonials__picture {
         -webkit-flex: 0 0 220px;
             -ms-flex: 0 0 220px;
@@ -3816,6 +3822,19 @@ button:focus {
     }
     .testimonials__content {
         margin-top: 20px;
+    }
+    .testimonials__rateable {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .testimonials__rating {
+        margin-top: 20px;
+    }
+    .testimonials__text--no-quotemark {
+        margin-top: 10px;
     }
 }
 /* BLOG */

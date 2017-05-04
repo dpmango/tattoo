@@ -453,6 +453,36 @@ $(document).ready(function () {
     arrows: true
   });
 
+  // Change slider on price row click or open modal
+  $('.price-row a').on('click', function () {
+    var selectedSlide = $(this).data('slide') - 1;
+    var openImage = $(this).data('image');
+
+    if (selectedSlide && _window.width() > 768) {
+      $('.text-slider').slick('slickGoTo', selectedSlide);
+    }
+
+    if (openImage && _window.width() < 768) {
+      $.magnificPopup.open({
+        items: {
+          src: openImage
+        },
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        image: {
+          verticalFit: true
+        },
+        zoom: {
+          enabled: false,
+          duration: 300
+        }
+      });
+    }
+  });
+
   // PANEL TOGGLER
   $('.panel__toggler').on('click', function () {
     $(this).parent().toggleClass('opened');
@@ -505,8 +535,15 @@ $(document).ready(function () {
     centerPadding: 20,
     draggable: true,
     easing: 'linear',
-    infinite: false,
-    lazyLoad: 'ondemand'
+    infinite: true,
+    lazyLoad: 'ondemand',
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }]
   });
 
   $('.master-portfolio__head__nav .ico-nav-arrow:first-child').on('click', function () {

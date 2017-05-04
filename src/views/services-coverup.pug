@@ -16,143 +16,157 @@ doctype html
         a(href='#') Услуги
         a(href='#') Удалениие татуировки
       
-      // GALLERY SECTION
-      .gallery
+      // SERVICE SLIDER
+      .service-slider.service-slider--dark-bg.mt25
         .container.container--fluid.container--no-pad
-          .gallery__wrapper
-            .gallery__filter
-              .gallery__filter__wrapper
-                i.ico.ico-filter-toggle
-                .gallery__filter__head
-                  .gallery__filter__head__label Фильтр
-                  .gallery__filter__head__selected Популярные
-                  .gallery__filter__head__dropdown
-                    span(data-filter='styles') Стили
-                    span(data-filter='popular').active Популярные
-                    span(data-filter='types') Жанры
-                .gallery__filter__content(data-filter='styles')
-                  .gallery__filter__item(data-filter='') Стиль 1
-                  .gallery__filter__item(data-filter='') Стиль 2
-                  .gallery__filter__item(data-filter='') Стиль 3
-                  .gallery__filter__item(data-filter='') Стиль 4
-                  .gallery__filter__item(data-filter='') Стиль 5
-                  .gallery__filter__item(data-filter='') Стиль 6
-                  .gallery__filter__item(data-filter='') Стиль 7
-                .gallery__filter__content(data-filter='popular').active
-                  .gallery__filter__item(data-filter='*').active Все
-                  .gallery__filter__item(data-filter='.f-man') Мужские тату
-                  .gallery__filter__item(data-filter='.f-women') Женские тату
-                  .gallery__filter__item(data-filter='.f-small') Маленькие тату
-                  .gallery__filter__item(data-filter='.f-big') Большие тату
-                  .gallery__filter__item(data-filter='.f-lettering') Тату надписи
-                  .gallery__filter__item(data-filter='.f-black-and-white') Черно-белые татуировки
-                  .gallery__filter__item(data-filter='.f-color') Цветные татуировки
-                  .gallery__filter__item(data-filter='.f-cover-up') Исправления (кавер ап)
-                .gallery__filter__content(data-filter='types')
-                  .gallery__filter__item(data-filter='') Жанр 1
-                  .gallery__filter__item(data-filter='') Жанр 2
-                  .gallery__filter__item(data-filter='') Жанр 3
-                  .gallery__filter__item(data-filter='') Жанр 4
-                  .gallery__filter__item(data-filter='') Жанр 5
-            
-           
-            .scrollbar-rail
-              .gallery__grid
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-                // grid card
-                .gallery__grid__card.f-women
-                  picture
-                    img(src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+          // single slide
+          .service-slider__slide
+            .service-slider__slide__wrapper
+              .service-slider__content
+                .service-slider__content__text 
+                  p Особыми операциями для мастеров тату являются ИСПРАВЛЕНИЯ и ПЕРЕКРЫТИЯ («COVER-UP») тату. При перекрытиях тату на старый узор кладется абсолютно новый, полностью его перекрывая. При исправлениях или переделках сюжет может быть достроен, т.е. части старого вплетаются в новый узор. Но в том и в другом случае первоначальный рисунок полностью изменяется.
+                  p При ИСПРАВЛЕНИЯХ тату мастера обычно используют затушевки, белый краситель или, наоборот, радикально черный. Тату-мастер примеряет на старый рисунок новый, дорисовывает его в соответствии с пожеланиями клиента и приступает к работе.
+                  p ПЕРЕКРЫТИЕ (COVER-UP) применяется в тех случаях, когда человек сделал себе так называемую «партачку» (армия, сдуру), «наколку» (зона) или просто разонравился сюжет, но сводить тату не хочет, а желает закрасить ее полностью, (без исправления!) в соответствии со своим сегодняшним статусом и ощущениями. Для опытного тату-мастера нет никаких проблем в том, чтобы обновить ваше тату, переделать его, исправить или достроить. Все зависит от сюжета тату и ваших пожеланий.
+              .service-slider__picture.service-slider__picture--no-gradient
+                img(alt="" src='images/services/serviceSlider_3.png', srcset='images/services/serviceSlider_3.png 1x, images/services/serviceSlider_3@2x.png 2x')
+      
+      // MASTER PORTFOLIO SECTION
+      .master-portfolio.light-bg
+        .master-portfolio__head
+          .small-title Работы мастера
+          .master-portfolio__head__nav
+            i.ico.ico-nav-arrow
+            i.ico.ico-nav-arrow.ico-nav-arrow--right
+        .master-portfolio__slider.popup-gallery
+          a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+          a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+        
+        a(href='#').btn.btn--ghost.mt40 Перейти к галерее
+        
+      // SERVICE QUOTE          
+      .service-quote.service-quote--bg-black
+        .container.container--fluid.container--no-pad
+          .service-quote__wrapper
+            .service-quote__picture
+              img(alt="" src='images/services/serviceCoverUp.png', srcset='images/services/serviceCoverUp.png 1x, images/services/serviceCoverUp@2x.png 2x')
+            .service-quote__content
+              form(action="#")
+                .small-title Узнайте стоимость исправления!
+                .row.mt10
+                  .col.col--3-6
+                    .ui-input.ui-input--icon.ui-input--user
+                      input(type='text' placeholder='Ваше имя' name='name') 
+                  .col.col--3-6
+                    .ui-input.ui-input--icon.ui-input--mobile
+                      input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
 
-                // grid card
-                .gallery__grid__card.f-women
-                  picture
-                    img(src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+                .ui-input.ui-input--icon.ui-input--email
+                  input(type='email' placeholder='Ваш email' name='email') 
 
-                // grid card
-                .gallery__grid__card.f-lettering
-                  picture
-                    img(src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-big
-                  picture
-                    img(src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-                // grid card
-                .gallery__grid__card.f-small
-                  picture
-                    img(src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-lettering
-                  picture
-                    img(src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-black-and-white
-                  picture
-                    img(src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений  
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+                .ui-input.ui-input--icon.ui-input--comment
+                  textarea(placeholder='Отзыв' rows='3' name='comment')
+                
+                .modal__cta
+                  .ui-file
+                    input(type='file' data-multiple-caption='выбрано {count} файлов', multiple='')
+                    .ui-file__btn
+                      span Прикрепить файл
+                      i.ico.ico-add-attachment
+                  button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться
+          
+      // SERVICE PRICE 
+      .service-price
+        .container.container--1280
+          .small-title Цены
+          .service-price__wrapper
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_1.png')
+                .service-price__card__name Исправление <br> тату
+              .service-price__card__price 1 500 руб
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_2.png')
+                .service-price__card__name Исправление <br> тату
+              .service-price__card__price 3 000 руб  
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_3.png')
+                .service-price__card__name Исправление <br> тату
+              .service-price__card__price 1 500 руб
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_4.png')
+                .service-price__card__name Коррекция <br> тату <span>В течение 3-х недель*</span>
+              .service-price__card__price 3 000 руб 
+              
+      // SERVICE BENEFITS
+      .service-benefits
+        .container.container--1280
+          .small-title Почему мы?
+        .service-benefits__wrapper
+          // card
+          a(href='#').service-benefits__card
+            img(alt="" src='images/services/serviceBenefits_1.png')
+            .service-benefits__card__content
+              .service-benefits__card__icon
+                i.icon-ico-paint-brush
+              .service-benefits__card__right
+                .service-benefits__card__name Только профессиональные художники
+                .service-benefits__card__desc Разработка эскиза любой <br> сложности в кратчайшие сроки Бесплатно!
+          // card
+          a(href='#').service-benefits__card
+            img(alt="" src='images/services/serviceBenefits_2.png')
+            .service-benefits__card__content
+              .service-benefits__card__icon
+                i.icon-ico-thumb-up
+              .service-benefits__card__right
+                .service-benefits__card__name Довольные клиенты
+                .service-benefits__card__desc Вы можете прочитать отзывы наших клиентов и убедиться в этом ;)
+          // card
+          a(href='#').service-benefits__card
+            img(alt="" src='images/services/serviceBenefits_3.png')
+            .service-benefits__card__content
+              .service-benefits__card__icon
+                i.icon-ico-shield
+              .service-benefits__card__right
+                .service-benefits__card__name Абсолютная безопасность
+                .service-benefits__card__desc Только одноразовые расходные материалы, уровень стерильности  соответствует самому жесткому стандарту ЕС!
+          // card
+          a(href='#').service-benefits__card
+            img(alt="" src='images/services/serviceBenefits_4.png')
+            .service-benefits__card__content
+              .service-benefits__card__icon
+                i.icon-ico-moustache
+              .service-benefits__card__right
+                .service-benefits__card__name Бесплатная консультация и высокий уровень сервиса
+                .service-benefits__card__desc Разработка эскиза любой сложности в кратчайшие сроки Бесплатно!
                                 
       // TESTIMONIALS SECTION
       .testimonials
@@ -208,7 +222,7 @@ doctype html
 
     
     include shared/promo-block.pug
-                          
+    include shared/footer-seo.pug                      
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

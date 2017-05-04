@@ -776,3 +776,20 @@
     &::after
       left: 50%
       right: 50%
+
+// video
+.video
+  position: relative
+  &::after
+    display: block
+    content: ' '
+    position: absolute 0
+    background: color(#18181D a(40%))
+    z-index: 2
+  .ico-video-play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 3
+    cursor: pointer

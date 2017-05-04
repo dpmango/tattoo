@@ -1,0 +1,74 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    include shared/menu.pug
+    
+    // SERVICE PAGE
+    .service.service--piercing-child
+      h1.section-title Татуаж бровей
+      .breadcrumbs
+        a(href='#') Главная
+        a(href='#') Услуги
+        a(href='#') Татуаж
+      
+      // SERVICE SLIDER
+      .service-slider.mt25
+        .container.container--fluid.container--no-pad
+          // single slide
+          .service-slider__slide
+            .service-slider__slide__wrapper
+              .service-slider__content
+                .small-title Татуаж без боли
+                .service-slider__content__text 
+                  p Татуаж представляет собой неглубокую косметическую татуировку (краска проникает в кожу только на 0,3-0,5 мм), поскольку он не должен бросаться в глаза своей чрезмерной яркостью. Работа над татуажем требует использования специальных (роторных) машин, не столь прочных и стойких красок, необходимых для тату, и более тонких игл.
+              .service-slider__picture.service-slider__picture--no-gradient
+                img(alt="" src='images/services/serviceSlider_7.png', srcset='images/services/serviceSlider_7.png 1x, images/services/serviceSlider_7@2x.png 2x')
+      
+      // SERVICE QUOTE          
+      .service-quote
+        .container.container--fluid.container--no-pad
+          .service-quote__wrapper
+            .service-quote__picture
+              img(alt="" src='images/services/servicePrice_piercing_5.png', srcset='images/services/servicePrice_piercing_5.png 1x, images/services/servicePrice_piercing_5@2x.png 2x')
+            .service-quote__content
+              p Перманентный макияж губ дает возможность женщине иметь более четкую форму с оформленным контуром, насыщенным цветом, корректируя или увеличивая их, не используя при этом декоративную косметику. Цвет губ не должен быть чрезмерно ярким, поэтому, выбирая пигмент, не игнорируйте советы мастера. Для коррекции наносится краситель чуть более насыщенный, растушевываясь частично или полностью по поверхности губ. Такая манипуляция сделает лицо не только свежим, но и придаст ему более ухоженный вид.
+      // MASTER PORTFOLIO SECTION
+      .master-portfolio
+        .master-portfolio__head
+          .small-title Примеры пирсинга
+          .master-portfolio__head__nav
+            i.ico.ico-nav-arrow
+            i.ico.ico-nav-arrow.ico-nav-arrow--right
+        .master-portfolio__slider.popup-gallery
+          a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+          a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+        
+        a(href='#').btn.btn--ghost.mt40 Перейти к галерее
+    
+    include shared/promo-block.pug             
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

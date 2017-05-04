@@ -4,14 +4,22 @@
   position: relative
   z-index: 5
   color: white
+  &--piercing-child
+    background: #2E2E31
+  &--permanent-child
+    background: #2E2E31
   &-slider
     background: #2E2E31
+    &--dark-bg
+      background: #18181D
     &__slide
       &__wrapper
         min-height: 100vh
         display: flex
         align-items: center
         justify-content: space-between
+        &--reverse
+          flex-direction: row-reverse
       &__nav
         position: absolute
         z-index: 3
@@ -37,6 +45,9 @@
       margin-left: 20px
       margin-left: auto
       overflow: hidden
+      &--no-gradient
+        &::after
+          display: none !important
       img
         position: absolute
         top: 50%
@@ -74,6 +85,13 @@
       flex: 0 1 25%
       padding-left: 3%
       padding-right: 3%
+      &:hover
+        .service-price__card__image
+          &::after
+            background: color(#18181D a(60%))
+          &::before
+            position: absolute 10px
+            opacity: 1
       &__image
         position: relative
         overflow: hidden
@@ -92,6 +110,15 @@
           position: absolute 0 0 0 0
           z-index: 2
           background: color(#18181D a(80%))
+          transition: all $transitionSpeed $ease
+        &::before
+          display: block
+          content: ' '
+          position: absolute 0
+          opacity: 0
+          z-index: 3
+          border: 3px solid $colorPrimary
+          transition: all $transitionSpeed $ease
         .ico-eye
           position: absolute
           top: 20px
@@ -238,3 +265,72 @@
         size: 100px
         .ico-zoom
           size: 40px
+
+  &-quote
+    background: #2E2E31
+    &--bg-black
+      background: #18181D
+    &__wrapper
+      display: flex
+      align-items: stretch
+      justify-content: space-between
+      &--reverse
+        flex-direction: row-reverse
+    &__content
+      flex: 1 1 50%
+      padding: 50px 5% 60px 5%
+    &__picture
+      position: relative
+      flex: 0 1 50%
+      margin-left: 20px
+      margin-left: auto
+      overflow: hidden
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 1
+        transform: translate(-50%, -50%)
+        height: 420px
+      .video
+        height: 420px
+
+
+  &-types
+    background: #2E2E31
+    min-height: 100vh
+    padding-top: 60px
+    &__wrapper
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+    &__item
+      flex: 0 1 25%
+      padding-left: 20px
+      padding-right: 20px
+      text-align: center
+      margin-bottom: 70px
+      &__image
+        display: inline-block
+        size: 160px
+        overflow: hidden
+        border-radius: 50%
+        img
+          max-width: 100%
+      &__name
+        display: block
+        font-size: 20px
+        font-weight: 300
+        margin-top: 20px
+
+@media($desktop)
+  .service
+    padding-top: 80px
+    .section-title
+      top: 105px
+
+@media($mobile)
+  .service
+    padding-top: 60px
+    .section-title
+      top: 85px

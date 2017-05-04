@@ -16,199 +16,56 @@ doctype html
         a(href='#') Услуги
         a(href='#') Удалениие татуировки
       
-      // GALLERY SECTION
-      .gallery
+      // SERVICE SLIDER
+      .service-slider.service-slider--dark-bg.mt25
         .container.container--fluid.container--no-pad
-          .gallery__wrapper
-            .gallery__filter
-              .gallery__filter__wrapper
-                i.ico.ico-filter-toggle
-                .gallery__filter__head
-                  .gallery__filter__head__label Фильтр
-                  .gallery__filter__head__selected Популярные
-                  .gallery__filter__head__dropdown
-                    span(data-filter='styles') Стили
-                    span(data-filter='popular').active Популярные
-                    span(data-filter='types') Жанры
-                .gallery__filter__content(data-filter='styles')
-                  .gallery__filter__item(data-filter='') Стиль 1
-                  .gallery__filter__item(data-filter='') Стиль 2
-                  .gallery__filter__item(data-filter='') Стиль 3
-                  .gallery__filter__item(data-filter='') Стиль 4
-                  .gallery__filter__item(data-filter='') Стиль 5
-                  .gallery__filter__item(data-filter='') Стиль 6
-                  .gallery__filter__item(data-filter='') Стиль 7
-                .gallery__filter__content(data-filter='popular').active
-                  .gallery__filter__item(data-filter='*').active Все
-                  .gallery__filter__item(data-filter='.f-man') Мужские тату
-                  .gallery__filter__item(data-filter='.f-women') Женские тату
-                  .gallery__filter__item(data-filter='.f-small') Маленькие тату
-                  .gallery__filter__item(data-filter='.f-big') Большие тату
-                  .gallery__filter__item(data-filter='.f-lettering') Тату надписи
-                  .gallery__filter__item(data-filter='.f-black-and-white') Черно-белые татуировки
-                  .gallery__filter__item(data-filter='.f-color') Цветные татуировки
-                  .gallery__filter__item(data-filter='.f-cover-up') Исправления (кавер ап)
-                .gallery__filter__content(data-filter='types')
-                  .gallery__filter__item(data-filter='') Жанр 1
-                  .gallery__filter__item(data-filter='') Жанр 2
-                  .gallery__filter__item(data-filter='') Жанр 3
-                  .gallery__filter__item(data-filter='') Жанр 4
-                  .gallery__filter__item(data-filter='') Жанр 5
-            
-           
-            .scrollbar-rail
-              .gallery__grid
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-                // grid card
-                .gallery__grid__card.f-women
-                  picture
-                    img(src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+          // single slide
+          .service-slider__slide
+            .service-slider__slide__wrapper
+              .service-slider__content
+                .service-slider__content__text 
+                  p Цена на выведение тату лазером зависит от размера рисунка, плотности нанесения пигмента, качества красителя и глубины забивки. Консультация мастера - бесплатно. Получить предварительную консультацию и уточнить стоимость, Вы можете по тел. +7 495 640 20 40
+                  p Причинами удаления татуировки может стать изменившаяся социальная ситуация и возраст ее обладателя, некачественно нанесенный рисунок, и многие другие причины.
+                  p Все предлагаемые ранее методы сведения татуировок (выжигание кислотами, удаление татуировок жидким азотом и электротоком, глубокая шлифовка, хирургическое удаление татуировок) значительно травмировали кожу и неизменно приводили при выведении татуировок к образованию грубых шрамов и рубцов. Сегодня вполне реально удалить татуировку бесследно и гуманно при помощи твердотельного неодимового лазера.
+                  p Удаление тату зависит от большого количества факторов – качество и цвет краски, техника и глубина нанесения рисунка, место нанесение татуировки, склонность кожи к рубцеванию и большое значение имеет уход за поврежденной кожей. Практически никогда невозможно точно определить количество процедур, которое необходимо для полного удаления пигмента!
+                  p Обычно видимый эффект потери цвета достигается после второй процедуры удаления лазером, когда пигмент становиться значительно светлее, последующие процедуры только усиливают этот эффект!
 
-                // grid card
-                .gallery__grid__card.f-women
-                  picture
-                    img(src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-lettering
-                  picture
-                    img(src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-big
-                  picture
-                    img(src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-                // grid card
-                .gallery__grid__card.f-small
-                  picture
-                    img(src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-lettering
-                  picture
-                    img(src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-black-and-white
-                  picture
-                    img(src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений  
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                                
-      // TESTIMONIALS SECTION
-      .testimonials
+              .service-slider__picture.service-slider__picture--no-gradient
+                img(alt="" src='images/services/serviceSlider_2.png', srcset='images/services/serviceSlider_2.png 1x, images/services/serviceSlider_2@2x.png 2x')
+      
+      // SERVICE QUOTE          
+      .service-quote
         .container.container--fluid.container--no-pad
-        // slick slider
-        .testimonials__slider.slick-custom-dots
-          // single slide
-          .testimonials__slide
-            .testimonials__slide__wrapper
-              .testimonials__content
-                .testimonials__actions
-                  a(href='#' data-toggle='testimonial').active
-                    i.ico.ico-photo-camera
-                    span Фото работы
-                  a(href='#' data-toggle='master')
-                    i.ico.ico-user-group
-                    span Фото с мастером
-                        
-                .testimonials__text Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)
-                .testimonials__author Екатерина Иванова
-                .testimonials__cta
-                    a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Оставить отзыв
-                .testimonials__nav
-                  
-                
-              .testimonials__picture
-                picture
-                  img(data-type='testimonial' src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x').active
-                  img(data-type='master' src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
-                  
-          // single slide
-          .testimonials__slide
-            .testimonials__slide__wrapper
-              .testimonials__content
-                .testimonials__actions
-                  a(href='#' data-toggle='testimonial').active
-                    i.ico.ico-photo-camera
-                    span Фото работы
-                  a(href='#' data-toggle='master')
-                    i.ico.ico-user-group
-                    span Фото с мастером
-                        
-                .testimonials__text Хочется выразить огромную благодарность мастеру Павлу! Это реально мастер своего дела!!! Все прошло спокойно и практически безболезненно!  Это была первая моя татуировка, но я уверена, что приду еще и обязательно буду  рекомендовать Ваш салон своим друзьям и знакомым!  Улыбайся! ;)
-                .testimonials__author Екатерина Иванова
-                .testimonials__cta
-                    a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Оставить отзыв
-                .testimonials__nav
-                
-              .testimonials__picture
-                picture
-                  img(data-type='testimonial' src='images/testimonialsPic.png', srcset='images/testimonialsPic.png 1x, images/testimonialsPic@2x.png 2x').active
-                  img(data-type='master' src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
+          .service-quote__wrapper
+            .service-quote__picture
+              img(alt="" src='images/services/serviceDelete.png', srcset='images/services/serviceDelete.png 1x, images/services/serviceDelete@2x.png 2x')
+            .service-quote__content
+              form(action="#")
+                .small-title Узнайте стоимость удаления!
+                .row.mt10
+                  .col.col--3-6
+                    .ui-input.ui-input--icon.ui-input--user
+                      input(type='text' placeholder='Ваше имя' name='name') 
+                  .col.col--3-6
+                    .ui-input.ui-input--icon.ui-input--mobile
+                      input(type='text' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00") 
 
+                .ui-input.ui-input--icon.ui-input--email
+                  input(type='email' placeholder='Ваш email' name='email') 
+
+                .ui-input.ui-input--icon.ui-input--comment
+                  textarea(placeholder='Отзыв' rows='3' name='comment')
+                
+                .modal__cta
+                  .ui-file
+                    input(type='file' data-multiple-caption='выбрано {count} файлов', multiple='')
+                    .ui-file__btn
+                      span Прикрепить файл
+                      i.ico.ico-add-attachment
+                  button(type='submit').btn.btn--ghost.btn--ghost--fill Записаться
+          
     
-    include shared/promo-block.pug
-                          
+    include shared/footer-seo.pug
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

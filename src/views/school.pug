@@ -1,0 +1,125 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    include shared/menu.pug
+    
+    // SERVICE PAGE
+    .service.service--school
+      h1.section-title Обучение
+      .breadcrumbs
+        a(href='#') Главная
+        a(href='#') Услуги
+        a(href='#') Удалениие татуировки
+      
+      // SERVICE SLIDER
+      .service-slider.service-slider--dark-bg.mt25
+        .container.container--fluid.container--no-pad
+          // single slide
+          .service-slider__slide
+            .service-slider__slide__wrapper
+              .service-slider__content
+                .small-title Обучение татуировке
+                .service-slider__content__text 
+                  p Интересуешься татуировкой и хочешь стать тату мастером, но не знаешь с чего начать? Мы поможем тебе! 
+                  p Опытные тату мастера салона «Тату Мания» разработали специальную программу обучения художественной татуировке, благодаря которой, каждый желающий сможет научиться всем тонкостям работы тату мастера. 
+                  p Посетив занятия по обучению тату, Вы познакомитесь с основами нанесения рисунков на тело (базовая техника нанесения контуров, тени и оттенки, колористика), а так же получите возможность применить свои знания на практике!
+                   
+              .service-slider__picture.service-slider__picture--no-gradient
+                img(alt="" src='images/services/serviceSlider_8.png', srcset='images/services/serviceSlider_8.png 1x, images/services/serviceSlider_8@2x.png 2x')
+      
+      // SERVICE QUOTE          
+      .service-quote.light-bg
+        .container.container--fluid.container--no-pad
+          .service-quote__wrapper
+            .service-quote__picture
+              .video
+                .ico-video-play
+                img(alt="" src='images/services/serviceVideo_2.png', srcset='images/services/serviceVideo_2.png 1x, images/services/serviceVideo_2@2x.png 2x')
+            .service-quote__content
+              form(action="#")
+                p Опытные тату мастера салона «Тату Мания» разработали специальную программу обучения художественной татуировке, благодаря которой, каждый желающий сможет научиться всем тонкостям работы тату мастера. 
+                p Посетив занятия по обучению тату, Вы познакомитесь с основами нанесения рисунков на тело (базовая техника нанесения контуров, тени и оттенки, колористика), а так же получите возможность применить свои знания на практике! 
+
+                                
+      // SERVICE MASTERS  
+      .container.container--fluid.container--no-pad
+          // row
+          .row.row--condenced.row--stretch-child.row--reverse.mt25.row--column--tablet.bg-black
+            .col.col--3-6.img-v-fluid
+              .master__image
+                picture
+                  img(alt="" src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+              
+            .col.col--3-6
+              .grid-text
+                .master__content
+                  .master__content__row.row--aic
+                    .master__content__image
+                      picture
+                        img(alt="" src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                    .master__content__scope
+                      .master__content__scope__name Борис
+                      a(href='#').hoverable-link Мастер пирсинга
+                      
+                  .master__content__row.mt40.mt20--mobile
+                    .master__content__scope
+                      .master__content__scope__name Стиль
+                      a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                    .master__content__scope
+                      .master__content__scope__name опыт работы
+                      a(href='#').hoverable-link 15 лет
+                  
+                  .master__content__row.mt40.mt0--mobile
+                    .master__content__scope
+                      .master__content__scope__name любимая краска
+                      a(href='#').hoverable-link Intense
+                    .master__content__scope
+                      .master__content__scope__name марка машинки
+                      a(href='#').hoverable-link Mustang
+                        
+                  .fz14.mt40.hidden--mobile
+                    p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+
+                  .text-center.mt30.mt10--mobile
+                    a(href='#').btn.btn--ghost Узнать подробнее
+
+      // MASTER PORTFOLIO SECTION
+      .master-portfolio.light-bg
+        .master-portfolio__head
+          .small-title Работы учеников
+          .master-portfolio__head__nav
+            i.ico.ico-nav-arrow
+            i.ico.ico-nav-arrow.ico-nav-arrow--right
+        .master-portfolio__slider.popup-gallery
+          a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+          a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+        
+        a(href='#').btn.btn--ghost.mt40 Перейти к галерее
+    
+    include shared/footer-seo.pug
+    include shared/footer.pug
+    include shared/modals.pug
+    include shared/scripts.pug

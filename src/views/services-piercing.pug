@@ -16,144 +16,189 @@ doctype html
         a(href='#') Услуги
         a(href='#') Удалениие татуировки
       
-      // GALLERY SECTION
-      .gallery
+      // SERVICE SLIDER
+      .service-slider.service-slider--dark-bg.mt25
         .container.container--fluid.container--no-pad
-          .gallery__wrapper
-            .gallery__filter
-              .gallery__filter__wrapper
-                i.ico.ico-filter-toggle
-                .gallery__filter__head
-                  .gallery__filter__head__label Фильтр
-                  .gallery__filter__head__selected Популярные
-                  .gallery__filter__head__dropdown
-                    span(data-filter='styles') Стили
-                    span(data-filter='popular').active Популярные
-                    span(data-filter='types') Жанры
-                .gallery__filter__content(data-filter='styles')
-                  .gallery__filter__item(data-filter='') Стиль 1
-                  .gallery__filter__item(data-filter='') Стиль 2
-                  .gallery__filter__item(data-filter='') Стиль 3
-                  .gallery__filter__item(data-filter='') Стиль 4
-                  .gallery__filter__item(data-filter='') Стиль 5
-                  .gallery__filter__item(data-filter='') Стиль 6
-                  .gallery__filter__item(data-filter='') Стиль 7
-                .gallery__filter__content(data-filter='popular').active
-                  .gallery__filter__item(data-filter='*').active Все
-                  .gallery__filter__item(data-filter='.f-man') Мужские тату
-                  .gallery__filter__item(data-filter='.f-women') Женские тату
-                  .gallery__filter__item(data-filter='.f-small') Маленькие тату
-                  .gallery__filter__item(data-filter='.f-big') Большие тату
-                  .gallery__filter__item(data-filter='.f-lettering') Тату надписи
-                  .gallery__filter__item(data-filter='.f-black-and-white') Черно-белые татуировки
-                  .gallery__filter__item(data-filter='.f-color') Цветные татуировки
-                  .gallery__filter__item(data-filter='.f-cover-up') Исправления (кавер ап)
-                .gallery__filter__content(data-filter='types')
-                  .gallery__filter__item(data-filter='') Жанр 1
-                  .gallery__filter__item(data-filter='') Жанр 2
-                  .gallery__filter__item(data-filter='') Жанр 3
-                  .gallery__filter__item(data-filter='') Жанр 4
-                  .gallery__filter__item(data-filter='') Жанр 5
+          // single slide
+          .service-slider__slide
+            .service-slider__slide__wrapper
+              .service-slider__content
+                .small-title Почему стоит делать пирсинг в нашем салоне?
+                .service-slider__content__text 
+                  p Пирсинг – это своеобразная незначительная операция. Проводить ее следует только в хорошо подготовленном месте. Наш салон пирсинга именно такой. Это одна из основных специализаций нашей деятельности, у нас есть все требуемые гигиенические сертификаты и созданы идеальные условия для осуществления данной процедуры.
+                  p Кроме того, наш пирсинг-тату салон отличается следующими преимуществами: профессиональный персонал, в том числе мастера пирсинга огромные возможности выбора украшений для пирсинга современные и полностью безопасные инструменты качественный сервис
+                  p Наш пирсинг-тату салон хорош не только высоким уровнем специалистов. Мы заботимся о посетителях. Мастера предоставляют всю необходимую информацию о том, как правильно ухаживать за пирсингом, чтобы это не повредило здоровью. Пирсинг у нас – это не рулетка с высокой вероятностью получить вместо украшения проблемы со здоровьем. Это надежная операция, результатом которой вы останетесь довольны. 
+              .service-slider__picture.service-slider__picture--no-gradient
+                img(alt="" src='images/services/serviceSlider_4.png', srcset='images/services/serviceSlider_4.png 1x, images/services/serviceSlider_4@2x.png 2x')
+      
+      // SERVICE TYPES
+      .service-types
+        .container.container--1280
+          .small-title Виды пирсинга 
+        .container.mt50
+          .service-types__wrapper
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_1.png', srcset='images/services/serviceType_1.png 1x, images/services/serviceType_1@2x.png 2x')
+              .service-types__item__name Пирсинг пупка 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_2.png', srcset='images/services/serviceType_2.png 1x, images/services/serviceType_2@2x.png 2x')
+              .service-types__item__name Пирсинг носа 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_3.png', srcset='images/services/serviceType_3.png 1x, images/services/serviceType_3@2x.png 2x')
+              .service-types__item__name Пирсинг языка 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_4.png', srcset='images/services/serviceType_4.png 1x, images/services/serviceType_4@2x.png 2x')
+              .service-types__item__name Пирсинг брови 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_5.png', srcset='images/services/serviceType_5.png 1x, images/services/serviceType_5@2x.png 2x')
+              .service-types__item__name Пирсинг ушей 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_6.png', srcset='images/services/serviceType_6.png 1x, images/services/serviceType_6@2x.png 2x')
+              .service-types__item__name Пирсинг сосков 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_7.png', srcset='images/services/serviceType_7.png 1x, images/services/serviceType_7@2x.png 2x')
+              .service-types__item__name Пирсинг губы 
+            // item
+            a(href='services-piercing-child.html').service-types__item
+              .service-types__item__image
+                img(alt="" src='images/services/serviceType_8.png', srcset='images/services/serviceType_8.png 1x, images/services/serviceType_8@2x.png 2x')
+              .service-types__item__name Сложные проколы
+              
+      // SERVICE MASTERS  
+      .container.container--fluid.container--no-pad
+        // row
+        .row.row--condenced.row--stretch-child.row--reverse.mt25.row--column--tablet.bg-black
+          .col.col--3-6.img-v-fluid
+            .master__image
+              picture
+                img(alt="" src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
             
-           
-            .scrollbar-rail
-              .gallery__grid
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-                // grid card
-                .gallery__grid__card.f-women
-                  picture
-                    img(src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+          .col.col--3-6
+            .grid-text
+              .master__content
+                .small-title Мастера пирсинга 
+                .master__content__row.row--aic.mt50
+                  .master__content__image
+                    picture
+                      img(alt="" src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                  .master__content__scope
+                    .master__content__scope__name Борис
+                    a(href='#').hoverable-link Мастер пирсинга
+                    
+                .master__content__row.mt40.mt20--mobile
+                  .master__content__scope
+                    .master__content__scope__name Стиль
+                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                  .master__content__scope
+                    .master__content__scope__name опыт работы
+                    a(href='#').hoverable-link 15 лет
+                
+                .master__content__row.mt40.mt0--mobile
+                  .master__content__scope
+                    .master__content__scope__name любимая краска
+                    a(href='#').hoverable-link Intense
+                  .master__content__scope
+                    .master__content__scope__name марка машинки
+                    a(href='#').hoverable-link Mustang
+                      
+                .fz14.mt40.hidden--mobile
+                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+                  
 
-                // grid card
-                .gallery__grid__card.f-women
-                  picture
-                    img(src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+      // MASTER PORTFOLIO SECTION
+      .master-portfolio.light-bg
+        .master-portfolio__head
+          .small-title Примеры пирсинга
+          .master-portfolio__head__nav
+            i.ico.ico-nav-arrow
+            i.ico.ico-nav-arrow.ico-nav-arrow--right
+        .master-portfolio__slider.popup-gallery
+          a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+          a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+          a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+          a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+          a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+          a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+      
+        a(href='#').btn.btn--ghost.mt40 Перейти к галерее
+              
+      // SERVICE PRICE 
+      .service-price
+        .container.container--1280
+          .small-title Цены
+          .service-price__wrapper
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_piercing_1.png')
+                .service-price__card__name Тату <span>5см на 5см</span>
+              .service-price__card__price 1 500 руб
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_piercing_2.png')
+                .service-price__card__name Тату <span>10см на 10см</span>
+              .service-price__card__price 3 000 руб  
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_piercing_3.png')
+                .service-price__card__name Исправление тату
+              .service-price__card__price 1 500 руб
+            // price card
+            a(href='#').service-price__card
+              .service-price__card__image
+                i.ico.ico-eye(data-action='#')
+                img(alt="" src='images/services/servicePrice_piercing_4.png')
+                .service-price__card__name Коррекция <br> тату <span>В течение 3-х недель*</span>
+              .service-price__card__price 3 000 руб 
+                      
+      // SERVICE QUOTE          
+      .service-quote
+        .container.container--fluid.container--no-pad
+          .service-quote__wrapper
+            .service-quote__picture
+              img(alt="" src='images/services/servicePiercing.png', srcset='images/services/servicePiercing.png 1x, images/services/servicePiercing@2x.png 2x')
+            .service-quote__content
+              .small-title Уход за пирсингом
+              p Классный пирсинг – это не только умение мастера, но и ваше старание по уходу за ним, особенно в первые недели после процедуры. Делая пирсинг, вы должны быть готовы к определенным ограничениям:
 
-                // grid card
-                .gallery__grid__card.f-lettering
-                  picture
-                    img(src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
+              p • Запрет на посещение бань и саун в первые две недели после процедуры;
+              p • Необходимость 3-4 раза в день обрабатывать прокол мирамистином или перекисью водорода.
 
-                // grid card
-                .gallery__grid__card.f-big
-                  picture
-                    img(src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений
-                // grid card
-                .gallery__grid__card.f-small
-                  picture
-                    img(src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-lettering
-                  picture
-                    img(src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-black-and-white
-                  picture
-                    img(src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      span Узнать стоимость
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                    .gallery__grid__card__name Корабль в бутылке
-                    .gallery__grid__card__author Евгений  
-                // grid card
-                .gallery__grid__card.f-man
-                  picture
-                    img(src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
-                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
-                      i.ico.ico-questionmark
-                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                      i.ico.ico-zoom
-                                
+              p Сразу при проколе нельзя вставлять серебряные украшения. Для того чтобы рана зажила быстро и безболезненно, рекомендуется до ее заживления носить украшения из хирургической стали или титана. Только через 1-2 недели, если все будет хорошо, стальное украшение можно заменить серебряным или другим. Такой подход позволяет свести к минимуму риск нагноения или занесения инфекции.                  
+                                                        
       // TESTIMONIALS SECTION
       .testimonials
         .container.container--fluid.container--no-pad
@@ -208,7 +253,7 @@ doctype html
 
     
     include shared/promo-block.pug
-                          
+    include shared/footer-seo.pug                  
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

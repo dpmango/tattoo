@@ -555,7 +555,7 @@ $(document).ready(function(){
   $('.master-portfolio__slider').slick({
     autoplay: true,
     autoplaySpeed: 3000,
-    slidesToShow: 1,
+    slidesToShow: 7,
     slidesToScroll: 1,
     centerMode: false,
     variableWidth: true,
@@ -566,16 +566,7 @@ $(document).ready(function(){
     draggable: true,
     easing: 'linear',
     infinite: true,
-    lazyLoad: 'ondemand',
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-    ]
+    lazyLoad: 'ondemand'
   });
 
   $('.master-portfolio__head__nav .ico-nav-arrow:first-child').on('click', function(){

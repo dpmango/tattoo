@@ -95,6 +95,22 @@ html.mfp-helper
       z-index: 5
       flex: 0 1 50%
       margin-left: auto
+  &__socials
+    margin: 40px 0 20px 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    a
+      text-align: center
+      flex: 0 0 120px
+      margin-bottom: 20px
+      opacity: 1
+      transition: all $transitionSpeed $ease
+      &:hover
+        opacity: .7
+    .ico
+      size: 80px
+
 
 @media(width <= 900px)
   .modal
@@ -111,6 +127,11 @@ html.mfp-helper
     &--master
       button.mfp-close
         size: 40px
+    &__socials
+      a
+        flex: 0 0 80px
+        .ico
+          size: 60px
 
 
 @media(width <= 630px)

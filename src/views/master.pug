@@ -9,60 +9,61 @@ doctype html
     include shared/menu.pug
     
     .page.page--master
-      .container.container--fluid.container--no-pad.bg-black
-        h1.section-title Мастер татуировки Борис
-        .breadcrumbs
-          a(href='#') Главная
-          a(href='#') Галерея
-          a(href='#') Биомеханика
-          a(href='#') Зеленый тигр на коне
+      .bg-black
+        .container.container--fluid.container--no-pad
+          h1.section-title Мастер татуировки Борис
+          .breadcrumbs
+            a(href='#') Главная
+            a(href='#') Галерея
+            a(href='#') Биомеханика
+            a(href='#') Зеленый тигр на коне
           
-          
-      .container.container--fluid.container--no-pad
-        // row
-        .row.row--condenced.row--stretch-child.row--reverse.pt25.row--column--tablet.bg-black
-          .col.col--3-6.img-v-fluid
-            .master__image
-              picture
-                img(alt="" src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
-            
-          .col.col--3-6
-            .grid-text
-              .master__content
-                .master__content__row.row--aic
-                  .master__content__image
-                    picture
-                      img(alt="" src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
-                  .master__content__scope
-                    .master__content__scope__name Борис
-                    a(href='#').hoverable-link Мастер пирсинга
-                    
-                .master__content__row.mt40.mt20--mobile
-                  .master__content__scope
-                    .master__content__scope__name Стиль
-                    a(href='#').hoverable-link дотворк, лайнворк, полинезия
-                  .master__content__scope
-                    .master__content__scope__name опыт работы
-                    a(href='#').hoverable-link 15 лет
-                
-                .master__content__row.mt40.mt20--mobile
-                  .master__content__scope
-                    .master__content__scope__name любимая краска
-                    a(href='#').hoverable-link Intense
-                  .master__content__scope
-                    .master__content__scope__name марка машинки
-                    a(href='#').hoverable-link Mustang
+
+          // row
+          .row.row--condenced.row--stretch-child.row--reverse.pt25.row--column--tablet
+            .col.col--3-6.img-v-fluid
+              .master__image
+                picture
+                  img(alt="" src='images/masterModalPicture.png', srcset='images/masterModalPicture.png 1x, images/masterModalPicture@2x.png 2x')
+              
+            .col.col--3-6
+              .grid-text
+                .master__content
+                  .master__content__row.row--aic
+                    .master__content__image
+                      picture
+                        img(alt="" src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
+                    .master__content__scope
+                      .master__content__scope__name Борис
+                      a(href='#').hoverable-link Мастер пирсинга
                       
-                .fz14.mt40.mt20--mobile
-                  p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
+                  .master__content__row.mt40.mt20--mobile
+                    .master__content__scope
+                      .master__content__scope__name Стиль
+                      a(href='#').hoverable-link дотворк, лайнворк, полинезия
+                    .master__content__scope
+                      .master__content__scope__name опыт работы
+                      a(href='#').hoverable-link 15 лет
+                  
+                  .master__content__row.mt40.mt20--mobile
+                    .master__content__scope
+                      .master__content__scope__name любимая краска
+                      a(href='#').hoverable-link Intense
+                    .master__content__scope
+                      .master__content__scope__name марка машинки
+                      a(href='#').hoverable-link Mustang
+                        
+                  .fz14.mt40.mt20--mobile
+                    p Тату – это способ самовыражения, это образ мышления и образ жизни! Татуировки на руках, ногах, теле, лице, веках, губах, ушах на коже между пальцев – ее можно сделать  где угодно.
 
-                  p Но откуда пошла такая традиция или мода? Что же представляет собой нательная живопись?
+                    p Но откуда пошла такая традиция или мода? Что же представляет собой нательная живопись?
 
-                  p Это рисунок, надпись, символ, наносимые на тело методом ввода иглой краски разных цветов под кожу. Еще в давние времена люди делали себе на теле различные рисунки,  с помощью них определяли их принадлежность к классу, роду и, в некоторых случаях, наделяли волшебной силой.
+                    p Это рисунок, надпись, символ, наносимые на тело методом ввода иглой краски разных цветов под кожу. Еще в давние времена люди делали себе на теле различные рисунки,  с помощью них определяли их принадлежность к классу, роду и, в некоторых случаях, наделяли волшебной силой.
 
-                  p Татуировки бывают различных видов и стилей, каждый из которых мог бы определять вашу этническую группу, взгляды, религию, статус и многое другое.
-                  p Как таковая, нательная живопись не имеет гендерной принадлежности, кроме татуажа,  но условно татуировки делятся на мужские и женские.
-
+                    p Татуировки бывают различных видов и стилей, каждый из которых мог бы определять вашу этническую группу, взгляды, религию, статус и многое другое.
+                    p Как таковая, нательная живопись не имеет гендерной принадлежности, кроме татуажа,  но условно татуировки делятся на мужские и женские.
+      
+      .container.container--fluid.container--no-pad
         // MASTER PORTFOLIO SECTION
         .master-portfolio
           .master-portfolio__head

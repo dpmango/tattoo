@@ -550,6 +550,22 @@ $(document).ready(function () {
 
   });
 
+  // PICABOUT SLIDER
+  $('.images-picabout__slider').slick({
+    adaptiveHeight: true,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    lazyLoad: 'ondemand'
+  });
+
+  $('.images-picabout__slider .ico-nav-left').on('click', function () {
+    $('.images-picabout__slider').slick('prev');
+  });
+  $('.images-picabout__slider .ico-nav-right').on('click', function () {
+    $('.images-picabout__slider').slick('next');
+  });
+
   // MASTER PORTFOLIO
   $('.master-portfolio__slider').slick({
     autoplay: true,

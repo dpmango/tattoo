@@ -9,36 +9,105 @@ doctype html
     include shared/menu.pug
     
     .page.page--picabout
-      .container.container--fluid.container--no-pad
-        h1.section-title Зеленый тигр на коне
-        .breadcrumbs
-          a(href='#') Главная
-          a(href='#') Галерея
-          a(href='#') Биомеханика
-          a(href='#') Зеленый тигр на коне
-      
-      
-        // slide itself
-        
-          
+      .bg-black
+        .container.container--fluid.container--no-pad
+          h1.section-title Зеленый тигр на коне
+          .breadcrumbs
+            a(href='#') Главная
+            a(href='#') Галерея
+            a(href='#') Биомеханика
+            a(href='#') Зеленый тигр на коне
+
+      // slide itself
+      .images-picabout
+        .container.container--fluid.container--no-pad
+          .images-picabout__slider
+            .images-picabout__slide
+              .images-picabout__image
+                i.ico.ico-nav-left
+                i.ico.ico-nav-right
+                a(href='#modalGetPrice').popup-with-zoom-anim.images-picabout__image__price
+                  span Узнать стоимость
+                  i.ico.ico-questionmark
+                img(alt="" src='images/gallery/galleryPicAbout.png', srcset='images/gallery/galleryPicAbout.png 1x, images/gallery/galleryPicAbout@2x.png 2x')
+              .images-picabout__description
+                .images-picabout__description__left
+                  .images-picabout__description__text
+                    .small-title Описание
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                    a(href='#').btn.btn--ghost.mt30.hidden--mobile Узнать стоимость
+                .images-picabout__description__right
+                  .images-picabout__description__scope
+                    .small-title Место нанесения
+                    a(href='#').hoverable-link Спина
+                  .images-picabout__description__scope
+                    .small-title Мастер
+                    a(href='#').hoverable-link Данила  
+                  .images-picabout__description__scope
+                    .small-title Стиль
+                    a(href='#').hoverable-link Неаотрадишинл
+                    
+                a(href='#').btn.btn--ghost.mt30.visible--mobile Узнать стоимость
+                
+            // slide
+            .images-picabout__slide
+              .images-picabout__image
+                i.ico.ico-nav-left
+                i.ico.ico-nav-right
+                a(href='#modalGetPrice').popup-with-zoom-anim.images-picabout__image__price
+                  span Узнать стоимость
+                  i.ico.ico-questionmark
+                img(alt="" src='images/gallery/galleryPicAbout.png', srcset='images/gallery/galleryPicAbout.png 1x, images/gallery/galleryPicAbout@2x.png 2x')
+              .images-picabout__description
+                .images-picabout__description__left
+                  .images-picabout__description__text
+                    .small-title Описание
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                    a(href='#').btn.btn--ghost.mt30.hidden--mobile Узнать стоимость
+                .images-picabout__description__right
+                  .images-picabout__description__scope
+                    .small-title Место нанесения
+                    a(href='#').hoverable-link Спина
+                  .images-picabout__description__scope
+                    .small-title Мастер
+                    a(href='#').hoverable-link Данила  
+                  .images-picabout__description__scope
+                    .small-title Стиль
+                    a(href='#').hoverable-link Неаотрадишинл
+                
+                a(href='#').btn.btn--ghost.mt30.visible--mobile Узнать стоимость
+                      
       .container.container--fluid.container--no-pad
 
         // MASTER PORTFOLIO SECTION
         .master-portfolio
           .master-portfolio__head
-            .small-title Работы мастера
-          .master-portfolio__slider
-            img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
-
+            .small-title Возможно вам понравится
+            .master-portfolio__head__nav
+              i.ico.ico-nav-arrow
+              i.ico.ico-nav-arrow.ico-nav-arrow--right
+          .master-portfolio__slider.popup-gallery
+            a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+            a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+            a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+            a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+            a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+            a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+            a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+            a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+            a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+            a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+        
           
         // TESTIMONIALS SECTION
         .testimonials
@@ -116,21 +185,34 @@ doctype html
         // MASTER PORTFOLIO SECTION
         .master-portfolio
           .master-portfolio__head
-            .small-title Работы мастера
-          .master-portfolio__slider
-            img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
-            img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+            .small-title История просмотров
+            .master-portfolio__head__nav
+              i.ico.ico-nav-arrow
+              i.ico.ico-nav-arrow.ico-nav-arrow--right
+          .master-portfolio__slider.popup-gallery
+            a(href='images/masters/masterWork_1@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_1.png', srcset='images/masters/masterWork_1.png 1x, images/masters/masterWork_1@2x.png 2x')
+            a(href='images/masters/masterWork_2@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_2.png', srcset='images/masters/masterWork_2.png 1x, images/masters/masterWork_2@2x.png 2x')
+            a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+            a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+            a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+            a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+            a(href='images/masters/masterWork_3@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_3.png', srcset='images/masters/masterWork_3.png 1x, images/masters/masterWork_3@2x.png 2x')
+            a(href='images/masters/masterWork_4@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_4.png', srcset='images/masters/masterWork_4.png 1x, images/masters/masterWork_4@2x.png 2x')
+            a(href='images/masters/masterWork_5@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_5.png', srcset='images/masters/masterWork_5.png 1x, images/masters/masterWork_5@2x.png 2x')
+            a(href='images/masters/masterWork_6@2x.png').master-portfolio__slider__item
+              img(alt="" src='images/masters/masterWork_6.png', srcset='images/masters/masterWork_6.png 1x, images/masters/masterWork_6@2x.png 2x')
+        
 
     include shared/promo-block.pug
-    
     include shared/footer.pug
     include shared/modals.pug
     include shared/scripts.pug

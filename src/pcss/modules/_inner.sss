@@ -711,9 +711,11 @@
 .images-masonry
   margin-top: 40px
   margin-bottom: 15px
+  font-size: 0
   &__gutter
     width: 1.5%
   &__card
+    display: block
     width: 23.5%
     position: relative
     color: $colorPrimary
@@ -724,21 +726,14 @@
     picture
       img
         max-width: 100%
-    .ico-zoom
-      position: absolute
-      top: 50%
-      left: 50%
-      opacity: 0
-      z-index: 3
-      transform: translate3d(-50%, -30%, 0)
-      transition: all $transitionSpeed $ease
 
     &::after
       display: block
       content: ' '
       opacity: 0
       position: absolute 0
-      background: color(#09090B a(80%))
+      background: color(#09090B a(80%)) svg-load('../../images/svg/ico-zoom.svg') no-repeat center
+      background-size: 10%
       z-index: 1
       transition: all $transitionSpeed $ease
     &::before
@@ -756,12 +751,151 @@
       &::before
         opacity: 1
         position: absolute 20px
-      .ico-zoom
-        opacity: 1
-        transform: translate3d(-50%, -60%, 0)
-        &:hover
-          transform: scale(1.1) translate3d(-50%, -60%, 0)
-          transform-origin: center center
+
+
+@media($mobile)
+  .images-masonry
+    &__card
+      width: 48.5%
+      &--wide
+        width: 98.5%
+        margin-right: 0
+
+.images-picabout
+  padding-top: 20px
+  position: relative
+  background: #18181D
+  &__image
+    position: relative
+    max-width: 1120px
+    margin-left: auto
+    margin-right: auto
+    img
+      max-width: 100%
+    .ico-nav-left, .ico-nav-right
+      size: 30px 60px
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      cursor: pointer
+    .ico-nav-left
+      left: -120px
+    .ico-nav-right
+      right: -120px
+      transform: translateY(-50%) rotate(180deg)
+
+    &__price
+      position: absolute
+      top: 20px
+      right: 20px
+      z-index: 3
+      color: $colorPrimary
+      letter-spacing: 1.52px
+      font-size: 14px
+      span
+        margin-right: 10px
+      transition: all $transitionSpeed $ease
+
+  &__description
+    margin-top: 60px
+    padding-bottom: 80px
+    display: flex
+    justify-content: space-between
+    &__left
+      flex: 0 1 50%
+      padding-left: 3.5%
+      padding-right: 3%
+    &__right
+      padding-left: 3%
+      padding-right: 6%
+      flex: 0 1 50%
+      display: flex
+      flex-wrap: wrap
+    &__text
+      p
+        font-size: 14px
+        line-height: 1.2
+      .btn
+        display: inline-block !important
+    &__scope
+      flex: 0 1 50%
+      margin-bottom: 40px
+      &:nth-child(even)
+        flex-basis: 35%
+        margin-left: auto
+      .small-title
+        margin-bottom: 15px
+
+@media(width <= 1400px)
+  .images-picabout
+    &__image
+      .ico-nav-left
+        left: -50px
+      .ico-nav-right
+        right: -50px
+
+@media(width <= 1280px)
+  .images-picabout
+    &__image
+      .ico-nav-left
+        left: 20px
+      .ico-nav-right
+        right: 20px
+
+@media($desktop)
+  .images-picabout
+    &__description
+      &__left
+        flex-basis: 60%
+        padding-left: 20px
+      &__right
+        flex-basis: 40%
+        padding-right: 20px
+      &__scope
+        flex: 1 1 100%
+        &:nth-child(even)
+          flex-basis: 100%
+          margin-left: auto
+          margin-right: auto
+
+@media($tablet)
+  .images-picabout
+    &__description
+      flex-direction: column
+      margin-top: 40px
+      padding-bottom: 50px
+      &__left
+        flex-basis: auto
+        padding: 0 20px
+      &__right
+        flex: 1 0 auto
+        padding: 40px 20px 0 20px
+        justify-content: center
+        flex-direction: column
+      &__scope
+        text-align: center
+        flex: 1 0 auto
+        margin-bottom: 25px
+        .small-title
+          margin-bottom: 10px
+
+@media($mobile)
+  .images-picabout
+    &__description
+      align-items: center
+      &__text
+        .btn
+          display: none !important
+      &__right
+        padding-top: 15px
+        justify-content: flex-start
+        align-self: flex-start
+      &__scope
+        text-align: left
+        &:nth-child(even)
+          flex-basis: 100%
+          margin-left: 0
+          margin-right: 0
 
 
 // SERVICES

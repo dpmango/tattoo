@@ -1,0 +1,26 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header-no-hover.pug
+    include shared/menu.pug
+    
+    .text-page
+      .container.container--narrow
+        .text-page__wrapper
+          .text-center
+            .row.row--column
+              .col.col--full.mt25
+                a(href='#modalOrder').btn.btn--ghost.popup-with-zoom-anim Запись к мастеру
+              .col.col--full.mt25
+                a(href='#modalGetPrice').btn.btn--ghost.popup-with-zoom-anim Стоимость эскиза
+              .col.col--full.mt25
+                a(href='#modalFeedback').btn.btn--ghost.popup-with-zoom-anim Отсавить отзыв
+              .col.col--full.mt25
+                a(href='#modalComment').btn.btn--ghost.popup-with-zoom-anim Комментарий
+
+    include shared/modals.pug
+    include shared/scripts.pug

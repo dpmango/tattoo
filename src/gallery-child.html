@@ -83,6 +83,9 @@
     <div class="container container--1280">
       <h1 class="section-title">Галерея            </h1>
       <div class="breadcrumbs"><a href="#">Главная</a><a href="#">Галерея</a></div>
+      <div class="images-filter__toggle-mobile"><a class="btn btn--ghost" href="#"> <span>Фильтр</span><i class="ico ico-filter-toggle-mobile"></i></a></div>
+    </div>
+    <div class="container container--1280 container--no-pad"> 
       <!-- filter main-->
       <div class="images-category">
         <div class="images-category__item">Татуировка</div>
@@ -91,10 +94,13 @@
         <div class="images-category__item">Татуаж</div>
         <div class="images-category__item">Био-тату</div>
       </div>
+    </div>
+    <div class="container container--1280">
       <!-- filter-->
       <div class="images-filter">
         <div class="images-filter__title">Стиль</div>
         <div class="images-filter__content">
+          <div class="images-filter__title--mobile">Стиль</div>
           <div class="images-filter__item">Традишнл</div>
           <div class="images-filter__item">Био-механика</div>
           <div class="images-filter__item">Чикано</div>
@@ -113,6 +119,7 @@
       <div class="images-filter">
         <div class="images-filter__title">Часть тела</div>
         <div class="images-filter__content">
+          <div class="images-filter__title--mobile">Часть тела</div>
           <div class="images-filter__item">Рука</div>
           <div class="images-filter__item">Спина</div>
           <div class="images-filter__item">Голова</div>
@@ -125,63 +132,46 @@
       </div>
       <div class="images-masonry">
         <div class="images-masonry__gutter"></div>
-        <!-- grid card-->
-        <div class="images-masonry__card images-masonry__card--wide f-man">
-          <picture><img alt="" src="images/homepageGallery1.png" srcset="images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-women">
-          <picture><img alt="" src="images/homepageGallery2.png" srcset="images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-women">
-          <picture><img alt="" src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-lettering">
-          <picture><img alt="" src="images/homepageGallery4.png" srcset="images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-big">
-          <picture><img alt="" src="images/homepageGallery5.png" srcset="images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-small">
-          <picture><img alt="" src="images/homepageGallery6.png" srcset="images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-lettering">
-          <picture><img alt="" src="images/homepageGallery7.png" srcset="images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-black-and-white">
-          <picture><img alt="" src="images/homepageGallery8.png" srcset="images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-man">
-          <picture><img alt="" src="images/homepageGallery9.png" srcset="images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
-        <!-- grid card-->
-        <div class="images-masonry__card f-man">
-          <picture><img alt="" src="images/homepageGallery10.png" srcset="images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x"><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
-        </div>
+        <!-- grid card--><a class="images-masonry__card images-masonry__card--wide f-man" href="#">
+          <picture><img alt="" src="images/homepageGallery1.png" srcset="images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-women" href="#">
+          <picture><img alt="" src="images/homepageGallery2.png" srcset="images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-women" href="#">
+          <picture><img alt="" src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-lettering" href="#">
+          <picture><img alt="" src="images/homepageGallery4.png" srcset="images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-big" href="#">
+          <picture><img alt="" src="images/homepageGallery5.png" srcset="images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-small" href="#">
+          <picture><img alt="" src="images/homepageGallery6.png" srcset="images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-lettering" href="#">
+          <picture><img alt="" src="images/homepageGallery7.png" srcset="images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-black-and-white" href="#">
+          <picture><img alt="" src="images/homepageGallery8.png" srcset="images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-man" href="#">
+          <picture><img alt="" src="images/homepageGallery9.png" srcset="images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x"></picture></a>
+        <!-- grid card--><a class="images-masonry__card f-man" href="#">
+          <picture><img alt="" src="images/homepageGallery10.png" srcset="images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x"></picture></a>
       </div>
-      <!-- PAGINTAION--><a class="btn btn--ghost btn--block btn--no-br" href="#">Показать еще</a>
-      <!-- list-->
-      <div class="pagination-full">
-        <div class="pagination-full__prev"><a href="#"> <i class="ico ico-nav-left"></i></a></div>
-        <ul class="pagination-full__list">
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><span>...</span></li>
-          <li><a href="#">65</a></li>
-        </ul>
-        <div class="pagination-full__next"><a href="#"> <i class="ico ico-nav-right"> </i></a></div>
+      <!-- PAGINTAION-->
+      <div class="hidden--mobile"><a class="btn btn--ghost btn--block btn--no-br" href="#">Показать еще</a>
+        <!-- list-->
+        <div class="pagination-full">
+          <div class="pagination-full__prev"><a href="#"> <i class="ico ico-nav-left"></i></a></div>
+          <ul class="pagination-full__list">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><span>...</span></li>
+            <li><a href="#">65</a></li>
+          </ul>
+          <div class="pagination-full__next"><a href="#"> <i class="ico ico-nav-right"> </i></a></div>
+        </div>
       </div>
     </div>
+    <div class="container container--no-pad"><a class="toggler-more js-toggle-gallery-mobile" href="#">Показать больше</a></div>
   </div>
   <footer class="footer">
     <div class="container container--fluid">
@@ -324,6 +314,11 @@
         <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
       </div>
     </form>
+  </div>
+  <!-- Comment-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalComment">
+    <div class="modal__title">Войдите, чтобы оставить комментарий</div>
+    <div class="modal__socials"><a href="#"><i class="ico ico-share-social-fb"></i></a><a href="#"><i class="ico ico-share-social-vk"></i></a><a href="#"><i class="ico ico-share-social-tw"></i></a><a href="#"><i class="ico ico-share-social-gplus"> </i></a></div>
   </div>
   <!-- SECONDARY STYLES-->
   <!--build:css css/secondary.css-->

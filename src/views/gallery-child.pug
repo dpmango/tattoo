@@ -15,6 +15,12 @@ doctype html
           a(href='#') Главная
           a(href='#') Галерея
           
+        .images-filter__toggle-mobile
+          a(href='#').btn.btn--ghost 
+            span Фильтр
+            i.ico.ico-filter-toggle-mobile
+              
+      .container.container--1280.container--no-pad 
         // filter main
         .images-category
           .images-category__item Татуировка
@@ -23,10 +29,12 @@ doctype html
           .images-category__item Татуаж
           .images-category__item Био-тату
           
+      .container.container--1280
         // filter
         .images-filter
           .images-filter__title Стиль
           .images-filter__content
+            .images-filter__title--mobile Стиль
             .images-filter__item Традишнл
             .images-filter__item Био-механика
             .images-filter__item Чикано
@@ -43,6 +51,7 @@ doctype html
         .images-filter
           .images-filter__title Часть тела
           .images-filter__content
+            .images-filter__title--mobile Часть тела
             .images-filter__item Рука
             .images-filter__item Спина
             .images-filter__item Голова
@@ -55,103 +64,85 @@ doctype html
         .images-masonry
           .images-masonry__gutter
           // grid card
-          .images-masonry__card.images-masonry__card--wide.f-man
+          a(href='#').images-masonry__card.images-masonry__card--wide.f-man
             picture
               img(alt="" src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-women
+          a(href='#').images-masonry__card.f-women
             picture
               img(alt="" src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-women
+          a(href='#').images-masonry__card.f-women
             picture
               img(alt="" src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-lettering
+          a(href='#').images-masonry__card.f-lettering
             picture
               img(alt="" src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-big
+          a(href='#').images-masonry__card.f-big
             picture
               img(alt="" src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-small
+          a(href='#').images-masonry__card.f-small
             picture
               img(alt="" src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-lettering
+          a(href='#').images-masonry__card.f-lettering
             picture
               img(alt="" src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-black-and-white
+          a(href='#').images-masonry__card.f-black-and-white
             picture
               img(alt="" src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
           // grid card
-          .images-masonry__card.f-man
+          a(href='#').images-masonry__card.f-man
             picture
               img(alt="" src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
-                  
+    
           // grid card
-          .images-masonry__card.f-man
+          a(href='#').images-masonry__card.f-man
             picture
               img(alt="" src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
-              a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
-                i.ico.ico-zoom
 
         // PAGINTAION
-        a(href='#').btn.btn--ghost.btn--block.btn--no-br Показать еще
-        
-        // list
-        .pagination-full
-          .pagination-full__prev
-            a(href='#') 
-              i.ico.ico-nav-left
-          ul.pagination-full__list
-            li.active
-              a(href='#') 1
-            li
-              a(href='#') 2
-            li
-              a(href='#') 3
-            li
-              a(href='#') 4
-            li
-              a(href='#') 5
-            li
-              span ...
-            li
-              a(href='#') 65
-          .pagination-full__next
-            a(href='#') 
-              i.ico.ico-nav-right  
+        .hidden--mobile
+          a(href='#').btn.btn--ghost.btn--block.btn--no-br Показать еще
+          // list
+          .pagination-full
+            .pagination-full__prev
+              a(href='#') 
+                i.ico.ico-nav-left
+            ul.pagination-full__list
+              li.active
+                a(href='#') 1
+              li
+                a(href='#') 2
+              li
+                a(href='#') 3
+              li
+                a(href='#') 4
+              li
+                a(href='#') 5
+              li
+                span ...
+              li
+                a(href='#') 65
+            .pagination-full__next
+              a(href='#') 
+                i.ico.ico-nav-right  
 
-                                        
+      .container.container--no-pad
+        a(href='#').toggler-more.js-toggle-gallery-mobile Показать больше
+                                                          
                                         
     include shared/footer.pug
     include shared/modals.pug

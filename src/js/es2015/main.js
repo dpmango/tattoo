@@ -544,11 +544,39 @@ $(document).ready(function(){
     setTimeout(initMasonryInner, 500);
   }
 
-
   // togle images grid filter (mobile)
+  if ( $('.images-filter__toggle-mobile').length > 0 ){
+    hideCategoryFilter();
+    _window.resize(100, function(){
+      hideCategoryFilter();
+    })
+  }
+  function hideCategoryFilter(){
+    if ( _window.width() < 568 ){
+      $('.images-category').addClass('hidden');
+    } else {
+      $('.images-category').removeClass('hidden');
+    }
+  }
+
+  // filter btn on mobile
   $('.images-filter__toggle-mobile').on('click', function(){
     $(this).toggleClass('active');
-    $(this).next().toggleClass('active');
+    $('.images-filter').toggleClass('active');
+    $('.images-category').toggleClass('active');
+  });
+
+  // filter item
+  $('.images-filter__item').on('click', function(){
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // mobile show more toggler
+  $('.js-toggle-gallery-mobile').on('click', function(){
+    // something here
+    // ajax like ?
+    
   });
 
   // MASTER PORTFOLIO

@@ -598,6 +598,15 @@
   > .images-category
     display: flex
     justify-content: space-between
+  &.hidden
+    display: none
+    > .images-category
+      display: none
+  &.active
+    display: block
+    > .images-category
+      display: flex
+
 .images-category
   margin-top: 20px
   overflow-y: scroll
@@ -680,6 +689,9 @@
 
 
 @media($tablet)
+  .images-category
+    padding-bottom: 15px !important
+
   .images-grid
     &__card
       flex-basis: 50%
@@ -900,6 +912,22 @@
       &__icon-double
         &::after, &::before
           display: block
+
+
+// toggler
+.page
+  .toggler-more
+    display: none
+    font-size: 18px
+    background: $colorPrimary
+    text-align: center
+    padding: 20px
+    color: $fontColor
+
+@media($mobile)
+  .page
+    .toggler-more
+      display: block
 
 
 

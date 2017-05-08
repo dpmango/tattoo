@@ -61,11 +61,20 @@
     z-index: 0
 
 // HERO
+.js-set-arrow-hero
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  transition: all $transitionSpeed $ease
 .hero
   position: relative
-  background: url('../images/el/mainpageHeroBg.png') no-repeat right center
+  background-image: url('../images/el/mainpageHeroBg.png')
+  background-repeat: no-repeat
+  background-position: right center
   background-size: cover
   color: white
+  transition: all $transitionSpeed $ease
   &::after
     display: block
     content: ' '
@@ -75,6 +84,9 @@
     padding-top: 80px
     padding-bottom: 60px
     min-height: 100vh
+    max-width: 1060px
+    margin-left: auto
+    margin-right: auto
     display: flex
     flex-direction: column
     justify-content: center
@@ -208,21 +220,23 @@
 .services
   position: relative
   color: white
-  &::after
+  overflow: hidden
+  &-bg
     display: block
-    content: ' '
-    position: absolute 0 0 0 0
-    width: 720px
-    background: url('../images/el/mainpageServicesBG.jpg') no-repeat left center
-    background-size: cover
-    z-index: 1
-  &::before
-    display: block
-    content: ' '
-    position: absolute 0 0 0 0
-    width: 720px
-    background: linear-gradient(to right, color(#2E2E32 a(0%)),color(#2E2E32 a(100%)))
-    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    height: 100%
+    width: auto
+    max-width: 100%
+    transition: all $transitionSpeed $ease
+    transform: translate3d(-35%, 0, 0)
+    &.animate
+      transform: translate3d(0, 0, 0)
+  .container
+    position: relative
+    z-index: 5
   &__wrapper
     padding-top: 80px
     padding-bottom: 60px
@@ -309,6 +323,10 @@
 @media($mobile)
   .services
     &::after
+      display: block
+      content: ' '
+      position: absolute 0
+      z-index: 2
       width: auto
       background: url('../images/el/mainpageServicesBgMobile@2x.png') no-repeat center center
       background-size: cover
@@ -461,6 +479,8 @@
       transition: all $transitionSpeed $ease
       &:hover, &.active
         color: $colorPrimary
+  .scroll-content
+    margin-right: -20px !important
   &__grid
     padding-left: 220px
     // overflow-x: auto
@@ -647,7 +667,7 @@
           opacity: 1
           position: absolute 10px
           transform: scale(1)
-          border: 4px solid color(#979797 a(80%))
+          border: 3px solid color(#979797 a(80%))
       &:hover
         .masters__card__image
           &::before

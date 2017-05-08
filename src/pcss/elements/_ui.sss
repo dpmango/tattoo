@@ -63,18 +63,25 @@
       display: block
       width: 100%
       border-color: $colorRed
+      color: $colorRed
+      &::-webkit-input-placeholder
+        color: $colorRed
+      &::-moz-placeholder
+        color: $colorRed
+      &:-moz-placeholder
+        color: $colorRed
+      &:-ms-input-placeholder
+        color: $colorRed
     .ui-input__validation
       display: inline-block
 
   &__validation
     display: none
-    margin-top: 5px
-    background: $colorRed
-    border-radius: 5px
-    padding: 3px 8px 2px 8px
-    color: white
-    font-size: 12px
+    color: $colorRed
+    font-size: 11px
     line-height: 1
+    &.show
+      display: inline-block
 
   &__placeholder
     display: inline-block

@@ -180,6 +180,22 @@ $(document).ready(function () {
     });
   });
 
+  // SERVICE HOVER FUNCTiONS
+  if (_window.width() > 568) {
+    $('.services__item').hover(function () {
+      var bg = $(this).data('bg');
+      if (bg) {
+        var createdServiceHoverEl = "<img src=" + bg + " class='services-bg' alt=''/>";
+        $('.js-append-hover-services').append(createdServiceHoverEl);
+        setTimeout(function () {
+          $('.services-bg').addClass('animate');
+        }, 10);
+      }
+    }, function () {
+      $('.js-append-hover-services').empty();
+    });
+  }
+
   // MASTERS HOVER FUNCTIONS
   $('.masters__card').on('mouseenter', function () {
     var bgLeft = $(this).data('bg-left');
@@ -233,8 +249,36 @@ $(document).ready(function () {
   var heroSliderTotal = $('.testimonials__slide').length;
   $('.js-heroSliderTotal').html(heroSliderTotal);
 
+  // store hero bg
+  var defaultHeroBg = $('.hero').css('background-image');
   $('.hero__slider').on('beforeChange', function (e, s, currentSlide, nextSlide) {
     $('.js-heroSliderCurrent').html(nextSlide + 1);
+
+    // change hero bg
+    s.$slides.each(function (i, slide) {
+      if ($(slide).data('slick-index') == nextSlide) {
+        var passTopForArrow = $(slide).find('.mega-title').offset().top;
+        setArrowHero(passTopForArrow);
+        // if the slide have bg attr, change hero
+        if ($(slide).data('bg')) {
+          var setBg = $(slide).data('bg');
+          $('.hero').css('background-image', 'url(' + setBg + ')');
+        } else {
+          // otherwise reset to default
+          $('.hero').css('background-image', defaultHeroBg);
+        }
+      }
+    });
+  });
+
+  function setArrowHero(top) {
+    var offsetPos = 60;
+    var topPos = top - offsetPos || $('.hero__slider .slick-active .mega-title').offset().top - offsetPos;
+    $('.js-set-arrow-hero').css('top', topPos + 'px');
+  }
+  setArrowHero();
+  _window.resized(100, function () {
+    setArrowHero();
   });
 
   // $('.hero .ico-nav-arrow').on('click', function(){
@@ -806,4 +850,10 @@ $(document).ready(function () {
   preloadImg('images/masters/mainpageMastersBgRight_1.jpg');
   preloadImg('images/masters/mainpageMastersBgRight_2.jpg');
   preloadImg('images/masters/mainpageMastersBgRight_3.jpg');
+  preloadImg('images/el/mainpageServicesBG_1.jpg');
+  preloadImg('images/el/mainpageServicesBG_2.jpg');
+  preloadImg('images/el/mainpageServicesBG_3.jpg');
+  preloadImg('images/el/mainpageServicesBG_4.jpg');
+  preloadImg('images/el/mainpageServicesBG_5.jpg');
+  preloadImg('images/el/mainpageServicesBG_6.jpg');
 });

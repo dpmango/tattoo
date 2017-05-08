@@ -15,15 +15,15 @@ doctype html
     // SECTIONS
     .section(data-section-name='hero' data-nav-name="Главная")
       .hero
-        .container.container--wide
+        .container.container--full.container--no-pad
+          .text-center.js-set-arrow-hero
+            .arrow-bar Акция
           .hero__slider
             // slide
             .hero__slide
               .hero__wrapper.text-center
-                .arrow-bar Акция
-                .mega-title.mt20 Разработка эскиза <span>бесплатно!</span>
+                .mega-title.mt60 Разработка эскиза <span>бесплатно!</span>
                 .fz14.mt10 Действует до 01.12.2018
-                
                 .hero__benefits
                   .hero__benefit
                     .hero__benefit__title Безопасность здоровья 
@@ -42,10 +42,9 @@ doctype html
                     i.ici.ico-phone
                           
             // slide
-            .hero__slide
+            .hero__slide(data-bg='images/el/mainpageHeroBg2.png')
               .hero__wrapper.text-center
-                .arrow-bar Акция
-                .mega-title.mt20 Разработка эскиза <span>бесплатно!</span>
+                .mega-title.mt60 Разработка эскиза <span>бесплатно!</span>
                 .fz14.mt10 Действует до 01.12.2018
                 
                 .hero__benefits
@@ -85,35 +84,37 @@ doctype html
     // SERVICES SECTION
     .section(data-section-name='services' data-nav-name="Услуги")
       .services
+        .js-append-hover-services
+          img.services-bg(src='images/el/mainpageServicesBG_2.jpg')
         .container
           .section-title Услуги
           .services__wrapper.slick-custom-dots
-            a(href='#').services__item
+            a(href='#' data-bg='images/el/mainpageServicesBG_1.jpg').services__item
               .services__item__icon
                 i.icon-ico-service-tatoo-machine
               .services__item__icon-double
               .services__item__name Тaтуировки
-            a(href='#').services__item
+            a(href='#' data-bg='images/el/mainpageServicesBG_2.jpg').services__item
               .services__item__icon
                 i.icon-ico-service-tattooache
               .services__item__icon-double
               .services__item__name Татуаж
-            a(href='#').services__item
+            a(href='#' data-bg='images/el/mainpageServicesBG_3.jpg').services__item
               .services__item__icon
                 i.icon-ico-service-pircing
               .services__item__icon-double
               .services__item__name Пирсинг
-            a(href='#').services__item
+            a(href='#' data-bg='images/el/mainpageServicesBG_4.jpg').services__item
               .services__item__icon
                 i.icon-ico-service-chrysanthemum
               .services__item__icon-double
               .services__item__name Био-тату
-            a(href='#').services__item
+            a(href='#' data-bg='images/el/mainpageServicesBG_5.jpg').services__item
               .services__item__icon
                 i.icon-ico-service-nano
               .services__item__icon-double
               .services__item__name Удалениe
-            a(href='#').services__item
+            a(href='#' data-bg='images/el/mainpageServicesBG_6.jpg').services__item
               .services__item__icon
                 i.icon-ico-service-pen
               .services__item__icon-double
@@ -163,10 +164,22 @@ doctype html
            
             .scrollbar-rail
               .gallery__grid
+                - for (var i = 1; i < 36; i++) {
+                 .gallery__grid__card
+                  picture
+                    img(alt="" src='images/masonry/'+ i +'.png')
+                    a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                      span Узнать стоимость
+                      i.ico.ico-questionmark
+                    a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                      i.ico.ico-zoom
+                - }
+              
+              // .gallery__grid
                 // grid card
                 .gallery__grid__card.f-man
                   picture
-                    img(alt="" src='images/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
+                    img(alt="" src='images/masonry/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
                     a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
                       span Узнать стоимость
                       i.ico.ico-questionmark
@@ -406,6 +419,7 @@ doctype html
                 i.ico.ico-zoom
                 i.ico.ico-team
               .masters__card__name Больше мастеров
+              .masters__card__yrs 0
           
           // MASTER MODALS
           .modal.modal--master.zoom-anim-dialog.mfp-hide#masterModal
@@ -591,11 +605,12 @@ doctype html
                       
                 form.blog__promo__form(action='#')
                   .ui-input
-                    input(type='text' placeholder='имя' name='name')
+                    input(type='text' placeholder='Имя' name='name')
                   .ui-input
-                    input(type='email' placeholder='email' name='email')    
+                    input(type='email' placeholder='Email' name='email')    
                   .ui-input
-                    input(type='tel' placeholder='телефон' name='phone' data-mask="0 (000) 000-00-00")   
+                    input(type='tel' placeholder='Телефон' name='phone' data-mask="0 (000) 000-00-00")   
+                  .ui-input__validation Поля, отмеченные красным цветом, обязательны для заполнения
                   button(type='submit').btn.btn--ghost.btn--block.mt30 Получить купон 
             
             a(href='#').toggler-more.js-toggle-blog Показать больше

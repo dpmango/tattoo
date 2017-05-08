@@ -93,7 +93,7 @@
 .navi
   display: flex
   position: fixed 0 0 0 0
-  background: #4A4A4A
+  background: #2E2E32
   font-family: 'RoadRadio'
   color: white
   z-index: 8
@@ -188,7 +188,10 @@
       flex: 1
       margin-bottom: 4vh
     .header__contact
-      margin-bottom: 5px
+      font-family: 'Geometria'
+      font-size: 16px
+      letter-spacing: 2px
+      margin-bottom: 10px
     &__socials
       margin-top: 3vh
       a
@@ -306,12 +309,11 @@
   &__wrapper
     display: flex
     padding-top: 50px
-    max-width: 1280px
-    margin-left: auto
-    margin-right: auto
-    padding-left: 20px
   &__contacts
     position: relative
+    max-width: 660px
+    padding-left: 20px
+    margin-left: auto
     flex: 0 1 50%
     padding-right: 40px
   &__contact
@@ -403,6 +405,7 @@
     &__contacts
       display: block
       flex-basis: auto
+      max-width: 100%
       padding-left: 20px
       padding-right: 20px
       margin-top: 35px
@@ -452,6 +455,7 @@
     font-weight: 700
 
 .arrow-bar
+  display: inline-block
   position: relative
   padding: 10px
   font-family: 'RoadRadio'
@@ -471,12 +475,14 @@
     background-size: cover
     height: 100%
     width: 20px
+    font-size: 0
   &::after
-    right: -22.99px
+    right: -22.5px
     background: svg-load('../../images/svg/arrow-bar-after.svg') no-repeat center
     background-size: cover
     height: 100%
     width: 23px
+    font-size: 0
 
 .section-title
   font-family: 'RoadRadio'

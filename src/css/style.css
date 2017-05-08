@@ -85,11 +85,11 @@ body, html {
     -moz-osx-font-smoothing: grayscale;
 }
 ::-moz-selection {
-    background: #D2A36E;
+    background: #775C3F;
     color: white;
 }
 ::selection {
-    background: #D2A36E;
+    background: #775C3F;
     color: white;
 }
 .container {
@@ -101,8 +101,11 @@ body, html {
     padding-left: 20px;
     max-width: 1000px;
 }
+.container--full {
+    max-width: 100%;
+}
 .container--fluid {
-    max-width: 1440px;
+    max-width: 100%;
 }
 .container--narrow {
     max-width: 940px;
@@ -799,20 +802,32 @@ body, html {
 .ui-input.has-error input {
     display: block;
     width: 100%;
-    border-color: #f45b63;
+    border-color: #FF3E3E;
+    color: #FF3E3E;
+}
+.ui-input.has-error input::-webkit-input-placeholder {
+    color: #FF3E3E;
+}
+.ui-input.has-error input::-moz-placeholder {
+    color: #FF3E3E;
+}
+.ui-input.has-error input:-moz-placeholder {
+    color: #FF3E3E;
+}
+.ui-input.has-error input:-ms-input-placeholder {
+    color: #FF3E3E;
 }
 .ui-input.has-error .ui-input__validation {
     display: inline-block;
 }
 .ui-input__validation {
     display: none;
-    margin-top: 5px;
-    padding: 3px 8px 2px 8px;
-    border-radius: 5px;
-    background: #f45b63;
-    color: white;
-    font-size: 12px;
+    color: #FF3E3E;
+    font-size: 11px;
     line-height: 1;
+}
+.ui-input__validation.show {
+    display: inline-block;
 }
 .ui-input__placeholder {
     display: inline-block;
@@ -1314,7 +1329,7 @@ button:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background: #4A4A4A;
+    background: #2E2E32;
     color: white;
     font-family: 'RoadRadio';
     opacity: 0;
@@ -1477,7 +1492,10 @@ button:focus {
     -webkit-box-flex: 1;
 }
 .navi__contacts .header__contact {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-family: 'Geometria';
 }
 .navi__contacts__socials {
     margin-top: 3vh;
@@ -1641,18 +1659,17 @@ button:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
     padding-top: 50px;
-    padding-left: 20px;
-    max-width: 1280px;
 }
 .footer__contacts {
     position: relative;
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+    margin-left: auto;
     padding-right: 40px;
+    padding-left: 20px;
+    max-width: 660px;
     -webkit-box-flex: 0;
 }
 .footer__contact {
@@ -1798,6 +1815,7 @@ button:focus {
         margin-top: 35px;
         padding-right: 20px;
         padding-left: 20px;
+        max-width: 100%;
             -ms-flex-preferred-size: auto;
     }
     .footer__maps {
@@ -1855,6 +1873,7 @@ button:focus {
 }
 .arrow-bar {
     position: relative;
+    display: inline-block;
     padding: 10px;
     background: #D2A36E;
     color: #18181D;
@@ -1875,13 +1894,15 @@ button:focus {
     height: 100%;
     background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='20px' height='40px' viewBox='0 0 20 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3ERectangle 10%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-650.000000, -224.000000)' fill='%23D2A36E'%3E %3Cg id='Group-15' transform='translate(649.000000, 224.000000)'%3E %3Cpolygon id='Rectangle-10' points='1 0 20.5 0 20.5 40 1 40 20.2704506 20'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
     background-size: cover;
+    font-size: 0;
 }
 .arrow-bar:after {
-    right: -22.99px;
+    right: -22.5px;
     width: 23px;
     height: 100%;
     background: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='24px' height='40px' viewBox='0 0 24 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 43 (38999) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Earrow-bar-after%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='main' transform='translate(-767.000000, -172.000000)' fill='%23D2A36E'%3E %3Cg id='Group-15' transform='translate(649.000000, 172.000000)'%3E %3Cpolygon id='arrow-bar-after' points='118.643093 0 141.685481 20 118.643093 40'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat center;
     background-size: cover;
+    font-size: 0;
 }
 .section-title {
     position: absolute;
@@ -2430,11 +2451,25 @@ button:focus {
     z-index: 0;
 }
 /* HERO */
+.js-set-arrow-hero {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
 .hero {
     position: relative;
-    background: url('../images/el/mainpageHeroBg.png') no-repeat right center;
+    background-image: url('../images/el/mainpageHeroBg.png');
+    background-position: right center;
     background-size: cover;
+    background-repeat: no-repeat;
     color: white;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .hero:after {
     position: absolute;
@@ -2459,9 +2494,12 @@ button:focus {
             align-items: center;
     -webkit-justify-content: center;
             justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 80px;
     padding-bottom: 60px;
     min-height: 100vh;
+    max-width: 1060px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-box-pack: center;
@@ -2649,35 +2687,30 @@ button:focus {
 /* SERVICE */
 .services {
     position: relative;
+    overflow: hidden;
     color: white;
 }
-.services:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 720px;
-    background: url('../images/el/mainpageServicesBG.jpg') no-repeat left center;
-    background-size: cover;
-    content: ' ';
+.services .container {
+    position: relative;
+    z-index: 5;
 }
-.services:before {
+.services-bg {
     position: absolute;
     top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    z-index: 2;
     display: block;
-    width: 720px;
-    background: -webkit-gradient(linear, left top, right top, from(#2e2e32),to(rgb(46, 46, 50)));
-    background: -webkit-gradient(linear, left top, right top, from(rgba(46, 46, 50, 0)),to(rgb(46, 46, 50)));
-    background: -webkit-linear-gradient(left, rgba(46, 46, 50, 0),rgb(46, 46, 50));
-    background: linear-gradient(to right, rgba(46, 46, 50, 0),rgb(46, 46, 50));
-    content: ' ';
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translate3d(-35%, 0, 0);
+            transform: translate3d(-35%, 0, 0);
+}
+.services-bg.animate {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
 }
 .services__wrapper {
     display: -webkit-box;
@@ -2822,9 +2855,17 @@ button:focus {
 @media(max-width: 568px) {
     .services {}
     .services:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
         width: auto;
         background: url('../images/el/mainpageServicesBgMobile@2x.png') no-repeat center center;
         background-size: cover;
+        content: ' ';
     }
     .services:before {
         position: absolute;
@@ -2851,6 +2892,9 @@ button:focus {
 .gallery {
     background: #18181D;
     color: white;
+}
+.gallery .scroll-content {
+    margin-right: -20px !important;
 }
 .gallery__wrapper {
     position: relative;
@@ -3330,8 +3374,8 @@ button:focus {
     right: 10px;
     bottom: 10px;
     left: 10px;
-    border: 4px solid #979797;
-    border: 4px solid rgba(151, 151, 151, 0.8);
+    border: 3px solid #979797;
+    border: 3px solid rgba(151, 151, 151, 0.8);
     opacity: 1;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);

@@ -728,6 +728,10 @@ $(document).ready(function () {
     $(this).closest('.video').append(appendedVideo);
   });
 
+  // toggler school
+  $('.js-toggle-shool').on('click', function () {
+    $(this).closest('.service-courses__course').toggleClass('active');
+  });
   //////////////
   // MODALS
   //////////////

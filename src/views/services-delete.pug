@@ -20,7 +20,7 @@ doctype html
       .service-slider.service-slider--dark-bg.mt25
         .container.container--fluid.container--no-pad
           // single slide
-          .service-slider__slide
+          .service-slider__slide.service-slider__slide--no-slider
             .service-slider__slide__wrapper
               .service-slider__content
                 .service-slider__content__text 
@@ -40,7 +40,7 @@ doctype html
             .service-quote__picture
               img(alt="" src='images/services/serviceDelete.png', srcset='images/services/serviceDelete.png 1x, images/services/serviceDelete@2x.png 2x')
             .service-quote__content
-              form(action="#")
+              form(action="#").js-service-form
                 .small-title Узнайте стоимость удаления!
                 .row.mt10
                   .col.col--3-6
@@ -55,7 +55,7 @@ doctype html
 
                 .ui-input.ui-input--icon.ui-input--comment
                   textarea(placeholder='Отзыв' rows='3' name='comment')
-                
+                .ui-input__validation Поля, отмеченные красным цветом, обязательны для заполнения
                 .modal__cta
                   .ui-file
                     input(type='file' data-multiple-caption='выбрано {count} файлов', multiple='')

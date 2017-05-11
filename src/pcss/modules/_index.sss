@@ -349,6 +349,13 @@
 .gallery
   background: #18181D
   color: white
+  &--inner
+    .gallery__wrapper
+      padding-top: 20px
+      height: calc(100vh - 50px)
+    .gallery__filter
+      top: 20px
+      height: calc(100vh - 50px)
   &__wrapper
     position: relative
     padding-top: 100px
@@ -494,6 +501,7 @@
       margin-right: 20px
       color: $colorPrimary
       text-align: center
+      font-size: 0
       picture
         max-width: 100%
       .ico-zoom
@@ -506,6 +514,7 @@
         transition: all $transitionSpeed $ease
 
       &__name
+        font-size: 1rem
         position: absolute
         z-index: 3
         left: 35px
@@ -518,6 +527,7 @@
         transform: translate3d(0%, 20px, 0)
         transition: all $transitionSpeed $ease
       &__author
+        font-size: 1rem
         position: absolute
         z-index: 3
         left: 35px
@@ -531,6 +541,7 @@
         transform: translate3d(0%, 20px, 0)
         transition: all $transitionSpeed $ease
       &__price
+        font-size: 1rem
         position: absolute
         top: 40px
         right: 40px
@@ -944,7 +955,10 @@
       left: 50%
       transform: translate(-50%, -50%)
       display: none
-      max-width: 100%
+      min-width: 100%
+      min-height: 100%
+      height: auto
+      width: auto
       &.active
         display: inline-block
 
@@ -979,10 +993,12 @@
       flex: 1 0 auto
       padding-bottom: 20px
       position: relative
+      .small-title
+        display: none
     &__picture
-      width: calc(100% + 40px)
-      margin-left: -20px
-      margin-right: 20px
+      width: 100%
+      margin-left: 0px
+      margin-right: 0px
       flex: 0 0 300px
       picture
         height: 300px
@@ -992,8 +1008,9 @@
         img
           position: static
           transform: none
-          width: calc(100% + 40px)
-          max-width: calc(100% + 40px)
+          min-height: 1px
+          width: 100%
+
     &__actions
       display: none
     &__nav

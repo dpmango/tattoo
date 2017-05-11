@@ -16,7 +16,7 @@ doctype html
         a(href='#') Эскизы
       
       // GALLERY SECTION
-      .gallery
+      .gallery.gallery--inner
         .container.container--fluid.container--no-pad
           .gallery__wrapper
             .gallery__filter
@@ -207,7 +207,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle1.png', srcset='images/homepageMasterCircle1.png 1x, images/homepageMasterCircle1@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -225,7 +225,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle2.png', srcset='images/homepageMasterCircle2.png 1x, images/homepageMasterCircle2@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -243,7 +243,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle3.png', srcset='images/homepageMasterCircle4.png 1x, images/homepageMasterCircle3@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -262,7 +262,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle4.png', srcset='images/homepageMasterCircle4.png 1x, images/homepageMasterCircle4@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -281,7 +281,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle5.png', srcset='images/homepageMasterCircle5.png 1x, images/homepageMasterCircle5@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -300,7 +300,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle6.png', srcset='images/homepageMasterCircle6.png 1x, images/homepageMasterCircle6@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -319,7 +319,7 @@ doctype html
                     i.ico.ico-zoom
                     picture
                       img(alt="" src='images/homepageMasterCircle1.png', srcset='images/homepageMasterCircle1.png 1x, images/homepageMasterCircle1@2x.png 2x')
-                  .masters__card__name Patrick Jacobs
+                  .masters__card__name Артем
                   .masters__card__yrs Опыт работы: 10 лет
                   .masters__card__mobile
                     .small-title Стиль
@@ -385,7 +385,7 @@ doctype html
       .service-price
         .container.container--1280
           .small-title Цены
-          .service-price__wrapper
+          .service-price__wrapper.slick-custom-dots
             // price card
             a(href='#').service-price__card
               .service-price__card__image
@@ -466,6 +466,7 @@ doctype html
           .testimonials__slide
             .testimonials__slide__wrapper
               .testimonials__content
+                .small-title Отзывы клиентов студии
                 .testimonials__actions
                   a(href='#' data-toggle='testimonial').active
                     i.ico.ico-photo-camera
@@ -490,6 +491,7 @@ doctype html
           .testimonials__slide
             .testimonials__slide__wrapper
               .testimonials__content
+                .small-title Отзывы клиентов студии
                 .testimonials__actions
                   a(href='#' data-toggle='testimonial').active
                     i.ico.ico-photo-camera

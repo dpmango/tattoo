@@ -234,7 +234,8 @@
       flex: 0 1 300px
       overflow: hidden
       max-width: 300px
-
+      .header__contact
+        letter-spacing: 1px
 @media(width <= 920px)
   .navi
     &__contacts
@@ -799,3 +800,15 @@
     transform: translate(-50%, -50%)
     z-index: 3
     cursor: pointer
+  iframe
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    transform: translate(-50%, -50%)
+    z-index: 5
+
+@media($tablet)
+  .video
+    iframe
+      height: 300px

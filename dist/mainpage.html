@@ -81,13 +81,15 @@
   <!-- SECTIONS-->
   <div class="section" data-section-name="hero" data-nav-name="Главная">
     <div class="hero">
-      <div class="container container--wide">
+      <div class="container container--full container--no-pad">
+        <div class="text-center js-set-arrow-hero">
+          <div class="arrow-bar">Акция</div>
+        </div>
         <div class="hero__slider">
           <!-- slide-->
           <div class="hero__slide">
             <div class="hero__wrapper text-center">
-              <div class="arrow-bar">Акция</div>
-              <div class="mega-title mt20">Разработка эскиза <span>бесплатно!</span></div>
+              <div class="mega-title mt60">Разработка эскиза <span>бесплатно!</span></div>
               <div class="fz14 mt10">Действует до 01.12.2018</div>
               <div class="hero__benefits">
                 <div class="hero__benefit">
@@ -107,10 +109,9 @@
             </div>
           </div>
           <!-- slide-->
-          <div class="hero__slide">
+          <div class="hero__slide" data-bg="images/el/mainpageHeroBg2.png">
             <div class="hero__wrapper text-center">
-              <div class="arrow-bar">Акция</div>
-              <div class="mega-title mt20">Разработка эскиза <span>бесплатно!</span></div>
+              <div class="mega-title mt60">Разработка эскиза <span>бесплатно!</span></div>
               <div class="fz14 mt10">Действует до 01.12.2018</div>
               <div class="hero__benefits">
                 <div class="hero__benefit">
@@ -144,24 +145,25 @@
   <!-- SERVICES SECTION-->
   <div class="section" data-section-name="services" data-nav-name="Услуги">
     <div class="services">
+      <div class="js-append-hover-services"></div>
       <div class="container">
         <div class="section-title">Услуги</div>
-        <div class="services__wrapper slick-custom-dots"><a class="services__item" href="#">
+        <div class="services__wrapper slick-custom-dots"><a class="services__item" href="#" data-bg="images/el/mainpageServicesBG_1.jpg">
             <div class="services__item__icon"><i class="icon-ico-service-tatoo-machine"></i></div>
             <div class="services__item__icon-double"></div>
-            <div class="services__item__name">Тaтуировки</div></a><a class="services__item" href="#">
+            <div class="services__item__name">Тaтуировки</div></a><a class="services__item" href="#" data-bg="images/el/mainpageServicesBG_2.jpg">
             <div class="services__item__icon"><i class="icon-ico-service-tattooache"></i></div>
             <div class="services__item__icon-double"></div>
-            <div class="services__item__name">Татуаж</div></a><a class="services__item" href="#">
+            <div class="services__item__name">Татуаж</div></a><a class="services__item" href="#" data-bg="images/el/mainpageServicesBG_3.jpg">
             <div class="services__item__icon"><i class="icon-ico-service-pircing"></i></div>
             <div class="services__item__icon-double"></div>
-            <div class="services__item__name">Пирсинг</div></a><a class="services__item" href="#">
+            <div class="services__item__name">Пирсинг</div></a><a class="services__item" href="#" data-bg="images/el/mainpageServicesBG_4.jpg">
             <div class="services__item__icon"><i class="icon-ico-service-chrysanthemum"></i></div>
             <div class="services__item__icon-double"></div>
-            <div class="services__item__name">Био-тату</div></a><a class="services__item" href="#">
+            <div class="services__item__name">Био-тату</div></a><a class="services__item" href="#" data-bg="images/el/mainpageServicesBG_5.jpg">
             <div class="services__item__icon"><i class="icon-ico-service-nano"></i></div>
             <div class="services__item__icon-double"></div>
-            <div class="services__item__name">Удалениe</div></a><a class="services__item" href="#">
+            <div class="services__item__name">Удалениe</div></a><a class="services__item" href="#" data-bg="images/el/mainpageServicesBG_6.jpg">
             <div class="services__item__icon"><i class="icon-ico-service-pen"></i></div>
             <div class="services__item__icon-double"></div>
             <div class="services__item__name">Обучение  </div></a></div>
@@ -212,56 +214,211 @@
           </div>
           <div class="scrollbar-rail">
             <div class="gallery__grid">
-              <!-- grid card-->
-              <div class="gallery__grid__card f-man">
-                <picture><img alt="" src="images/homepageGallery1.png" srcset="images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a>
-                  <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                  <div class="gallery__grid__card__author">Евгений</div>
-                </picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/1.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-women">
-                <picture><img alt="" src="images/homepageGallery2.png" srcset="images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/2.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-women">
-                <picture><img alt="" src="images/homepageGallery3.png" srcset="images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/3.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-lettering">
-                <picture><img alt="" src="images/homepageGallery4.png" srcset="images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/4.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-big">
-                <picture><img alt="" src="images/homepageGallery5.png" srcset="images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a>
-                  <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                  <div class="gallery__grid__card__author">Евгений</div>
-                </picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/5.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-small">
-                <picture><img alt="" src="images/homepageGallery6.png" srcset="images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/6.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-lettering">
-                <picture><img alt="" src="images/homepageGallery7.png" srcset="images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/7.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-black-and-white">
-                <picture><img alt="" src="images/homepageGallery8.png" srcset="images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/8.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-man">
-                <picture><img alt="" src="images/homepageGallery9.png" srcset="images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a>
-                  <div class="gallery__grid__card__name">Корабль в бутылке</div>
-                  <div class="gallery__grid__card__author">Евгений  </div>
-                </picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/9.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
-              <!-- grid card-->
-              <div class="gallery__grid__card f-man">
-                <picture><img alt="" src="images/homepageGallery10.png" srcset="images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/10.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/11.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/12.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/13.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/14.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/15.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/16.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/17.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/18.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/19.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/20.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/21.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/22.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/23.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/24.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/25.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/26.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/27.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/28.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/29.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/30.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/31.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/32.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/33.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/34.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
+              </div>
+              <div class="gallery__grid__card">
+                <picture><img alt="" src="images/masonry/35.png"><a class="popup-with-zoom-anim gallery__grid__card__price" href="#modalGetPrice"><span>Узнать стоимость</span><i class="ico ico-questionmark"></i></a><a class="js-magnific-fullpage" href="images/homepageGallery1@2x.png"><i class="ico ico-zoom"></i></a></picture>
               </div>
             </div>
+            <!-- .gallery__grid
+            // grid card
+            .gallery__grid__card.f-man
+              picture
+                img(alt="" src='images/masonry/homepageGallery1.png', srcset='images/homepageGallery1.png 1x, images/homepageGallery1@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  span Узнать стоимость
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+                .gallery__grid__card__name Корабль в бутылке
+                .gallery__grid__card__author Евгений
+            // grid card
+            .gallery__grid__card.f-women
+              picture
+                img(alt="" src='images/homepageGallery2.png', srcset='images/homepageGallery2.png 1x, images/homepageGallery2@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            // grid card
+            .gallery__grid__card.f-women
+              picture
+                img(alt="" src='images/homepageGallery3.png', srcset='images/homepageGallery3.png 1x, images/homepageGallery3@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            // grid card
+            .gallery__grid__card.f-lettering
+              picture
+                img(alt="" src='images/homepageGallery4.png', srcset='images/homepageGallery4.png 1x, images/homepageGallery4@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            // grid card
+            .gallery__grid__card.f-big
+              picture
+                img(alt="" src='images/homepageGallery5.png', srcset='images/homepageGallery5.png 1x, images/homepageGallery5@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  span Узнать стоимость
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+                .gallery__grid__card__name Корабль в бутылке
+                .gallery__grid__card__author Евгений
+            // grid card
+            .gallery__grid__card.f-small
+              picture
+                img(alt="" src='images/homepageGallery6.png', srcset='images/homepageGallery6.png 1x, images/homepageGallery6@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            // grid card
+            .gallery__grid__card.f-lettering
+              picture
+                img(alt="" src='images/homepageGallery7.png', srcset='images/homepageGallery7.png 1x, images/homepageGallery7@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            // grid card
+            .gallery__grid__card.f-black-and-white
+              picture
+                img(alt="" src='images/homepageGallery8.png', srcset='images/homepageGallery8.png 1x, images/homepageGallery8@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            // grid card
+            .gallery__grid__card.f-man
+              picture
+                img(alt="" src='images/homepageGallery9.png', srcset='images/homepageGallery9.png 1x, images/homepageGallery9@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  span Узнать стоимость
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+                .gallery__grid__card__name Корабль в бутылке
+                .gallery__grid__card__author Евгений  
+            // grid card
+            .gallery__grid__card.f-man
+              picture
+                img(alt="" src='images/homepageGallery10.png', srcset='images/homepageGallery10.png 1x, images/homepageGallery10@2x.png 2x')
+                a(href='#modalGetPrice').popup-with-zoom-anim.gallery__grid__card__price
+                  i.ico.ico-questionmark
+                a.js-magnific-fullpage(href='images/homepageGallery1@2x.png')
+                  i.ico.ico-zoom
+            
+            
+            -->
           </div>
         </div>
       </div>
@@ -382,7 +539,8 @@
             </div></a>
           <!-- master card--><a class="masters__card masters__card--more" href="#">
             <div class="masters__card__image"><i class="ico ico-zoom"></i><i class="ico ico-team"></i></div>
-            <div class="masters__card__name">Больше мастеров</div></a>
+            <div class="masters__card__name">Больше мастеров</div>
+            <div class="masters__card__yrs">0</div></a>
         </div>
         <!-- MASTER MODALS-->
         <div class="modal modal--master zoom-anim-dialog mfp-hide" id="masterModal">
@@ -532,14 +690,15 @@
               </div>
               <form class="blog__promo__form" action="#">
                 <div class="ui-input">
-                  <input type="text" placeholder="имя" name="name">
+                  <input type="text" placeholder="Имя" name="name">
                 </div>
                 <div class="ui-input">
-                  <input type="email" placeholder="email" name="email">
+                  <input type="email" placeholder="Email" name="email">
                 </div>
                 <div class="ui-input">
-                  <input type="tel" placeholder="телефон" name="phone" data-mask="0 (000) 000-00-00">
+                  <input type="tel" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
                 </div>
+                <div class="ui-input__validation">Поля, отмеченные красным цветом, обязательны для заполнения</div>
                 <button class="btn btn--ghost btn--block mt30" type="submit">Получить купон </button>
               </form>
             </div>
@@ -585,7 +744,7 @@
     <div class="container container--fluid">
       <div class="footer__menu"><a href="#">О салоне</a><a href="#">Услуги</a><a href="#">Галерея</a><a href="#">Эскизы</a><a href="#">отзывы</a><a href="#">Цены</a><a href="#">обучение</a><a href="#">Контакты</a></div>
     </div>
-    <div class="container container--fluid container--no-pad">
+    <div class="container container--full container--no-pad">
       <div class="footer__wrapper">
         <div class="footer__contacts">
           <div class="footer__contact"><i class="ico ico-location"> </i><span>Москва, Кутузовский пр-т, 27</span></div>
@@ -722,6 +881,11 @@
         <button class="btn btn--ghost btn--ghost--fill" type="submit">Записаться</button>
       </div>
     </form>
+  </div>
+  <!-- Comment-->
+  <div class="modal zoom-anim-dialog mfp-hide" id="modalComment">
+    <div class="modal__title">Войдите, чтобы оставить комментарий</div>
+    <div class="modal__socials"><a href="#"><i class="ico ico-share-social-fb"></i></a><a href="#"><i class="ico ico-share-social-vk"></i></a><a href="#"><i class="ico ico-share-social-tw"></i></a><a href="#"><i class="ico ico-share-social-gplus"> </i></a></div>
   </div>
   <!-- SECONDARY STYLES-->
   <link rel="stylesheet" href="css/secondary.css">

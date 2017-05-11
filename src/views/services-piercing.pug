@@ -120,7 +120,7 @@ doctype html
                   
 
       // MASTER PORTFOLIO SECTION
-      .master-portfolio.light-bg
+      .master-portfolio.master-portfolio--inline.light-bg
         .master-portfolio__head
           .small-title Примеры пирсинга
           .master-portfolio__head__nav
@@ -154,7 +154,7 @@ doctype html
       .service-price
         .container.container--1280
           .small-title Цены
-          .service-price__wrapper
+          .service-price__wrapper.slick-custom-dots
             // price card
             a(href='#').service-price__card
               .service-price__card__image
@@ -208,6 +208,7 @@ doctype html
           .testimonials__slide
             .testimonials__slide__wrapper
               .testimonials__content
+                .small-title Отзывы клиентов
                 .testimonials__actions
                   a(href='#' data-toggle='testimonial').active
                     i.ico.ico-photo-camera
@@ -232,6 +233,7 @@ doctype html
           .testimonials__slide
             .testimonials__slide__wrapper
               .testimonials__content
+                .small-title Отзывы клиентов
                 .testimonials__actions
                   a(href='#' data-toggle='testimonial').active
                     i.ico.ico-photo-camera

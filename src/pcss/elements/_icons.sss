@@ -162,9 +162,14 @@
   &-video-play
     border-radius: 50%
     border: 2px solid white
-    background: url('../../images/svg/ico-video-play.svg') no-repeat center
+    background: url('../../images/svg/ico-video-play.svg') no-repeat 55% center
     size: 100px
     background-size: 44px 36px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background-color: white
+      opacity: .7
+
 
   &-404-smile
     background-image: url('../images/el/404-smile@2x.png')

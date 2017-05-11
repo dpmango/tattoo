@@ -43,8 +43,9 @@ $(document).ready(function(){
   ////////////////
 
   var validateErrorPlacement = function(error, element) {
-    error.addClass('ui-input__validation');
-    error.appendTo(element.parent("div"));
+    // error.addClass('ui-input__validation');
+    // error.appendTo(element.closest("form"));
+    $(element).closest('form').find('.ui-input__validation').show();
   }
   var validateHighlight = function(element) {
     $(element).parent('div').addClass("has-error");
@@ -144,6 +145,32 @@ $(document).ready(function(){
 
   // blog form
   $(".blog__promo__form").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      phone: validatePhone
+    },
+    messages: {
+      name: "Заполните это поле",
+      email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+      },
+      phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+      }
+    }
+  });
+
+  $('.js-service-form').validate({
     errorPlacement: validateErrorPlacement,
     highlight: validateHighlight,
     unhighlight: validateUnhighlight,

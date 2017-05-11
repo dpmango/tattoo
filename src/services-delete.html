@@ -87,7 +87,7 @@
     <div class="service-slider service-slider--dark-bg mt25">
       <div class="container container--fluid container--no-pad">
         <!-- single slide-->
-        <div class="service-slider__slide">
+        <div class="service-slider__slide service-slider__slide--no-slider">
           <div class="service-slider__slide__wrapper">
             <div class="service-slider__content">
               <div class="service-slider__content__text"> 
@@ -109,7 +109,7 @@
         <div class="service-quote__wrapper">
           <div class="service-quote__picture"><img alt="" src="images/services/serviceDelete.png" srcset="images/services/serviceDelete.png 1x, images/services/serviceDelete@2x.png 2x"></div>
           <div class="service-quote__content">
-            <form action="#">
+            <form class="js-service-form" action="#">
               <div class="small-title">Узнайте стоимость удаления!</div>
               <div class="row mt10">
                 <div class="col col--3-6">
@@ -129,6 +129,7 @@
               <div class="ui-input ui-input--icon ui-input--comment">
                 <textarea placeholder="Отзыв" rows="3" name="comment"></textarea>
               </div>
+              <div class="ui-input__validation">Поля, отмеченные красным цветом, обязательны для заполнения</div>
               <div class="modal__cta">
                 <div class="ui-file">
                   <input type="file" data-multiple-caption="выбрано {count} файлов" multiple="">

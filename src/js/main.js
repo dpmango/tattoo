@@ -276,10 +276,12 @@ $(document).ready(function () {
     var topPos = top - offsetPos || $('.hero__slider .slick-active .mega-title').offset().top - offsetPos;
     $('.js-set-arrow-hero').css('top', topPos + 'px');
   }
-  setArrowHero();
-  _window.resized(100, function () {
+  if ($('.hero__slider').length > 0) {
     setArrowHero();
-  });
+    _window.resized(100, function () {
+      setArrowHero();
+    });
+  }
 
   // $('.hero .ico-nav-arrow').on('click', function(){
   //   $('.hero__slider').slick('prev');
@@ -671,6 +673,59 @@ $(document).ready(function () {
   });
   $('.service-slider__slide__nav .ico-nav-arrow--right').on('click', function () {
     $('.service-slider__slider').slick('next');
+  });
+
+  // Price slider
+  var _priceSlickMobile = $('.service-price__wrapper');
+  var priceSlickMobileOptions = {
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    infinite: true,
+    responsive: [{
+      breakpoint: 0,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }, {
+      breakpoint: 992,
+      settings: "unslick"
+    }]
+  };
+  _priceSlickMobile.slick(priceSlickMobileOptions);
+
+  _window.resized(300, function (e) {
+    if (_window.width() > 992) {
+      if (_priceSlickMobile.hasClass('slick-initialized')) {
+        _priceSlickMobile.slick('unslick');
+      }
+      return;
+    }
+    if (!_priceSlickMobile.hasClass('slick-initialized')) {
+      return _priceSlickMobile.slick(priceSlickMobileOptions);
+    }
+  });
+
+  // VIDEO PLAY
+  $('.video .ico-video-play').on('click', function () {
+    var videoId = $(this).closest('.video').data('video-id');
+    var appendedVideo = "<iframe src='http://www.youtube.com/embed/" + videoId + "?autoplay=1' width=100% height=100% frameborder=0 allowfullscreen></iframe>";
+    $(this).closest('.video').append(appendedVideo);
   });
 
   //////////////

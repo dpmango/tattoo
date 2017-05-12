@@ -724,7 +724,7 @@ $(document).ready(function () {
   // VIDEO PLAY
   $('.video .ico-video-play').on('click', function () {
     var videoId = $(this).closest('.video').data('video-id');
-    var appendedVideo = "<iframe src='http://www.youtube.com/embed/" + videoId + "?autoplay=1' width=100% height=100% frameborder=0 allowfullscreen></iframe>";
+    var appendedVideo = "<iframe src='https://www.youtube.com/embed/" + videoId + "?autoplay=1' width=100% height=100% frameborder=0 allowfullscreen></iframe>";
     $(this).closest('.video').append(appendedVideo);
   });
 

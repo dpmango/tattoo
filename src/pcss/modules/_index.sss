@@ -61,12 +61,6 @@
     z-index: 0
 
 // HERO
-.js-set-arrow-hero
-  position: absolute
-  top: 0
-  left: 50%
-  transform: translateX(-50%)
-  transition: all $transitionSpeed $ease
 .hero
   position: relative
   background-image: url('../images/el/mainpageHeroBg.png')
@@ -80,10 +74,13 @@
     content: ' '
     position: absolute 0 0 0 0
     background: color($fontColor a(70%))
+  &__promo
+    text-align: center
+    padding-top: 20vh
+    padding-left: 20px
+    padding-right: 20px
   &__wrapper
-    padding-top: 80px
     padding-bottom: 60px
-    min-height: 100vh
     max-width: 1060px
     margin-left: auto
     margin-right: auto
@@ -173,6 +170,8 @@
 
 @media($tablet)
   .hero
+    &__wrapper
+      display: block
     &__benefits
       flex: 0
       margin-top: 10vh
@@ -180,16 +179,10 @@
       max-width: 300px
       margin-left: auto
       margin-right: auto
-      // flex-wrap: wrap
-      // flex-direction: column
     &__benefit
       margin-bottom: 4vh
       min-height: 0
       min-width: 0
-      // flex: 0 1 auto
-      // max-width: 300px
-      // margin-left: auto
-      // margin-right: auto
       max-width: 100%
       padding-left: 15px
       padding-right: 15px
@@ -202,8 +195,9 @@
 
 @media($mobile)
   .hero
-    &__wrapper
+    &__promo
       padding-top: 65px
+    &__wrapper
       padding-bottom: 65px
     &__bottom
       &__wrapper
@@ -231,9 +225,9 @@
     width: auto
     max-width: 100%
     transition: all $transitionSpeed $ease
-    transform: translate3d(-35%, 0, 0)
+    opacity: 0
     &.animate
-      transform: translate3d(0, 0, 0)
+      opacity: 1
   .container
     position: relative
     z-index: 5
@@ -629,19 +623,23 @@
     position: absolute 0 0 0 0
     background-repeat: no-repeat
     background-size: cover
-    transition: all $transitionSpeed $ease
+    transition: all .35s $ease
+    &.animate, &.default
+      transform: translate3d(0,0,0)
     &::after
       display: block
       content: ' '
       position: absolute 0 0 0 0
       background-repeat: no-repeat
       background-size: cover
-      transition: all $transitionSpeed $ease
+      transition: all .35s $ease
   &__bg-left
     background-position: left center
     width: 50%
     background-image: url('../images/el/mainpageMastersBgLeft.png')
     z-index: 3
+    transform: translate3d(-100%,0,0)
+    transition: all .35s $ease
     &::after
       width: 100%
       background: linear-gradient(to right, color(#2E2E32 a(0%)),color(#2E2E32 a(100%)))
@@ -652,6 +650,8 @@
     width: 50%
     background-image: url('../images/el/mainpageMastersBgRight.png')
     z-index: 1
+    transform: translate3d(100%,0,0)
+    transition: all .35s $ease
     &::after
       background: linear-gradient(to left, color(#2E2E32 a(0%)),color(#2E2E32 a(100%)))
       z-index: 2

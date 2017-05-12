@@ -16,14 +16,14 @@ doctype html
     .section(data-section-name='hero' data-nav-name="Главная")
       .hero
         .container.container--full.container--no-pad
-          .text-center.js-set-arrow-hero
+          .hero__promo
             .arrow-bar Акция
+            .mega-title.mt20 Разработка эскиза <span>бесплатно!</span>
+            .fz14.mt10 Действует до 01.12.2018
           .hero__slider
             // slide
             .hero__slide
               .hero__wrapper.text-center
-                .mega-title.mt60 Разработка эскиза <span>бесплатно!</span>
-                .fz14.mt10 Действует до 01.12.2018
                 .hero__benefits
                   .hero__benefit
                     .hero__benefit__title Безопасность здоровья 
@@ -40,13 +40,10 @@ doctype html
                     i.ici.ico-location
                   a(href='#').btn.btn--circle
                     i.ici.ico-phone
-                          
+          
             // slide
             .hero__slide(data-bg='images/el/mainpageHeroBg2.png')
-              .hero__wrapper.text-center
-                .mega-title.mt60 Разработка эскиза <span>бесплатно!</span>
-                .fz14.mt10 Действует до 01.12.2018
-                
+              .hero__wrapper.text-center                
                 .hero__benefits
                   .hero__benefit
                     .hero__benefit__title Безопасность здоровья 
@@ -276,8 +273,9 @@ doctype html
     // MASTERS SECTION
     .section(data-section-name='masters' data-nav-name="Мастера")
       .masters
-        .masters__bg-right
-        .masters__bg-left
+        .js-append-master-bg
+          .masters__bg-right.default
+          .masters__bg-left.default
         
         .container
           .section-title Мастера

@@ -206,29 +206,47 @@ $(document).ready(function(){
 
 
   // MASTERS HOVER FUNCTIONS
+  var hoverIteration = 0;
   $('.masters__card').on('mouseenter', function(){
+    // parse hover bg
     var bgLeft = $(this).data('bg-left');
     var bgRight = $(this).data('bg-right');
 
+    // if present
     if (bgLeft && bgRight){
-      $('.masters__bg-left').css(
-        'background-image', 'url(' + bgLeft + ')'
-      )
-      $('.masters__bg-right').css(
-        'background-image', 'url(' + bgRight + ')'
-      )
-    }
+      hoverIteration = hoverIteration + 1;
+      console.log(hoverIteration);
+      // create element and assign global variable
+      var storebgLeftEl = '<div class="masters__bg-left" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgLeft + ')"></div>'
+      var storebgRightEl = '<div class="masters__bg-right" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgRight + ')"></div>'
 
+      $('.js-append-master-bg').append(storebgLeftEl);
+      $('.js-append-master-bg').append(storebgRightEl);
+
+      // animate then
+      setTimeout(function(){
+        $('.masters__bg-left').not('.default').addClass('animate');
+        $('.masters__bg-right').not('.default').addClass('animate');
+      }, 10)
+    }
   });
 
 
   $('.masters__card').on('mouseleave', function(){
-    $('.masters__bg-left').css(
-      'background-image', 'url(images/el/mainpageMastersBgLeft.png)'
-    )
-    $('.masters__bg-right').css(
-      'background-image', 'url(images/el/mainpageMastersBgRight.png)'
-    )
+    setTimeout(function(){
+      $('.masters__bg-left').each(function(i, val){
+        if ( $(val).data('iteration') && $(val).data('iteration') != hoverIteration ){
+          $(val).remove();
+        }
+      });
+
+      $('.masters__bg-right').each(function(i, val){
+        if ( $(val).data('iteration') && $(val).data('iteration') != hoverIteration ){
+          $(val).remove();
+        }
+      });
+
+    }, 340);
   });
 
 
@@ -280,8 +298,6 @@ $(document).ready(function(){
     // change hero bg
     s.$slides.each(function(i, slide){
       if ( $(slide).data('slick-index') == nextSlide ){
-        var passTopForArrow = $(slide).find('.mega-title').offset().top
-        setArrowHero(passTopForArrow);
         // if the slide have bg attr, change hero
         if ( $(slide).data('bg') ){
           var setBg = $(slide).data('bg');
@@ -297,24 +313,6 @@ $(document).ready(function(){
 
   });
 
-  function setArrowHero(top){
-    var offsetPos = 60
-    var topPos = top - offsetPos || $('.hero__slider .slick-active .mega-title').offset().top - offsetPos
-    $('.js-set-arrow-hero').css('top', topPos + 'px')
-  }
-  if ( $('.hero__slider').length > 0 ){
-    setArrowHero();
-    _window.resized(100, function(){
-      setArrowHero();
-    });
-  }
-
-  // $('.hero .ico-nav-arrow').on('click', function(){
-  //   $('.hero__slider').slick('prev');
-  // });
-  // $('.hero .ico-nav-arrow--right').on('click', function(){
-  //   $('.hero__slider').slick('next');
-  // });
 
   // Testimonails slider
   $('.testimonials__slider').slick({

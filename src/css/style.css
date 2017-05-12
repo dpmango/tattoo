@@ -2487,16 +2487,6 @@ button:focus {
     z-index: 0;
 }
 /* HERO */
-.js-set-arrow-hero {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-}
 .hero {
     position: relative;
     background-image: url('../images/el/mainpageHeroBg.png');
@@ -2518,6 +2508,12 @@ button:focus {
     background: rgba(24, 24, 29, 0.7);
     content: ' ';
 }
+.hero__promo {
+    padding-top: 20vh;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
 .hero__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2532,9 +2528,7 @@ button:focus {
             justify-content: center;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 80px;
     padding-bottom: 60px;
-    min-height: 100vh;
     max-width: 1060px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2668,6 +2662,9 @@ button:focus {
 }
 @media(max-width: 768px) {
     .hero {}
+    .hero__wrapper {
+        display: block;
+    }
     .hero__benefits {
         display: block;
         -webkit-flex: 0;
@@ -2677,7 +2674,7 @@ button:focus {
         margin-right: auto;
         margin-left: auto;
         max-width: 300px;
-        -webkit-box-flex: 0;/* flex-wrap: wrap *//* flex-direction: column */
+        -webkit-box-flex: 0;
     }
     .hero__benefit {
         margin-bottom: 4vh;
@@ -2685,7 +2682,7 @@ button:focus {
         padding-left: 15px;
         min-width: 0;
         min-height: 0;
-        max-width: 100%;/* flex: 0 1 auto *//* max-width: 300px *//* margin-left: auto *//* margin-right: auto */
+        max-width: 100%;
     }
     .hero__benefit:first-child {
         padding-left: 15px;
@@ -2699,8 +2696,10 @@ button:focus {
 }
 @media(max-width: 568px) {
     .hero {}
-    .hero__wrapper {
+    .hero__promo {
         padding-top: 65px;
+    }
+    .hero__wrapper {
         padding-bottom: 65px;
     }
     .hero__bottom {}
@@ -2739,14 +2738,12 @@ button:focus {
     max-width: 100%;
     width: auto;
     height: 100%;
+    opacity: 0;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    -webkit-transform: translate3d(-35%, 0, 0);
-            transform: translate3d(-35%, 0, 0);
 }
 .services-bg.animate {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    opacity: 1;
 }
 .services__wrapper {
     display: -webkit-box;
@@ -3335,8 +3332,12 @@ button:focus {
     left: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+}
+.masters__bg-left.animate, .masters__bg-left.default, .masters__bg-right.animate, .masters__bg-right.default {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
 }
 .masters__bg-left:after, .masters__bg-right:after {
     position: absolute;
@@ -3348,14 +3349,18 @@ button:focus {
     background-size: cover;
     background-repeat: no-repeat;
     content: ' ';
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 .masters__bg-left {
     z-index: 3;
     width: 50%;
     background-image: url('../images/el/mainpageMastersBgLeft.png');
     background-position: left center;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+    -webkit-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
 }
 .masters__bg-left:after {
     z-index: 4;
@@ -3371,6 +3376,10 @@ button:focus {
     width: 50%;
     background-image: url('../images/el/mainpageMastersBgRight.png');
     background-position: right center;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+    -webkit-transform: translate3d(100%,0,0);
+            transform: translate3d(100%,0,0);
 }
 .masters__bg-right:after {
     z-index: 2;

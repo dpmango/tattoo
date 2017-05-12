@@ -69,9 +69,19 @@ button
       transform: scale(1.03) translate3d(0,-5px,0)
       box-shadow: 0 2px 4px color($colorPrimary a(50%))
   &--square
-    border-right: 0
+    border-radius: 0
     max-height: 40px
     height: 40px
+    cursor: auto
+    &.btn--ghost
+      &:hover
+        background: transparent
+        color: white
+    &.btn--primary
+      padding: 10px 15px
+      color: $fontColor
+      &:hover
+        background: $colorPrimary
   &--muted
     opacity: .6
     &:hover

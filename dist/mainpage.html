@@ -82,15 +82,15 @@
   <div class="section" data-section-name="hero" data-nav-name="Главная">
     <div class="hero">
       <div class="container container--full container--no-pad">
-        <div class="text-center js-set-arrow-hero">
+        <div class="hero__promo">
           <div class="arrow-bar">Акция</div>
+          <div class="mega-title mt20">Разработка эскиза <span>бесплатно!</span></div>
+          <div class="fz14 mt10">Действует до 01.12.2018</div>
         </div>
         <div class="hero__slider">
           <!-- slide-->
           <div class="hero__slide">
             <div class="hero__wrapper text-center">
-              <div class="mega-title mt60">Разработка эскиза <span>бесплатно!</span></div>
-              <div class="fz14 mt10">Действует до 01.12.2018</div>
               <div class="hero__benefits">
                 <div class="hero__benefit">
                   <div class="hero__benefit__title">Безопасность здоровья </div>
@@ -110,9 +110,7 @@
           </div>
           <!-- slide-->
           <div class="hero__slide" data-bg="images/el/mainpageHeroBg2.png">
-            <div class="hero__wrapper text-center">
-              <div class="mega-title mt60">Разработка эскиза <span>бесплатно!</span></div>
-              <div class="fz14 mt10">Действует до 01.12.2018</div>
+            <div class="hero__wrapper text-center">               
               <div class="hero__benefits">
                 <div class="hero__benefit">
                   <div class="hero__benefit__title">Безопасность здоровья </div>
@@ -427,8 +425,10 @@
   <!-- MASTERS SECTION-->
   <div class="section" data-section-name="masters" data-nav-name="Мастера">
     <div class="masters">
-      <div class="masters__bg-right"></div>
-      <div class="masters__bg-left"></div>
+      <div class="js-append-master-bg">
+        <div class="masters__bg-right default"></div>
+        <div class="masters__bg-left default"></div>
+      </div>
       <div class="container">
         <div class="section-title">Мастера</div>
         <div class="masters__wrapper slick-custom-dots">
@@ -698,7 +698,7 @@
                 <div class="ui-input">
                   <input type="tel" placeholder="Телефон" name="phone" data-mask="0 (000) 000-00-00">
                 </div>
-                <div class="ui-input__validation">Поля, отмеченные красным цветом, обязательны для заполнения</div>
+                <div class="ui-input__validation"> <span>Поля, отмеченные красным цветом, обязательны для заполнения</span></div>
                 <button class="btn btn--ghost btn--block mt30" type="submit">Получить купон </button>
               </form>
             </div>

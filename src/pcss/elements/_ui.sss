@@ -76,10 +76,16 @@
       display: inline-block
 
   &__validation
+    position: relative
     display: none
     color: $colorRed
     font-size: 11px
     line-height: 1
+    span
+      position: absolute
+      top: -5px
+      left: 0
+      right: 0
     &.show
       display: inline-block
 

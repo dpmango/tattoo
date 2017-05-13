@@ -821,10 +821,17 @@ body, html {
     display: inline-block;
 }
 .ui-input__validation {
+    position: relative;
     display: none;
     color: #FF3E3E;
     font-size: 11px;
     line-height: 1;
+}
+.ui-input__validation span {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    left: 0;
 }
 .ui-input__validation.show {
     display: inline-block;
@@ -3332,10 +3339,12 @@ button:focus {
     left: 0;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0;
     -webkit-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
 }
 .masters__bg-left.animate, .masters__bg-left.default, .masters__bg-right.animate, .masters__bg-right.default {
+    opacity: 1;
     -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
 }
@@ -3359,8 +3368,8 @@ button:focus {
     background-position: left center;
     -webkit-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
-    -webkit-transform: translate3d(-100%,0,0);
-            transform: translate3d(-100%,0,0);
+    -webkit-transform: translate3d(-70%,0,0);
+            transform: translate3d(-70%,0,0);
 }
 .masters__bg-left:after {
     z-index: 4;
@@ -3378,8 +3387,8 @@ button:focus {
     background-position: right center;
     -webkit-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
-    -webkit-transform: translate3d(100%,0,0);
-            transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(70%,0,0);
+            transform: translate3d(70%,0,0);
 }
 .masters__bg-right:after {
     z-index: 2;

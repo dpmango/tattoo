@@ -990,6 +990,11 @@ body, html {
     background: #775C3F;
     color: white;
 }
+.scroll-me {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
 .container {
     position: relative;
     z-index: 5;
@@ -1017,6 +1022,13 @@ body, html {
 .container--no-pad {
     padding-right: 0;
     padding-left: 0;
+}
+@media(min-width: 1600px) {
+    .container {}
+    .container--full {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
 }
 /* CUSTOM 6 COL FLEX GRID */
 .row {
@@ -1879,11 +1891,8 @@ button:focus {
     color: #18181D;
 }
 .btn--ghost--fill:hover {
-    background: #D2A36E;
-    -webkit-box-shadow: 0 2px 4px rgba(210, 163, 110, 0.5);
-            box-shadow: 0 2px 4px rgba(210, 163, 110, 0.5);
-    -webkit-transform: scale(1.05) translate3d(0,-5px,0);
-            transform: scale(1.05) translate3d(0,-5px,0);
+    background: #18181D;
+    color: #D2A36E;
 }
 .btn--circle {
     display: -webkit-box;
@@ -1916,12 +1925,8 @@ button:focus {
     font-size: 18px;
 }
 .btn--black:hover {
-    background: #2e2e32;
-    background: rgba(46, 46, 50, 0.8);
-    -webkit-box-shadow: 0 2px 4px rgba(210, 163, 110, 0.5);
-            box-shadow: 0 2px 4px rgba(210, 163, 110, 0.5);
-    -webkit-transform: scale(1.03) translate3d(0,-5px,0);
-            transform: scale(1.03) translate3d(0,-5px,0);
+    background: #18181D;
+    color: #D2A36E;
 }
 .btn--square {
     max-height: 40px;
@@ -4227,7 +4232,11 @@ button:focus {
 /* MASTERS */
 .masters {
     position: relative;
-    color: white;/* background: url('../images/el/mainpageMastersBG.png') no-repeat left center *//* background-size: cover */
+    color: white;/* background: url('../images/el/mainpageMastersBG.png') no-repeat left center */
+}
+/* background-size: cover */
+.masters > .container {
+    position: relative;
 }
 .masters__bg-left, .masters__bg-right {
     position: absolute;
@@ -4264,10 +4273,10 @@ button:focus {
     width: 50%;
     background-image: url('../images/el/mainpageMastersBgLeft.png');
     background-position: left center;
-    -webkit-transition: all .35s ease-in-out;
-    transition: all .35s ease-in-out;
-    -webkit-transform: translate3d(-70%,0,0);
-            transform: translate3d(-70%,0,0);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translate3d(-20%,0,0);
+            transform: translate3d(-20%,0,0);
 }
 .masters__bg-left:after {
     z-index: 4;
@@ -4283,10 +4292,10 @@ button:focus {
     width: 50%;
     background-image: url('../images/el/mainpageMastersBgRight.png');
     background-position: right center;
-    -webkit-transition: all .35s ease-in-out;
-    transition: all .35s ease-in-out;
-    -webkit-transform: translate3d(70%,0,0);
-            transform: translate3d(70%,0,0);
+    -webkit-transition: all .5s .25s ease-in-out;
+    transition: all .5s .25s ease-in-out;
+    -webkit-transform: translate3d(20%,0,0);
+            transform: translate3d(20%,0,0);
 }
 .masters__bg-right:after {
     z-index: 2;
@@ -4309,7 +4318,6 @@ button:focus {
             justify-content: center;
     padding-top: 80px;
     padding-bottom: 60px;
-    min-height: 100vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
     -webkit-box-align: center;
@@ -5603,6 +5611,10 @@ button:focus {
     top: 50%;
     left: 50%;
     display: inline-block;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -5763,7 +5775,10 @@ button:focus {
     color: white;
 }
 .text-slider picture img {
-    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
 }
 .text-slider .btn {
     position: absolute;
@@ -5810,6 +5825,14 @@ button:focus {
     padding-top: 15px;
     letter-spacing: 1.8px;
     font-size: 20px;
+}
+@media(min-width: 1600px) {
+    .text-slider {
+        margin-right: -webkit-calc(-3% - 40px);
+        margin-right: calc(-3% - 40px);
+        width: -webkit-calc(112% + 40px);
+        width: calc(112% + 40px);
+    }
 }
 @media(max-width: 992px) {
     .text-slider {}

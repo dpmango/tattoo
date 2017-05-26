@@ -159,6 +159,7 @@ $(document).ready(function () {
   });
 
   // SERVICE HOVER FUNCTiONS
+  var storedServiceHover = $('.js-append-hover-services img').attr('src');
   if (_window.width() > 568) {
     $('.services__item').hover(function () {
       var bg = $(this).data('bg');
@@ -170,7 +171,12 @@ $(document).ready(function () {
         }, 10);
       }
     }, function () {
-      $('.js-append-hover-services').empty();
+
+      $('.js-append-hover-services img').each(function (i, val) {
+        if ($(val).is('.js-static')) {} else {
+          $(val).remove();
+        }
+      });
     });
   }
 
@@ -489,9 +495,10 @@ $(document).ready(function () {
     var selectedSlide = $(this).data('slide') - 1;
     var openImage = $(this).data('image');
 
-    if (selectedSlide && _window.width() > 768) {
-      $('.text-slider').slick('slickGoTo', selectedSlide);
-    }
+    // disable slider navigation
+    // if (selectedSlide && _window.width() > 768){
+    //   $('.text-slider').slick('slickGoTo', selectedSlide)
+    // }
 
     if (openImage && _window.width() < 768) {
       $.magnificPopup.open({
@@ -751,15 +758,15 @@ $(document).ready(function () {
     callbacks: {
       beforeOpen: function beforeOpen() {
         startWindowScroll = _window.scrollTop();
-        $('html').addClass('mfp-helper');
+        // $('html').addClass('mfp-helper');
       },
       open: function open() {
         // initialize slick
         setTimeout(initModalSlider, 500);
       },
       close: function close() {
-        $('html').removeClass('mfp-helper');
-        _window.scrollTop(startWindowScroll);
+        // $('html').removeClass('mfp-helper');
+        // _window.scrollTop(startWindowScroll);
       }
     }
   });

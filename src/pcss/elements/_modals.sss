@@ -4,10 +4,7 @@
   -webkit-transform: translateZ(0)
 
 html.mfp-helper
-  height: 100%
   body
-    overflow: hidden
-    height: 100%
     -webkit-transform: translateZ(0)
 
 .modal
@@ -21,7 +18,7 @@ html.mfp-helper
   &--master
     padding: 0
     margin: 0 auto
-    max-width: 1400px
+    max-width: 100%
     button.mfp-close
       filter: brightness(50)
       size: 60px
@@ -59,10 +56,14 @@ html.mfp-helper
     display: flex
     min-height: 100vh
     overflow-y: scroll
+    width: 100% !important
+    &.scroll-wrapper > .scroll-content
+      width: 100% !important
     &::after
       display: block
       content: ' '
       background: url('../images/el/modalMasterBG.jpg') no-repeat top left
+      background-size: cover
       width: 720px
       position: absolute
       top: 0
@@ -86,10 +87,12 @@ html.mfp-helper
       padding-left: 5%
       display: flex
       flex-direction: column
-      margin-top: auto
+      justify-content: center
       padding-top: 100px
       margin-bottom: 20px
       padding-right: 3%
+      max-width: 720px
+      margin-left: auto
     .master__image
       position: relative
       z-index: 5
@@ -125,8 +128,19 @@ html.mfp-helper
 @media($tablet)
   .modal
     &--master
+      overflow-x: hidden !important
       button.mfp-close
         size: 40px
+    &__master
+      width: auto !important
+      &.scroll-wrapper > .scroll-content
+        width: auto !important
+      &::before, &::after
+        width: 100%
+      .master__content
+        flex-basis: 100%
+        width: 100%
+        max-width: 100%
     &__socials
       a
         flex: 0 0 80px
@@ -138,6 +152,16 @@ html.mfp-helper
   .modal
     padding-left: 5%
     padding-right: 5%
+    &--master
+      padding-left: 0
+      padding-right: 0
+      button.mfp-close
+        right: 5%
+    &__master
+      .master__content
+        padding-left: 5%
+        padding-right: 5%
+
 
 @media($mobile)
   .modal

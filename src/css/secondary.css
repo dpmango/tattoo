@@ -1147,12 +1147,7 @@
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translateZ(0);
 }
-html.mfp-helper {
-    height: 100%;
-}
 html.mfp-helper body {
-    overflow: hidden;
-    height: 100%;
     -webkit-transform: translateZ(0);
 }
 .modal {
@@ -1167,7 +1162,7 @@ html.mfp-helper body {
 .modal--master {
     margin: 0 auto;
     padding: 0;
-    max-width: 1400px;
+    max-width: 100%;
 }
 .modal--master button.mfp-close {
     top: 100px;
@@ -1233,6 +1228,7 @@ html.mfp-helper body {
     display: flex;
     overflow-y: scroll;
     min-height: 100vh;
+    width: 100% !important;
 }
 .modal__master .master__content {
     position: relative;
@@ -1247,14 +1243,19 @@ html.mfp-helper body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: auto;
+    -webkit-justify-content: center;
+            justify-content: center;
     margin-bottom: 20px;
+    margin-left: auto;
     padding-top: 100px;
     padding-right: 3%;
     padding-left: 5%;
+    max-width: 720px;
     -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
 }
 .modal__master .master__image {
     position: relative;
@@ -1265,6 +1266,9 @@ html.mfp-helper body {
     margin-left: auto;
     -webkit-box-flex: 0;
 }
+.modal__master.scroll-wrapper > .scroll-content {
+    width: 100% !important;
+}
 .modal__master:after {
     position: absolute;
     top: 0;
@@ -1274,6 +1278,7 @@ html.mfp-helper body {
     display: block;
     width: 720px;
     background: url('../images/el/modalMasterBG.jpg') no-repeat top left;
+    background-size: cover;
     content: ' ';
 }
 .modal__master:before {
@@ -1335,9 +1340,28 @@ html.mfp-helper body {
 }
 @media(max-width: 768px) {
     .modal {}
+    .modal--master {
+        overflow-x: hidden !important;
+    }
     .modal--master button.mfp-close {
         width: 40px;
         height: 40px;
+    }
+    .modal__master {
+        width: auto !important;
+    }
+    .modal__master .master__content {
+        -webkit-flex-basis: 100%;
+                flex-basis: 100%;
+        max-width: 100%;
+        width: 100%;
+            -ms-flex-preferred-size: 100%;
+    }
+    .modal__master.scroll-wrapper > .scroll-content {
+        width: auto !important;
+    }
+    .modal__master:before, .modal__master:after {
+        width: 100%;
     }
     .modal__socials a {
         -webkit-flex: 0 0 80px;
@@ -1352,6 +1376,17 @@ html.mfp-helper body {
 }
 @media(max-width: 630px) {
     .modal {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .modal--master {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .modal--master button.mfp-close {
+        right: 5%;
+    }
+    .modal__master .master__content {
         padding-right: 5%;
         padding-left: 5%;
     }

@@ -1147,12 +1147,7 @@
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translateZ(0);
 }
-html.mfp-helper {
-    height: 100%;
-}
 html.mfp-helper body {
-    overflow: hidden;
-    height: 100%;
     -webkit-transform: translateZ(0);
 }
 .modal {
@@ -1167,7 +1162,7 @@ html.mfp-helper body {
 .modal--master {
     margin: 0 auto;
     padding: 0;
-    max-width: 1400px;
+    max-width: 100%;
 }
 .modal--master button.mfp-close {
     top: 100px;
@@ -1233,6 +1228,7 @@ html.mfp-helper body {
     display: flex;
     overflow-y: scroll;
     min-height: 100vh;
+    width: 100% !important;
 }
 .modal__master .master__content {
     position: relative;
@@ -1247,14 +1243,19 @@ html.mfp-helper body {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: auto;
+    -webkit-justify-content: center;
+            justify-content: center;
     margin-bottom: 20px;
+    margin-left: auto;
     padding-top: 100px;
     padding-right: 3%;
     padding-left: 5%;
+    max-width: 720px;
     -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
 }
 .modal__master .master__image {
     position: relative;
@@ -1265,6 +1266,9 @@ html.mfp-helper body {
     margin-left: auto;
     -webkit-box-flex: 0;
 }
+.modal__master.scroll-wrapper > .scroll-content {
+    width: 100% !important;
+}
 .modal__master:after {
     position: absolute;
     top: 0;
@@ -1274,6 +1278,7 @@ html.mfp-helper body {
     display: block;
     width: 720px;
     background: url('../images/el/modalMasterBG.jpg') no-repeat top left;
+    background-size: cover;
     content: ' ';
 }
 .modal__master:before {
@@ -1335,9 +1340,28 @@ html.mfp-helper body {
 }
 @media(max-width: 768px) {
     .modal {}
+    .modal--master {
+        overflow-x: hidden !important;
+    }
     .modal--master button.mfp-close {
         width: 40px;
         height: 40px;
+    }
+    .modal__master {
+        width: auto !important;
+    }
+    .modal__master .master__content {
+        -webkit-flex-basis: 100%;
+                flex-basis: 100%;
+        max-width: 100%;
+        width: 100%;
+            -ms-flex-preferred-size: 100%;
+    }
+    .modal__master.scroll-wrapper > .scroll-content {
+        width: auto !important;
+    }
+    .modal__master:before, .modal__master:after {
+        width: 100%;
     }
     .modal__socials a {
         -webkit-flex: 0 0 80px;
@@ -1352,6 +1376,17 @@ html.mfp-helper body {
 }
 @media(max-width: 630px) {
     .modal {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .modal--master {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .modal--master button.mfp-close {
+        right: 5%;
+    }
+    .modal__master .master__content {
         padding-right: 5%;
         padding-left: 5%;
     }
@@ -1672,7 +1707,7 @@ button.mfp-close:hover {
 /*       top: -14px */
 /* */
 /* SCROLLBAR MAC OS X ************** */
-.scrollbar-macosx > .scroll-element, .images-category > .scroll-element {
+.scroll-me > .scroll-element, .scrollbar-macosx > .scroll-element, .images-category > .scroll-element, .modal__master > .scroll-element {
     position: absolute;
     z-index: 10;
     margin: 0;
@@ -1680,7 +1715,7 @@ button.mfp-close:hover {
     border: none;
     background: none;
 }
-.scrollbar-macosx > .scroll-element div, .images-category > .scroll-element div {
+.scroll-me > .scroll-element div, .scrollbar-macosx > .scroll-element div, .images-category > .scroll-element div, .modal__master > .scroll-element div {
     position: absolute;
     top: 0;
     left: 0;
@@ -1693,10 +1728,10 @@ button.mfp-close:hover {
     border: none;
     background: none;
 }
-.scrollbar-macosx > .scroll-element .scroll-element_track, .images-category > .scroll-element .scroll-element_track {
+.scroll-me > .scroll-element .scroll-element_track, .scrollbar-macosx > .scroll-element .scroll-element_track, .images-category > .scroll-element .scroll-element_track, .modal__master > .scroll-element .scroll-element_track {
     display: none;
 }
-.scrollbar-macosx > .scroll-element .scroll-bar, .images-category > .scroll-element .scroll-bar {
+.scroll-me > .scroll-element .scroll-bar, .scrollbar-macosx > .scroll-element .scroll-bar, .images-category > .scroll-element .scroll-bar, .modal__master > .scroll-element .scroll-bar {
     display: block;
     border-radius: 7px;
     background-color: #6C6E71;
@@ -1706,13 +1741,13 @@ button.mfp-close:hover {
     -webkit-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear;
 }
-.scrollbar-macosx > .scroll-element, .images-category > .scroll-element {}
-.scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar, .images-category > .scroll-element.scroll-draggable .scroll-bar {
+.scroll-me > .scroll-element, .scrollbar-macosx > .scroll-element, .images-category > .scroll-element, .modal__master > .scroll-element {}
+.scroll-me > .scroll-element.scroll-draggable .scroll-bar, .scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar, .images-category > .scroll-element.scroll-draggable .scroll-bar, .modal__master > .scroll-element.scroll-draggable .scroll-bar {
     opacity: 0.7;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     filter: alpha(opacity = 70);
 }
-.scrollbar-macosx > .scroll-element.scroll-x, .images-category > .scroll-element.scroll-x {
+.scroll-me > .scroll-element.scroll-x, .scrollbar-macosx > .scroll-element.scroll-x, .images-category > .scroll-element.scroll-x, .modal__master > .scroll-element.scroll-x {
     bottom: 0px;
     left: 0;
     overflow: visible;
@@ -1720,42 +1755,42 @@ button.mfp-close:hover {
     width: 100%;
     height: 0px;
 }
-.scrollbar-macosx > .scroll-element.scroll-y, .images-category > .scroll-element.scroll-y {
+.scroll-me > .scroll-element.scroll-y, .scrollbar-macosx > .scroll-element.scroll-y, .images-category > .scroll-element.scroll-y, .modal__master > .scroll-element.scroll-y {
     top: 0;
     right: 0px;
     min-height: 100%;
     width: 0px;
     height: 100%;
 }
-.scrollbar-macosx > .scroll-element.scroll-x .scroll-bar, .images-category > .scroll-element.scroll-x .scroll-bar {
+.scroll-me > .scroll-element.scroll-x .scroll-bar, .scrollbar-macosx > .scroll-element.scroll-x .scroll-bar, .images-category > .scroll-element.scroll-x .scroll-bar, .modal__master > .scroll-element.scroll-x .scroll-bar {
     top: -9px;
     min-width: 10px;
     height: 7px;
 }
-.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar, .images-category > .scroll-element.scroll-y .scroll-bar {
+.scroll-me > .scroll-element.scroll-y .scroll-bar, .scrollbar-macosx > .scroll-element.scroll-y .scroll-bar, .images-category > .scroll-element.scroll-y .scroll-bar, .modal__master > .scroll-element.scroll-y .scroll-bar {
     left: -9px;
     min-height: 10px;
     width: 7px;
 }
-.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer, .images-category > .scroll-element.scroll-x .scroll-element_outer {
+.scroll-me > .scroll-element.scroll-x .scroll-element_outer, .scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer, .images-category > .scroll-element.scroll-x .scroll-element_outer, .modal__master > .scroll-element.scroll-x .scroll-element_outer {
     left: 2px;
 }
-.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size, .images-category > .scroll-element.scroll-x .scroll-element_size {
+.scroll-me > .scroll-element.scroll-x .scroll-element_size, .scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size, .images-category > .scroll-element.scroll-x .scroll-element_size, .modal__master > .scroll-element.scroll-x .scroll-element_size {
     left: -4px;
 }
-.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer, .images-category > .scroll-element.scroll-y .scroll-element_outer {
+.scroll-me > .scroll-element.scroll-y .scroll-element_outer, .scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer, .images-category > .scroll-element.scroll-y .scroll-element_outer, .modal__master > .scroll-element.scroll-y .scroll-element_outer {
     top: 2px;
 }
-.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size, .images-category > .scroll-element.scroll-y .scroll-element_size {
+.scroll-me > .scroll-element.scroll-y .scroll-element_size, .scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size, .images-category > .scroll-element.scroll-y .scroll-element_size, .modal__master > .scroll-element.scroll-y .scroll-element_size {
     top: -4px;
 }
-.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size, .images-category > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+.scroll-me > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size, .scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size, .images-category > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size, .modal__master > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
     left: -11px;
 }
-.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size, .images-category > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+.scroll-me > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size, .scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size, .images-category > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size, .modal__master > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
     top: -11px;
 }
-.scrollbar-macosx:hover > .scroll-element .scroll-bar, .images-category:hover > .scroll-element .scroll-bar {
+.scroll-me:hover > .scroll-element .scroll-bar, .scrollbar-macosx:hover > .scroll-element .scroll-bar, .images-category:hover > .scroll-element .scroll-bar, .modal__master:hover > .scroll-element .scroll-bar {
     opacity: 0.7;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     filter: alpha(opacity = 70);

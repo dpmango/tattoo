@@ -132,6 +132,13 @@ body, html {
         padding-left: 80px;
     }
 }
+@media(max-width: 1600px) and (min-width:1200px) {
+    .container {}
+    .container--full {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
 /* CUSTOM 6 COL FLEX GRID */
 .row {
     display: -webkit-box;
@@ -1699,11 +1706,9 @@ button:focus {
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
-    margin-left: auto;
     padding-right: 40px;
-    padding-left: 20px;
-    max-width: 660px;
-    -webkit-box-flex: 0;
+    padding-left: 80px;
+    -webkit-box-flex: 0;/* max-width: 660px *//* margin-left: 80px */
 }
 .footer__contact {
     position: relative;
@@ -1798,6 +1803,18 @@ button:focus {
         -ms-flex: 1;
             flex: 1 1 0%;
     -webkit-box-flex: 1;
+}
+@media(max-width: 1600px) {
+    .footer {}
+    .footer__contacts {
+        padding-left: 40px;
+    }
+}
+@media(max-width: 1200px) {
+    .footer {}
+    .footer__contacts {
+        padding-left: 20px;
+    }
 }
 @media(max-width: 1070px) {
     .footer .ico-18plus {
@@ -3709,7 +3726,6 @@ button:focus {
     margin-left: auto;
     padding-right: 20px;
     min-height: 100vh;
-    max-width: 520px;
     -webkit-box-flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3873,9 +3889,29 @@ button:focus {
 .testimonials__picture img.active {
     display: inline-block;
 }
+@media(min-width: 1600px) {
+    .testimonials {}
+    .testimonials__content {
+        padding-right: 60px;
+        padding-left: 80px;
+    }
+}
+@media(max-width: 1600px) {
+    .testimonials {}
+    .testimonials__content {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+@media(min-width: 1366px) {
+    .testimonials--inner .testimonials__slide__wrapper {
+        min-height: 60vh;
+    }
+}
 @media(max-width: 1200px) {
     .testimonials {}
     .testimonials__content {
+        padding-right: 20px;
         padding-left: 20px;
     }
 }
@@ -4573,6 +4609,12 @@ button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
 }
+@media(min-width: 1600px) {
+    .grid-text {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
 @media(max-width: 568px) {
     .grid-text {
         padding-top: 25px;
@@ -4720,6 +4762,11 @@ button:focus {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+}
+@media(min-width: 1366px) {
+    .row--grow-height--1366 .grid-text {
+        min-height: 60vh;
+    }
 }
 @media(max-width: 568px) {
     .master {}
@@ -6094,13 +6141,13 @@ button:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: center;
-            align-items: center;
+    -webkit-align-items: stretch;
+            align-items: stretch;
     -webkit-justify-content: space-between;
             justify-content: space-between;
-    min-height: 100vh;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
+    min-height: 700px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
@@ -6140,8 +6187,7 @@ button:focus {
             justify-content: center;
     margin-left: auto;
     padding: 50px 40px 60px 20px;
-    min-height: 100vh;
-    max-width: 620px;
+    min-height: 700px;
     -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6163,7 +6209,7 @@ button:focus {
             flex: 0 1 50%;
     overflow: hidden;
     margin-left: 0px;
-    min-height: 100vh;
+    min-height: 700px;
     -webkit-box-flex: 0;
 }
 .service-slider__picture img {
@@ -6174,7 +6220,6 @@ button:focus {
     min-width: 100%;
     min-height: 100%;
     width: auto;
-    height: 100vh;
     height: auto;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -6495,7 +6540,6 @@ button:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-height: 100vh;
 }
 .service-masters__text {
     display: -webkit-box;
@@ -6511,7 +6555,6 @@ button:focus {
     margin-left: auto;
     padding-top: 60px;
     padding-bottom: 70px;
-    max-width: 620px;
     -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6626,7 +6669,7 @@ button:focus {
 }
 .service-types {
     padding-top: 60px;
-    min-height: 100vh;
+    min-height: 700px;
     background: #2E2E31;
 }
 .service-types__wrapper {
@@ -7037,6 +7080,66 @@ button:focus {
     min-height: 40px;
     border-radius: 40px;
     font-size: 18px;
+}
+@media(min-width: 1600px) {
+    .service {}
+    .service-slider {}
+    .service-slider__content {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    .service-slider__slide--no-slider .service-slider__content {
+        padding-right: 80px;
+    }
+    .service-masters {}
+    .service-masters__text {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    .service-quote {}
+    .service-quote__content {
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+}
+@media(max-width: 1600px) {
+    .service {}
+    .service-slider {}
+    .service-slider__content {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .service-slider__slide--no-slider .service-slider__content {
+        padding-right: 40px;
+    }
+    .service-masters {}
+    .service-masters__text {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .service-quote {}
+    .service-quote__content {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+@media(max-width: 1200px) {
+    .service {}
+    .service-slider {}
+    .service-slider__content {
+        padding-right: 40px;
+        padding-left: 20px;
+    }
+    .service-masters {}
+    .service-masters__text {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .service-quote {}
+    .service-quote__content {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
 }
 @media(max-width: 992px) {
     .service {

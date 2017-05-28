@@ -312,9 +312,9 @@
     padding-top: 50px
   &__contacts
     position: relative
-    max-width: 660px
-    padding-left: 20px
-    margin-left: auto
+    // max-width: 660px
+    padding-left: 80px
+    // margin-left: 80px
     flex: 0 1 50%
     padding-right: 40px
   &__contact
@@ -378,6 +378,16 @@
     overflow: hidden
     #yaMap
       flex: 1
+
+@media(width <= 1600px)
+  .footer
+    &__contacts
+      padding-left: 40px
+
+@media($wide)
+  .footer
+    &__contacts
+      padding-left: 20px
 
 @media(width <= 1070px)
   .footer

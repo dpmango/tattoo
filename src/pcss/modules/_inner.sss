@@ -155,6 +155,11 @@
   justify-content: center
   padding: 45px 10%
 
+@media(width >= 1600px)
+  .grid-text
+    padding-left: 80px
+    padding-right: 80px
+    
 @media($mobile)
   .grid-text
     padding-top: 25px
@@ -250,6 +255,10 @@
       width: auto
       display: inline-block
 
+@media(width >= 1366px)
+  .row--grow-height--1366
+    .grid-text
+      min-height: 60vh
 
 @media($mobile)
   .master

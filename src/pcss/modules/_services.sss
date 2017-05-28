@@ -14,9 +14,9 @@
       background: #18181D
     &__slide
       &__wrapper
-        min-height: 100vh
+        min-height: 700px
         display: flex
-        align-items: center
+        align-items: stretch
         justify-content: space-between
         &--reverse
           flex-direction: row-reverse
@@ -35,9 +35,8 @@
     &__content
       flex: 0 1 50%
       padding: 50px 40px 60px 20px
-      max-width: 620px
       margin-left: auto
-      min-height: 100vh
+      min-height: 700px
       display: flex
       flex-direction: column
       justify-content: center
@@ -50,7 +49,7 @@
     &__picture
       position: relative
       flex: 0 1 50%
-      min-height: 100vh
+      min-height: 700px
       margin-left: 0px
       overflow: hidden
       &--no-gradient
@@ -62,7 +61,6 @@
         left: 50%
         z-index: 1
         transform: translate(-50%, -50%)
-        height: 100vh
         min-width: 100%
         min-height: 100%
         width: auto
@@ -259,14 +257,12 @@
       position: relative
       z-index: 2
       display: flex
-      min-height: 100vh
     &__text
       flex: 0 1 50%
       display: flex
       flex-direction: column
       padding-top: 60px
       padding-bottom: 70px
-      max-width: 620px
       margin-left: auto
       &__content
         flex: 0
@@ -330,7 +326,7 @@
 
   &-types
     background: #2E2E31
-    min-height: 100vh
+    min-height: 700px
     padding-top: 60px
     &__wrapper
       display: flex
@@ -582,8 +578,57 @@
               padding-bottom: 10px
 
 
+@media(width >= 1600px)
+  .service
+    &-slider
+      &__content
+        padding-left: 80px
+        padding-right: 80px
+      &__slide--no-slider
+        .service-slider__content
+          padding-right: 80px
+    &-masters
+      &__text
+        padding-left: 80px
+        padding-right: 80px
+    &-quote
+      &__content
+        padding-left: 80px
+        padding-right: 80px
 
+@media(width <= 1600px)
+  .service
+    &-slider
+      &__content
+        padding-left: 40px
+        padding-right: 40px
+      &__slide--no-slider
+        .service-slider__content
+          padding-right: 40px
 
+    &-masters
+      &__text
+        padding-left: 40px
+        padding-right: 40px
+    &-quote
+      &__content
+        padding-left: 40px
+        padding-right: 40px
+
+@media($wide)
+  .service
+    &-slider
+      &__content
+        padding-right: 40px
+        padding-left: 20px
+    &-masters
+      &__text
+        padding-left: 20px
+        padding-right: 20px
+    &-quote
+      &__content
+        padding-left: 5%
+        padding-right: 5%
 
 @media($desktop)
   .service

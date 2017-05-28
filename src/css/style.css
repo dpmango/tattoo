@@ -3392,8 +3392,8 @@ button:focus {
     width: 50%;
     background-image: url('../images/el/mainpageMastersBgLeft.png');
     background-position: left center;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     -webkit-transform: translate3d(-20%,0,0);
             transform: translate3d(-20%,0,0);
 }
@@ -3411,8 +3411,8 @@ button:focus {
     width: 50%;
     background-image: url('../images/el/mainpageMastersBgRight.png');
     background-position: right center;
-    -webkit-transition: all .5s .25s ease-in-out;
-    transition: all .5s .25s ease-in-out;
+    -webkit-transition: all 1s .3s ease-in-out;
+    transition: all 1s .3s ease-in-out;
     -webkit-transform: translate3d(20%,0,0);
             transform: translate3d(20%,0,0);
 }

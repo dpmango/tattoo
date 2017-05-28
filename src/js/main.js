@@ -213,7 +213,7 @@ $(document).ready(function () {
           $(val).remove();
         }
       });
-    }, 500);
+    }, 1000);
 
     setTimeout(function () {
       $('.masters__bg-right').each(function (i, val) {
@@ -221,7 +221,7 @@ $(document).ready(function () {
           $(val).remove();
         }
       });
-    }, 750);
+    }, 1300);
   });
 
   // Hero slider

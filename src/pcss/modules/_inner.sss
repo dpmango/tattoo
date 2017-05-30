@@ -443,7 +443,7 @@
         &::before
           position: absolute 10px
           opacity: 1
-      &:first-child
+      &[data-slick-index="0"]
         padding-left: 80px
         &::after, &::before
           left: 80px
@@ -451,6 +451,14 @@
         &:hover
           &::before
             position: absolute 10px 10px 10px 90px
+
+@media(width <= 1600px)
+  .master-portfolio
+    padding-left: 40px
+
+@media($wide)
+  .master-portfolio
+    padding-left: 20px
 
 @media($tablet)
   .master-portfolio

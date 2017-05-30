@@ -1673,6 +1673,8 @@ button:focus {
             justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
     max-width: 1280px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1825,6 +1827,10 @@ button:focus {
     .footer {}
     .footer__contacts {
         padding-left: 20px;
+    }
+    .footer__menu {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 @media(max-width: 1070px) {
@@ -5137,19 +5143,29 @@ button:focus {
     left: 10px;
     opacity: 1;
 }
-.master-portfolio__slider__item:first-child {
+.master-portfolio__slider__item[data-slick-index="0"] {
     padding-left: 80px;
 }
-.master-portfolio__slider__item:first-child:after, .master-portfolio__slider__item:first-child:before {
+.master-portfolio__slider__item[data-slick-index="0"]:after, .master-portfolio__slider__item[data-slick-index="0"]:before {
     left: 80px;
 }
-.master-portfolio__slider__item:first-child:hover {}
-.master-portfolio__slider__item:first-child:hover:before {
+.master-portfolio__slider__item[data-slick-index="0"]:hover {}
+.master-portfolio__slider__item[data-slick-index="0"]:hover:before {
     position: absolute;
     top: 10px;
     right: 10px;
     bottom: 10px;
     left: 90px;
+}
+@media(max-width: 1600px) {
+    .master-portfolio {
+        padding-left: 40px;
+    }
+}
+@media(max-width: 1200px) {
+    .master-portfolio {
+        padding-left: 20px;
+    }
 }
 @media(max-width: 768px) {
     .master-portfolio {
@@ -6835,6 +6851,9 @@ button:focus {
 .service-how {
     padding-top: 60px;
 }
+.service-how .small-title {
+    padding-left: 20px;
+}
 .service-how__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6845,6 +6864,8 @@ button:focus {
     margin-right: -20px;
     margin-left: -20px;
     padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
@@ -6911,12 +6932,17 @@ button:focus {
     position: relative;
     padding-top: 20px;
 }
+.service-courses .small-title {
+    padding-left: 20px;
+}
 .service-courses__course {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
     padding-top: 45px;
+    padding-right: 20px;
     padding-bottom: 60px;
+    padding-left: 20px;
 }
 .service-courses__course.active .service-courses__course__toggle {
     display: block;
@@ -7195,6 +7221,11 @@ button:focus {
         padding-right: 40px;
         padding-left: 40px;
     }
+    .service-benefits {}
+    .service-benefits__card {}
+    .service-benefits__card__content {
+        margin-left: 40px;
+    }
 }
 @media(max-width: 1200px) {
     .service {}
@@ -7212,6 +7243,28 @@ button:focus {
     .service-quote__content {
         padding-right: 5%;
         padding-left: 5%;
+    }
+    .service-benefits {}
+    .service-benefits__card {}
+    .service-benefits__card__content {
+        margin-left: 20px;
+    }
+    .service-how {
+        padding-top: 60px;
+    }
+    .service-how .small-title {
+        padding-left: 0px;
+    }
+    .service-how__wrapper {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .service-courses .small-title {
+        padding-left: 0px;
+    }
+    .service-courses__course {
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
 @media(max-width: 992px) {
@@ -7245,9 +7298,6 @@ button:focus {
     }
     .service-benefits {}
     .service-benefits__card {}
-    .service-benefits__card__content {
-        margin-left: 30px;
-    }
     .service-benefits__card__right {
         margin-left: 20px;
     }
@@ -7284,9 +7334,6 @@ button:focus {
             -ms-flex: 0 1 100%;
                 flex: 0 1 100%;
         -webkit-box-flex: 0;
-    }
-    .service-benefits__card__content {
-        margin-left: 80px;
     }
     .service-benefits__card__right {
         margin-left: 40px;
@@ -7523,9 +7570,6 @@ button:focus {
     .service-benefits__card:after {
         background: #18181d;
         background: rgba(24, 24, 29, 0.8);
-    }
-    .service-benefits__card__content {
-        margin-left: 30px;
     }
     .service-benefits__card__right {
         margin-left: 20px;
@@ -8035,7 +8079,7 @@ button:focus {
 .promo-block {
     position: relative;
     overflow: hidden;
-    padding: 50px 0;
+    padding: 50px 20px;
     background: #D2A36E;
     color: $fonColor;
 }

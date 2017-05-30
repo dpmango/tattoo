@@ -389,6 +389,10 @@
       justify-content: space-between
       margin-left: -20px
       margin-right: -20px
+      padding-left: 20px
+      padding-right: 20px
+    .small-title
+      padding-left: 20px
     &__col
       flex: 0 1 50%
       max-width: 540px
@@ -420,12 +424,16 @@
   &-courses
     position: relative
     padding-top: 20px
+    .small-title
+      padding-left: 20px
     &__course
       position: relative
       overflow: hidden
       padding-top: 45px
       padding-bottom: 60px
       margin-bottom: 20px
+      padding-left: 20px
+      padding-right: 20px
       &.active
         .service-courses__course__toggle
           display: block
@@ -614,6 +622,10 @@
       &__content
         padding-left: 40px
         padding-right: 40px
+    &-benefits
+      &__card
+        &__content
+          margin-left: 40px
 
 @media($wide)
   .service
@@ -629,6 +641,23 @@
       &__content
         padding-left: 5%
         padding-right: 5%
+    &-benefits
+      &__card
+        &__content
+          margin-left: 20px
+    &-how
+      padding-top: 60px
+      &__wrapper
+        padding-left: 0
+        padding-right: 0
+      .small-title
+        padding-left: 0px
+    &-courses
+      .small-title
+        padding-left: 0px
+      &__course
+        padding-left: 0px
+        padding-right: 0px
 
 @media($desktop)
   .service
@@ -655,8 +684,6 @@
 
     &-benefits
       &__card
-        &__content
-          margin-left: 30px
         &__right
           margin-left: 20px
 
@@ -684,8 +711,6 @@
         padding-top: 40px
       &__card
         flex: 0 1 100%
-        &__content
-          margin-left: 80px
         &__right
           margin-left: 40px
 
@@ -840,8 +865,6 @@
       &__card
         &::after
           background: color(#18181D a(80%))
-        &__content
-          margin-left: 30px
         &__right
           margin-left: 20px
         &__name

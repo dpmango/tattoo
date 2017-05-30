@@ -292,7 +292,8 @@ $(document).ready(function(){
           draggable: false,
           swipe: false,
           touchMove: true,
-          verticalSwiping: false
+          verticalSwiping: false,
+          centerMode: true
         }
       }
     ]
@@ -413,6 +414,7 @@ $(document).ready(function(){
     dots: true,
     arrows: false,
     mobileFirst: true,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 768,

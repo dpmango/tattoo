@@ -2,6 +2,28 @@ $(document).ready(function(){
   const _window = $(window);
   const _document = $(document);
 
+  // check devise
+  var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+  };
+
   // YANDEX MAP
   ymaps.ready(initMaps);
   var myMap, myMapContact, myContact;
@@ -16,6 +38,11 @@ $(document).ready(function(){
       });
 
       myMap.behaviors.disable('scrollZoom');
+      myMap.behaviors.disable('multiTouch');
+
+      if(isMobile.any()){
+        myMap.behaviors.disable('drag');
+      }
     }
 
     // карта в меню

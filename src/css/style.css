@@ -1338,6 +1338,9 @@ button:focus {
         height: 60px;
         font-size: 11px;
     }
+    .header__hamburger__name {
+        display: none;
+    }
 }
 .about-logo-overlay {
     position: fixed;
@@ -2763,6 +2766,17 @@ button:focus {
     }
     .hero__benefits {
         margin-top: 5vh;
+        max-width: 100%;
+    }
+    .hero__benefit {
+        margin-right: -20px;
+        margin-left: -20px;
+        max-width: 100%;
+    }
+    .hero__benefit__title, .hero__benefit__description {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 300px;
     }
 }
 /* SERVICE */
@@ -2981,6 +2995,8 @@ button:focus {
         text-transform: uppercase;
         letter-spacing: 1.8px;
         font-weight: 400;
+        font-size: 20px;
+        font-family: 'RoadRadio';
     }
 }
 /* Gallery */
@@ -3696,9 +3712,6 @@ button:focus {
     }
     .masters__card:hover .masters__card__image {}
     .masters__card:hover .masters__card__image:before {
-        display: none;
-    }
-    .masters__card:hover .masters__card__image:after {
         display: none;
     }
     .masters__card:hover .ico-zoom {

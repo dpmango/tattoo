@@ -231,10 +231,17 @@
   .container
     position: relative
     z-index: 5
+    min-height: 100vh
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
   &__wrapper
     padding-top: 80px
     padding-bottom: 60px
-    min-height: 100vh
+    flex: 0 1 auto
+    margin-top: auto
+    margin-bottom: auto
     display: flex
     flex-wrap: wrap
     justify-content: center
@@ -621,6 +628,10 @@
   // background-size: cover
   > .container
     position: relative
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+
   &__bg-left, &__bg-right
     position: absolute 0 0 0 0
     background-repeat: no-repeat
@@ -661,7 +672,9 @@
       z-index: 2
 
   &__wrapper
-
+    flex: 0 1 auto
+    margin-top: auto
+    margin-bottom: auto
     padding-top: 80px
     padding-bottom: 60px
     display: flex
@@ -1067,6 +1080,10 @@
 .blog
   position: relative
   color: white
+  > .container
+    min-height: 100vh
+    display: flex
+    flex-direction: column
   &--inner
     padding-top: 60px
     .blog__wrapper
@@ -1074,12 +1091,11 @@
       padding-bottom: 80px
       min-height: 1px
   &__wrapper
+    flex: 0 1 auto
     padding-top: 80px
     padding-bottom: 100px
     max-width: 900px
-    margin-left: auto
-    margin-right: auto
-    min-height: 100vh
+    margin: auto
     display: flex
     flex-wrap: wrap
   .toggler-more

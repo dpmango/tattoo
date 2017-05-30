@@ -19,9 +19,33 @@ $(document).ready(function () {
   });
 
   // Hamburger and menu
+  var storeTopPostion = 0;
+  var storeScrollifySection;
+  var naviOpened = false;
   $('.js-main-hamb').on('click', function () {
     $(this).find('.hamburger').toggleClass('is-active');
     $('.navi').toggleClass('active');
+
+    if (naviOpened) {
+      naviOpened = false;
+    } else {
+      naviOpened = true;
+    }
+
+    if (naviOpened) {
+      storeTopPostion = _window.scrollTop();
+      $('html').addClass('locked');
+      console.log(storeScrollifySection);
+      $.scrollify.disable();
+      // $('body').bind('scroll', function(e){e.preventDefault()})
+      console.log(storeTopPostion);
+    } else {
+      _window.scrollTop(storeTopPostion);
+      // $('body').unbind('scroll')
+      $('html').removeClass('locked');
+      $.scrollify.enable();
+      $.scrollify.move(storeScrollifySection);
+    }
   });
 
   // LOGO overlay
@@ -844,6 +868,7 @@ $(document).ready(function () {
         } else {
           $('.header').addClass('header--no-conacts');
         }
+        storeScrollifySection = i;
       },
       after: function after() {},
       afterResize: function afterResize() {},

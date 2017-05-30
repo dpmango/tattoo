@@ -184,25 +184,24 @@ $(document).ready(function () {
 
   // SERVICE HOVER FUNCTiONS
   var storedServiceHover = $('.js-append-hover-services img').attr('src');
-  if (_window.width() > 568) {
-    $('.services__item').hover(function () {
-      var bg = $(this).data('bg');
-      if (bg) {
-        var createdServiceHoverEl = "<img src=" + bg + " class='services-bg' alt=''/>";
-        $('.js-append-hover-services').append(createdServiceHoverEl);
-        setTimeout(function () {
-          $('.services-bg').addClass('animate');
-        }, 10);
-      }
-    }, function () {
 
-      $('.js-append-hover-services img').each(function (i, val) {
-        if ($(val).is('.js-static')) {} else {
-          $(val).remove();
-        }
-      });
+  $('.services__item').hover(function () {
+    var bg = $(this).data('bg');
+    if (bg) {
+      var createdServiceHoverEl = "<img src=" + bg + " class='services-bg' alt=''/>";
+      $('.js-append-hover-services').append(createdServiceHoverEl);
+      setTimeout(function () {
+        $('.services-bg').addClass('animate');
+      }, 10);
+    }
+  }, function () {
+
+    $('.js-append-hover-services img').each(function (i, val) {
+      if ($(val).is('.js-static')) {} else {
+        $(val).remove();
+      }
     });
-  }
+  });
 
   // MASTERS HOVER FUNCTIONS
   var hoverIteration = 0;

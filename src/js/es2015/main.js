@@ -187,7 +187,7 @@ $(document).ready(function(){
 
   // SERVICE HOVER FUNCTiONS
   var storedServiceHover = $('.js-append-hover-services img').attr('src');
-  if ( _window.width() > 568 ){
+
     $('.services__item').hover(
       function(){
         var bg = $(this).data('bg');
@@ -211,7 +211,7 @@ $(document).ready(function(){
         });
 
       });
-  }
+
 
 
 

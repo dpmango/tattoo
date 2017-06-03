@@ -5197,18 +5197,18 @@ button:focus {
 }
 @media(max-width: 768px) {
     .master-portfolio {
-        padding-left: 40px;
+        padding-left: 20px;
     }
     .master-portfolio__head {}
     .master-portfolio__head__nav {
         padding-right: 40px;
     }
     .master-portfolio__slider {
-        margin-left: -40px;
+        margin-left: -20px;
     }
     .master-portfolio__slider__item {}
     .master-portfolio__slider__item:first-child {
-        padding-left: 40px;
+        padding-left: 20px;
     }
     .master-portfolio__slider__item:first-child:after, .master-portfolio__slider__item:first-child:before {
         left: 40px;
@@ -6418,8 +6418,12 @@ button:focus {
     top: 50%;
     left: 50%;
     z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     width: auto;
     height: 100%;
+    height: auto;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -6960,17 +6964,14 @@ button:focus {
     position: relative;
     padding-top: 20px;
 }
-.service-courses .small-title {
-    padding-left: 20px;
-}
 .service-courses__course {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
     padding-top: 45px;
-    padding-right: 20px;
+    padding-right: 80px;
     padding-bottom: 60px;
-    padding-left: 20px;
+    padding-left: 80px;
 }
 .service-courses__course.active .service-courses__course__toggle {
     display: block;
@@ -7027,9 +7028,6 @@ button:focus {
             justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-    max-width: 1280px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
 }
@@ -7106,9 +7104,7 @@ button:focus {
     margin-right: auto;
     margin-left: auto;
     padding-top: 60px;
-    padding-right: 20px;
-    padding-left: 20px;
-    max-width: 1280px;
+    width: 100%;
 }
 .service-courses__course__dropdown p {
     margin: 0;
@@ -7254,6 +7250,11 @@ button:focus {
     .service-benefits__card__content {
         margin-left: 40px;
     }
+    .service-courses {}
+    .service-courses__course {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
 }
 @media(max-width: 1200px) {
     .service {}
@@ -7291,8 +7292,8 @@ button:focus {
         padding-left: 0px;
     }
     .service-courses__course {
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 @media(max-width: 992px) {

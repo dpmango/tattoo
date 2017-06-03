@@ -32,16 +32,21 @@ $(document).ready(function(){
 
     if ( naviOpened ){
       storeTopPostion = _window.scrollTop();
-      $('html').addClass('locked');
-      console.log(storeScrollifySection);
-      $.scrollify.disable();
+      setTimeout(function(){
+        $('html').addClass('locked');
+      }, 300)
+
+      if ( _window.width() > 768 ){
+        $.scrollify.disable();
+      }
       // $('body').bind('scroll', function(e){e.preventDefault()})
-      console.log(storeTopPostion);
     } else {
       _window.scrollTop(storeTopPostion);
       // $('body').unbind('scroll')
       $('html').removeClass('locked');
-      $.scrollify.enable();
+      if ( _window.width() > 768 ){
+        $.scrollify.enable();
+      }
       $.scrollify.move(storeScrollifySection);
     }
   });
@@ -187,81 +192,80 @@ $(document).ready(function(){
 
   // SERVICE HOVER FUNCTiONS
   var storedServiceHover = $('.js-append-hover-services img').attr('src');
+    if ( _window.width() > 568 ){
+      $('.services__item').hover(
+        function(){
+          var bg = $(this).data('bg');
+          if (bg){
+            var createdServiceHoverEl = "<img src="+ bg +" class='services-bg' alt=''/>"
+            $('.js-append-hover-services').append(createdServiceHoverEl);
+            setTimeout(function(){
+              $('.services-bg').addClass('animate');
+            }, 10)
 
-    $('.services__item').hover(
-      function(){
-        var bg = $(this).data('bg');
-        if (bg){
-          var createdServiceHoverEl = "<img src="+ bg +" class='services-bg' alt=''/>"
-          $('.js-append-hover-services').append(createdServiceHoverEl);
-          setTimeout(function(){
-            $('.services-bg').addClass('animate');
-          }, 10)
 
-
-        }
-      }, function(){
-
-        $('.js-append-hover-services img').each(function(i, val){
-          if ( $(val).is('.js-static') ){
-
-          } else {
-            $(val).remove();
           }
+        }, function(){
+
+          $('.js-append-hover-services img').each(function(i, val){
+            if ( $(val).is('.js-static') ){
+
+            } else {
+              $(val).remove();
+            }
+          });
+
         });
-
-      });
-
-
+    }
 
 
   // MASTERS HOVER FUNCTIONS
   var hoverIteration = 0;
-  $('.masters__card').on('mouseenter', function(){
-    // parse hover bg
-    var bgLeft = $(this).data('bg-left');
-    var bgRight = $(this).data('bg-right');
+  if ( _window.width() > 768 ){
+    $('.masters__card').on('mouseenter', function(){
+      // parse hover bg
+      var bgLeft = $(this).data('bg-left');
+      var bgRight = $(this).data('bg-right');
 
-    // if present
-    if (bgLeft && bgRight){
-      hoverIteration = hoverIteration + 1;
-      console.log(hoverIteration);
-      // create element and assign global variable
-      var storebgLeftEl = '<div class="masters__bg-left" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgLeft + ')"></div>'
-      var storebgRightEl = '<div class="masters__bg-right" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgRight + ')"></div>'
+      // if present
+      if (bgLeft){
+        hoverIteration = hoverIteration + 1;
+        // create element and assign global variable
+        var storebgLeftEl = '<div class="masters__bg-left" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgLeft + ')"></div>'
+        var storebgRightEl = '<div class="masters__bg-right" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgRight + ')"></div>'
 
-      $('.js-append-master-bg').append(storebgLeftEl);
-      $('.js-append-master-bg').append(storebgRightEl);
+        $('.js-append-master-bg').append(storebgLeftEl);
+        // $('.js-append-master-bg').append(storebgRightEl);
 
-      // animate then
+        // animate then
+        setTimeout(function(){
+          $('.masters__bg-left').not('.default').addClass('animate');
+          // $('.masters__bg-right').not('.default').addClass('animate');
+        }, 10)
+      }
+    });
+
+    $('.masters__card').on('mouseleave', function(){
       setTimeout(function(){
-        $('.masters__bg-left').not('.default').addClass('animate');
-        $('.masters__bg-right').not('.default').addClass('animate');
-      }, 10)
-    }
-  });
+        $('.masters__bg-left').each(function(i, val){
+          if ( $(val).data('iteration') && $(val).data('iteration') != hoverIteration ){
+            $(val).remove();
+          }
+        });
+      }, 1000);
+
+      setTimeout(function(){
+        $('.masters__bg-right').each(function(i, val){
+          if ( $(val).data('iteration') && $(val).data('iteration') != hoverIteration ){
+            $(val).remove();
+          }
+        });
+      }, 1300);
+
+    });
 
 
-  $('.masters__card').on('mouseleave', function(){
-    setTimeout(function(){
-      $('.masters__bg-left').each(function(i, val){
-        if ( $(val).data('iteration') && $(val).data('iteration') != hoverIteration ){
-          $(val).remove();
-        }
-      });
-    }, 1000);
-
-    setTimeout(function(){
-      $('.masters__bg-right').each(function(i, val){
-        if ( $(val).data('iteration') && $(val).data('iteration') != hoverIteration ){
-          $(val).remove();
-        }
-      });
-    }, 1300);
-
-  });
-
-
+  }
 
   // Hero slider
   $('.hero__slider').slick({
@@ -407,6 +411,35 @@ $(document).ready(function(){
     }
   });
 
+  // change background on mobile services slider
+  _servicesSlickMobile.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    event.stopPropagation();
+    if ( _window.width() < 568 ){
+      var bg = $(slick.$slides[nextSlide]).data('bg');
+
+      if (bg){
+        // create and append
+        var createdServiceHoverEl = "<img src="+ bg +" class='services-bg' alt=''/>"
+        $('.js-append-hover-services').append(createdServiceHoverEl);
+        setTimeout(function(){
+          $('.services-bg').addClass('animate');
+        }, 10)
+
+        // remove unused
+        $('.js-append-hover-services img').each(function(i, val){
+          if ( $(val).is('.js-static') ){
+
+          } else if ( $(val).attr('src') != $(createdServiceHoverEl).attr('src') ){
+            $(val).remove();
+          }
+        });
+
+      }
+    }
+
+  });
+
+
   // MASTERS
   var _mastersSlickMobile = $('.masters__wrapper');
   var mastersSlickMobileOptions = {
@@ -414,7 +447,7 @@ $(document).ready(function(){
     dots: true,
     arrows: false,
     mobileFirst: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     responsive: [
       {
         breakpoint: 768,
@@ -434,6 +467,33 @@ $(document).ready(function(){
     if (!_mastersSlickMobile.hasClass('slick-initialized')) {
       return _mastersSlickMobile.slick(mastersSlickMobileOptions);
     }
+  });
+
+  // master mobile background change
+  _mastersSlickMobile.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    event.stopPropagation();
+
+    if ( _window.width() < 768 ){
+      var bgLeft = $(slick.$slides[nextSlide]).data('bg-left');
+
+      if (bgLeft){
+        // create and append
+        var storebgLeftEl = '<div class="masters__bg-left" data-iteration="'+hoverIteration+'" style="background-image: url(' + bgLeft + ')"></div>'
+        $('.js-append-master-bg').append(storebgLeftEl);
+        setTimeout(function(){
+          $('.masters__bg-left').not('.default').addClass('animate');
+        }, 10)
+
+        // remove unused
+        $('.js-append-master-bg img').each(function(i, val){
+          if ( $(val).attr('src') != $(createdServiceHoverEl).attr('src') ){
+            $(val).remove();
+          }
+        });
+
+      }
+    }
+
   });
 
   // HERO BENEFITS
@@ -854,10 +914,14 @@ $(document).ready(function(){
       },
       open: function(){
         $('body').addClass('popup-enabled');
-        $.scrollify.disable();
+        if ( _window.width() > 768 ){
+          $.scrollify.disable();
+        }
       },
       close: function() {
-        $.scrollify.enable();
+        if ( _window.width() > 768 ){
+          $.scrollify.enable();
+        }
         $('body').removeClass('popup-enabled');
       }
     }

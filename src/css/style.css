@@ -91,7 +91,6 @@ html.locked {
 html.locked body {
     overflow-y: hidden;
     height: 100%;
-    -webkit-transform: translateZ(0);
 }
 ::-moz-selection {
     background: #775c3f;
@@ -2963,6 +2962,9 @@ button:focus {
 }
 @media(max-width: 568px) {
     .services {}
+    .services-bg {
+        max-width: 200%;
+    }
     .services:after {
         position: absolute;
         top: 0;
@@ -3456,8 +3458,8 @@ button:focus {
     background-position: left center;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    -webkit-transform: translate3d(-20%,0,0);
-            transform: translate3d(-20%,0,0);
+    -webkit-transform: translate3d(0%,0,0);
+            transform: translate3d(0%,0,0);
 }
 .masters__bg-left:after {
     z-index: 4;
@@ -3725,6 +3727,16 @@ button:focus {
     }
     .masters__card:hover .masters__card__yrs {
         opacity: 0;
+    }
+}
+@media(max-width: 568px) {
+    .masters {}
+    .masters__bg-left {
+        width: 100%;
+    }
+    .masters__card {}
+    .masters__card--more .masters__card__image {
+        margin-top: 160px;
     }
 }
 /* TESTIMONIALS */
